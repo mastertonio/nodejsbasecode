@@ -8,7 +8,7 @@ const router = express.Router();
 
 router
   .route('/:userId')
-  .get(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.getDashboard);
-//   .get(dashboardController.getDashboard);
+//   .get(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.getDashboard);
+  .get(dashboardController.getDashboard);
 
 module.exports = router;
