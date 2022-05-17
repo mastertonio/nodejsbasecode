@@ -3,3 +3,4 @@ module.exports.User = require('./user.model');
 module.exports.Calculator = require('./calculators.model');
 module.exports.Cell = require('./cell.model');
 module.exports.Company = require('./company.model');
+module.exports.Element = require('./element.model');
