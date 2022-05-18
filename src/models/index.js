@@ -10,3 +10,4 @@ module.exports.Section = require('./section.model');
 module.exports.StoreValue = require('./storeValue.model');
 module.exports.Template = require('./templates.model');
 module.exports.TemplateVersion = require('./templateVersion.model');
+module.exports.UserPermission = require('./userPermission.model');
