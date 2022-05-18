@@ -35,6 +35,42 @@ const userSchema = mongoose.Schema(
       },
       private: true, // used by the toJSON plugin
     },
+    verification_code: {
+      type:String,
+      default: null
+    },
+    company_id: {
+      type: mongoose.SchemaTypes.ObjectId,
+      required: true
+    },
+    phone: {
+      type: String,
+      default: null
+    },
+    manager: {
+      type: mongoose.SchemaTypes.ObjectId,
+      default: null
+    },
+    first_name: {
+      type: String,
+      default: null
+    },
+    last_name: {
+      type: String,
+      default: null
+    },
+    currency: {
+      type: String,
+      default: null
+    },
+    email_verified_at: {
+      type: Date,
+      default: null
+    },
+    remember_token: {
+      type: String,
+      default: null
+    },
     role: {
       type: String,
       enum: roles,
