@@ -5,3 +5,4 @@ module.exports.Cell = require('./cell.model');
 module.exports.Company = require('./company.model');
 module.exports.Element = require('./element.model');
 module.exports.Field = require('./field.model')
+module.exports.Migration = require('./migration.model');
