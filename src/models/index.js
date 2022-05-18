@@ -8,3 +8,4 @@ module.exports.Field = require('./field.model')
 module.exports.Migration = require('./migration.model');
 module.exports.Section = require('./section.model');
 module.exports.StoreValue = require('./storeValue.model');
+module.exports.Template = require('./templates.model');
