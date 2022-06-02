@@ -35,6 +35,10 @@ const calculatorSchema = mongoose.Schema(
             type: String,
             default: null
         },
+        dt: {
+            type: Date,
+            default: Date.now
+        },
         currency: {
             type: String,
             default: null
@@ -78,10 +82,6 @@ const calculatorSchema = mongoose.Schema(
         cloned_from_parent: {
             type: Number,
             default: null
-        },
-        dt: {
-            type: Date,
-            default: Date.now
         }
     },
     {
