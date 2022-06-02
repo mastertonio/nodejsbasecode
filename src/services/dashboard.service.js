@@ -2,103 +2,216 @@ const httpStatus = require('http-status');
 const ApiError = require('../utils/ApiError');
 const commonService = require('./common.service');
 const userService = require('./user.service');
+const ObjectId = require('mongodb').ObjectID;
 
+const { Calculator, Company, Template, TemplateVersion, User} = require('../models');
 
-const getDashboard = async (userId) => {
-    const setChart = await commonService.setChart({type:'bargraph',uid:userId})
+const getAllTemplate = async () => {
+    return Template.find();
+}
+
+const calculatorsByUser = async (userId) => {
+    let o_id = new ObjectId(userId);
+    
+    return  Calculator.aggregate([
+        {
+            $match: {
+                user_id: o_id
+            }
+        },
+        {
+            $lookup: {
+                from: 'templateversions',
+                localField: 'template_version_id',
+                foreignField: '_id',
+                as: 'TemplateVersionData'
+            }
+        }
+    ]);
+}
+
+const allUserByCompany = async () => {
+    
+    return User.aggregate([
+        {
+            $lookup: {
+                from: "calculators",
+                localField: "_id",
+                foreignField: "user_id",
+                as: "calculatorCount"
+            }
+        },
+        {
+            "$unwind": "$calculatorCount"
+        },
+        {
+            "$group": {
+                "_id": "$calculatorCount.user_id",
+                "name": {
+                    $first: "$name"
+                },
+                "totalROIS": {
+                    "$sum": 1
+                }
+            }
+        }
+    ]);
+}
+
+const getAllAdmin = async () => {
+    return User.find({role: "admin"},{name:1})
+}
+
+const getActiveROI = async (userId) =>{
+    let o_id = new ObjectId(userId);
+    return Calculator.find({user_id: o_id, status:1})
+}
+
+const getAllROI = async (userId) =>{
+    let o_id = new ObjectId(userId);
+    return Calculator.find({user_id: o_id, status:1})
+}
+
+const getCalculatorByUID = async (calc_id) =>{
+    let o_id = new ObjectId(calc_id);
+    return Calculator.findOne({_id:o_id})
+}
+
+const updateStatus = async (userId,updateBody) => {
     const user = await userService.getUserById(userId);
     if (!user) {
         throw new ApiError(httpStatus.NOT_FOUND, 'User not found');
+    }
+
+    const template_status = await getCalculatorByUID(updateBody.calculator_id);
+    if(!template_status) {
+        throw new ApiError(httpStatus.NOT_FOUND, "Calculator Template not found")
+    }
+        
+    Object.assign(template_status, {status:updateBody.status});
+    await template_status.save();
+    return template_status;
+}
+
+/***
+ * remaining task
+ * 1.) welcome [done]
+ *  1.1) current roi [done]
+ *  1.2) active roi [done]
+ * 2.) template list [done]
+ * 3.) graph
+ */
+const getDashboard = async (userId) => {
+    const setChart = await commonService.setChart({type:'bargraph',uid:userId})
+    const user = await userService.getUserById(userId);
+    let roi_table = [];
+    
+    if (!user) {
+        throw new ApiError(httpStatus.NOT_FOUND, 'User not found');
       }
+
+    const calculatorsPerUser = await calculatorsByUser(userId);
+
+    if(!calculatorsPerUser){
+        throw new ApiError(httpStatus.NOT_FOUND, `No record found for user_id: ${userId} `);
+    }
+    //re-visit dashboard.initialize [line 153]
+    calculatorsPerUser.map(v =>{
+        roi_table.push({id:Object(v._id),
+        link: null,
+        importance: Number(v.importance),
+        name: v.title,
+        source: v.TemplateVersionData[0].name,
+        dateCreated: v.createdAt,
+        views: Number(v.visits),
+        uniqueViews: Number(v.unique_ip)
+        });
+    })
+    const ranking_UserByCompany = await allUserByCompany();
+
+    const adminList = await getAllAdmin();
+    const active_roi =  await getActiveROI(user._id);
+    const all_roi = await getAllROI(user._id);
+    const allTemplate = await getAllTemplate()
+    
     let name = user.name;
     let data = {};
 
+
+    //check the number of roi per account
     data.welcome = {
         account_name: name.toString().toUpperCase(),
-        current_roi: 1,
-        active_roi:1
+        current_roi: all_roi.length,
+        active_roi: active_roi.length
     };
 
-    data.admin_list = [
-        {
-            uid: Object('6273ca41e773a40aeca0247e'),
-            name: 'ANTHONY DERECHO'
-        },
-        {
-            uid: Object('627cb4bf890f73d8bd4d3395'),
-            name: 'JOHN DOE'
-        }
-    ];
+    data.admin_list = adminList;
     
+    /***
+     * it will be replace in the future 
+     * just leave this static data
+     */
     data.viewcount = [
         {
             roi_name: "My Company",
             count: 0
         }
     ];
-    data.ranking = [
-        {
-            account_name: "John Doe",
-            rois:1
-        },
-        {
-            account_name: "Michael Farber",
-            rois: 329
-        }
-    ];
 
-    data.template_list = [
-        {
-            id: Object('1'),
-            name: 'Sample template 1'
-        },
-        {
-            id: Object('2'),
-            name: 'Sample template 2'
-        },
-        {
-            id: Object('3'),
-            name: 'Sample template 3'
-        }
-    ];
 
-    data.my_roi = [{
-        id:Object('79228'),
-        importance: 0,
-        name: 'Sample template 1',
-        source: '15five',
-        dateCreated: '2022-05-05T09:32:24.605+00:00',
-        views: 0,
-        uniqueViews: 0
-    },
-    {
-        id:Object('79228'),
-        importance: 1,
-        name: 'Sample template 2',
-        source: '15five',
-        dateCreated: '2022-05-05T10:32:24.605+00:00',
-        views: 1,
-        uniqueViews: 1
-    },
-    {
-        id:Object('79228'),
-        importance: 2,
-        name: 'Sample template 3',
-        source: '15five',
-        dateCreated: '2022-05-05T11:32:24.605+00:00',
-        views: 2,
-        uniqueViews: 2
-    }
-      
-    ]
+    data.ranking = ranking_UserByCompany;
+
+    data.template_list = allTemplate;
+
+    data.my_roi = roi_table
 
     data.chart = setChart;
 
     return data;
   };
 
+  /**
+   * 
+   * @param {userId, templateId} req 
+   * @returns Object
+   */
+  const getImportance = async (req) =>{
+    const user = await userService.getUserById(req.userId);
+    if (!user) {
+        throw new ApiError(httpStatus.NOT_FOUND, 'User not found');
+    }
+
+    const template = await getCalculatorByUID(req.templateId);
+    if(!template) {
+        throw new ApiError(httpStatus.NOT_FOUND, "Calculator Template not found")
+    }
+
+    let response = {}
+    response.importance_value = template.importance;
+    return response;
+  }
+
+  const updateImportance = async (req,updateBody) =>{
+    const user = await userService.getUserById(req.userId);
+    if (!user) {
+        throw new ApiError(httpStatus.NOT_FOUND, 'User not found');
+    }
+
+    const template = await getCalculatorByUID(req.templateId);
+    if(!template) {
+        throw new ApiError(httpStatus.NOT_FOUND, "Calculator Template not found")
+    }
+
+    Object.assign(template, {importance: updateBody.importance_value});
+    await template.save();
+    return template;
+  }
+
 
 
   module.exports = {
-      getDashboard
+      getDashboard,
+      updateStatus,
+      getImportance,
+      updateImportance
   }

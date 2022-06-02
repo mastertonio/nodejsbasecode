@@ -35,3 +35,5 @@ companySchema.plugin(toJSON);
  *  @typedef Company
  */
 const Company = mongoose.model('Company', companySchema);
+
+module.exports = Company;
