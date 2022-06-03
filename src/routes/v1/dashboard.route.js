@@ -18,3 +18,46 @@ router
   .put(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.updateImportance)
 
 module.exports = router;
+
+
+
+/**
+ * @swagger
+ * tags:
+ *   name: Dashboard
+ *   description: Display data analytic and all ROI's
+ */
+
+/**
+ * @swagger
+ * /dashboard/{id}:
+ *   get:
+ *     summary: Generate dashboard data
+ *     description: Logged in users can fetch calculator.
+ *     tags: [Dashboard, Calculator]
+ *     security:
+ *       - bearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *         description: User id
+ *     responses:
+ *       "200":
+ *         description: OK
+ *         content:
+ *           application/json:
+ *             schema:
+ *                $ref: '#/components/schemas/Dashboard'
+ *       "401":
+ *         $ref: '#/components/responses/Unauthorized'
+ *       "403":
+ *         $ref: '#/components/responses/Forbidden'
+ *       "404":
+ *         $ref: '#/components/responses/NotFound'
+ *
+ * 
+ * 
+ */

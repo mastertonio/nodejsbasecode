@@ -5,6 +5,7 @@ const userService = require('./user.service');
 const ObjectId = require('mongodb').ObjectID;
 
 const { Calculator, Company, Template, TemplateVersion, User} = require('../models');
+const { mongoose } = require('../config/config');
 
 const getAllTemplate = async () => {
     return Template.find();
@@ -14,11 +15,6 @@ const calculatorsByUser = async (userId) => {
     let o_id = new ObjectId(userId);
     
     return  Calculator.aggregate([
-        {
-            $match: {
-                user_id: o_id
-            }
-        },
         {
             $lookup: {
                 from: 'templateversions',
@@ -115,8 +111,21 @@ const getDashboard = async (userId) => {
     if(!calculatorsPerUser){
         throw new ApiError(httpStatus.NOT_FOUND, `No record found for user_id: ${userId} `);
     }
-    //re-visit dashboard.initialize [line 153]
+    
     calculatorsPerUser.map(v =>{
+        console.log(v.user_id)
+        if(v.user_id == userId){
+            roi_table.push({
+                id:Object(v._id),
+                link: null,
+                importance: Number(v.importance),
+                name: v.title,
+                source: v.TemplateVersionData[0].name,
+                dateCreated: v.createdAt,
+                views: Number(v.visits),
+                uniqueViews: Number(v.unique_ip)
+            });
+        }
         roi_table.push({id:Object(v._id),
         link: null,
         importance: Number(v.importance),
