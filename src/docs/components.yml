@@ -18,6 +18,18 @@ components:
         email: fake@example.com
         name: fake name
         role: user
+    Dashbord:
+      type: Object
+      properties:
+        welcome:
+          type: Object
+          # properties:
+          #   account_name:
+          #     type: string
+          #   current_roi:
+          #     type: number
+          #   active_roi:
+          #     type: number
 
     Token:
       type: object

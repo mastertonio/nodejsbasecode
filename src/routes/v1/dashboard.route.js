@@ -10,12 +10,14 @@ const router = express.Router();
 router
   .route('/:userId')
   .get(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.getDashboard)
-  .put(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.updateTemplateStatus);
+  .put(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.updateTemplateStatus)
+  
 
 router
-  .route('/importance/:templateId/:userId')
+  .route('/roi/:templateId/:userId')
   .get(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.getImportance)
   .put(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.updateImportance)
+  .patch(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.updateroiTable);
 
 module.exports = router;
 
