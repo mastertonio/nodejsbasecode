@@ -6,6 +6,7 @@ const ObjectId = require('mongodb').ObjectID;
 
 const { Calculator, Company, Template, TemplateVersion, User} = require('../models');
 const { mongoose } = require('../config/config');
+const { now } = require('mongoose');
 
 const getAllTemplate = async () => {
     return Template.find();
@@ -71,6 +72,11 @@ const getAllROI = async (userId) =>{
 const getCalculatorByUID = async (calc_id) =>{
     let o_id = new ObjectId(calc_id);
     return Calculator.findOne({_id:o_id})
+}
+
+const getCalculatorByUser = async (uid) => {
+    let o_id = new ObjectId(uid);
+    return Calculator.findOne({user_id: o_id});
 }
 
 const updateStatus = async (userId,updateBody) => {
@@ -214,6 +220,30 @@ const getDashboard = async (userId) => {
     Object.assign(template, {importance: updateBody.importance_value});
     await template.save();
     return template;
+  };
+
+  const updateroiTableService = async (req, updateBody) =>{
+    const user = await userService.getUserById(req.userId);
+    if (!user) {
+        throw new ApiError(httpStatus.NOT_FOUND, 'User not found');
+    }
+    
+    /**
+     * validate index key
+     */
+    // let bodyParamsValidator = await commonService.indexKeyValidator(Object.keys(updateBody));
+    // console.log(bodyParamsValidator);
+
+    // console.log(Object.keys(updateBody));
+
+    let calculator = await getCalculatorByUID(req.templateId);
+    if(!calculatorsByUser){
+        throw new ApiError(httpStatus.NOT_FOUND, `no record found!`)
+    }
+
+    Object.assign(calculator,updateBody);
+    await calculator.save();
+    return calculator;
   }
 
 
@@ -222,5 +252,6 @@ const getDashboard = async (userId) => {
       getDashboard,
       updateStatus,
       getImportance,
-      updateImportance
+      updateImportance,
+      updateroiTableService
   }

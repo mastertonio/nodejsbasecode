@@ -32,9 +32,19 @@ const updateImportance = catchAsync(async (req, res) =>{
   const updateImportanceValue = await dashboadService.updateImportance(req.params, req.body);
   res.send(updateImportanceValue);
 })
+
+/**
+ * update roi table
+ */
+const updateroiTable = catchAsync(async (req, res) =>{
+  const updateroi_table = await dashboadService.updateroiTableService(req.params, req.body);
+  res.send(updateroi_table);
+});
+
 module.exports = {
     getDashboard,
     updateTemplateStatus,
     getImportance,
-    updateImportance
+    updateImportance,
+    updateroiTable
 }

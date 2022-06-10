@@ -40,6 +40,7 @@ const dashboardData = async (uid) => {
         }]
     };
     return data;
+    
 }
 
 const piegraph = async (uid) =>{
@@ -57,8 +58,24 @@ const setChart = async (data) => {
  }
 }
 
+const indexKeyValidator = async (data) => {
+    const listOfIndex = ["title","importance","status"];
+    //is founded
+    let container = [];
+    data.map((i)=>{
+        if(listOfIndex.indexOf(i) !== -1){
+            container.push(1)
+        }else{
+            container.push(0)
+        }
+    });
+
+    return container.every(n => n == 1);
+
+}
 
 
 module.exports = {
-setChart
+setChart,
+indexKeyValidator
 }
