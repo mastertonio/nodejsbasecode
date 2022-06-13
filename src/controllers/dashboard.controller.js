@@ -41,10 +41,19 @@ const updateroiTable = catchAsync(async (req, res) =>{
   res.send(updateroi_table);
 });
 
+/**
+ * create calculator
+ */
+const createCalculator = catchAsync(async (req,res)=>{
+  const create_calculator = await dashboadService.createCalculator(req.params, req.body);
+  res.send(create_calculator);
+});
+
 module.exports = {
     getDashboard,
     updateTemplateStatus,
     getImportance,
     updateImportance,
-    updateroiTable
+    updateroiTable,
+    createCalculator
 }
