@@ -246,6 +246,24 @@ const getDashboard = async (userId) => {
     return calculator;
   }
 
+  const createCalculator = async(params,entryBody) =>{
+    const user = await userService.getUserById(params.userId);
+    if (!user) {
+        throw new ApiError(httpStatus.NOT_FOUND, 'User not found');
+    }
+
+    return  {
+        "id": "1234556",
+        "link": null,
+        "importance": 0,
+        "name": "asus laptop",
+        "source": "the test",
+        "dateCreated": "2022-05-19T13:53:56.969Z",
+        "views": 2,
+        "uniqueViews": 1
+    };
+  }
+
 
 
   module.exports = {
@@ -253,5 +271,6 @@ const getDashboard = async (userId) => {
       updateStatus,
       getImportance,
       updateImportance,
-      updateroiTableService
+      updateroiTableService,
+      createCalculator
   }

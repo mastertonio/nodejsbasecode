@@ -11,6 +11,7 @@ router
   .route('/:userId')
   .get(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.getDashboard)
   .put(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.updateTemplateStatus)
+  .post(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.createCalculator)
   
 
 router
@@ -18,6 +19,8 @@ router
   .get(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.getImportance)
   .put(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.updateImportance)
   .patch(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.updateroiTable);
+
+
 
 module.exports = router;
 
