@@ -17,7 +17,23 @@ const createCompany = {
   };
 
 
+  const patchCompany = {
+    params: Joi.object().keys({
+      _id: Joi.required().custom(objectId),
+    }),
+    body: Joi.object()
+      .keys({
+        alias: Joi.string().required(),
+        name: Joi.string().required(),
+        active: Joi.number().integer(),
+        licenses: Joi.number().integer()
+      })
+      .min(1),
+  };
+
+
 module.exports = {
     createCompany,
-    getCompany
+    getCompany,
+    patchCompany
   };
