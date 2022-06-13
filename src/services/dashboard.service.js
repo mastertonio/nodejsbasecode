@@ -237,7 +237,7 @@ const getDashboard = async (userId) => {
     // console.log(Object.keys(updateBody));
 
     let calculator = await getCalculatorByUID(req.templateId);
-    if(!calculatorsByUser){
+    if(!calculator){
         throw new ApiError(httpStatus.NOT_FOUND, `no record found!`)
     }
 
