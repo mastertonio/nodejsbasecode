@@ -1,7 +1,6 @@
 const httpStatus = require('http-status');
 const catchAsync = require('../utils/catchAsync');
 const {dashboadService} = require('../services');
-const { create } = require('../models/token.model');
 
 
 const getDashboard = catchAsync(async (req, res) => {

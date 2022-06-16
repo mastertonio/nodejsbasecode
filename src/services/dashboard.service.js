@@ -5,13 +5,15 @@ const userService = require('./user.service');
 const ObjectId = require('mongodb').ObjectID;
 
 const { Calculator, Company, Template, TemplateVersion, User} = require('../models');
-const { mongoose } = require('../config/config');
-const { now } = require('mongoose');
 
 const getAllTemplate = async () => {
     return Template.find();
 }
 
+const getTemplateVersion = async (id) => {
+    let o_id = new ObjectId(id);       
+    return TemplateVersion.findById({_id: o_id});
+}
 const calculatorsByUser = async (userId) => {
     let o_id = new ObjectId(userId);
     
@@ -246,22 +248,23 @@ const getDashboard = async (userId) => {
     return calculator;
   }
 
-  const createCalculator = async(params,entryBody) =>{
+  const createCalculator = async(params,paramBody) =>{
     const user = await userService.getUserById(params.userId);
     if (!user) {
         throw new ApiError(httpStatus.NOT_FOUND, 'User not found');
     }
 
-    return  {
-        "id": "1234556",
-        "link": null,
-        "importance": 0,
-        "name": "asus laptop",
-        "source": "the test",
-        "dateCreated": "2022-05-19T13:53:56.969Z",
-        "views": 2,
-        "uniqueViews": 1
-    };
+    const templateVersion = await getTemplateVersion(paramBody.templateVersion_id);    
+    if(!templateVersion){
+        throw new ApiError(httpStatus.NOT_FOUND, `no record found!`)
+    }
+    
+    const data = {};
+    data.user_id = params.userId;
+    data.title = paramBody.name;
+    data.template_version_id = paramBody.templateVersion_id;
+
+    return Calculator.create(data);
   }
 
 
