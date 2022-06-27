@@ -126,18 +126,28 @@ const getDashboard = async (userId) => {
     }
     
     calculatorsPerUser.map(v =>{
-        if(v.user_id == userId){
-            roi_table.push({
-                id:Object(v._id),
-                link: null,
-                importance: Number(v.importance),
-                name: v.title,
-                source: v.TemplateVersionData[0].name,
-                dateCreated: v.createdAt,
-                views: Number(v.visits),
-                uniqueViews: Number(v.unique_ip)
-            });
-        }
+//         console.log(v.user_id)
+//         if(v.user_id == userId){
+//             roi_table.push({
+//                 id:Object(v._id),
+//                 link: null,
+//                 importance: Number(v.importance),
+//                 name: v.title,
+//                 source: v.TemplateVersionData[0].name,
+//                 dateCreated: v.createdAt,
+//                 views: Number(v.visits),
+//                 uniqueViews: Number(v.unique_ip)
+//             });
+//         }
+        roi_table.push({id:Object(v._id),
+        link: null,
+        importance: Number(v.importance),
+        name: v.title,
+        source: v.TemplateVersionData[0].name,
+        dateCreated: v.createdAt,
+        views: Number(v.visits),
+        uniqueViews: Number(v.unique_ip)
+        });
     })
     const ranking_UserByCompany = await allUserByCompany();
 
