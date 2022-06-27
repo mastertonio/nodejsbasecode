@@ -3,7 +3,6 @@ const auth = require('../../middlewares/auth');
 const validate = require('../../middlewares/validate');
 const dashboardValidation = require('../../validations/dashboard.validation');
 const dashboardController = require('../../controllers/dashboard.controller');
-const { get } = require('mongoose');
 
 const router = express.Router();
 
@@ -18,7 +17,9 @@ router
   .route('/roi/:templateId/:userId')
   .get(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.getImportance)
   .put(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.updateImportance)
-  .patch(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.updateroiTable);
+  .patch(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.updateroiTable)
+  .delete(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.deleteCalculator)
+  .post(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.cloneCalculators)
 
 
 

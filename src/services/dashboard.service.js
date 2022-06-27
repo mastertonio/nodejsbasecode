@@ -19,6 +19,11 @@ const calculatorsByUser = async (userId) => {
     
     return  Calculator.aggregate([
         {
+            $match: {
+                user_id:o_id
+            }
+        },
+        {
             $lookup: {
                 from: 'templateversions',
                 localField: 'template_version_id',
@@ -121,7 +126,6 @@ const getDashboard = async (userId) => {
     }
     
     calculatorsPerUser.map(v =>{
-        console.log(v.user_id)
         if(v.user_id == userId){
             roi_table.push({
                 id:Object(v._id),
@@ -134,15 +138,6 @@ const getDashboard = async (userId) => {
                 uniqueViews: Number(v.unique_ip)
             });
         }
-        roi_table.push({id:Object(v._id),
-        link: null,
-        importance: Number(v.importance),
-        name: v.title,
-        source: v.TemplateVersionData[0].name,
-        dateCreated: v.createdAt,
-        views: Number(v.visits),
-        uniqueViews: Number(v.unique_ip)
-        });
     })
     const ranking_UserByCompany = await allUserByCompany();
 
@@ -267,6 +262,59 @@ const getDashboard = async (userId) => {
     return Calculator.create(data);
   }
 
+  const deleteCalculator = async(params) =>{
+    const user = await userService.getUserById(params.userId);
+    if (!user) {
+        throw new ApiError(httpStatus.NOT_FOUND, 'User not found');
+    }
+    //templateId user.remove();
+    const template = await getCalculatorByUID(params.templateId);
+    if(!template) {
+        throw new ApiError(httpStatus.NOT_FOUND, "Calculator Template not found")
+    }
+   
+    template.remove();
+    return template;
+  }
+
+  const cloneCalculator = async(params, paramBody) =>{
+    let o_id = new ObjectId(params.userId);     
+    const user = await userService.getUserById(params.userId);
+    if (!user) {
+        throw new ApiError(httpStatus.NOT_FOUND, 'User not found');
+    }
+    
+    const template = await getCalculatorByUID(params.templateId);
+    if(!template) {
+        throw new ApiError(httpStatus.NOT_FOUND, "Calculator Template not found")
+    }
+    
+    const t_version = new ObjectId(template.template_version_id)
+    let data = {
+        "position": template.position,
+        "verification_code": template.verification_code,
+        "email_protected": template.email_protected,
+        "visits": template.visits,
+        "unique_ip": template.unique_ip,
+        "currency": template.currency,
+        "is_sf_opportunity": template.is_sf_opportunity,
+        "salesforce_id": template.salesforce_id,
+        "sfdc_link": template.sfdc_link,
+        "instance": template.instance,
+        "folder":  template.folder,
+        "linked_title": template.linked_title,
+        "version": template.version,
+        "status": template.status,
+        "importance": template.importance,
+        "cloned_from_parent":  template.cloned_from_parent,
+        "user_id": o_id,
+        "title": paramBody.title,
+        "template_version_id": t_version,
+    }
+    
+    return Calculator.create(data);
+  }
+
 
 
   module.exports = {
@@ -275,5 +323,7 @@ const getDashboard = async (userId) => {
       getImportance,
       updateImportance,
       updateroiTableService,
-      createCalculator
+      createCalculator,
+      deleteCalculator,
+      cloneCalculator
   }

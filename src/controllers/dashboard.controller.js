@@ -48,11 +48,27 @@ const createCalculator = catchAsync(async (req,res)=>{
   res.send(create_calculator);
 });
 
+/**
+ * deleteCalculators
+ */
+
+ const deleteCalculator = catchAsync(async (req,res)=>{
+  const delete_calculator = await dashboadService.deleteCalculator(req.params);
+  res.send(delete_calculator);
+});
+
+const cloneCalculators = catchAsync(async (req,res)=>{
+  const clone_calculator = await dashboadService.cloneCalculator(req.params,  req.body);
+  res.send(clone_calculator);
+});
+
 module.exports = {
     getDashboard,
     updateTemplateStatus,
     getImportance,
     updateImportance,
     updateroiTable,
-    createCalculator
+    createCalculator,
+    deleteCalculator,
+    cloneCalculators
 }
