@@ -22,7 +22,7 @@ router
   .put(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.updateImportance)
   .patch(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.updateroiTable)
   .delete(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.deleteCalculator)
-  .post(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.cloneCalculators)
+  .post(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.cloneCalculators);
 
 
 

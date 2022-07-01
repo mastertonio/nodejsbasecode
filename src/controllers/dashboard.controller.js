@@ -67,15 +67,10 @@ const cloneCalculators = catchAsync(async (req,res)=>{
   res.send(clone_calculator);
 });
 
-/**
- * get roi table
- */
-
 const getRoiTable = catchAsync(async (req, res)=>{
   const roiTable = await dashboadService.getRoiTable(req);
   res.send(roiTable);
-})
-
+});
 module.exports = {
     getDashboard,
     updateTemplateStatus,
