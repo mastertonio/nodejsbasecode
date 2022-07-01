@@ -12,6 +12,9 @@ router
   .put(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.updateTemplateStatus)
   .post(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.createCalculator)
   
+router
+  .route('/roi/:userId')
+  .get(auth('getDashboard'), validate(dashboardValidation.getROIS), dashboardController.getRoiTable)
 
 router
   .route('/roi/:templateId/:userId')
@@ -19,11 +22,7 @@ router
   .put(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.updateImportance)
   .patch(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.updateroiTable)
   .delete(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.deleteCalculator)
-<<<<<<< HEAD
   .post(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.cloneCalculators)
-=======
-  .post(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.cloneCalculators);
->>>>>>> 33e2bad858d8e09bc9cc64fdf4cdb80b97cf88fe
 
 
 

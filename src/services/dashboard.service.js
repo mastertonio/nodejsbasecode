@@ -3,6 +3,7 @@ const ApiError = require('../utils/ApiError');
 const commonService = require('./common.service');
 const userService = require('./user.service');
 const ObjectId = require('mongodb').ObjectID;
+const pick = require('../utils/pick');
 
 const { Calculator, Company, Template, TemplateVersion, User} = require('../models');
 
@@ -10,13 +11,30 @@ const getAllTemplate = async () => {
     return Template.find();
 }
 
+const getAllCalculators = async (userId,filter, options) => {
+    // 'limit', 'page'
+    const pageOptions = {
+        page: parseInt(options.page, 10) || 0,
+        limit: parseInt(options.limit, 10) || 10
+    }
+
+    return Calculator.find()
+    .skip(pageOptions.page * pageOptions.limit)
+    .limit(pageOptions.limit)
+    .exec(function (err, doc) {
+        if(err) { res.status(500).json(err); return; };
+        return doc
+    });
+    console.log(data)
+}
+
+
 const getTemplateVersion = async (id) => {
     let o_id = new ObjectId(id);       
     return TemplateVersion.findById({_id: o_id});
 }
-const calculatorsByUser = async (userId) => {
+const calculatorsByUser = async (userId,filter, options) => {
     let o_id = new ObjectId(userId);
-    
     return  Calculator.aggregate([
         {
             $match: {
@@ -31,7 +49,24 @@ const calculatorsByUser = async (userId) => {
                 as: 'TemplateVersionData'
             }
         }
-    ]);
+    ])
+    /**
+     * aggregate([
+        {
+            $match: {
+                user_id:o_id
+            }
+        },
+        {
+            $lookup: {
+                from: 'templateversions',
+                localField: 'template_version_id',
+                foreignField: '_id',
+                as: 'TemplateVersionData'
+            }
+        }
+    ])
+     */
 }
 
 const allUserByCompany = async () => {
@@ -110,7 +145,7 @@ const updateStatus = async (userId,updateBody) => {
  * 2.) template list [done]
  * 3.) graph
  */
-const getDashboard = async (userId) => {
+const getDashboard = async (userId,filter, options) => {
     const setChart = await commonService.setChart({type:'bargraph',uid:userId})
     const user = await userService.getUserById(userId);
     let roi_table = [];
@@ -119,26 +154,13 @@ const getDashboard = async (userId) => {
         throw new ApiError(httpStatus.NOT_FOUND, 'User not found');
       }
 
-    const calculatorsPerUser = await calculatorsByUser(userId);
+    const calculatorsPerUser = await calculatorsByUser(userId, filter, options);
 
     if(!calculatorsPerUser){
         throw new ApiError(httpStatus.NOT_FOUND, `No record found for user_id: ${userId} `);
     }
-    
+   
     calculatorsPerUser.map(v =>{
-//         console.log(v.user_id)
-//         if(v.user_id == userId){
-//             roi_table.push({
-//                 id:Object(v._id),
-//                 link: null,
-//                 importance: Number(v.importance),
-//                 name: v.title,
-//                 source: v.TemplateVersionData[0].name,
-//                 dateCreated: v.createdAt,
-//                 views: Number(v.visits),
-//                 uniqueViews: Number(v.unique_ip)
-//             });
-//         }
         roi_table.push({id:Object(v._id),
         link: null,
         importance: Number(v.importance),
@@ -235,13 +257,7 @@ const getDashboard = async (userId) => {
         throw new ApiError(httpStatus.NOT_FOUND, 'User not found');
     }
     
-    /**
-     * validate index key
-     */
-    // let bodyParamsValidator = await commonService.indexKeyValidator(Object.keys(updateBody));
-    // console.log(bodyParamsValidator);
-
-    // console.log(Object.keys(updateBody));
+  
 
     let calculator = await getCalculatorByUID(req.templateId);
     if(!calculator){
@@ -258,16 +274,19 @@ const getDashboard = async (userId) => {
     if (!user) {
         throw new ApiError(httpStatus.NOT_FOUND, 'User not found');
     }
-
-    const templateVersion = await getTemplateVersion(paramBody.templateVersion_id);    
+    // const template_id = paramBody.template_id;
+    const template_id = "628779c3ec4e045f4806f775";
+    const templateVersion = await getTemplateVersion(template_id);    
     if(!templateVersion){
         throw new ApiError(httpStatus.NOT_FOUND, `no record found!`)
     }
     
     const data = {};
+    const templateVersionID = new ObjectId("628779c3ec4e045f4806f775");
     data.user_id = params.userId;
     data.title = paramBody.name;
-    data.template_version_id = paramBody.templateVersion_id;
+    // data.template_version_id = paramBody.templateVersion_id;
+    data.template_version_id = templateVersionID;
 
     return Calculator.create(data);
   }
@@ -327,6 +346,18 @@ const getDashboard = async (userId) => {
     return Calculator.create(data);
   }
 
+  const getRoiTable = async(params) =>{
+    const filter = pick(params.query, ['title']);
+    const options = pick(params.query, ['sortBy', 'limit', 'page']);
+    const o_id = new ObjectId(params.userId);   
+  
+    const roi_table = await getAllCalculators(o_id, filter, options);
+    // if(!roi_table){
+    //     throw new ApiError(httpStatus.NOT_FOUND,"not found")
+    // }
+    console.log(roi_table)
+    return {};
+  }
 
 
   module.exports = {
@@ -337,5 +368,6 @@ const getDashboard = async (userId) => {
       updateroiTableService,
       createCalculator,
       deleteCalculator,
-      cloneCalculator
+      cloneCalculator,
+      getRoiTable
   }
