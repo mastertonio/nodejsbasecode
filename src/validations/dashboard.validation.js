@@ -8,6 +8,16 @@ const getDashboard = {
     }),
   };
 
+  const getROIS = {
+    query: Joi.object().keys({
+      title: Joi.string(),
+      sortBy: Joi.string(),
+      limit: Joi.number().integer(),
+      page: Joi.number().integer(),
+    }),
+  };
+
 module.exports = {
-    getDashboard
+    getDashboard,
+    getROIS
 }

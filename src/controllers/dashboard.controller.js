@@ -1,11 +1,16 @@
 const httpStatus = require('http-status');
 const catchAsync = require('../utils/catchAsync');
+const pick = require('../utils/pick');
 const {dashboadService} = require('../services');
 
 
 const getDashboard = catchAsync(async (req, res) => {
-    const dashboard = await dashboadService.getDashboard(req.params.userId);
-    res.status(httpStatus.CREATED).send(dashboard);
+    const filter = pick(req.query, ['title']);
+    const options = pick(req.query, ['sortBy', 'limit', 'page']);
+
+    console.log(options)
+    const dashboard = await dashboadService.getDashboard(req.params.userId, filter, options);
+    res.send(dashboard);
   });
 
 /**
@@ -62,6 +67,10 @@ const cloneCalculators = catchAsync(async (req,res)=>{
   res.send(clone_calculator);
 });
 
+const getRoiTable = catchAsync(async (req, res)=>{
+  const roiTable = await dashboadService.getRoiTable(req);
+  res.send(roiTable);
+});
 module.exports = {
     getDashboard,
     updateTemplateStatus,
@@ -70,5 +79,6 @@ module.exports = {
     updateroiTable,
     createCalculator,
     deleteCalculator,
-    cloneCalculators
+    cloneCalculators,
+    getRoiTable
 }
