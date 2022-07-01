@@ -168,7 +168,8 @@ const getDashboard = async (userId,filter, options) => {
         source: v.TemplateVersionData[0].name,
         dateCreated: v.createdAt,
         views: Number(v.visits),
-        uniqueViews: Number(v.unique_ip)
+        uniqueViews: Number(v.unique_ip),
+        status: v.status
         });
     })
     const ranking_UserByCompany = await allUserByCompany();
