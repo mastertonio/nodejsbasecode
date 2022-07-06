@@ -91,6 +91,7 @@ const calculatorSchema = mongoose.Schema(
 
 //add plugin that converts mongoose to json
 calculatorSchema.plugin(toJSON);
+calculatorSchema.plugin(paginate);
 
 /**
  *  @typedef Calculator

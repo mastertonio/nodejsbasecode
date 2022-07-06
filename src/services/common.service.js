@@ -1,5 +1,14 @@
-const dashboardData = async (uid) => {
+const pick = require("../utils/pick");
+
+const dashboardData = async (data_col) => {
     let data;
+    let monthlyCount = [0,0,0,0,0,0,0,0,0,0,0,0];
+    
+    data_col.collection.map(v=>{
+        monthlyCount[v.month-1] = v.count 
+    })
+    console.log(monthlyCount)
+   
     data ={
         chart: {
             type: 'column'
@@ -7,9 +16,7 @@ const dashboardData = async (uid) => {
         title: {
             text: 'ROI CREATED'
         },
-        subtitle: {
-            text: 'ROI Created Past Year'
-        },
+       
         xAxis: {
             categories: [
                 'Jan',
@@ -35,7 +42,7 @@ const dashboardData = async (uid) => {
         },
         series: [{
             name: 'ROI CREATED',
-            data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
+            data: monthlyCount
     
         }]
     };
@@ -47,9 +54,27 @@ const piegraph = async (uid) =>{
     return Object(uid);
 }
 const setChart = async (data) => {
+    
+    const d = new Date();
+    let year = d.getFullYear();
+    const data_col = [];
+    data.statistic.map(v=>{
+        console.log(v._id.month)
+        if(year == v._id.year){
+            data_col.push({
+                month: v._id.month,
+                count: v.count
+            })
+        }
+    })
+    const n_data_col = {
+        y:year,
+        collection: data_col
+    }
+    console.log(n_data_col)
  switch (data.type) {
     case 'bargraph':
-        return  dashboardData(data.uid);
+        return  dashboardData(n_data_col);
     case 'piegraph':
         return piegraph(data.uid);
  
