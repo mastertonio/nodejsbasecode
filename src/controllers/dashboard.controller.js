@@ -2,6 +2,7 @@ const httpStatus = require('http-status');
 const catchAsync = require('../utils/catchAsync');
 const pick = require('../utils/pick');
 const {dashboadService} = require('../services');
+const { jwtExtract } = require('./common.controller');
 
 
 const getDashboard = catchAsync(async (req, res) => {
@@ -67,9 +68,64 @@ const cloneCalculators = catchAsync(async (req,res)=>{
   res.send(clone_calculator);
 });
 
+/**
+ * get roi table
+ */
+
 const getRoiTable = catchAsync(async (req, res)=>{
-  const roiTable = await dashboadService.getRoiTable(req);
+  const uid = jwtExtract(req);
+  const roiTable = await dashboadService.getRoiTable(req,uid);
   res.send(roiTable);
+});
+
+/**
+ * fetch all tempaltes
+ */
+
+const getRoiTemplate = catchAsync(async (req, res)=>{
+  const uid = jwtExtract(req);
+  const roiTable = await dashboadService.getRoiTemplates(uid);
+  res.send(roiTable);
+});
+
+/**
+ * fetch all admin user
+ */
+
+const getRoiAdmin =catchAsync(async (req, res) =>{
+  const uid = jwtExtract(req);
+  const roiAdmin = await dashboadService.getRoiAdmin(uid);
+  res.send(roiAdmin);
+});
+
+/**
+ * fetch graph data
+ */
+ const getRoiGraph =catchAsync(async (req, res) =>{
+  const uid = jwtExtract(req);
+  const roiGraph = await dashboadService.getRoiGraph(uid);
+  res.send(roiGraph);
+});
+
+/**
+ * fetch Ranking
+ */
+ 
+ const getRanking =catchAsync(async (req, res) =>{
+  const uid = jwtExtract(req);
+  const userRanking = await dashboadService.getRanking(uid);
+  res.send(userRanking);
+});
+
+/**
+ * dashboard
+ * 
+ */
+
+ const dashboardData =catchAsync(async (req, res) =>{
+  const uid = jwtExtract(req);
+  const dashboard_data = await dashboadService.dashboardData(uid);
+  res.send(dashboard_data);
 });
 module.exports = {
     getDashboard,
@@ -80,5 +136,10 @@ module.exports = {
     createCalculator,
     deleteCalculator,
     cloneCalculators,
-    getRoiTable
+    getRoiTable,
+    getRoiTemplate,
+    getRoiAdmin,
+    getRoiGraph,
+    getRanking,
+    dashboardData
 }

@@ -10,11 +10,27 @@ router
   .route('/:userId')
   .get(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.getDashboard)
   .put(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.updateTemplateStatus)
-  .post(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.createCalculator)
-  
+  .post(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.createCalculator);
+
 router
-  .route('/roi/:userId')
+  .route('/')
+  .get(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.dashboardData);
+router
+  .route('/ranking/list')
+  .get(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.getRanking);
+router
+  .route('/roi/list')
   .get(auth('getDashboard'), validate(dashboardValidation.getROIS), dashboardController.getRoiTable)
+router
+  .route('/template/list')
+  .get(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.getRoiTemplate)
+router
+  .route('/admin/list')
+  .get(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.getRoiAdmin);
+
+router
+  .route('/data/graph')
+  .get(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.getRoiGraph);
 
 router
   .route('/roi/:templateId/:userId')
@@ -22,7 +38,7 @@ router
   .put(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.updateImportance)
   .patch(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.updateroiTable)
   .delete(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.deleteCalculator)
-  .post(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.cloneCalculators);
+  .post(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.cloneCalculators)
 
 
 

@@ -6,26 +6,32 @@ const ObjectId = require('mongodb').ObjectID;
 const pick = require('../utils/pick');
 
 const { Calculator, Company, Template, TemplateVersion, User} = require('../models');
+const { data } = require('../config/logger');
 
 const getAllTemplate = async () => {
     return Template.find();
 }
-
-const getAllCalculators = async (userId,filter, options) => {
-    // 'limit', 'page'
-    const pageOptions = {
-        page: parseInt(options.page, 10) || 0,
-        limit: parseInt(options.limit, 10) || 10
+const getCalculatorStatistic = async (uid) =>{
+   return Calculator.aggregate([
+    // {
+    //     $match: {
+    //         user_id:uid
+    //     }
+    // },
+    {
+      $group: {
+        _id: {
+          month: { $month: "$createdAt" },
+          year: { $year: "$createdAt" }
+        },
+        count: { $sum: 1 }
+      }
     }
+  ])
+}
 
-    return Calculator.find()
-    .skip(pageOptions.page * pageOptions.limit)
-    .limit(pageOptions.limit)
-    .exec(function (err, doc) {
-        if(err) { res.status(500).json(err); return; };
-        return doc
-    });
-    console.log(data)
+const getAllCalculators = async (filter, options) => {
+    return  Calculator.paginate(filter, options);
 }
 
 
@@ -146,7 +152,7 @@ const updateStatus = async (userId,updateBody) => {
  * 3.) graph
  */
 const getDashboard = async (userId,filter, options) => {
-    const setChart = await commonService.setChart({type:'bargraph',uid:userId})
+    // const setChart = await commonService.setChart({type:'bargraph',uid:userId})
     const user = await userService.getUserById(userId);
     let roi_table = [];
     
@@ -161,8 +167,9 @@ const getDashboard = async (userId,filter, options) => {
     }
    
     calculatorsPerUser.map(v =>{
+        console.log(v)
         roi_table.push({id:Object(v._id),
-        link: null,
+        link: v.linked_title,
         importance: Number(v.importance),
         name: v.title,
         source: v.TemplateVersionData[0].name,
@@ -210,7 +217,56 @@ const getDashboard = async (userId,filter, options) => {
 
     data.my_roi = roi_table
 
-    data.chart = setChart;
+    data.chart = {
+        "chart": {
+            "type": "column"
+        },
+        "title": {
+            "text": "ROI CREATED"
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "crosshair": true
+        },
+        "yAxis": {
+            "min": 0,
+            "title": {
+                "text": ""
+            }
+        },
+        "series": [
+            {
+                "name": "ROI CREATED",
+                "data": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    17,
+                    3,
+                    13,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            }
+        ]
+    };
 
     return data;
   };
@@ -347,17 +403,107 @@ const getDashboard = async (userId,filter, options) => {
     return Calculator.create(data);
   }
 
-  const getRoiTable = async(params) =>{
+  const getRoiTable = async(params,uid) =>{
+    const data = [];
     const filter = pick(params.query, ['title']);
-    const options = pick(params.query, ['sortBy', 'limit', 'page']);
-    const o_id = new ObjectId(params.userId);   
-  
-    const roi_table = await getAllCalculators(o_id, filter, options);
-    // if(!roi_table){
-    //     throw new ApiError(httpStatus.NOT_FOUND,"not found")
-    // }
-    console.log(roi_table)
-    return {};
+    const options = pick(params.query, ['sortBy', 'limit', 'page']);  
+    const roi_table = await getAllCalculators(filter, options);
+
+    const user = await userService.getUserById(uid);
+    if (!user) {
+        throw new ApiError(httpStatus.NOT_FOUND, 'User not found');
+    }
+
+    roi_table.results.map(v=>{
+        if(uid == v.user_id){
+            
+            data.push({
+                id: v._id,
+                link: v.linked_title,
+                importance: Number(v.importance),
+                name: v.title,
+                source: v.template_version_id,
+                dateCreated: v.createdAt,
+                views: Number(v.visits),
+                uniqueViews: Number(v.unique_ip),
+                status: v.status
+            })
+        
+        }
+    });
+    roi_table.results = data;
+    return roi_table;
+  }
+
+  const getRoiTemplates = async(uid) =>{
+    
+    const user = await userService.getUserById(uid);
+    if (!user) {
+        throw new ApiError(httpStatus.NOT_FOUND, 'User not found');
+    }
+    return  getAllTemplate();
+  }
+
+  const getRoiAdmin = async(uid) => {
+    
+    const user = await userService.getUserById(uid);
+    if (!user) {
+        throw new ApiError(httpStatus.NOT_FOUND, 'User not found');
+    }
+    return getAllAdmin();
+  }
+
+  const getRoiGraph = async(uid) =>{
+    const user = await userService.getUserById(uid);
+    if (!user) {
+        throw new ApiError(httpStatus.NOT_FOUND, 'User not found');
+    }
+    let o_id = new ObjectId(uid);     
+    const statistic = await getCalculatorStatistic(o_id);
+    
+     return commonService.setChart({type:'bargraph',uid:uid, statistic})
+    // return setChart;
+  }
+
+  const getRanking = async(uid) =>{
+    const user = await userService.getUserById(uid);
+    if (!user) {
+        throw new ApiError(httpStatus.NOT_FOUND, 'User not found');
+    }
+    return allUserByCompany();
+  }
+
+
+  const dashboardData = async(uid) =>{
+    const user = await userService.getUserById(uid);
+    if (!user) {
+        throw new ApiError(httpStatus.NOT_FOUND, 'User not found');
+    }
+
+    const active_roi =  await getActiveROI(user._id);
+    const all_roi = await getAllROI(user._id);
+    const name = user.name;
+ 
+
+    /***
+     * it will be replace in the future 
+     * just leave this static data
+     */
+     const viewcount = [
+        {
+            roi_name: "My Company",
+            count: 0
+        }
+    ];
+    console.log(data)
+    return {
+        welcome:{
+            account_name: name.toString().toUpperCase(),
+            current_roi: all_roi.length,
+            active_roi: active_roi.length
+        },
+        viewcount:viewcount
+    };
   }
 
 
@@ -370,5 +516,10 @@ const getDashboard = async (userId,filter, options) => {
       createCalculator,
       deleteCalculator,
       cloneCalculator,
-      getRoiTable
+      getRoiTable,
+      getRoiTemplates,
+      getRoiAdmin,
+      getRoiGraph,
+      getRanking,
+      dashboardData
   }
