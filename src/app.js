@@ -14,54 +14,56 @@ const routes = require('./routes/v1');
 const { errorConverter, errorHandler } = require('./middlewares/error');
 const ApiError = require('./utils/ApiError');
 
-const app = express();
 
-if (config.env !== 'test') {
-  app.use(morgan.successHandler);
-  app.use(morgan.errorHandler);
-}
+  const app = express();
 
-// set security HTTP headers
-app.use(helmet());
+  if (config.env !== 'test') {
+    app.use(morgan.successHandler);
+    app.use(morgan.errorHandler);
+  }
 
-// parse json request body
-app.use(express.json());
+  // set security HTTP headers
+  app.use(helmet());
 
-// parse urlencoded request body
-app.use(express.urlencoded({ extended: true }));
+  // parse json request body
+  app.use(express.json());
 
-// sanitize request data
-app.use(xss());
-app.use(mongoSanitize());
+  // parse urlencoded request body
+  app.use(express.urlencoded({ extended: true }));
 
-// gzip compression
-app.use(compression());
+  // sanitize request data
+  app.use(xss());
+  app.use(mongoSanitize());
 
-// enable cors
-app.use(cors());
-app.options('*', cors());
+  // gzip compression
+  app.use(compression());
 
-// jwt authentication
-app.use(passport.initialize());
-passport.use('jwt', jwtStrategy);
+  // enable cors
+  app.use(cors());
+  app.options('*', cors());
 
-// limit repeated failed requests to auth endpoints
-if (config.env === 'production') {
-  app.use('/v1/auth', authLimiter);
-}
+  // jwt authentication
+  app.use(passport.initialize());
+  passport.use('jwt', jwtStrategy);
 
-// v1 api routes
-app.use('/v1', routes);
+  // limit repeated failed requests to auth endpoints
+  if (config.env === 'production') {
+    app.use('/v1/auth', authLimiter);
+  }
 
-// send back a 404 error for any unknown api request
-app.use((req, res, next) => {
-  next(new ApiError(httpStatus.NOT_FOUND, 'Not found'));
-});
+  // v1 api routes
+  app.use('/v1', routes);
 
-// convert error to ApiError, if needed
-app.use(errorConverter);
+  // send back a 404 error for any unknown api request
+  app.use((req, res, next) => {
+    next(new ApiError(httpStatus.NOT_FOUND, 'Not found'));
+  });
 
-// handle error
-app.use(errorHandler);
+  // convert error to ApiError, if needed
+  app.use(errorConverter);
 
-module.exports = app;
+  // handle error
+  app.use(errorHandler);
+
+  module.exports = app;
+
