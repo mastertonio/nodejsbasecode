@@ -50,6 +50,7 @@
   ],
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "cluster": "^0.7.7",
     "compression": "^1.7.4",
     "cors": "^2.8.5",
     "cross-env": "^7.0.0",
@@ -63,6 +64,7 @@
     "joi": "^17.3.0",
     "jsonwebtoken": "^8.5.1",
     "jwt-decode": "^3.1.2",
+    "loadtest": "^5.2.0",
     "moment": "^2.24.0",
     "mongoose": "^5.7.7",
     "morgan": "^1.9.1",
