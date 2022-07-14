@@ -53,15 +53,14 @@ const getCompany = async(uid,comp)=>{
  * @param {Object} 
  * @returns {Promise<Company>}
  */
- const getAllCompany = async(uid,comp)=>{
+ const getAllCompany = async(uid)=>{
     const user = userService.getUserById(uid);
     
     if(!user){
         throw new ApiError(httpStatus.NOT_FOUND, 'User not found');
     }
 
-    const company = await fetchAllCompany();
-    return company;
+   return  fetchAllCompany();
 
 }
 
