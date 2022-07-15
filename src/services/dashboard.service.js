@@ -383,7 +383,7 @@ const getDashboard = async (userId,filter, options) => {
         "verification_code": template.verification_code,
         "email_protected": template.email_protected,
         "visits": template.visits,
-        "unique_ip": template.unique_ip,
+        "unique_ip": 0,
         "currency": template.currency,
         "is_sf_opportunity": template.is_sf_opportunity,
         "salesforce_id": template.salesforce_id,
