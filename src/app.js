@@ -4,6 +4,7 @@ const xss = require('xss-clean');
 const mongoSanitize = require('express-mongo-sanitize');
 const compression = require('compression');
 const cors = require('cors');
+const upload = require('express-fileupload');
 const passport = require('passport');
 const httpStatus = require('http-status');
 const config = require('./config/config');
@@ -16,6 +17,7 @@ const ApiError = require('./utils/ApiError');
 
 
   const app = express();
+  
 
   if (config.env !== 'test') {
     app.use(morgan.successHandler);
@@ -34,6 +36,7 @@ const ApiError = require('./utils/ApiError');
   // sanitize request data
   app.use(xss());
   app.use(mongoSanitize());
+  app.use(upload());
 
   // gzip compression
   app.use(compression());
@@ -58,7 +61,7 @@ const ApiError = require('./utils/ApiError');
   app.use((req, res, next) => {
     next(new ApiError(httpStatus.NOT_FOUND, 'Not found'));
   });
-
+  
   // convert error to ApiError, if needed
   app.use(errorConverter);
 

@@ -1,4 +1,5 @@
 const express = require('express');
+
 const auth = require('../../middlewares/auth');
 const validate = require('../../middlewares/validate');
 const companyValidation = require('../../validations/company.validation');
@@ -10,9 +11,12 @@ const router = express.Router();
 
 router
   .route('/')
-  .post(auth('createCompany'), validate(companyValidation.createCompany), companyController.createCompany)
+  //auth('createCompany'), validate(companyValidation.createCompany),
+  .post(  companyController.createCompany)
   .get(auth('getCompany'), validate(companyValidation.getCompany), companyController.getAllCompany);
-
+router
+  .route('/get/file')
+  .post(companyController.getFile)
 router
   .route('/:_id')
   .get(auth('getCompany'), validate(companyValidation.getCompany), companyController.getCompany)

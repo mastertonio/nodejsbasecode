@@ -4,3 +4,763 @@
 [31merror[39m: TypeError: app.listen is not a function
     at D:\ROINode_Backend\src\index.js:9:16
     at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: SyntaxError: Unexpected token - in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (D:\ROINode_Backend\node_modules\body-parser\lib\types\json.js:160:10)
+    at parse (D:\ROINode_Backend\node_modules\body-parser\lib\types\json.js:83:15)
+    at D:\ROINode_Backend\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:202:9)
+    at invokeCallback (D:\ROINode_Backend\node_modules\raw-body\index.js:231:16)
+    at done (D:\ROINode_Backend\node_modules\raw-body\index.js:220:7)
+    at IncomingMessage.onEnd (D:\ROINode_Backend\node_modules\raw-body\index.js:280:7)
+    at IncomingMessage.emit (node:events:539:35)
+    at endReadableNT (node:internal/streams/readable:1345:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[31merror[39m: POST /v1/company 400 - 21.445 ms - message: Unexpected token - in JSON at position 0
+[31merror[39m: SyntaxError: Unexpected token - in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (D:\ROINode_Backend\node_modules\body-parser\lib\types\json.js:160:10)
+    at parse (D:\ROINode_Backend\node_modules\body-parser\lib\types\json.js:83:15)
+    at D:\ROINode_Backend\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:202:9)
+    at invokeCallback (D:\ROINode_Backend\node_modules\raw-body\index.js:231:16)
+    at done (D:\ROINode_Backend\node_modules\raw-body\index.js:220:7)
+    at IncomingMessage.onEnd (D:\ROINode_Backend\node_modules\raw-body\index.js:280:7)
+    at IncomingMessage.emit (node:events:539:35)
+    at endReadableNT (node:internal/streams/readable:1345:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[31merror[39m: POST /v1/company 400 - 17.406 ms - message: Unexpected token - in JSON at position 0
+[31merror[39m: SyntaxError: Unexpected token - in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (D:\ROINode_Backend\node_modules\body-parser\lib\types\json.js:160:10)
+    at parse (D:\ROINode_Backend\node_modules\body-parser\lib\types\json.js:83:15)
+    at D:\ROINode_Backend\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:202:9)
+    at invokeCallback (D:\ROINode_Backend\node_modules\raw-body\index.js:231:16)
+    at done (D:\ROINode_Backend\node_modules\raw-body\index.js:220:7)
+    at IncomingMessage.onEnd (D:\ROINode_Backend\node_modules\raw-body\index.js:280:7)
+    at IncomingMessage.emit (node:events:539:35)
+    at endReadableNT (node:internal/streams/readable:1345:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[31merror[39m: POST /v1/company 400 - 24.957 ms - message: Unexpected token - in JSON at position 0
+[31merror[39m: SyntaxError: Unexpected token - in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (D:\ROINode_Backend\node_modules\body-parser\lib\types\json.js:160:10)
+    at parse (D:\ROINode_Backend\node_modules\body-parser\lib\types\json.js:83:15)
+    at D:\ROINode_Backend\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:202:9)
+    at invokeCallback (D:\ROINode_Backend\node_modules\raw-body\index.js:231:16)
+    at done (D:\ROINode_Backend\node_modules\raw-body\index.js:220:7)
+    at IncomingMessage.onEnd (D:\ROINode_Backend\node_modules\raw-body\index.js:280:7)
+    at IncomingMessage.emit (node:events:539:35)
+    at endReadableNT (node:internal/streams/readable:1345:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[31merror[39m: POST /v1/company 400 - 38.091 ms - message: Unexpected token - in JSON at position 0
+[31merror[39m: SyntaxError: Unexpected token o in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at D:\ROINode_Backend\src\controllers\company.controller.js:12:23
+    at D:\ROINode_Backend\src\utils\catchAsync.js:2:19
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:28:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company 500 - 97.018 ms - message: Unexpected token o in JSON at position 1
+[31merror[39m: SyntaxError: Unexpected token o in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at D:\ROINode_Backend\src\controllers\company.controller.js:12:23
+    at D:\ROINode_Backend\src\utils\catchAsync.js:2:19
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (D:\ROINode_Backend\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (D:\ROINode_Backend\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\ROINode_Backend\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+[31merror[39m: POST /v1/company 500 - 48.191 ms - message: Unexpected token o in JSON at position 1
+[31merror[39m: ReferenceError: response is not defined
+    at D:\ROINode_Backend\src\controllers\company.controller.js:12:5
+    at D:\ROINode_Backend\src\utils\catchAsync.js:2:19
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (D:\ROINode_Backend\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (D:\ROINode_Backend\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\ROINode_Backend\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+[31merror[39m: POST /v1/company 500 - 14.350 ms - message: response is not defined
+[31merror[39m: ReferenceError: request is not defined
+    at D:\ROINode_Backend\src\controllers\company.controller.js:12:14
+    at D:\ROINode_Backend\src\utils\catchAsync.js:2:19
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (D:\ROINode_Backend\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (D:\ROINode_Backend\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\ROINode_Backend\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+[31merror[39m: POST /v1/company 500 - 14.528 ms - message: request is not defined
+[31merror[39m: SyntaxError: Unexpected token o in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at D:\ROINode_Backend\src\controllers\company.controller.js:12:22
+    at D:\ROINode_Backend\src\utils\catchAsync.js:2:19
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (D:\ROINode_Backend\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (D:\ROINode_Backend\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\ROINode_Backend\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+[31merror[39m: POST /v1/company 500 - 74.851 ms - message: Unexpected token o in JSON at position 1
+[31merror[39m: Error: Malformed content type
+    at getInstance (D:\ROINode_Backend\node_modules\busboy\lib\index.js:9:11)
+    at module.exports (D:\ROINode_Backend\node_modules\busboy\lib\index.js:56:10)
+    at module.exports (D:\ROINode_Backend\node_modules\express-fileupload\lib\processMultipart.js:32:18)
+    at D:\ROINode_Backend\node_modules\express-fileupload\lib\index.js:37:5
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at D:\ROINode_Backend\node_modules\express-mongo-sanitize\index.js:122:5
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at D:\ROINode_Backend\node_modules\xss-clean\lib\index.js:11:5
+[31merror[39m: POST /v1/company 500 - 9.738 ms - message: Malformed content type
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'name')
+    at D:\ROINode_Backend\src\controllers\company.controller.js:18:25
+    at D:\ROINode_Backend\src\utils\catchAsync.js:2:19
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (D:\ROINode_Backend\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (D:\ROINode_Backend\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\ROINode_Backend\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+[31merror[39m: POST /v1/company 500 - 24.126 ms - message: Cannot read properties of undefined (reading 'name')
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'name')
+    at D:\ROINode_Backend\src\controllers\company.controller.js:18:25
+    at D:\ROINode_Backend\src\utils\catchAsync.js:2:19
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (D:\ROINode_Backend\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (D:\ROINode_Backend\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\ROINode_Backend\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+[31merror[39m: POST /v1/company 500 - 29.499 ms - message: Cannot read properties of undefined (reading 'name')
+[31merror[39m: Error: params.Body is required
+    at ManagedUpload.validateBody (D:\ROINode_Backend\node_modules\aws-sdk\lib\s3\managed_upload.js:271:13)
+    at ManagedUpload.configure (D:\ROINode_Backend\node_modules\aws-sdk\lib\s3\managed_upload.js:123:10)
+    at new ManagedUpload (D:\ROINode_Backend\node_modules\aws-sdk\lib\s3\managed_upload.js:95:10)
+    at features.constructor.upload (D:\ROINode_Backend\node_modules\aws-sdk\lib\services\s3.js:1284:20)
+    at D:\ROINode_Backend\src\controllers\company.controller.js:29:36
+    at D:\ROINode_Backend\src\utils\catchAsync.js:2:19
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (D:\ROINode_Backend\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (D:\ROINode_Backend\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\ROINode_Backend\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+[31merror[39m: POST /v1/company 500 - 27.889 ms - message: params.Body is required
+[31merror[39m: Error: params.Body is required
+    at ManagedUpload.validateBody (D:\ROINode_Backend\node_modules\aws-sdk\lib\s3\managed_upload.js:271:13)
+    at ManagedUpload.configure (D:\ROINode_Backend\node_modules\aws-sdk\lib\s3\managed_upload.js:123:10)
+    at new ManagedUpload (D:\ROINode_Backend\node_modules\aws-sdk\lib\s3\managed_upload.js:95:10)
+    at features.constructor.upload (D:\ROINode_Backend\node_modules\aws-sdk\lib\services\s3.js:1284:20)
+    at D:\ROINode_Backend\src\controllers\company.controller.js:31:36
+    at D:\ROINode_Backend\src\utils\catchAsync.js:2:19
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (D:\ROINode_Backend\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (D:\ROINode_Backend\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\ROINode_Backend\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+[31merror[39m: POST /v1/company 500 - 40.435 ms - message: params.Body is required
+[31merror[39m: TypeError [ERR_INVALID_ARG_TYPE]: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received an instance of Promise
+    at new NodeError (node:internal/errors:372:5)
+    at Function.from (node:buffer:323:9)
+    at D:\ROINode_Backend\src\controllers\company.controller.js:61:22
+    at D:\ROINode_Backend\src\utils\catchAsync.js:2:19
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (D:\ROINode_Backend\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (D:\ROINode_Backend\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\ROINode_Backend\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+[31merror[39m: POST /v1/company 500 - 65.126 ms - message: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received an instance of Promise
+[31merror[39m: NoSuchKey: The specified key does not exist.
+    at Request.extractError (D:\ROINode_Backend\node_modules\aws-sdk\lib\services\s3.js:711:35)
+    at Request.callListeners (D:\ROINode_Backend\node_modules\aws-sdk\lib\sequential_executor.js:106:20)
+    at Request.emit (D:\ROINode_Backend\node_modules\aws-sdk\lib\sequential_executor.js:78:10)
+    at Request.emit (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:686:14)
+    at Request.transition (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:22:10)
+    at AcceptorStateMachine.runTo (D:\ROINode_Backend\node_modules\aws-sdk\lib\state_machine.js:14:12)
+    at D:\ROINode_Backend\node_modules\aws-sdk\lib\state_machine.js:26:10
+    at Request.<anonymous> (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:38:9)
+    at Request.<anonymous> (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:688:12)
+    at Request.callListeners (D:\ROINode_Backend\node_modules\aws-sdk\lib\sequential_executor.js:116:18)
+    at Request.emit (D:\ROINode_Backend\node_modules\aws-sdk\lib\sequential_executor.js:78:10)
+    at Request.emit (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:686:14)
+    at Request.transition (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:22:10)
+    at AcceptorStateMachine.runTo (D:\ROINode_Backend\node_modules\aws-sdk\lib\state_machine.js:14:12)
+    at D:\ROINode_Backend\node_modules\aws-sdk\lib\state_machine.js:26:10
+    at Request.<anonymous> (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:38:9)
+[31merror[39m: NoSuchKey: The specified key does not exist.
+    at Request.extractError (D:\ROINode_Backend\node_modules\aws-sdk\lib\services\s3.js:711:35)
+    at Request.callListeners (D:\ROINode_Backend\node_modules\aws-sdk\lib\sequential_executor.js:106:20)
+    at Request.emit (D:\ROINode_Backend\node_modules\aws-sdk\lib\sequential_executor.js:78:10)
+    at Request.emit (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:686:14)
+    at Request.transition (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:22:10)
+    at AcceptorStateMachine.runTo (D:\ROINode_Backend\node_modules\aws-sdk\lib\state_machine.js:14:12)
+    at D:\ROINode_Backend\node_modules\aws-sdk\lib\state_machine.js:26:10
+    at Request.<anonymous> (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:38:9)
+    at Request.<anonymous> (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:688:12)
+    at Request.callListeners (D:\ROINode_Backend\node_modules\aws-sdk\lib\sequential_executor.js:116:18)
+    at Request.emit (D:\ROINode_Backend\node_modules\aws-sdk\lib\sequential_executor.js:78:10)
+    at Request.emit (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:686:14)
+    at Request.transition (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:22:10)
+    at AcceptorStateMachine.runTo (D:\ROINode_Backend\node_modules\aws-sdk\lib\state_machine.js:14:12)
+    at D:\ROINode_Backend\node_modules\aws-sdk\lib\state_machine.js:26:10
+    at Request.<anonymous> (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:38:9)
+[31merror[39m: AccessDenied: Access Denied
+    at Request.extractError (D:\ROINode_Backend\node_modules\aws-sdk\lib\services\s3.js:711:35)
+    at Request.callListeners (D:\ROINode_Backend\node_modules\aws-sdk\lib\sequential_executor.js:106:20)
+    at Request.emit (D:\ROINode_Backend\node_modules\aws-sdk\lib\sequential_executor.js:78:10)
+    at Request.emit (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:686:14)
+    at Request.transition (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:22:10)
+    at AcceptorStateMachine.runTo (D:\ROINode_Backend\node_modules\aws-sdk\lib\state_machine.js:14:12)
+    at D:\ROINode_Backend\node_modules\aws-sdk\lib\state_machine.js:26:10
+    at Request.<anonymous> (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:38:9)
+    at Request.<anonymous> (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:688:12)
+    at Request.callListeners (D:\ROINode_Backend\node_modules\aws-sdk\lib\sequential_executor.js:116:18)
+    at Request.emit (D:\ROINode_Backend\node_modules\aws-sdk\lib\sequential_executor.js:78:10)
+    at Request.emit (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:686:14)
+    at Request.transition (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:22:10)
+    at AcceptorStateMachine.runTo (D:\ROINode_Backend\node_modules\aws-sdk\lib\state_machine.js:14:12)
+    at D:\ROINode_Backend\node_modules\aws-sdk\lib\state_machine.js:26:10
+    at Request.<anonymous> (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:38:9)
+[31merror[39m: POST /v1/company 400 - 2141.133 ms - message: Access Denied
+[31merror[39m: AccessDenied: Access Denied
+    at Request.extractError (D:\ROINode_Backend\node_modules\aws-sdk\lib\services\s3.js:711:35)
+    at Request.callListeners (D:\ROINode_Backend\node_modules\aws-sdk\lib\sequential_executor.js:106:20)
+    at Request.emit (D:\ROINode_Backend\node_modules\aws-sdk\lib\sequential_executor.js:78:10)
+    at Request.emit (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:686:14)
+    at Request.transition (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:22:10)
+    at AcceptorStateMachine.runTo (D:\ROINode_Backend\node_modules\aws-sdk\lib\state_machine.js:14:12)
+    at D:\ROINode_Backend\node_modules\aws-sdk\lib\state_machine.js:26:10
+    at Request.<anonymous> (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:38:9)
+    at Request.<anonymous> (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:688:12)
+    at Request.callListeners (D:\ROINode_Backend\node_modules\aws-sdk\lib\sequential_executor.js:116:18)
+    at Request.emit (D:\ROINode_Backend\node_modules\aws-sdk\lib\sequential_executor.js:78:10)
+    at Request.emit (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:686:14)
+    at Request.transition (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:22:10)
+    at AcceptorStateMachine.runTo (D:\ROINode_Backend\node_modules\aws-sdk\lib\state_machine.js:14:12)
+    at D:\ROINode_Backend\node_modules\aws-sdk\lib\state_machine.js:26:10
+    at Request.<anonymous> (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:38:9)
+[31merror[39m: POST /v1/company 400 - 2093.467 ms - message: Access Denied
+[31merror[39m: AccessDenied: Access Denied
+    at Request.extractError (D:\ROINode_Backend\node_modules\aws-sdk\lib\services\s3.js:711:35)
+    at Request.callListeners (D:\ROINode_Backend\node_modules\aws-sdk\lib\sequential_executor.js:106:20)
+    at Request.emit (D:\ROINode_Backend\node_modules\aws-sdk\lib\sequential_executor.js:78:10)
+    at Request.emit (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:686:14)
+    at Request.transition (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:22:10)
+    at AcceptorStateMachine.runTo (D:\ROINode_Backend\node_modules\aws-sdk\lib\state_machine.js:14:12)
+    at D:\ROINode_Backend\node_modules\aws-sdk\lib\state_machine.js:26:10
+    at Request.<anonymous> (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:38:9)
+    at Request.<anonymous> (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:688:12)
+    at Request.callListeners (D:\ROINode_Backend\node_modules\aws-sdk\lib\sequential_executor.js:116:18)
+    at Request.emit (D:\ROINode_Backend\node_modules\aws-sdk\lib\sequential_executor.js:78:10)
+    at Request.emit (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:686:14)
+    at Request.transition (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:22:10)
+    at AcceptorStateMachine.runTo (D:\ROINode_Backend\node_modules\aws-sdk\lib\state_machine.js:14:12)
+    at D:\ROINode_Backend\node_modules\aws-sdk\lib\state_machine.js:26:10
+    at Request.<anonymous> (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:38:9)
+[31merror[39m: POST /v1/company 400 - 2080.559 ms - message: Access Denied
+[31merror[39m: NoSuchKey: The specified key does not exist.
+    at Request.extractError (D:\ROINode_Backend\node_modules\aws-sdk\lib\services\s3.js:711:35)
+    at Request.callListeners (D:\ROINode_Backend\node_modules\aws-sdk\lib\sequential_executor.js:106:20)
+    at Request.emit (D:\ROINode_Backend\node_modules\aws-sdk\lib\sequential_executor.js:78:10)
+    at Request.emit (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:686:14)
+    at Request.transition (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:22:10)
+    at AcceptorStateMachine.runTo (D:\ROINode_Backend\node_modules\aws-sdk\lib\state_machine.js:14:12)
+    at D:\ROINode_Backend\node_modules\aws-sdk\lib\state_machine.js:26:10
+    at Request.<anonymous> (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:38:9)
+    at Request.<anonymous> (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:688:12)
+    at Request.callListeners (D:\ROINode_Backend\node_modules\aws-sdk\lib\sequential_executor.js:116:18)
+    at Request.emit (D:\ROINode_Backend\node_modules\aws-sdk\lib\sequential_executor.js:78:10)
+    at Request.emit (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:686:14)
+    at Request.transition (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:22:10)
+    at AcceptorStateMachine.runTo (D:\ROINode_Backend\node_modules\aws-sdk\lib\state_machine.js:14:12)
+    at D:\ROINode_Backend\node_modules\aws-sdk\lib\state_machine.js:26:10
+    at Request.<anonymous> (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:38:9)
+[31merror[39m: POST /v1/company 400 - 1055.614 ms - message: The specified key does not exist.
+[31merror[39m: NoSuchKey: The specified key does not exist.
+    at Request.extractError (D:\ROINode_Backend\node_modules\aws-sdk\lib\services\s3.js:711:35)
+    at Request.callListeners (D:\ROINode_Backend\node_modules\aws-sdk\lib\sequential_executor.js:106:20)
+    at Request.emit (D:\ROINode_Backend\node_modules\aws-sdk\lib\sequential_executor.js:78:10)
+    at Request.emit (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:686:14)
+    at Request.transition (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:22:10)
+    at AcceptorStateMachine.runTo (D:\ROINode_Backend\node_modules\aws-sdk\lib\state_machine.js:14:12)
+    at D:\ROINode_Backend\node_modules\aws-sdk\lib\state_machine.js:26:10
+    at Request.<anonymous> (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:38:9)
+    at Request.<anonymous> (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:688:12)
+    at Request.callListeners (D:\ROINode_Backend\node_modules\aws-sdk\lib\sequential_executor.js:116:18)
+    at Request.emit (D:\ROINode_Backend\node_modules\aws-sdk\lib\sequential_executor.js:78:10)
+    at Request.emit (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:686:14)
+    at Request.transition (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:22:10)
+    at AcceptorStateMachine.runTo (D:\ROINode_Backend\node_modules\aws-sdk\lib\state_machine.js:14:12)
+    at D:\ROINode_Backend\node_modules\aws-sdk\lib\state_machine.js:26:10
+    at Request.<anonymous> (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:38:9)
+[31merror[39m: POST /v1/company 400 - 1026.534 ms - message: The specified key does not exist.
+[31merror[39m: NoSuchKey: The specified key does not exist.
+    at Request.extractError (D:\ROINode_Backend\node_modules\aws-sdk\lib\services\s3.js:711:35)
+    at Request.callListeners (D:\ROINode_Backend\node_modules\aws-sdk\lib\sequential_executor.js:106:20)
+    at Request.emit (D:\ROINode_Backend\node_modules\aws-sdk\lib\sequential_executor.js:78:10)
+    at Request.emit (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:686:14)
+    at Request.transition (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:22:10)
+    at AcceptorStateMachine.runTo (D:\ROINode_Backend\node_modules\aws-sdk\lib\state_machine.js:14:12)
+    at D:\ROINode_Backend\node_modules\aws-sdk\lib\state_machine.js:26:10
+    at Request.<anonymous> (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:38:9)
+    at Request.<anonymous> (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:688:12)
+    at Request.callListeners (D:\ROINode_Backend\node_modules\aws-sdk\lib\sequential_executor.js:116:18)
+    at Request.emit (D:\ROINode_Backend\node_modules\aws-sdk\lib\sequential_executor.js:78:10)
+    at Request.emit (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:686:14)
+    at Request.transition (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:22:10)
+    at AcceptorStateMachine.runTo (D:\ROINode_Backend\node_modules\aws-sdk\lib\state_machine.js:14:12)
+    at D:\ROINode_Backend\node_modules\aws-sdk\lib\state_machine.js:26:10
+    at Request.<anonymous> (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:38:9)
+[31merror[39m: POST /v1/company 400 - 1027.815 ms - message: The specified key does not exist.
+[31merror[39m: TypeError [ERR_INVALID_ARG_TYPE]: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received an instance of Object
+    at new NodeError (node:internal/errors:372:5)
+    at Function.from (node:buffer:323:9)
+    at D:\ROINode_Backend\src\controllers\company.controller.js:73:22
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company 500 - 1026.221 ms - message: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received an instance of Object
+[31merror[39m: TypeError [ERR_INVALID_ARG_TYPE]: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received an instance of Object
+    at new NodeError (node:internal/errors:372:5)
+    at Function.from (node:buffer:323:9)
+    at D:\ROINode_Backend\src\controllers\company.controller.js:73:22
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company 500 - 1041.413 ms - message: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received an instance of Object
+[31merror[39m: TypeError [ERR_INVALID_ARG_TYPE]: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received an instance of Object
+    at new NodeError (node:internal/errors:372:5)
+    at Function.from (node:buffer:323:9)
+    at D:\ROINode_Backend\src\controllers\company.controller.js:73:22
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company 500 - 1015.783 ms - message: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received an instance of Object
+[31merror[39m: TypeError [ERR_INVALID_ARG_TYPE]: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received an instance of Object
+    at new NodeError (node:internal/errors:372:5)
+    at Function.from (node:buffer:323:9)
+    at encode (D:\ROINode_Backend\src\controllers\company.controller.js:38:20)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:77:14
+[31merror[39m: POST /v1/company 500 - 1069.634 ms - message: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received an instance of Object
+[31merror[39m: Error: Not found
+    at D:\ROINode_Backend\src\app.js:62:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at initialize (D:\ROINode_Backend\node_modules\passport\lib\middleware\initialize.js:53:5)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at cors (D:\ROINode_Backend\node_modules\cors\lib\index.js:188:7)
+    at D:\ROINode_Backend\node_modules\cors\lib\index.js:224:17
+    at originCallback (D:\ROINode_Backend\node_modules\cors\lib\index.js:214:15)
+    at D:\ROINode_Backend\node_modules\cors\lib\index.js:219:13
+[31merror[39m: GET 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0looUcgvvL3VYWvdNtQ27rbB7Zbbq7Z/LGIXXSk2K64ofl/CKrnylflXlV8t7kjcMVhqU7p/J2Ynb+fILuddh8uky9aUje8O3N1ZTi8vKn+1Z+WeyxVWFXV7CXuFe0crAyq7q7Sqdla9r06uHq5xq2mvVa7dXju/j73vxn6X/W11KnXFde8OcA/cqfeu72zQaag4iDmYffBJY2Rj/9eMr5ubFJuKmz4c4h0aPRx6uK/Ztrm5RbmltBVuFbZOH4k7cv0bj2+624zb6ttp7cVHwVHh0affxn87csz/WO9xxvG277S/q+2gdBR1Qp25nbNdyV2j3THdQyf8TvT2OPR0fG/y/aGT6idrTsmeKj1NOF1wevHMmjNzZzPPzpxLOjfeu7L3/vno87f6QvoGL/hfuHTR6+L5ftf+M5ccL528bH/5xBXGla6rNlc7B6wHOn6w/qFj0Gaw85rtte7rdtd7hpYMnb7hfOPcTY+bF2/53ro6vHR4aCRi5M7tuNujd9h3pu6m3X1xL/vewv2ND9APih5KPax4pPyo4Uf9H9tHbUZPjXmMDTwOe3x/nDX+7Kesn95PFDwhP6mYVJtsnrKYOjntNX396bKnE88yny3MFP4s/XPtc73n3/3i8svAbPTsxAv+i8VfS14qvDz0yupV71zw3KPX6a8X5oveKLw5/Jbxtv9d1LvJhZz32PeVH/Q/9Hz0//hgMX1x8V/3hPP7y2IJQQplbmRzdHJlYW0KZW5kb2JqCjMgMCBvYmoKPDwKPj4gZW5kb2JqCjkgMCBvYmoKPDwKL0Jhc2VGb250IC9IZWx2ZXRpY2EgCi9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nIAovU3VidHlwZSAvVHlwZTEgCi9UeXBlIC9Gb250IAovTmFtZSAvSGVsdiAKPj4gZW5kb2JqCjEwIDAgb2JqCjw8Ci9DcmVhdGlvbkRhdGUgKEQ6MjAwODA2MTExNjU2MDMpIAovTW9kRGF0ZSAoRDoyMDA4MDYxMTE2NTYwMykgCi9Qcm9kdWNlciAoSWJleCBQREYgQ3JlYXRvciA0LjMuNi40LzUwMjUgWy5ORVQgMi4wXSkgCj4+IGVuZG9iagp4cmVmCjAgMTEKMDAwMDAwMDAwMCA2NTUzNSBmIAowMDAwMDAwNjE2IDAwMDAwIG4gCjAwMDAwMDA1NTYgMDAwMDAgbiAKMDAwMDAwMzQyNCAwMDAwMCBuIAowMDAwMDAwNzA2IDAwMDAwIG4gCjAwMDAwMDA3NDEgMDAwMDAgbiAKMDAwMDAwMDIxNSAwMDAwMCBuIAowMDAwMDAwNDgwIDAwMDAwIG4gCjAwMDAwMDAwMjAgMDAwMDAgbiAKMDAwMDAwMzQ0NSAwMDAwMCBuIAowMDAwMDAzNTU5IDAwMDAwIG4gCnRyYWlsZXIKPDwKL1NpemUgMTEgCi9JbmZvIDEwIDAgUiAgCi9Sb290IDEgMCBSIAo+PgpzdGFydHhyZWYKMzY5OAolJUVPRgo= 404 - 5.481 ms - message: Not found
+[31merror[39m: TypeError: AWSs3.upload_file is not a constructor
+    at D:\ROINode_Backend\src\controllers\company.controller.js:80:17
+    at D:\ROINode_Backend\src\utils\catchAsync.js:2:19
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (D:\ROINode_Backend\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (D:\ROINode_Backend\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\ROINode_Backend\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+[31merror[39m: POST /v1/company 500 - 22.674 ms - message: AWSs3.upload_file is not a constructor
+[31merror[39m: TypeError: AWSs3.upload_file is not a constructor
+    at D:\ROINode_Backend\src\controllers\company.controller.js:80:17
+    at D:\ROINode_Backend\src\utils\catchAsync.js:2:19
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (D:\ROINode_Backend\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (D:\ROINode_Backend\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\ROINode_Backend\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+[31merror[39m: POST /v1/company 500 - 27.819 ms - message: AWSs3.upload_file is not a constructor
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 's3Key')
+    at upload_file (D:\ROINode_Backend\src\services\s3.service.js:22:48)
+    at D:\ROINode_Backend\src\controllers\company.controller.js:82:15
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: TypeError: Class constructor AWSs3 cannot be invoked without 'new'
+    at D:\ROINode_Backend\src\controllers\company.controller.js:57:32
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company 500 - 93.287 ms - message: Class constructor AWSs3 cannot be invoked without 'new'
+[31merror[39m: ReferenceError: filename is not defined
+    at AWSs3.get upload_file [as upload_file] (D:\ROINode_Backend\src\services\s3.service.js:31:18)
+    at D:\ROINode_Backend\src\controllers\company.controller.js:58:35
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company 500 - 127.995 ms - message: filename is not defined
+[31merror[39m: ReferenceError: file is not defined
+    at AWSs3.get upload_file [as upload_file] (D:\ROINode_Backend\src\services\s3.service.js:32:19)
+    at D:\ROINode_Backend\src\controllers\company.controller.js:58:35
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company 500 - 91.688 ms - message: file is not defined
+[31merror[39m: TypeError: this.connection.upload is not a function
+    at AWSs3.get upload_file [as upload_file] (D:\ROINode_Backend\src\services\s3.service.js:30:45)
+    at D:\ROINode_Backend\src\controllers\company.controller.js:58:35
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company 500 - 124.334 ms - message: this.connection.upload is not a function
+[31merror[39m: TypeError: this.connection.upload is not a function
+    at AWSs3.get upload_file [as upload_file] (D:\ROINode_Backend\src\services\s3.service.js:30:45)
+    at D:\ROINode_Backend\src\controllers\company.controller.js:58:35
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company 500 - 112.761 ms - message: this.connection.upload is not a function
+[31merror[39m: TypeError: s3.upload is not a function
+    at AWSs3.get upload_file [as upload_file] (D:\ROINode_Backend\src\services\s3.service.js:31:32)
+    at D:\ROINode_Backend\src\controllers\company.controller.js:58:35
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company 500 - 121.757 ms - message: s3.upload is not a function
+[31merror[39m: TypeError: awsService.upload_file is not a function
+    at D:\ROINode_Backend\src\controllers\company.controller.js:59:35
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company 500 - 139.125 ms - message: awsService.upload_file is not a function
+[31merror[39m: ReferenceError: bucketLocatio is not defined
+    at D:\ROINode_Backend\src\controllers\company.controller.js:75:26
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company 500 - 1235.350 ms - message: bucketLocatio is not defined
+[31merror[39m: Error: MissingRequiredParameter: Missing required key 'Key' in params
+    at D:\ROINode_Backend\src\services\s3.service.js:58:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: Error: MissingRequiredParameter: Missing required key 'Key' in params
+    at D:\ROINode_Backend\src\services\s3.service.js:58:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: POST /v1/company/get/file 422 - 122.811 ms - message: Error: MissingRequiredParameter: Missing required key 'Key' in params
+    at D:\ROINode_Backend\src\services\s3.service.js:58:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: Error: Please authenticate
+    at D:\ROINode_Backend\src\middlewares\auth.js:9:19
+    at allFailed (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:107:18)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:180:28)
+    at JwtStrategy.strategy.fail (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:302:9)
+    at JwtStrategy.authenticate (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:96:21)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:366:16)
+    at authenticate (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:367:7)
+    at D:\ROINode_Backend\src\middlewares\auth.js:26:107
+    at new Promise (<anonymous>)
+    at D:\ROINode_Backend\src\middlewares\auth.js:25:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (D:\ROINode_Backend\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:284:15
+    at param (D:\ROINode_Backend\node_modules\express\lib\router\index.js:365:14)
+[31merror[39m: GET /v1/users/6298548c95e432514d017b3b 401 - 9.839 ms - message: Please authenticate
+[31merror[39m: Error: Please authenticate
+    at D:\ROINode_Backend\src\middlewares\auth.js:9:19
+    at allFailed (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:107:18)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:180:28)
+    at JwtStrategy.strategy.fail (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:302:9)
+    at JwtStrategy.authenticate (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:96:21)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:366:16)
+    at authenticate (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:367:7)
+    at D:\ROINode_Backend\src\middlewares\auth.js:26:107
+    at new Promise (<anonymous>)
+    at D:\ROINode_Backend\src\middlewares\auth.js:25:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (D:\ROINode_Backend\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:284:15
+    at param (D:\ROINode_Backend\node_modules\express\lib\router\index.js:365:14)
+[31merror[39m: GET /v1/users/6298548c95e432514d017b3b 401 - 9.568 ms - message: Please authenticate
+[31merror[39m: Error: Please authenticate
+    at D:\ROINode_Backend\src\middlewares\auth.js:9:19
+    at allFailed (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:107:18)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:180:28)
+    at JwtStrategy.strategy.fail (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:302:9)
+    at JwtStrategy.authenticate (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:96:21)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:366:16)
+    at authenticate (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:367:7)
+    at D:\ROINode_Backend\src\middlewares\auth.js:26:107
+    at new Promise (<anonymous>)
+    at D:\ROINode_Backend\src\middlewares\auth.js:25:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (D:\ROINode_Backend\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:284:15
+    at param (D:\ROINode_Backend\node_modules\express\lib\router\index.js:365:14)
+[31merror[39m: GET /v1/users/6298548c95e432514d017b3b 401 - 5.087 ms - message: Please authenticate
+[31merror[39m: Error: Please authenticate
+    at D:\ROINode_Backend\src\middlewares\auth.js:9:19
+    at allFailed (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:107:18)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:180:28)
+    at JwtStrategy.strategy.fail (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:302:9)
+    at JwtStrategy.authenticate (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:96:21)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:366:16)
+    at authenticate (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:367:7)
+    at D:\ROINode_Backend\src\middlewares\auth.js:26:107
+    at new Promise (<anonymous>)
+    at D:\ROINode_Backend\src\middlewares\auth.js:25:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (D:\ROINode_Backend\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:284:15
+    at param (D:\ROINode_Backend\node_modules\express\lib\router\index.js:365:14)
+[31merror[39m: GET /v1/users/6298548c95e432514d017b3b 401 - 7.677 ms - message: Please authenticate
+[31merror[39m: Error: "email" is required, "password" is required, "name" is required, "role" is required
+    at D:\ROINode_Backend\src\middlewares\validate.js:15:17
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:28:17
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/users 400 - 73.571 ms - message: "email" is required, "password" is required, "name" is required, "role" is required
+[31merror[39m: Error: Please authenticate
+    at D:\ROINode_Backend\src\middlewares\auth.js:9:19
+    at allFailed (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:107:18)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:180:28)
+    at JwtStrategy.strategy.fail (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:302:9)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:106:33
+    at D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:152:16
+    at getSecret (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:94:10)
+    at Function.module.exports [as JwtVerifier] (D:\ROINode_Backend\node_modules\passport-jwt\lib\verify_jwt.js:4:16)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:40:13)
+    at JwtStrategy.authenticate (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:99:10)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:366:16)
+    at authenticate (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:367:7)
+    at D:\ROINode_Backend\src\middlewares\auth.js:26:107
+    at new Promise (<anonymous>)
+[31merror[39m: POST /v1/users 401 - 17.984 ms - message: Please authenticate
+[31merror[39m: Error: Please authenticate
+    at D:\ROINode_Backend\src\middlewares\auth.js:9:19
+    at allFailed (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:107:18)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:180:28)
+    at JwtStrategy.strategy.fail (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:302:9)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:106:33
+    at D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:152:16
+    at getSecret (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:94:10)
+    at Function.module.exports [as JwtVerifier] (D:\ROINode_Backend\node_modules\passport-jwt\lib\verify_jwt.js:4:16)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:40:13)
+    at JwtStrategy.authenticate (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:99:10)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:366:16)
+    at authenticate (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:367:7)
+    at D:\ROINode_Backend\src\middlewares\auth.js:26:107
+    at new Promise (<anonymous>)
+[31merror[39m: POST /v1/users 401 - 7.975 ms - message: Please authenticate
+[31merror[39m: Error: "email" is required, "password" is required, "first_name" is required, "last_name" is required, "role" is required
+    at D:\ROINode_Backend\src\middlewares\validate.js:15:17
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:28:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/users 400 - 88.486 ms - message: "email" is required, "password" is required, "first_name" is required, "last_name" is required, "role" is required
+[31merror[39m: Error: "email" is required, "password" is required, "first_name" is required, "last_name" is required, "role" is required
+    at D:\ROINode_Backend\src\middlewares\validate.js:15:17
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:28:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/users 400 - 76.714 ms - message: "email" is required, "password" is required, "first_name" is required, "last_name" is required, "role" is required
+[31merror[39m: SyntaxError: Unexpected token } in JSON at position 127
+    at JSON.parse (<anonymous>)
+    at parse (D:\ROINode_Backend\node_modules\body-parser\lib\types\json.js:89:19)
+    at D:\ROINode_Backend\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:202:9)
+    at invokeCallback (D:\ROINode_Backend\node_modules\raw-body\index.js:231:16)
+    at done (D:\ROINode_Backend\node_modules\raw-body\index.js:220:7)
+    at IncomingMessage.onEnd (D:\ROINode_Backend\node_modules\raw-body\index.js:280:7)
+    at IncomingMessage.emit (node:events:539:35)
+    at IncomingMessage.emit (node:domain:475:12)
+    at endReadableNT (node:internal/streams/readable:1345:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[31merror[39m: POST /v1/users 400 - 4.931 ms - message: Unexpected token } in JSON at position 127
+[31merror[39m: ValidationError: User validation failed: company_id: Path `company_id` is required., name: Path `name` is required.
+    at model.Document.invalidate (D:\ROINode_Backend\node_modules\mongoose\lib\document.js:2782:32)
+    at D:\ROINode_Backend\node_modules\mongoose\lib\document.js:2574:17
+    at D:\ROINode_Backend\node_modules\mongoose\lib\schematype.js:1273:9
+    at processTicksAndRejections (node:internal/process/task_queues:78:11)
+[31merror[39m: POST /v1/users 400 - 150.711 ms - message: User validation failed: company_id: Path `company_id` is required., name: Path `name` is required.
+[31merror[39m: Error: "company_id" is not allowed
+    at D:\ROINode_Backend\src\middlewares\validate.js:15:17
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:28:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/users 400 - 70.076 ms - message: "company_id" is not allowed
+[31merror[39m: Error: "company_id" is not allowed
+    at D:\ROINode_Backend\src\middlewares\validate.js:15:17
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:28:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/users 400 - 68.443 ms - message: "company_id" is not allowed
+[31merror[39m: Error: "company_id" must be a string
+    at D:\ROINode_Backend\src\middlewares\validate.js:15:17
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:28:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/users 400 - 233.896 ms - message: "company_id" must be a string
+[31merror[39m: SyntaxError: Unexpected token b in JSON at position 144
+    at JSON.parse (<anonymous>)
+    at parse (D:\ROINode_Backend\node_modules\body-parser\lib\types\json.js:89:19)
+    at D:\ROINode_Backend\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:202:9)
+    at invokeCallback (D:\ROINode_Backend\node_modules\raw-body\index.js:231:16)
+    at done (D:\ROINode_Backend\node_modules\raw-body\index.js:220:7)
+    at IncomingMessage.onEnd (D:\ROINode_Backend\node_modules\raw-body\index.js:280:7)
+    at IncomingMessage.emit (node:events:539:35)
+    at IncomingMessage.emit (node:domain:475:12)
+    at endReadableNT (node:internal/streams/readable:1345:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[31merror[39m: POST /v1/users 400 - 21.503 ms - message: Unexpected token b in JSON at position 144
+[31merror[39m: ValidationError: User validation failed: name: Path `name` is required.
+    at model.Document.invalidate (D:\ROINode_Backend\node_modules\mongoose\lib\document.js:2782:32)
+    at D:\ROINode_Backend\node_modules\mongoose\lib\document.js:2574:17
+    at D:\ROINode_Backend\node_modules\mongoose\lib\schematype.js:1273:9
+    at processTicksAndRejections (node:internal/process/task_queues:78:11)
+[31merror[39m: POST /v1/users 400 - 184.432 ms - message: User validation failed: name: Path `name` is required.
+[31merror[39m: TypeError: expires.unix is not a function
+    at generateToken (D:\ROINode_Backend\src\services\token.service.js:23:18)
+    at Object.generateAuthTokens (D:\ROINode_Backend\src\services\token.service.js:74:24)
+    at D:\ROINode_Backend\src\controllers\auth.controller.js:15:37
+[31merror[39m: POST /v1/auth/login 500 - 156.357 ms - message: expires.unix is not a function
+[31merror[39m: TypeError: expires.unix is not a function
+    at generateToken (D:\ROINode_Backend\src\services\token.service.js:23:18)
+    at Object.generateAuthTokens (D:\ROINode_Backend\src\services\token.service.js:74:24)
+    at D:\ROINode_Backend\src\controllers\auth.controller.js:15:37
+[31merror[39m: POST /v1/auth/login 500 - 183.608 ms - message: expires.unix is not a function
+[31merror[39m: TypeError: expires.unix is not a function
+    at generateToken (D:\ROINode_Backend\src\services\token.service.js:22:18)
+    at Object.generateAuthTokens (D:\ROINode_Backend\src\services\token.service.js:73:24)
+    at D:\ROINode_Backend\src\controllers\auth.controller.js:15:37
+[31merror[39m: POST /v1/auth/login 500 - 164.959 ms - message: expires.unix is not a function
+[31merror[39m: TypeError: expires.unix is not a function
+    at generateToken (D:\ROINode_Backend\src\services\token.service.js:23:18)
+    at Object.generateAuthTokens (D:\ROINode_Backend\src\services\token.service.js:74:24)
+    at D:\ROINode_Backend\src\controllers\auth.controller.js:15:37
+[31merror[39m: POST /v1/auth/login 500 - 287.892 ms - message: expires.unix is not a function
+[31merror[39m: Error: Please authenticate
+    at D:\ROINode_Backend\src\middlewares\auth.js:9:19
+    at allFailed (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:107:18)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:180:28)
+    at JwtStrategy.strategy.fail (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:302:9)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:106:33
+    at D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:152:16
+    at getSecret (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:94:10)
+    at Function.module.exports [as JwtVerifier] (D:\ROINode_Backend\node_modules\passport-jwt\lib\verify_jwt.js:4:16)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:40:13)
+    at JwtStrategy.authenticate (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:99:10)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:366:16)
+    at authenticate (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:367:7)
+    at D:\ROINode_Backend\src\middlewares\auth.js:26:107
+    at new Promise (<anonymous>)
+[31merror[39m: GET /v1/users/6298548c95e432514d017b3b 401 - 16.677 ms - message: Please authenticate
+[31merror[39m: Error: Please authenticate
+    at D:\ROINode_Backend\src\middlewares\auth.js:9:19
+    at allFailed (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:107:18)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:180:28)
+    at JwtStrategy.strategy.fail (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:302:9)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:106:33
+    at D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:152:16
+    at getSecret (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:94:10)
+    at Function.module.exports [as JwtVerifier] (D:\ROINode_Backend\node_modules\passport-jwt\lib\verify_jwt.js:4:16)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:40:13)
+    at JwtStrategy.authenticate (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:99:10)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:366:16)
+    at authenticate (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:367:7)
+    at D:\ROINode_Backend\src\middlewares\auth.js:26:107
+    at new Promise (<anonymous>)
+[31merror[39m: GET /v1/users/6298548c95e432514d017b3b 401 - 15.303 ms - message: Please authenticate
