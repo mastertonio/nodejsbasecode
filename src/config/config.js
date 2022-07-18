@@ -32,10 +32,14 @@ if (error) {
   throw new Error(`Config validation error: ${error.message}`);
 }
 
+
 module.exports = {
   env: envVars.NODE_ENV,
   port: envVars.PORT,
   host: envVars.HOST,
+  s3_key_id: envVars.AWS_S3_ACCESS_KEY_ID,
+  s3_secret_key: envVars.AWS_S3_SECRET_ACCESS_KEY,
+  s3_company_bucket: `${envVars.AWS_S3_BUCKET_NAME}/${envVars.COMPANY_FILE}`,
   mongoose: {
     url: envVars.MONGODB_URL + (envVars.NODE_ENV === 'test' ? '-test' : ''),
     options: {

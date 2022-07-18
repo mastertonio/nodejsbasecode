@@ -6,6 +6,7 @@ const userService = require('./user.service');
 const ObjectId = require('mongodb').ObjectID;
 
 const {Company} = require('../models');
+const logger = require('../config/logger');
 
 const getCompanyById = async (_id) =>{
     const o_id = new ObjectId(_id);
@@ -21,16 +22,18 @@ const fetchAllCompany = async() =>{
  * @param {Object} userBody
  * @returns {Promise<Company>}
  */
- const createCompany = async (uid,companyBody) => {
-
-    companyBody.templates = 0;
-    const user = userService.getUserById(uid);
-    
-    if(!user){
-        throw new ApiError(httpStatus.NOT_FOUND, 'User not found');
+ const createCompany = async (companyBody) => {
+    try {
+        let companyData = Company.create(companyBody);
+        logger.info(`[Company Module] successfully Inserted; ${JSON.stringify(companyBody)}`);
+        return companyData;
+    } catch (error) {
+        let e = new ApiError(httpStatus.NOT_FOUND, 'User not found');
+        logger.error(`[Company Module] ${e}`)
+        throw e;
     }
-    return Company.create(companyBody)
-  };
+    
+  }
 /**
  * get company by id
  * @param {Object} 
