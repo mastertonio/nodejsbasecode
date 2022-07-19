@@ -4,10 +4,12 @@ const commonService = require('./common.service');
 const userService = require('./user.service');
 const ObjectId = require('mongodb').ObjectID;
 const pick = require('../utils/pick');
+const _ = require('underscore');
 
 const { Calculator, Company, Template, TemplateVersion, User} = require('../models');
 const { data } = require('../config/logger');
 const { CostExplorer } = require('aws-sdk');
+const { required } = require('joi');
 
 const getAllTemplate = async () => {
     return Template.find();
@@ -32,24 +34,14 @@ const getCalculatorStatistic = async (uid) =>{
 }
 
 const getAllCalculators = async (filter, options) => {
-
-    return  Calculator.paginate(filter, options);
-//     // 
-//     const pageOptions = {
-//         page: parseInt(options.page, 10) || 0,
-//         limit: parseInt(options.limit, 10) || 10
-//     }
-//    const countPromise = await Calculator.countDocuments(filter).exec();
-
-//     console.log(countPromise)
-    // return Calculator.find()
-    // .skip(pageOptions.page * pageOptions.limit)
-    // .limit(pageOptions.limit)
-    // .exec(function (err, doc) {
-    //     if(err) { res.status(500).json(err); return; };
-        
-    // });
-
+    if(_.isEmpty(options)){
+        const calc_data = await Calculator.find(filter);
+        return {
+            results: calc_data
+        };
+    }else{
+        return  Calculator.paginate(filter, options);
+    }
 }
 
 
@@ -434,8 +426,8 @@ const getDashboard = async (userId,filter, options) => {
     filter.user_id = new ObjectId(uid)
     console.log(filter)
     const roi_table = await getAllCalculators(filter, options);
-    roi_table.results.map(v=>{
-            
+
+    roi_table.results.map(v=>{            
             data.push({
                 id: v._id,
                 link: v.linked_title,
