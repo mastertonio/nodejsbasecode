@@ -7,6 +7,7 @@ const pick = require('../utils/pick');
 
 const { Calculator, Company, Template, TemplateVersion, User} = require('../models');
 const { data } = require('../config/logger');
+const { CostExplorer } = require('aws-sdk');
 
 const getAllTemplate = async () => {
     return Template.find();
@@ -31,7 +32,24 @@ const getCalculatorStatistic = async (uid) =>{
 }
 
 const getAllCalculators = async (filter, options) => {
+
     return  Calculator.paginate(filter, options);
+//     // 
+//     const pageOptions = {
+//         page: parseInt(options.page, 10) || 0,
+//         limit: parseInt(options.limit, 10) || 10
+//     }
+//    const countPromise = await Calculator.countDocuments(filter).exec();
+
+//     console.log(countPromise)
+    // return Calculator.find()
+    // .skip(pageOptions.page * pageOptions.limit)
+    // .limit(pageOptions.limit)
+    // .exec(function (err, doc) {
+    //     if(err) { res.status(500).json(err); return; };
+        
+    // });
+
 }
 
 
@@ -407,15 +425,16 @@ const getDashboard = async (userId,filter, options) => {
     const data = [];
     const filter = pick(params.query, ['title']);
     const options = pick(params.query, ['sortBy', 'limit', 'page']);  
-    const roi_table = await getAllCalculators(filter, options);
-
+    
+   
     const user = await userService.getUserById(uid);
     if (!user) {
         throw new ApiError(httpStatus.NOT_FOUND, 'User not found');
     }
-
+    filter.user_id = new ObjectId(uid)
+    console.log(filter)
+    const roi_table = await getAllCalculators(filter, options);
     roi_table.results.map(v=>{
-        if(uid == v.user_id){
             
             data.push({
                 id: v._id,
@@ -428,8 +447,6 @@ const getDashboard = async (userId,filter, options) => {
                 uniqueViews: Number(v.unique_ip),
                 status: v.status
             })
-        
-        }
     });
     roi_table.results = data;
     return roi_table;
