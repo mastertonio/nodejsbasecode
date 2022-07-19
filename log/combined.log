@@ -6843,3 +6843,240 @@
 [32minfo[39m: GET /v1/dashboard/roi/list?limit=10&page=1 200 - 264.035 ms
 [32minfo[39m: GET /v1/dashboard/roi/list?limit=10&page=1&title=Imprivata 200 - 226.382 ms
 [32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[31merror[39m: Error: Please authenticate
+    at D:\ROINode_Backend\src\middlewares\auth.js:9:19
+    at allFailed (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:107:18)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:180:28)
+    at JwtStrategy.strategy.fail (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:302:9)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:106:33
+    at D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:152:16
+    at getSecret (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:94:10)
+    at Function.module.exports [as JwtVerifier] (D:\ROINode_Backend\node_modules\passport-jwt\lib\verify_jwt.js:4:16)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:40:13)
+    at JwtStrategy.authenticate (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:99:10)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:366:16)
+    at authenticate (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:367:7)
+    at D:\ROINode_Backend\src\middlewares\auth.js:26:107
+    at new Promise (<anonymous>)
+[31merror[39m: GET /v1/dashboard/roi/list?limit=10&page=1&title=Imprivata 401 - 15.170 ms - message: Please authenticate
+[32minfo[39m: POST /v1/auth/login 200 - 357.330 ms
+[32minfo[39m: GET /v1/dashboard/roi/list?limit=10&page=1&title=Imprivata 200 - 263.549 ms
+[32minfo[39m: GET /v1/dashboard/roi/list?limit=10&page=1 200 - 201.771 ms
+[32minfo[39m: GET /v1/dashboard/roi/list?limit=11&page=1 200 - 226.647 ms
+[32minfo[39m: GET /v1/dashboard/roi/list?limit=11&page=2 200 - 225.653 ms
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: GET /v1/dashboard/roi/list?limit=11&page=2 200 - 248.703 ms
+[32minfo[39m: GET /v1/dashboard/roi/list 200 - 262.950 ms
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'map')
+    at Object.getRoiTable (D:\ROINode_Backend\src\services\dashboard.service.js:426:23)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:77:20
+[31merror[39m: GET /v1/dashboard/roi/list 500 - 235.827 ms - message: Cannot read properties of undefined (reading 'map')
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'map')
+    at Object.getRoiTable (D:\ROINode_Backend\src\services\dashboard.service.js:426:23)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:77:20
+[31merror[39m: GET /v1/dashboard/roi/list 500 - 292.883 ms - message: Cannot read properties of undefined (reading 'map')
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: GET /v1/dashboard/roi/list 200 - 202.329 ms
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: GET /v1/dashboard/roi/list 200 - 333.752 ms
+[32minfo[39m: Connected to email server
