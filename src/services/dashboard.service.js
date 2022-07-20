@@ -402,7 +402,7 @@ const getDashboard = async (userId,filter, options) => {
         "folder":  template.folder,
         "linked_title": template.linked_title,
         "version": template.version,
-        "status": 1,
+        "status": 0,
         "importance": 0,
         "cloned_from_parent":  template.cloned_from_parent,
         "user_id": o_id,
