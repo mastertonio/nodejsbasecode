@@ -388,7 +388,7 @@ const getDashboard = async (userId,filter, options) => {
     }
     
     const t_version = new ObjectId(template.template_version_id)
-    let data = {
+    let response_data = {
         "position": template.position,
         "verification_code": template.verification_code,
         "email_protected": template.email_protected,
@@ -410,7 +410,7 @@ const getDashboard = async (userId,filter, options) => {
         "template_version_id": t_version,
     }
     
-    return Calculator.create(data);
+    return Calculator.create(response_data);
   }
 
   const getRoiTable = async(params,uid) =>{

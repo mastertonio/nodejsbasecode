@@ -3,6 +3,8 @@ const pick = require('../utils/pick');
 const ApiError = require('../utils/ApiError');
 const catchAsync = require('../utils/catchAsync');
 const { userService } = require('../services');
+const { jwtExtract } = require('./common.controller');
+const AWSs3 =  require('../services/s3.service');
 
 const createUser = catchAsync(async (req, res) => {
   const user = await userService.createUser(req.body);
@@ -34,10 +36,54 @@ const deleteUser = catchAsync(async (req, res) => {
   res.status(httpStatus.NO_CONTENT).send();
 });
 
+const uploadAvatar = catchAsync(async (req, res) => {
+  /**
+  * extracting JWT Token to get the User Id
+  */
+  const token = jwtExtract(req);
+  let bucketLocation = ""; 
+  /**
+      * validating the user Account base on the response of the extraction
+      */
+  const is_user = await userService.getUserById(token);
+  if(!is_user){
+    let error = new ApiError(httpStatus.NOT_FOUND, 'User not found');
+    logger.error(`[Invalid TOken] ${error}`);
+    throw error;
+  }
+  /**
+     * get the file and upload to s3bucket services
+     */
+   if(req.files.avatar !== 'undefined'){
+    const file = req.files.avatar;
+    const awsService = await new AWSs3(file);
+    await awsService.upload_file;
+    bucketLocation = file.name;    
+
+  }else{
+    let error = new ApiError(httpStatus.UNPROCESSABLE_ENTITY, 'Invalid Payload');
+    logger.error(`[Invalid Payload] ${error}`);
+    throw error;
+  }
+  const data = {};
+  data.filname = bucketLocation
+  data.uid = token;
+  const upload_avatar = await userService.uploadAvatar(data);
+
+  const awsService = await new AWSs3({name:upload_avatar.avatar,data:null});
+  const encode = await awsService.fetch_file;
+  res.send({data:encode});
+
+
+
+
+})
+
 module.exports = {
   createUser,
   getUsers,
   getUser,
   updateUser,
   deleteUser,
+  uploadAvatar
 };

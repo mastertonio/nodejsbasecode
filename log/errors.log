@@ -862,3 +862,7 @@
     at processTicksAndRejections (node:internal/process/task_queues:96:5)
     at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:77:20
 [31merror[39m: GET /v1/dashboard/roi/list 500 - 292.883 ms - message: Cannot read properties of undefined (reading 'map')
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'contract_file')
+    at D:\ROINode_Backend\src\controllers\user.controller.js:57:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/users/avatar 500 - 151.745 ms - message: Cannot read properties of undefined (reading 'contract_file')
