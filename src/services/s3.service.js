@@ -42,6 +42,21 @@ class AWSs3{
             throw error;
           });
         }
+    get upload_Avatar(){
+        const s3 = this.connection();
+        return s3.upload({
+            Bucket: s3_avatar_bucket,
+            Key: this.s3Key,
+            Body: this.s3Body,
+            }).promise().then((file)=>{
+            logger.info(`Successfully Connected to AWS bucket => ${JSON.stringify(file)}`)
+            return file
+            },(e)=>{
+            let error = new ApiError(httpStatus.UNPROCESSABLE_ENTITY, e);
+            logger.error(error);
+            throw error;
+            });
+        }
     get fetch_file(){
         const s3 = this.connection();
         return s3.getObject(

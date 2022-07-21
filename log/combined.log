@@ -7080,3 +7080,340 @@
 [32minfo[39m: Connected to email server
 [32minfo[39m: GET /v1/dashboard/roi/list 200 - 333.752 ms
 [32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: GET /v1/dashboard/roi/list?limit=11&page=2 200 - 311.177 ms
+[32minfo[39m: GET /v1/dashboard/roi/list 200 - 215.072 ms
+[32minfo[39m: POST /v1/auth/login 200 - 222.439 ms
+[32minfo[39m: POST /v1/auth/login 200 - 186.374 ms
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: POST /v1/auth/login 200 - 530.804 ms
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'contract_file')
+    at D:\ROINode_Backend\src\controllers\user.controller.js:57:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/users/avatar 500 - 151.745 ms - message: Cannot read properties of undefined (reading 'contract_file')
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Successfully Connected to AWS bucket => {"ETag":"\"58149becdc22de9f6fb4be6ce7a362b2\"","ServerSideEncryption":"AES256","VersionId":"vAkuaxfUwGupwfr5Tunihz_CQvK7WNaB","Location":"https://roi-sandbox.s3.amazonaws.com/company_files/images.jpg","key":"company_files/images.jpg","Key":"company_files/images.jpg","Bucket":"roi-sandbox"}
+[32minfo[39m: POST /v1/users/avatar 200 - 1327.623 ms
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Successfully Connected to AWS bucket => {"ETag":"\"58149becdc22de9f6fb4be6ce7a362b2\"","ServerSideEncryption":"AES256","VersionId":"y0NL7wlbFVDXHF6YBH8wxY1dj9P5bgwC","Location":"https://roi-sandbox.s3.amazonaws.com/company_files/images.jpg","key":"company_files/images.jpg","Key":"company_files/images.jpg","Bucket":"roi-sandbox"}
+[32minfo[39m: POST /v1/users/avatar 200 - 1754.510 ms
