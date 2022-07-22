@@ -7768,3 +7768,31 @@
 [32minfo[39m: Connected to email server
 [32minfo[39m: Connected to email server
 [32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: POST /v1/auth/login 200 - 237.684 ms
+[32minfo[39m: GET /v1/dashboard/data/graph 200 - 228.497 ms
+[32minfo[39m: Connected to email server

@@ -40,6 +40,7 @@ const updateUser = {
       first_name: Joi.string(),
       last_name: Joi.string(),
       company_id: Joi.custom(objectId),
+      phone: Joi.string()
     })
     .min(1),
 };
