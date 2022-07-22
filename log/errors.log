@@ -907,3 +907,39 @@
     at D:\ROINode_Backend\src\controllers\user.controller.js:60:22
     at processTicksAndRejections (node:internal/process/task_queues:96:5)
 [31merror[39m: POST /v1/users/avatar 500 - 228.196 ms - message: s3_avatar_bucket is not defined
+[31merror[39m: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:73:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\user.controller.js:74:18
+[31merror[39m: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:73:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\user.controller.js:74:18
+[31merror[39m: POST /v1/users/avatar 422 - 3593.918 ms - message: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:73:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\user.controller.js:74:18
+[31merror[39m: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:73:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\user.controller.js:74:18
+[31merror[39m: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:73:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\user.controller.js:74:18
+[31merror[39m: POST /v1/users/avatar 422 - 3462.625 ms - message: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:73:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\user.controller.js:74:18
+[31merror[39m: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:73:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\user.controller.js:74:18
+[31merror[39m: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:73:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\user.controller.js:74:18
+[31merror[39m: POST /v1/users/avatar 422 - 3093.396 ms - message: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:73:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\user.controller.js:74:18
