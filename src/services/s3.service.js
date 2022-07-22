@@ -1,6 +1,6 @@
 const AWS = require('aws-sdk');
 const httpStatus = require('http-status');
-const {s3_key_id,s3_secret_key,s3_company_bucket} = require('../config/config');
+const {s3_key_id,s3_secret_key,s3_company_bucket,s3_avatar_bucket} = require('../config/config');
 const logger = require('../config/logger');
 const ApiError = require('../utils/ApiError');
 
