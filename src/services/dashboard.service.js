@@ -16,11 +16,11 @@ const getAllTemplate = async () => {
 }
 const getCalculatorStatistic = async (uid) =>{
    return Calculator.aggregate([
-    // {
-    //     $match: {
-    //         user_id:uid
-    //     }
-    // },
+    {
+        $match: {
+            user_id:uid
+        }
+    },
     {
       $group: {
         _id: {
