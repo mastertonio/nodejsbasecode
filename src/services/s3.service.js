@@ -15,6 +15,7 @@ class AWSs3{
                 this.s3Bucket_company = s3_company_bucket;
                 this.s3Key = params.name;
                 this.s3Body = params.data;
+                this.Bucket = params.bucket;
             }            
         } catch (error) {
             throw new ApiError(httpStatus.UNPROCESSABLE_ENTITY, error);
@@ -59,9 +60,13 @@ class AWSs3{
         }
     get fetch_file(){
         const s3 = this.connection();
+        let bucket = s3_company_bucket;
+        if(this.Bucket == 2){
+            bucket = s3_avatar_bucket;
+        }
         return s3.getObject(
                 {
-                    Bucket: s3_company_bucket,
+                    Bucket: bucket,
                     Key: this.s3Key
                 }
                 

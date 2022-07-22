@@ -70,7 +70,7 @@ const uploadAvatar = catchAsync(async (req, res) => {
   data.uid = token;
   const upload_avatar = await userService.uploadAvatar(data);
 
-  const awsService = await new AWSs3({name:upload_avatar.avatar,data:null});
+  const awsService = await new AWSs3({name:upload_avatar.avatar,data:null,bucket:2});
   const encode = await awsService.fetch_file;
   res.send({data:encode});
 
