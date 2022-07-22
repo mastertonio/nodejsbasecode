@@ -866,3 +866,44 @@
     at D:\ROINode_Backend\src\controllers\user.controller.js:57:17
     at processTicksAndRejections (node:internal/process/task_queues:96:5)
 [31merror[39m: POST /v1/users/avatar 500 - 151.745 ms - message: Cannot read properties of undefined (reading 'contract_file')
+[31merror[39m: Error: Please authenticate
+    at D:\ROINode_Backend\src\middlewares\auth.js:9:19
+    at allFailed (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:107:18)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:180:28)
+    at JwtStrategy.strategy.fail (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:302:9)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:106:33
+    at D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:152:16
+    at getSecret (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:94:10)
+    at Function.module.exports [as JwtVerifier] (D:\ROINode_Backend\node_modules\passport-jwt\lib\verify_jwt.js:4:16)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:40:13)
+    at JwtStrategy.authenticate (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:99:10)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:366:16)
+    at authenticate (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:367:7)
+    at D:\ROINode_Backend\src\middlewares\auth.js:26:107
+    at new Promise (<anonymous>)
+[31merror[39m: POST /v1/users/avatar 401 - 38.972 ms - message: Please authenticate
+[31merror[39m: Error: Please authenticate
+    at D:\ROINode_Backend\src\middlewares\auth.js:9:19
+    at allFailed (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:107:18)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:180:28)
+    at JwtStrategy.strategy.fail (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:302:9)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:106:33
+    at D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:152:16
+    at getSecret (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:94:10)
+    at Function.module.exports [as JwtVerifier] (D:\ROINode_Backend\node_modules\passport-jwt\lib\verify_jwt.js:4:16)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:40:13)
+    at JwtStrategy.authenticate (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:99:10)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:366:16)
+    at authenticate (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:367:7)
+    at D:\ROINode_Backend\src\middlewares\auth.js:26:107
+    at new Promise (<anonymous>)
+[31merror[39m: POST /v1/users/avatar 401 - 8.590 ms - message: Please authenticate
+[31merror[39m: ReferenceError: s3_avatar_bucket is not defined
+    at AWSs3.get upload_Avatar [as upload_Avatar] (D:\ROINode_Backend\src\services\s3.service.js:48:21)
+    at D:\ROINode_Backend\src\controllers\user.controller.js:60:22
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/users/avatar 500 - 228.196 ms - message: s3_avatar_bucket is not defined

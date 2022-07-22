@@ -57,7 +57,7 @@ const uploadAvatar = catchAsync(async (req, res) => {
    if(req.files.avatar !== 'undefined'){
     const file = req.files.avatar;
     const awsService = await new AWSs3(file);
-    await awsService.upload_file;
+    await awsService.upload_Avatar;
     bucketLocation = file.name;    
 
   }else{
