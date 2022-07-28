@@ -14187,3 +14187,251 @@
 [32minfo[39m: Number of CPUs is 8
 [32minfo[39m: Master 26484 is running
 [32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: GET /v1/dashboard/roi/list 200 - 476.271 ms
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: worker 25092 died
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 20912 is running
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: GET /v1/dashboard/roi/list 200 - 672.529 ms
+[32minfo[39m: worker 9420 died
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 6712 is running
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: GET /v1/dashboard/roi/list 200 - 490.241 ms
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 6788 is running
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: GET /v1/dashboard/roi/list 200 - 499.062 ms
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 3276 is running
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 25880 is running
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: GET /v1/dashboard/roi/list 200 - 343.266 ms
+[32minfo[39m: worker 28880 died
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 12600 is running
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: GET /v1/dashboard/roi/list 200 - 306.074 ms
+[32minfo[39m: worker 13076 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 1504 is running
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: GET /v1/dashboard/roi/list 200 - 341.267 ms
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 20768 is running
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: GET /v1/dashboard/roi/list 200 - 330.152 ms
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 25992 is running
+[32minfo[39m: Connected to email server

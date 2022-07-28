@@ -10,7 +10,7 @@ const { Calculator, Company, Template, TemplateVersion, User} = require('../mode
 const { data } = require('../config/logger');
 const { CostExplorer } = require('aws-sdk');
 const { required } = require('joi');
-const { map } = require('underscore');
+const { map, get } = require('underscore');
 
 const getAllTemplate = async () => {
     return Template.find();
@@ -50,7 +50,7 @@ const getAllCalculators = async (id) => {
                 as: 'TemplateVersionData'
             }
         }
-    ])
+    ]).sort({createdAt:-1})
 }
 
 
@@ -452,12 +452,12 @@ const getDashboard = async (userId,filter, options) => {
       ];
 
     roi_table.map(v=>{    
-        console.log(v)
        
         let d=new Date(v.createdAt);     
         let monthIndex  =  d.getMonth();
         let monthName = months[monthIndex]
         let getDate = d.getDate();
+            getDate = (String(Math.abs(getDate)).charAt(0) == getDate) ? `0${getDate}` : getDate;
         let getYear = d.getFullYear();
         let n_d = d.toLocaleString();
             n_d= n_d.split(', ');
