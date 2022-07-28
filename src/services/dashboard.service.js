@@ -10,6 +10,7 @@ const { Calculator, Company, Template, TemplateVersion, User} = require('../mode
 const { data } = require('../config/logger');
 const { CostExplorer } = require('aws-sdk');
 const { required } = require('joi');
+const { map } = require('underscore');
 
 const getAllTemplate = async () => {
     return Template.find();
@@ -40,7 +41,21 @@ const getAllCalculators = async (filter, options) => {
             results: calc_data
         };
     }else{
-        return  Calculator.paginate(filter, options);
+        const calculator_data = await Calculator.paginate(filter, options);
+       
+       calculator_data.results.map(x=>{
+        console.log(x.template_version_id)
+        const templateVersion = getTemplateVersion(x.template_version_id);
+        const template_name = templateVersion.then((tmplateData)=>{
+                // return tmplateData.name;
+
+                return calculator_data.results.source_name=tmplateData.name;
+            });
+            
+
+       });
+       
+        return  calculator_data;
     }
 }
 
@@ -424,17 +439,43 @@ const getDashboard = async (userId,filter, options) => {
         throw new ApiError(httpStatus.NOT_FOUND, 'User not found');
     }
     filter.user_id = new ObjectId(uid)
-    console.log(filter)
+    options.sortBy = {createdAt:-1};
+    
     const roi_table = await getAllCalculators(filter, options);
+    const months = [
+        'January',
+        'February',
+        'March',
+        'April',
+        'May',
+        'June',
+        'July',
+        'August',
+        'September',
+        'October',
+        'November',
+        'December'
+      ];
 
-    roi_table.results.map(v=>{            
+    roi_table.results.map(v=>{    
+       
+        let d=new Date(v.createdAt);     
+        let monthIndex  =  d.getMonth();
+        let monthName = months[monthIndex]
+        let getDate = d.getDate();
+        let getYear = d.getFullYear();
+        let n_d = d.toLocaleString();
+            n_d= n_d.split(', ');
+       console.log(v)
+        // 
             data.push({
                 id: v._id,
                 link: v.linked_title,
                 importance: Number(v.importance),
                 name: v.title,
-                source: v.template_version_id,
-                dateCreated: v.createdAt,
+                source_id: v.template_version_id,
+                source_name: "The ROI SHOP",
+                dateCreated:`${monthName} ${getDate},${getYear} ${n_d[1]}`,
                 views: Number(v.visits),
                 uniqueViews: Number(v.unique_ip),
                 status: v.status

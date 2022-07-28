@@ -943,3 +943,796 @@
     at D:\ROINode_Backend\src\services\s3.service.js:73:29
     at processTicksAndRejections (node:internal/process/task_queues:96:5)
     at async D:\ROINode_Backend\src\controllers\user.controller.js:74:18
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'toString')
+    at D:\ROINode_Backend\src\controllers\user.controller.js:77:73
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/users/avatar 500 - 6825.497 ms - message: Cannot read properties of undefined (reading 'toString')
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'toString')
+    at D:\ROINode_Backend\src\controllers\user.controller.js:77:73
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/users/avatar 500 - 2266.454 ms - message: Cannot read properties of undefined (reading 'toString')
+[31merror[39m: TypeError [ERR_INVALID_ARG_TYPE]: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+    at new NodeError (node:internal/errors:372:5)
+    at Function.from (node:buffer:323:9)
+    at new Buffer (node:buffer:279:17)
+    at D:\ROINode_Backend\src\controllers\user.controller.js:77:50
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/users/avatar 500 - 2368.063 ms - message: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[31merror[39m: Error: EISDIR: illegal operation on a directory, open 'D:\ROINode_Backend\log'
+[31merror[39m: Error: EISDIR: illegal operation on a directory, open 'D:\ROINode_Backend\log'
+[31merror[39m: Error: EISDIR: illegal operation on a directory, open 'D:\ROINode_Backend\uploads'
+[31merror[39m: ReferenceError: self is not defined
+    at Request.<anonymous> (D:\ROINode_Backend\src\services\s3.service.js:70:13)
+    at Request.callListeners (D:\ROINode_Backend\node_modules\aws-sdk\lib\sequential_executor.js:106:20)
+    at Request.emit (D:\ROINode_Backend\node_modules\aws-sdk\lib\sequential_executor.js:78:10)
+    at Request.emit (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:686:14)
+    at Request.transition (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:22:10)
+    at AcceptorStateMachine.runTo (D:\ROINode_Backend\node_modules\aws-sdk\lib\state_machine.js:14:12)
+    at D:\ROINode_Backend\node_modules\aws-sdk\lib\state_machine.js:26:10
+    at Request.<anonymous> (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:38:9)
+    at Request.<anonymous> (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:688:12)
+    at Request.callListeners (D:\ROINode_Backend\node_modules\aws-sdk\lib\sequential_executor.js:116:18)
+    at callNextListener (D:\ROINode_Backend\node_modules\aws-sdk\lib\sequential_executor.js:96:12)
+    at Request.RESET_RETRY_STATE (D:\ROINode_Backend\node_modules\aws-sdk\lib\event_listeners.js:537:9)
+    at Request.callListeners (D:\ROINode_Backend\node_modules\aws-sdk\lib\sequential_executor.js:102:18)
+    at Request.emit (D:\ROINode_Backend\node_modules\aws-sdk\lib\sequential_executor.js:78:10)
+    at Request.emit (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:686:14)
+    at Request.transition (D:\ROINode_Backend\node_modules\aws-sdk\lib\request.js:22:10)
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'pipe')
+    at D:\ROINode_Backend\src\controllers\user.controller.js:80:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/users/avatar 500 - 1423.150 ms - message: Cannot read properties of undefined (reading 'pipe')
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'Body')
+    at D:\ROINode_Backend\src\controllers\user.controller.js:80:12
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/users/avatar 500 - 1390.701 ms - message: Cannot read properties of undefined (reading 'Body')
+[31merror[39m: ReferenceError: filname is not defined
+    at D:\ROINode_Backend\src\controllers\user.controller.js:80:25
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/users/avatar 500 - 1606.079 ms - message: filname is not defined
+[31merror[39m: ReferenceError: endcode is not defined
+    at D:\ROINode_Backend\src\controllers\user.controller.js:80:18
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/users/avatar 500 - 1353.871 ms - message: endcode is not defined
+[31merror[39m: TypeError: path must be absolute or specify root to res.sendFile
+    at ServerResponse.sendFile (D:\ROINode_Backend\node_modules\express\lib\response.js:441:11)
+    at D:\ROINode_Backend\src\controllers\user.controller.js:80:9
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/users/avatar 500 - 1431.089 ms - message: path must be absolute or specify root to res.sendFile
+[31merror[39m: ReferenceError: fileName is not defined
+    at D:\ROINode_Backend\src\controllers\user.controller.js:89:32
+    at D:\ROINode_Backend\node_modules\express\lib\response.js:450:22
+    at SendStream.onend (D:\ROINode_Backend\node_modules\express\lib\response.js:1078:5)
+    at SendStream.emit (node:events:527:28)
+    at SendStream.emit (node:domain:475:12)
+    at ReadStream.onend (D:\ROINode_Backend\node_modules\send\index.js:813:10)
+    at ReadStream.emit (node:events:539:35)
+    at ReadStream.emit (node:domain:475:12)
+    at endReadableNT (node:internal/streams/readable:1345:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[31merror[39m: Error: ENOENT: no such file or directory, stat 'D:\ROINode_Backend\src\controllers\uploads\images.jpg'
+[31merror[39m: POST /v1/users/avatar 400 - 1453.016 ms - message: ENOENT: no such file or directory, stat 'D:\ROINode_Backend\src\controllers\uploads\images.jpg'
+[31merror[39m: Error: Not found
+    at D:\ROINode_Backend\src\app.js:65:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at initialize (D:\ROINode_Backend\node_modules\passport\lib\middleware\initialize.js:53:5)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at cors (D:\ROINode_Backend\node_modules\cors\lib\index.js:188:7)
+    at D:\ROINode_Backend\node_modules\cors\lib\index.js:224:17
+    at originCallback (D:\ROINode_Backend\node_modules\cors\lib\index.js:214:15)
+    at D:\ROINode_Backend\node_modules\cors\lib\index.js:219:13
+[31merror[39m: GET /uploads/images.jpg 404 - 15.897 ms - message: Not found
+[31merror[39m: Error: Not found
+    at D:\ROINode_Backend\src\app.js:65:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at initialize (D:\ROINode_Backend\node_modules\passport\lib\middleware\initialize.js:53:5)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at cors (D:\ROINode_Backend\node_modules\cors\lib\index.js:188:7)
+    at D:\ROINode_Backend\node_modules\cors\lib\index.js:224:17
+    at originCallback (D:\ROINode_Backend\node_modules\cors\lib\index.js:214:15)
+    at D:\ROINode_Backend\node_modules\cors\lib\index.js:219:13
+[31merror[39m: GET /favicon.ico 404 - 4.530 ms - message: Not found
+[31merror[39m: Error: Not found
+    at D:\ROINode_Backend\src\app.js:65:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at initialize (D:\ROINode_Backend\node_modules\passport\lib\middleware\initialize.js:53:5)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at cors (D:\ROINode_Backend\node_modules\cors\lib\index.js:188:7)
+    at D:\ROINode_Backend\node_modules\cors\lib\index.js:224:17
+    at originCallback (D:\ROINode_Backend\node_modules\cors\lib\index.js:214:15)
+    at D:\ROINode_Backend\node_modules\cors\lib\index.js:219:13
+[31merror[39m: GET /uploads/images.jpg 404 - 39.463 ms - message: Not found
+[31merror[39m: Error: Not found
+    at D:\ROINode_Backend\src\app.js:65:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at initialize (D:\ROINode_Backend\node_modules\passport\lib\middleware\initialize.js:53:5)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at cors (D:\ROINode_Backend\node_modules\cors\lib\index.js:188:7)
+    at D:\ROINode_Backend\node_modules\cors\lib\index.js:224:17
+    at originCallback (D:\ROINode_Backend\node_modules\cors\lib\index.js:214:15)
+    at D:\ROINode_Backend\node_modules\cors\lib\index.js:219:13
+[31merror[39m: GET /uploads/images.jpg 404 - 6.656 ms - message: Not found
+[31merror[39m: Error: Not found
+    at D:\ROINode_Backend\src\app.js:66:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at SendStream.error (D:\ROINode_Backend\node_modules\serve-static\index.js:121:7)
+    at SendStream.emit (node:events:527:28)
+    at SendStream.emit (node:domain:475:12)
+    at SendStream.error (D:\ROINode_Backend\node_modules\send\index.js:270:17)
+    at SendStream.onStatError (D:\ROINode_Backend\node_modules\send\index.js:417:12)
+    at onstat (D:\ROINode_Backend\node_modules\send\index.js:722:26)
+    at FSReqCallback.oncomplete (node:fs:198:21)
+[31merror[39m: GET /uploads/images.jpg 404 - 38.468 ms - message: Not found
+[31merror[39m: Error: Not found
+    at D:\ROINode_Backend\src\app.js:64:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at initialize (D:\ROINode_Backend\node_modules\passport\lib\middleware\initialize.js:53:5)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at cors (D:\ROINode_Backend\node_modules\cors\lib\index.js:188:7)
+    at D:\ROINode_Backend\node_modules\cors\lib\index.js:224:17
+    at originCallback (D:\ROINode_Backend\node_modules\cors\lib\index.js:214:15)
+    at D:\ROINode_Backend\node_modules\cors\lib\index.js:219:13
+[31merror[39m: GET /uploads/images.jpg 404 - 12.217 ms - message: Not found
+[31merror[39m: Error: Not found
+    at D:\ROINode_Backend\src\app.js:64:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at initialize (D:\ROINode_Backend\node_modules\passport\lib\middleware\initialize.js:53:5)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at cors (D:\ROINode_Backend\node_modules\cors\lib\index.js:188:7)
+    at D:\ROINode_Backend\node_modules\cors\lib\index.js:224:17
+    at originCallback (D:\ROINode_Backend\node_modules\cors\lib\index.js:214:15)
+    at D:\ROINode_Backend\node_modules\cors\lib\index.js:219:13
+[31merror[39m: GET /uploads/images.jpg 404 - 13.724 ms - message: Not found
+[31merror[39m: Error: Not found
+    at D:\ROINode_Backend\src\app.js:64:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at initialize (D:\ROINode_Backend\node_modules\passport\lib\middleware\initialize.js:53:5)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at cors (D:\ROINode_Backend\node_modules\cors\lib\index.js:188:7)
+    at D:\ROINode_Backend\node_modules\cors\lib\index.js:224:17
+    at originCallback (D:\ROINode_Backend\node_modules\cors\lib\index.js:214:15)
+    at D:\ROINode_Backend\node_modules\cors\lib\index.js:219:13
+[31merror[39m: GET /uploads/images.jpg 404 - 12.748 ms - message: Not found
+[31merror[39m: TypeError: path must be absolute or specify root to res.sendFile
+    at ServerResponse.sendFile (D:\ROINode_Backend\node_modules\express\lib\response.js:441:11)
+    at D:\ROINode_Backend\src\controllers\user.controller.js:80:7
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/users/avatar 500 - 1691.214 ms - message: path must be absolute or specify root to res.sendFile
+[31merror[39m: TypeError: path must be absolute or specify root to res.sendFile
+    at ServerResponse.sendFile (D:\ROINode_Backend\node_modules\express\lib\response.js:441:11)
+    at D:\ROINode_Backend\src\controllers\user.controller.js:81:7
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/users/avatar 500 - 1472.240 ms - message: path must be absolute or specify root to res.sendFile
+[31merror[39m: Error: ENOENT: no such file or directory, stat 'D:\ROINode_Backend\uploads\images.jpg'
+[31merror[39m: POST /v1/users/avatar 400 - 1481.015 ms - message: ENOENT: no such file or directory, stat 'D:\ROINode_Backend\uploads\images.jpg'
+[31merror[39m: Error: Not found
+    at D:\ROINode_Backend\src\app.js:64:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:646:15
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:265:14)
+    at Function.handle (D:\ROINode_Backend\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\ROINode_Backend\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at initialize (D:\ROINode_Backend\node_modules\passport\lib\middleware\initialize.js:53:5)
+[31merror[39m: GET /v1/public/images.jpg 404 - 7.886 ms - message: Not found
+[31merror[39m: Error: Not found
+    at D:\ROINode_Backend\src\app.js:64:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:646:15
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:265:14)
+    at Function.handle (D:\ROINode_Backend\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\ROINode_Backend\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at initialize (D:\ROINode_Backend\node_modules\passport\lib\middleware\initialize.js:53:5)
+[31merror[39m: GET /v1/public/image/images.jpg 404 - 5.282 ms - message: Not found
+[31merror[39m: Error: Not found
+    at D:\ROINode_Backend\src\app.js:64:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at initialize (D:\ROINode_Backend\node_modules\passport\lib\middleware\initialize.js:53:5)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at cors (D:\ROINode_Backend\node_modules\cors\lib\index.js:188:7)
+    at D:\ROINode_Backend\node_modules\cors\lib\index.js:224:17
+    at originCallback (D:\ROINode_Backend\node_modules\cors\lib\index.js:214:15)
+    at D:\ROINode_Backend\node_modules\cors\lib\index.js:219:13
+[31merror[39m: GET /public/image/images.jpg 404 - 4.925 ms - message: Not found
+[31merror[39m: Error: Not found
+    at D:\ROINode_Backend\src\app.js:64:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at initialize (D:\ROINode_Backend\node_modules\passport\lib\middleware\initialize.js:53:5)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at cors (D:\ROINode_Backend\node_modules\cors\lib\index.js:188:7)
+    at D:\ROINode_Backend\node_modules\cors\lib\index.js:224:17
+    at originCallback (D:\ROINode_Backend\node_modules\cors\lib\index.js:214:15)
+    at D:\ROINode_Backend\node_modules\cors\lib\index.js:219:13
+[31merror[39m: GET /public/image/images.jpg 404 - 27.642 ms - message: Not found
+[31merror[39m: Error: Not found
+    at D:\ROINode_Backend\src\app.js:64:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at initialize (D:\ROINode_Backend\node_modules\passport\lib\middleware\initialize.js:53:5)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at cors (D:\ROINode_Backend\node_modules\cors\lib\index.js:188:7)
+    at D:\ROINode_Backend\node_modules\cors\lib\index.js:224:17
+    at originCallback (D:\ROINode_Backend\node_modules\cors\lib\index.js:214:15)
+    at D:\ROINode_Backend\node_modules\cors\lib\index.js:219:13
+[31merror[39m: GET /public/image/images.jpg 404 - 9.659 ms - message: Not found
+[31merror[39m: TypeError [ERR_INVALID_ARG_TYPE]: The "chunk" argument must be of type string or an instance of Buffer or Uint8Array. Received an instance of PassThrough
+    at new NodeError (node:internal/errors:372:5)
+    at write_ (node:_http_outgoing:742:11)
+    at ServerResponse.end (node:_http_outgoing:855:5)
+    at ServerResponse.end (D:\ROINode_Backend\node_modules\compression\index.js:107:21)
+    at D:\ROINode_Backend\src\controllers\user.controller.js:79:7
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/users/avatar 500 - 1654.977 ms - message: The "chunk" argument must be of type string or an instance of Buffer or Uint8Array. Received an instance of PassThrough
+[31merror[39m: TypeError [ERR_INVALID_ARG_TYPE]: The "chunk" argument must be of type string or an instance of Buffer or Uint8Array. Received an instance of PassThrough
+    at new NodeError (node:internal/errors:372:5)
+    at write_ (node:_http_outgoing:742:11)
+    at ServerResponse.end (node:_http_outgoing:855:5)
+    at ServerResponse.end (D:\ROINode_Backend\node_modules\compression\index.js:107:21)
+    at D:\ROINode_Backend\src\controllers\user.controller.js:79:7
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/users/avatar 500 - 1293.125 ms - message: The "chunk" argument must be of type string or an instance of Buffer or Uint8Array. Received an instance of PassThrough
+[31merror[39m: TypeError [ERR_INVALID_ARG_TYPE]: The "chunk" argument must be of type string or an instance of Buffer or Uint8Array. Received an instance of PassThrough
+    at new NodeError (node:internal/errors:372:5)
+    at write_ (node:_http_outgoing:742:11)
+    at ServerResponse.end (node:_http_outgoing:855:5)
+    at ServerResponse.end (D:\ROINode_Backend\node_modules\compression\index.js:107:21)
+    at D:\ROINode_Backend\src\controllers\user.controller.js:79:7
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/users/avatar 500 - 1409.591 ms - message: The "chunk" argument must be of type string or an instance of Buffer or Uint8Array. Received an instance of PassThrough
+[31merror[39m: TypeError [ERR_INVALID_ARG_TYPE]: The "chunk" argument must be of type string or an instance of Buffer or Uint8Array. Received an instance of PassThrough
+    at new NodeError (node:internal/errors:372:5)
+    at write_ (node:_http_outgoing:742:11)
+    at ServerResponse.end (node:_http_outgoing:855:5)
+    at ServerResponse.end (D:\ROINode_Backend\node_modules\compression\index.js:107:21)
+    at D:\ROINode_Backend\src\controllers\user.controller.js:79:7
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/users/avatar 500 - 1495.280 ms - message: The "chunk" argument must be of type string or an instance of Buffer or Uint8Array. Received an instance of PassThrough
+[31merror[39m: TypeError [ERR_INVALID_ARG_TYPE]: The "chunk" argument must be of type string or an instance of Buffer or Uint8Array. Received an instance of Object
+    at new NodeError (node:internal/errors:372:5)
+    at write_ (node:_http_outgoing:742:11)
+    at ServerResponse.end (node:_http_outgoing:855:5)
+    at ServerResponse.end (D:\ROINode_Backend\node_modules\compression\index.js:107:21)
+    at D:\ROINode_Backend\src\controllers\user.controller.js:79:7
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/users/avatar 500 - 2421.474 ms - message: The "chunk" argument must be of type string or an instance of Buffer or Uint8Array. Received an instance of Object
+[31merror[39m: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:99:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:99:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: POST /v1/company/get/file 422 - 1415.308 ms - message: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:99:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: Error: Please authenticate
+    at D:\ROINode_Backend\src\middlewares\auth.js:9:19
+    at allFailed (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:107:18)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:180:28)
+    at JwtStrategy.strategy.fail (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:302:9)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:106:33
+    at D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:133:14
+    at getSecret (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:94:10)
+    at Function.module.exports [as JwtVerifier] (D:\ROINode_Backend\node_modules\passport-jwt\lib\verify_jwt.js:4:16)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:40:13)
+    at JwtStrategy.authenticate (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:99:10)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:366:16)
+    at authenticate (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:367:7)
+    at D:\ROINode_Backend\src\middlewares\auth.js:26:107
+    at new Promise (<anonymous>)
+[31merror[39m: POST /v1/company/get/file 401 - 27.732 ms - message: Please authenticate
+[31merror[39m: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:99:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:99:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: POST /v1/company/get/file 422 - 1123.998 ms - message: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:99:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: POST /v1/company/get/file 422 - 1228.036 ms - message: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: POST /v1/company/get/file 422 - 1192.125 ms - message: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: POST /v1/company/get/file 422 - 1256.274 ms - message: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: POST /v1/company/get/file 422 - 1264.597 ms - message: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: POST /v1/company/get/file 422 - 1313.429 ms - message: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: POST /v1/company/get/file 422 - 1330.384 ms - message: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: POST /v1/company/get/file 422 - 1242.740 ms - message: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: POST /v1/company/get/file 422 - 1312.035 ms - message: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: POST /v1/company/get/file 422 - 1306.947 ms - message: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: POST /v1/company/get/file 422 - 1261.952 ms - message: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: POST /v1/company/get/file 422 - 1165.767 ms - message: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: POST /v1/company/get/file 422 - 1230.570 ms - message: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: POST /v1/company/get/file 422 - 1147.727 ms - message: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: POST /v1/company/get/file 422 - 1168.383 ms - message: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: POST /v1/company/get/file 422 - 1404.122 ms - message: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: POST /v1/company/get/file 422 - 1131.399 ms - message: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: POST /v1/company/get/file 422 - 1363.242 ms - message: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:88:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:88:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: POST /v1/company/get/file 422 - 1386.203 ms - message: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:88:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:88:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:88:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: POST /v1/company/get/file 422 - 1279.871 ms - message: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:88:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:86:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:86:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: POST /v1/company/get/file 422 - 1225.535 ms - message: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:86:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: POST /v1/company/get/file 422 - 1426.395 ms - message: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: POST /v1/company/get/file 422 - 1153.747 ms - message: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: POST /v1/company/get/file 422 - 1139.583 ms - message: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: POST /v1/company/get/file 422 - 1308.895 ms - message: Error: NoSuchKey: The specified key does not exist.
+    at D:\ROINode_Backend\src\services\s3.service.js:87:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:55:20
+[31merror[39m: TypeError [ERR_HTTP_INVALID_HEADER_VALUE]: Invalid value "undefined" for header "Content-type"
+    at ServerResponse.setHeader (node:_http_outgoing:579:3)
+    at setHeadersFromObject (D:\ROINode_Backend\node_modules\on-headers\index.js:94:16)
+    at ServerResponse.setWriteHeadHeaders (D:\ROINode_Backend\node_modules\on-headers\index.js:122:5)
+    at ServerResponse.writeHead (D:\ROINode_Backend\node_modules\on-headers\index.js:30:36)
+    at D:\ROINode_Backend\src\controllers\company.controller.js:58:9
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company/company/logo 500 - 1629.707 ms - message: Invalid value "undefined" for header "Content-type"
+[31merror[39m: ReferenceError: type is not defined
+    at D:\ROINode_Backend\src\controllers\company.controller.js:58:55
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company/company/logo 500 - 1808.585 ms - message: type is not defined
+[31merror[39m: Error: Please authenticate
+    at D:\ROINode_Backend\src\middlewares\auth.js:9:19
+    at allFailed (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:107:18)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:180:28)
+    at JwtStrategy.strategy.fail (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:302:9)
+    at JwtStrategy.authenticate (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:96:21)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:366:16)
+    at authenticate (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:367:7)
+    at D:\ROINode_Backend\src\middlewares\auth.js:26:107
+    at new Promise (<anonymous>)
+    at D:\ROINode_Backend\src\middlewares\auth.js:25:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:138:14)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:138:14)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:138:14)
+    at Route.dispatch (D:\ROINode_Backend\node_modules\express\lib\router\route.js:114:3)
+[31merror[39m: GET /v1/users?limit=10&page=1 401 - 10.942 ms - message: Please authenticate
+[31merror[39m: Error: Please authenticate
+    at D:\ROINode_Backend\src\middlewares\auth.js:9:19
+    at allFailed (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:107:18)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:180:28)
+    at JwtStrategy.strategy.fail (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:302:9)
+    at JwtStrategy.authenticate (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:96:21)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:366:16)
+    at authenticate (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:367:7)
+    at D:\ROINode_Backend\src\middlewares\auth.js:26:107
+    at new Promise (<anonymous>)
+    at D:\ROINode_Backend\src\middlewares\auth.js:25:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:138:14)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:138:14)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:138:14)
+    at Route.dispatch (D:\ROINode_Backend\node_modules\express\lib\router\route.js:114:3)
+[31merror[39m: GET /v1/users?sortBy=desc&limit=10&page=1 401 - 5.081 ms - message: Please authenticate
+[31merror[39m: TypeError: getTemplateVersion(...).promise is not a function
+    at D:\ROINode_Backend\src\services\dashboard.service.js:455:76
+    at Array.map (<anonymous>)
+    at Object.getRoiTable (D:\ROINode_Backend\src\services\dashboard.service.js:445:23)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:77:20
+[31merror[39m: GET /v1/dashboard/roi/list?limit=3&page=1 500 - 243.636 ms - message: getTemplateVersion(...).promise is not a function
+[31merror[39m: ReferenceError: templateVersion is not defined
+    at D:\ROINode_Backend\src\services\dashboard.service.js:456:21
+    at Array.map (<anonymous>)
+    at Object.getRoiTable (D:\ROINode_Backend\src\services\dashboard.service.js:445:23)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:77:20
+[31merror[39m: GET /v1/dashboard/roi/list?limit=3&page=1 500 - 243.550 ms - message: templateVersion is not defined
+[31merror[39m: ReferenceError: templateVersion is not defined
+    at D:\ROINode_Backend\src\services\dashboard.service.js:456:21
+    at Array.map (<anonymous>)
+    at Object.getRoiTable (D:\ROINode_Backend\src\services\dashboard.service.js:445:23)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:77:20
+[31merror[39m: GET /v1/dashboard/roi/list?limit=3&page=1 500 - 278.573 ms - message: templateVersion is not defined
+[31merror[39m: ReferenceError: template_version_id is not defined
+    at D:\ROINode_Backend\src\services\dashboard.service.js:46:25
+    at Array.map (<anonymous>)
+    at getAllCalculators (D:\ROINode_Backend\src\services\dashboard.service.js:45:33)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async Object.getRoiTable (D:\ROINode_Backend\src\services\dashboard.service.js:434:23)
+    at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:77:20
+[31merror[39m: GET /v1/dashboard/roi/list?limit=3&page=1 500 - 516.955 ms - message: template_version_id is not defined
+[31merror[39m: TypeError: data.forEach is not a function
+    at getTemplateVersionData (D:\ROINode_Backend\src\services\dashboard.service.js:51:11)
+    at getAllCalculators (D:\ROINode_Backend\src\services\dashboard.service.js:46:9)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async Object.getRoiTable (D:\ROINode_Backend\src\services\dashboard.service.js:442:23)
+    at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:77:20
+[31merror[39m: TypeError: TemplateVersion.findById(...).promise is not a function
+    at D:\ROINode_Backend\src\services\dashboard.service.js:53:47
+    at Array.forEach (<anonymous>)
+    at getTemplateVersionData (D:\ROINode_Backend\src\services\dashboard.service.js:51:19)
+    at getAllCalculators (D:\ROINode_Backend\src\services\dashboard.service.js:46:9)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async Object.getRoiTable (D:\ROINode_Backend\src\services\dashboard.service.js:445:23)
+    at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:77:20
+[31merror[39m: TypeError: templateVersion.promise is not a function
+    at D:\ROINode_Backend\src\services\dashboard.service.js:49:25
+    at Array.map (<anonymous>)
+    at getAllCalculators (D:\ROINode_Backend\src\services\dashboard.service.js:46:32)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async Object.getRoiTable (D:\ROINode_Backend\src\services\dashboard.service.js:439:23)
+    at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:77:20
+[31merror[39m: GET /v1/dashboard/roi/list?limit=1&page=1 500 - 257.325 ms - message: templateVersion.promise is not a function

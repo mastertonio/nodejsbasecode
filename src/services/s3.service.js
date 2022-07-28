@@ -1,9 +1,9 @@
 const AWS = require('aws-sdk');
 const httpStatus = require('http-status');
-const {s3_key_id,s3_secret_key,s3_company_bucket,s3_avatar_bucket} = require('../config/config');
+const {s3_key_id,s3_secret_key,s3_company_bucket,s3_avatar_bucket, s3_company_logo} = require('../config/config');
 const logger = require('../config/logger');
 const ApiError = require('../utils/ApiError');
-
+const fs = require('fs');
 class AWSs3{
     constructor(params){
         try {
@@ -60,20 +60,29 @@ class AWSs3{
         }
     get fetch_file(){
         const s3 = this.connection();
-        let bucket = s3_company_bucket;
-        if(this.Bucket == 2){
-            bucket = s3_avatar_bucket;
+        let bucket;
+     
+        switch (this.Bucket) {
+            case 2:
+                bucket = s3_avatar_bucket;
+                break;
+            case 1:
+                bucket = s3_company_logo
+                break
+            default:
+                bucket = s3_company_bucket;
+                break;
         }
-        return s3.getObject(
-                {
-                    Bucket: bucket,
-                    Key: this.s3Key
-                }
-                
-            ).promise().then((file)=>{
-                logger.info(`Successfully Connected to AWS bucket => ${JSON.stringify(file)}`)
-                let buf = Buffer.from(file.Body);
-                return buf.toString('base64');
+        console.log(this.s3Key)
+        let options = {
+            Bucket: bucket,
+            Key: this.s3Key
+            // 
+        }
+        console.log(options)
+        return s3.getObject(options).promise().then((file)=>{
+                logger.info(`Successfully Connected to AWS bucket => ${JSON.stringify(file)}`);
+                return file;
             },(e)=>{
                 let error = new ApiError(httpStatus.UNPROCESSABLE_ENTITY, e);
                 logger.error(error);

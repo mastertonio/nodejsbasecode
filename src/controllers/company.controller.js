@@ -9,34 +9,6 @@ const AWSs3 =  require('../services/s3.service');
 const { info } = require('../config/logger');
 const logger = require('../config/logger');
 
-
-
-// AWS.config.update({
-//   accessKeyId: s3_key_id,
-//   secretAccessKey: s3_secret_key
-// });
-// let s3 = new AWS.S3();
-
-// async function getFile(){
-//    console.log(s3_company_bucket);
-//   const data =  s3.getObject(
-//     {
-//         Bucket: s3_company_bucket,
-//         Key: 'hello-world.pdf'
-//       }
-    
-//   ).promise();
-//   return data;
-// }
-
-
-// async function encode(){
-//   let data = await getFile();
-//   let buf = Buffer.from(data.Body);
-//   let base64 = buf.toString('base64');
-//   return base64
-// }
-
 const getFile = catchAsync(async (req, res)=>{
     /**
      * extracting JWT Token to get the User Id
@@ -51,9 +23,11 @@ const getFile = catchAsync(async (req, res)=>{
        logger.error(`[Invalid TOken] ${error}`);
        throw error;
      }
-    const awsService = await new AWSs3({name:req.body.file_name,data:null});
+    const awsService = await new AWSs3({name:req.params._id,data:null, bucket:1});
     const encode = await awsService.fetch_file;
-    res.send({data:encode});
+    logger.info(`[File] ${encode}`);
+    res.writeHead(200, {"Content-type":encode.ContentType});    
+    res.end(encode.Body)
 });
 
 const createCompany = catchAsync(async (req, res) =>{
