@@ -1736,3 +1736,36 @@
     at async Object.getRoiTable (D:\ROINode_Backend\src\services\dashboard.service.js:439:23)
     at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:77:20
 [31merror[39m: GET /v1/dashboard/roi/list?limit=1&page=1 500 - 257.325 ms - message: templateVersion.promise is not a function
+[31merror[39m: ReferenceError: aggregate is not defined
+    at getAllCalculators (D:\ROINode_Backend\src\services\dashboard.service.js:39:5)
+    at Object.getRoiTable (D:\ROINode_Backend\src\services\dashboard.service.js:438:29)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:77:20
+[31merror[39m: GET /v1/dashboard/roi/list 500 - 252.327 ms - message: aggregate is not defined
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'map')
+    at Object.getRoiTable (D:\ROINode_Backend\src\services\dashboard.service.js:454:23)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:77:20
+[31merror[39m: GET /v1/dashboard/roi/list 500 - 575.547 ms - message: Cannot read properties of undefined (reading 'map')
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'map')
+    at Object.getRoiTable (D:\ROINode_Backend\src\services\dashboard.service.js:454:23)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:77:20
+[31merror[39m: GET /v1/dashboard/roi/list 500 - 273.711 ms - message: Cannot read properties of undefined (reading 'map')
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'map')
+    at Object.getRoiTable (D:\ROINode_Backend\src\services\dashboard.service.js:454:23)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:77:20
+[31merror[39m: GET /v1/dashboard/roi/list 500 - 291.250 ms - message: Cannot read properties of undefined (reading 'map')
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'map')
+    at Object.getRoiTable (D:\ROINode_Backend\src\services\dashboard.service.js:454:23)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:77:20
+[31merror[39m: GET /v1/dashboard/roi/list 500 - 348.823 ms - message: Cannot read properties of undefined (reading 'map')
+[31merror[39m: ReferenceError: TemplateVersionData is not defined
+    at D:\ROINode_Backend\src\services\dashboard.service.js:471:30
+    at Array.map (<anonymous>)
+    at Object.getRoiTable (D:\ROINode_Backend\src\services\dashboard.service.js:454:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:77:20
+[31merror[39m: GET /v1/dashboard/roi/list 500 - 426.980 ms - message: TemplateVersionData is not defined

@@ -13811,3 +13811,379 @@
 [32minfo[39m: Number of CPUs is 8
 [32minfo[39m: Master 4856 is running
 [32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: worker 32604 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 18516 is running
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: GET /v1/dashboard/roi/list 200 - 242.792 ms
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 14648 is running
+[32minfo[39m: Connected to email server
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 14892 is running
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: worker 10972 died
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 7648 is running
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: worker 14052 died
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 15436 is running
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[31merror[39m: ReferenceError: aggregate is not defined
+    at getAllCalculators (D:\ROINode_Backend\src\services\dashboard.service.js:39:5)
+    at Object.getRoiTable (D:\ROINode_Backend\src\services\dashboard.service.js:438:29)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:77:20
+[31merror[39m: GET /v1/dashboard/roi/list 500 - 252.327 ms - message: aggregate is not defined
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 17464 is running
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'map')
+    at Object.getRoiTable (D:\ROINode_Backend\src\services\dashboard.service.js:454:23)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:77:20
+[31merror[39m: GET /v1/dashboard/roi/list 500 - 575.547 ms - message: Cannot read properties of undefined (reading 'map')
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'map')
+    at Object.getRoiTable (D:\ROINode_Backend\src\services\dashboard.service.js:454:23)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:77:20
+[31merror[39m: GET /v1/dashboard/roi/list 500 - 273.711 ms - message: Cannot read properties of undefined (reading 'map')
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 25204 is running
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'map')
+    at Object.getRoiTable (D:\ROINode_Backend\src\services\dashboard.service.js:454:23)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:77:20
+[31merror[39m: GET /v1/dashboard/roi/list 500 - 291.250 ms - message: Cannot read properties of undefined (reading 'map')
+[32minfo[39m: Connected to email server
+[32minfo[39m: worker 8860 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 2252 is running
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'map')
+    at Object.getRoiTable (D:\ROINode_Backend\src\services\dashboard.service.js:454:23)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:77:20
+[31merror[39m: GET /v1/dashboard/roi/list 500 - 348.823 ms - message: Cannot read properties of undefined (reading 'map')
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 14520 is running
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: GET /v1/dashboard/roi/list 200 - 610.980 ms
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 11416 is running
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: GET /v1/dashboard/roi/list 200 - 422.645 ms
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 21056 is running
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[31merror[39m: ReferenceError: TemplateVersionData is not defined
+    at D:\ROINode_Backend\src\services\dashboard.service.js:471:30
+    at Array.map (<anonymous>)
+    at Object.getRoiTable (D:\ROINode_Backend\src\services\dashboard.service.js:454:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:77:20
+[31merror[39m: GET /v1/dashboard/roi/list 500 - 426.980 ms - message: TemplateVersionData is not defined
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: worker 12900 died
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 32240 is running
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: GET /v1/dashboard/roi/list 200 - 498.906 ms
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 11804 is running
+[32minfo[39m: Connected to email server
+[32minfo[39m: worker 11716 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 26484 is running
+[32minfo[39m: Connected to email server
