@@ -5,6 +5,8 @@ const catchAsync = require('../utils/catchAsync');
 const { userService } = require('../services');
 const { jwtExtract } = require('./common.controller');
 const AWSs3 =  require('../services/s3.service');
+const fs = require('fs');
+const path = require('path');
 
 const createUser = catchAsync(async (req, res) => {
   const user = await userService.createUser(req.body);
@@ -72,7 +74,25 @@ const uploadAvatar = catchAsync(async (req, res) => {
 
   const awsService = await new AWSs3({name:upload_avatar.avatar,data:null,bucket:2});
   const encode = await awsService.fetch_file;
-  res.send({data:encode});
+  console.log(encode)
+  res.writeHead(200, {"Content-type":"image/jpg"});
+  
+  res.end(encode.Body)
+  
+
+  // res.status(200).contentType("image/jpeg").send(encode)
+    // var options = {
+    //     root: path.join('./uploads')
+    // };
+  
+
+    // res.sendFile(data.filname, options, function (err) {
+    //   if (err) {
+    //       next(err);
+    //   } else {
+    //       console.log('Sent:', data.filname);
+    //   }
+    // });
 
 
 

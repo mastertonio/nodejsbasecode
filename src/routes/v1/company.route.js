@@ -15,8 +15,8 @@ router
   .post(  companyController.createCompany)
   .get(auth('getCompany'), validate(companyValidation.getCompany), companyController.getAllCompany);
 router
-  .route('/get/file')
-  .post(companyController.getFile)
+  .route('/company/logo/:_id')
+  .get(auth('createCompany'),companyController.getFile)
 router
   .route('/:_id')
   .get(auth('getCompany'), validate(companyValidation.getCompany), companyController.getCompany)
