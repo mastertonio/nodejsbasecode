@@ -34,29 +34,23 @@ const getCalculatorStatistic = async (uid) =>{
   ])
 }
 
-const getAllCalculators = async (filter, options) => {
-    if(_.isEmpty(options)){
-        const calc_data = await Calculator.find(filter);
-        return {
-            results: calc_data
-        };
-    }else{
-        const calculator_data = await Calculator.paginate(filter, options);
-       
-       calculator_data.results.map(x=>{
-        console.log(x.template_version_id)
-        const templateVersion = getTemplateVersion(x.template_version_id);
-        const template_name = templateVersion.then((tmplateData)=>{
-                // return tmplateData.name;
-
-                return calculator_data.results.source_name=tmplateData.name;
-            });
-            
-
-       });
-       
-        return  calculator_data;
-    }
+const getAllCalculators = async (id) => {
+    let o_id = new ObjectId(id);  
+    return Calculator.aggregate([
+        {
+            $match: {
+                user_id:o_id
+            }
+        },
+        {
+            $lookup: {
+                from: 'templateversions',
+                localField: 'template_version_id',
+                foreignField: '_id',
+                as: 'TemplateVersionData'
+            }
+        }
+    ])
 }
 
 
@@ -441,7 +435,7 @@ const getDashboard = async (userId,filter, options) => {
     filter.user_id = new ObjectId(uid)
     options.sortBy = {createdAt:-1};
     
-    const roi_table = await getAllCalculators(filter, options);
+    const roi_table = await getAllCalculators(uid);
     const months = [
         'January',
         'February',
@@ -457,7 +451,8 @@ const getDashboard = async (userId,filter, options) => {
         'December'
       ];
 
-    roi_table.results.map(v=>{    
+    roi_table.map(v=>{    
+        console.log(v)
        
         let d=new Date(v.createdAt);     
         let monthIndex  =  d.getMonth();
@@ -466,23 +461,22 @@ const getDashboard = async (userId,filter, options) => {
         let getYear = d.getFullYear();
         let n_d = d.toLocaleString();
             n_d= n_d.split(', ');
-       console.log(v)
-        // 
+        // console.log()
             data.push({
                 id: v._id,
                 link: v.linked_title,
                 importance: Number(v.importance),
                 name: v.title,
                 source_id: v.template_version_id,
-                source_name: "The ROI SHOP",
+                source_name: v.TemplateVersionData[0].name,
                 dateCreated:`${monthName} ${getDate},${getYear} ${n_d[1]}`,
                 views: Number(v.visits),
                 uniqueViews: Number(v.unique_ip),
                 status: v.status
             })
     });
-    roi_table.results = data;
-    return roi_table;
+    // roi_table.results = data;
+    return data;
   }
 
   const getRoiTemplates = async(uid) =>{
