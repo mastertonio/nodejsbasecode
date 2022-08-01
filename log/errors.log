@@ -1769,3 +1769,407 @@
     at processTicksAndRejections (node:internal/process/task_queues:96:5)
     at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:77:20
 [31merror[39m: GET /v1/dashboard/roi/list 500 - 426.980 ms - message: TemplateVersionData is not defined
+[31merror[39m: Error: Password reset failed
+    at Object.resetPassword (D:\ROINode_Backend\src\services\auth.service.js:70:11)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\auth.controller.js:36:3
+[31merror[39m: POST /v1/auth/reset-password?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MjgyNDdiMTllMmExZDNhNWVmOGI5YWQiLCJjaWQiOiI2Mjg3NzgzMzFmMGQyYTFkZWMyNzU0MDQiLCJpYXQiOjE2NTkwNzgzMTYsImV4cCI6MTY1OTE2NDcxNiwidHlwZSI6ImFjY2VzcyJ9.hNhaHhBOFjBy_uExr5sfwuu5Bo1OjSI4wiwySv5KeGQ 401 - 342.184 ms - message: Password reset failed
+[31merror[39m: Error: Password reset failed
+    at Object.resetPassword (D:\ROINode_Backend\src\services\auth.service.js:70:11)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\auth.controller.js:36:3
+[31merror[39m: POST /v1/auth/reset-password?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MjgyNDdiMTllMmExZDNhNWVmOGI5YWQiLCJjaWQiOiI2Mjg3NzgzMzFmMGQyYTFkZWMyNzU0MDQiLCJpYXQiOjE2NTkwNzgzMTYsImV4cCI6MTY1OTE2NDcxNiwidHlwZSI6ImFjY2VzcyJ9.hNhaHhBOFjBy_uExr5sfwuu5Bo1OjSI4wiwySv5KeGQ 401 - 71.770 ms - message: Password reset failed
+[31merror[39m: Error: "token" is required
+    at D:\ROINode_Backend\src\middlewares\validate.js:15:17
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (D:\ROINode_Backend\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (D:\ROINode_Backend\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\ROINode_Backend\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (D:\ROINode_Backend\node_modules\express\lib\router\index.js:175:3)
+[31merror[39m: POST /v1/auth/reset-password 400 - 7.594 ms - message: "token" is required
+[31merror[39m: Error: Password reset failed
+    at Object.resetPassword (D:\ROINode_Backend\src\services\auth.service.js:70:11)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\auth.controller.js:36:3
+[31merror[39m: POST /v1/auth/reset-password?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MjgyNDdiMTllMmExZDNhNWVmOGI5YWQiLCJjaWQiOiI2Mjg3NzgzMzFmMGQyYTFkZWMyNzU0MDQiLCJpYXQiOjE2NTkwNzgzMTYsImV4cCI6MTY1OTE2NDcxNiwidHlwZSI6ImFjY2VzcyJ9.hNhaHhBOFjBy_uExr5sfwuu5Bo1OjSI4wiwySv5KeGQ 401 - 66.493 ms - message: Password reset failed
+[31merror[39m: Error: "token" is required
+    at D:\ROINode_Backend\src\middlewares\validate.js:15:17
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (D:\ROINode_Backend\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (D:\ROINode_Backend\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\ROINode_Backend\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (D:\ROINode_Backend\node_modules\express\lib\router\index.js:175:3)
+[31merror[39m: POST /v1/auth/reset-password 400 - 6.258 ms - message: "token" is required
+[31merror[39m: Error: Password reset failed
+    at Object.resetPassword (D:\ROINode_Backend\src\services\auth.service.js:70:11)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\auth.controller.js:36:3
+[31merror[39m: POST /v1/auth/reset-password?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MjgyNDdiMTllMmExZDNhNWVmOGI5YWQiLCJjaWQiOiI2Mjg3NzgzMzFmMGQyYTFkZWMyNzU0MDQiLCJpYXQiOjE2NTkwNzg0NjMsImV4cCI6MTY1OTE2NDg2MywidHlwZSI6ImFjY2VzcyJ9._Ic5PxRI03dlxWrCasYZgz7zDRzv_qXfzuhNDQjvPhA 401 - 78.746 ms - message: Password reset failed
+[31merror[39m: Error: Password reset failed
+    at Object.resetPassword (D:\ROINode_Backend\src\services\auth.service.js:70:11)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\auth.controller.js:36:3
+[31merror[39m: POST /v1/auth/reset-password?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MjgyNDdiMTllMmExZDNhNWVmOGI5YWQiLCJjaWQiOiI2Mjg3NzgzMzFmMGQyYTFkZWMyNzU0MDQiLCJpYXQiOjE2NTkwNzg0NjMsImV4cCI6MTY1OTE2NDg2MywidHlwZSI6ImFjY2VzcyJ9._Ic5PxRI03dlxWrCasYZgz7zDRzv_qXfzuhNDQjvPhA 401 - 69.459 ms - message: Password reset failed
+[31merror[39m: Error: Password reset failed
+    at Object.resetPassword (D:\ROINode_Backend\src\services\auth.service.js:70:11)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\auth.controller.js:36:3
+[31merror[39m: POST /v1/auth/reset-password?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MjgyNDdiMTllMmExZDNhNWVmOGI5YWQiLCJjaWQiOiI2Mjg3NzgzMzFmMGQyYTFkZWMyNzU0MDQiLCJpYXQiOjE2NTkwNzg0NjMsImV4cCI6MTY1OTE2NDg2MywidHlwZSI6ImFjY2VzcyJ9._Ic5PxRI03dlxWrCasYZgz7zDRzv_qXfzuhNDQjvPhA 401 - 71.743 ms - message: Password reset failed
+[31merror[39m: TypeError: expires.unix is not a function
+    at generateToken (D:\ROINode_Backend\src\services\token.service.js:23:18)
+    at Object.generateResetPasswordToken (D:\ROINode_Backend\src\services\token.service.js:100:30)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\auth.controller.js:30:30
+[31merror[39m: POST /v1/auth/forgot-password 500 - 87.953 ms - message: expires.unix is not a function
+[31merror[39m: TypeError: expires.unix is not a function
+    at generateToken (D:\ROINode_Backend\src\services\token.service.js:23:18)
+    at Object.generateResetPasswordToken (D:\ROINode_Backend\src\services\token.service.js:100:30)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\auth.controller.js:30:30
+[31merror[39m: POST /v1/auth/forgot-password 500 - 70.021 ms - message: expires.unix is not a function
+[31merror[39m: TypeError: expires.unix is not a function
+    at generateToken (D:\ROINode_Backend\src\services\token.service.js:24:18)
+    at Object.generateResetPasswordToken (D:\ROINode_Backend\src\services\token.service.js:101:30)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\auth.controller.js:30:30
+[31merror[39m: POST /v1/auth/forgot-password 500 - 123.683 ms - message: expires.unix is not a function
+[31merror[39m: TypeError: expires.unix is not a function
+    at generateToken (D:\ROINode_Backend\src\services\token.service.js:24:18)
+    at Object.generateResetPasswordToken (D:\ROINode_Backend\src\services\token.service.js:101:30)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\auth.controller.js:30:30
+[31merror[39m: POST /v1/auth/forgot-password 500 - 107.521 ms - message: expires.unix is not a function
+[31merror[39m: TypeError: expires.unix is not a function
+    at generateToken (D:\ROINode_Backend\src\services\token.service.js:24:18)
+    at Object.generateResetPasswordToken (D:\ROINode_Backend\src\services\token.service.js:101:30)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\auth.controller.js:30:30
+[31merror[39m: POST /v1/auth/forgot-password 500 - 119.231 ms - message: expires.unix is not a function
+[31merror[39m: TypeError: expires.unix is not a function
+    at generateToken (D:\ROINode_Backend\src\services\token.service.js:24:18)
+    at Object.generateResetPasswordToken (D:\ROINode_Backend\src\services\token.service.js:101:30)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\auth.controller.js:30:30
+[31merror[39m: POST /v1/auth/forgot-password 500 - 101.959 ms - message: expires.unix is not a function
+[31merror[39m: Error: Not found
+    at D:\ROINode_Backend\src\app.js:64:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at initialize (D:\ROINode_Backend\node_modules\passport\lib\middleware\initialize.js:53:5)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at cors (D:\ROINode_Backend\node_modules\cors\lib\index.js:188:7)
+    at D:\ROINode_Backend\node_modules\cors\lib\index.js:224:17
+    at originCallback (D:\ROINode_Backend\node_modules\cors\lib\index.js:214:15)
+    at D:\ROINode_Backend\node_modules\cors\lib\index.js:219:13
+[31merror[39m: POST /reset-password?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MjgyNDdiMTllMmExZDNhNWVmOGI5YWQiLCJjaWQiOm51bGwsImlhdCI6MTY1OTA4MDAwNSwiZXhwIjoxNjU5MDgwNjA1LCJ0eXBlIjoicmVzZXRQYXNzd29yZCJ9.NI0ZysLc1zw9y1oQeTT0m1Rq0tKg3aQL-vwWm6WcMUk 404 - 13.142 ms - message: Not found
+[31merror[39m: Error: Please authenticate
+    at D:\ROINode_Backend\src\middlewares\auth.js:9:19
+    at allFailed (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:107:18)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:180:28)
+    at JwtStrategy.strategy.fail (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:302:9)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:106:33
+    at D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:152:16
+    at getSecret (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:94:10)
+    at Function.module.exports [as JwtVerifier] (D:\ROINode_Backend\node_modules\passport-jwt\lib\verify_jwt.js:4:16)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:40:13)
+    at JwtStrategy.authenticate (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:99:10)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:366:16)
+    at authenticate (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:367:7)
+    at D:\ROINode_Backend\src\middlewares\auth.js:26:107
+    at new Promise (<anonymous>)
+[31merror[39m: PATCH /v1/users/62d51bec4c27ff3b583b8bd4 401 - 8.511 ms - message: Please authenticate
+[31merror[39m: Error: password must be at least 8 characters
+    at D:\ROINode_Backend\src\middlewares\validate.js:15:17
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:28:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: PATCH /v1/users/62d51bec4c27ff3b583b8bd4 400 - 111.475 ms - message: password must be at least 8 characters
+[31merror[39m: Error: password must contain at least 1 letter and 1 number
+    at D:\ROINode_Backend\src\middlewares\validate.js:15:17
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:28:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: PATCH /v1/users/62d51bec4c27ff3b583b8bd4 400 - 71.544 ms - message: password must contain at least 1 letter and 1 number
+[31merror[39m: Error: Incorrect email or password
+    at Object.loginUserWithEmailAndPassword (D:\ROINode_Backend\src\services\auth.service.js:17:11)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\auth.controller.js:14:16
+[31merror[39m: POST /v1/auth/login 401 - 329.716 ms - message: Incorrect email or password
+[31merror[39m: Error: Incorrect email or password
+    at Object.loginUserWithEmailAndPassword (D:\ROINode_Backend\src\services\auth.service.js:17:11)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\auth.controller.js:14:16
+[31merror[39m: POST /v1/auth/login 401 - 72.184 ms - message: Incorrect email or password
+[31merror[39m: Error: Incorrect email or password
+    at Object.loginUserWithEmailAndPassword (D:\ROINode_Backend\src\services\auth.service.js:18:11)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\auth.controller.js:14:16
+[31merror[39m: POST /v1/auth/login 401 - 129.951 ms - message: Incorrect email or password
+[31merror[39m: Error: Incorrect email or password
+    at Object.loginUserWithEmailAndPassword (D:\ROINode_Backend\src\services\auth.service.js:19:11)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\auth.controller.js:14:16
+[31merror[39m: POST /v1/auth/login 401 - 139.333 ms - message: Incorrect email or password
+[31merror[39m: TypeError: Cannot read properties of null (reading 'id')
+    at Object.generateAuthTokens (D:\ROINode_Backend\src\services\token.service.js:72:42)
+    at D:\ROINode_Backend\src\controllers\auth.controller.js:15:37
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/auth/login 500 - 100.748 ms - message: Cannot read properties of null (reading 'id')
+[31merror[39m: TypeError: Cannot read properties of null (reading 'id')
+    at Object.generateAuthTokens (D:\ROINode_Backend\src\services\token.service.js:72:42)
+    at D:\ROINode_Backend\src\controllers\auth.controller.js:15:37
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/auth/login 500 - 123.805 ms - message: Cannot read properties of null (reading 'id')
+[31merror[39m: TypeError: Cannot read properties of null (reading 'id')
+    at Object.generateAuthTokens (D:\ROINode_Backend\src\services\token.service.js:72:42)
+    at D:\ROINode_Backend\src\controllers\auth.controller.js:15:37
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/auth/login 500 - 75.574 ms - message: Cannot read properties of null (reading 'id')
+[31merror[39m: Error: Please authenticate
+    at D:\ROINode_Backend\src\middlewares\auth.js:9:19
+    at allFailed (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:107:18)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:180:28)
+    at JwtStrategy.strategy.fail (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:302:9)
+    at JwtStrategy.authenticate (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:96:21)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:366:16)
+    at authenticate (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:367:7)
+    at D:\ROINode_Backend\src\middlewares\auth.js:26:107
+    at new Promise (<anonymous>)
+    at D:\ROINode_Backend\src\middlewares\auth.js:25:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:138:14)
+    at Route.dispatch (D:\ROINode_Backend\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:284:15
+[31merror[39m: GET /v1/company 401 - 10.647 ms - message: Please authenticate
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'includes')
+    at D:\ROINode_Backend\src\middlewares\auth.js:15:82
+    at Array.every (<anonymous>)
+    at D:\ROINode_Backend\src\middlewares\auth.js:15:46
+    at JwtStrategy.strategy.success (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:219:18)
+    at verified (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'includes')
+    at D:\ROINode_Backend\src\middlewares\auth.js:15:82
+    at Array.every (<anonymous>)
+    at D:\ROINode_Backend\src\middlewares\auth.js:15:46
+    at JwtStrategy.strategy.success (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:219:18)
+    at verified (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'includes')
+    at D:\ROINode_Backend\src\middlewares\auth.js:15:82
+    at Array.every (<anonymous>)
+    at D:\ROINode_Backend\src\middlewares\auth.js:15:46
+    at JwtStrategy.strategy.success (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:219:18)
+    at verified (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'includes')
+    at D:\ROINode_Backend\src\middlewares\auth.js:15:82
+    at Array.every (<anonymous>)
+    at D:\ROINode_Backend\src\middlewares\auth.js:15:46
+    at JwtStrategy.strategy.success (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:219:18)
+    at verified (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: Error: Not found
+    at D:\ROINode_Backend\src\app.js:64:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:646:15
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:265:14)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:646:15
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:265:14)
+    at Function.handle (D:\ROINode_Backend\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\ROINode_Backend\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+[31merror[39m: POST /v1/company/company/logo 404 - 23.127 ms - message: Not found
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'includes')
+    at D:\ROINode_Backend\src\middlewares\auth.js:15:82
+    at Array.every (<anonymous>)
+    at D:\ROINode_Backend\src\middlewares\auth.js:15:46
+    at JwtStrategy.strategy.success (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:219:18)
+    at verified (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'includes')
+    at D:\ROINode_Backend\src\middlewares\auth.js:15:82
+    at Array.every (<anonymous>)
+    at D:\ROINode_Backend\src\middlewares\auth.js:15:46
+    at JwtStrategy.strategy.success (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:219:18)
+    at verified (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'includes')
+    at D:\ROINode_Backend\src\middlewares\auth.js:15:82
+    at Array.every (<anonymous>)
+    at D:\ROINode_Backend\src\middlewares\auth.js:15:46
+    at JwtStrategy.strategy.success (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:219:18)
+    at verified (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'includes')
+    at D:\ROINode_Backend\src\middlewares\auth.js:15:82
+    at Array.every (<anonymous>)
+    at D:\ROINode_Backend\src\middlewares\auth.js:15:46
+    at JwtStrategy.strategy.success (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:219:18)
+    at verified (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'includes')
+    at D:\ROINode_Backend\src\middlewares\auth.js:15:82
+    at Array.every (<anonymous>)
+    at D:\ROINode_Backend\src\middlewares\auth.js:15:46
+    at JwtStrategy.strategy.success (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:219:18)
+    at verified (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'includes')
+    at D:\ROINode_Backend\src\middlewares\auth.js:16:82
+    at Array.every (<anonymous>)
+    at D:\ROINode_Backend\src\middlewares\auth.js:16:46
+    at JwtStrategy.strategy.success (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:219:18)
+    at verified (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'includes')
+    at D:\ROINode_Backend\src\middlewares\auth.js:15:82
+    at Array.every (<anonymous>)
+    at D:\ROINode_Backend\src\middlewares\auth.js:15:46
+    at JwtStrategy.strategy.success (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:219:18)
+    at verified (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'includes')
+    at D:\ROINode_Backend\src\middlewares\auth.js:16:82
+    at Array.every (<anonymous>)
+    at D:\ROINode_Backend\src\middlewares\auth.js:16:46
+    at JwtStrategy.strategy.success (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:219:18)
+    at verified (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'includes')
+    at D:\ROINode_Backend\src\middlewares\auth.js:16:82
+    at Array.every (<anonymous>)
+    at D:\ROINode_Backend\src\middlewares\auth.js:16:46
+    at JwtStrategy.strategy.success (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:219:18)
+    at verified (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'includes')
+    at D:\ROINode_Backend\src\middlewares\auth.js:16:82
+    at Array.every (<anonymous>)
+    at D:\ROINode_Backend\src\middlewares\auth.js:16:46
+    at JwtStrategy.strategy.success (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:219:18)
+    at verified (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'includes')
+    at D:\ROINode_Backend\src\middlewares\auth.js:16:82
+    at Array.every (<anonymous>)
+    at D:\ROINode_Backend\src\middlewares\auth.js:16:46
+    at JwtStrategy.strategy.success (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:219:18)
+    at verified (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'includes')
+    at D:\ROINode_Backend\src\middlewares\auth.js:16:82
+    at Array.every (<anonymous>)
+    at D:\ROINode_Backend\src\middlewares\auth.js:16:46
+    at JwtStrategy.strategy.success (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:219:18)
+    at verified (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'includes')
+    at D:\ROINode_Backend\src\middlewares\auth.js:17:82
+    at Array.every (<anonymous>)
+    at D:\ROINode_Backend\src\middlewares\auth.js:17:46
+    at JwtStrategy.strategy.success (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:219:18)
+    at verified (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: Error: Forbidden
+    at D:\ROINode_Backend\src\middlewares\auth.js:18:21
+    at JwtStrategy.strategy.success (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:219:18)
+    at verified (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/company 403 - 100.346 ms - message: Forbidden
+[31merror[39m: Error: Forbidden
+    at D:\ROINode_Backend\src\middlewares\auth.js:18:21
+    at JwtStrategy.strategy.success (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:219:18)
+    at verified (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/company 403 - 125.153 ms - message: Forbidden
+[31merror[39m: Error: Forbidden
+    at D:\ROINode_Backend\src\middlewares\auth.js:18:21
+    at JwtStrategy.strategy.success (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:219:18)
+    at verified (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/company 403 - 106.533 ms - message: Forbidden
+[31merror[39m: Error: Forbidden
+    at D:\ROINode_Backend\src\middlewares\auth.js:18:21
+    at JwtStrategy.strategy.success (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:219:18)
+    at verified (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/company 403 - 99.745 ms - message: Forbidden
+[31merror[39m: Error: Incorrect email or password
+    at Object.loginUserWithEmailAndPassword (D:\ROINode_Backend\src\services\auth.service.js:17:11)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\auth.controller.js:14:16
+[31merror[39m: POST /v1/auth/login 401 - 79.749 ms - message: Incorrect email or password
+[31merror[39m: Error: Incorrect email or password
+    at Object.loginUserWithEmailAndPassword (D:\ROINode_Backend\src\services\auth.service.js:17:11)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\auth.controller.js:14:16
+[31merror[39m: POST /v1/auth/login 401 - 70.820 ms - message: Incorrect email or password
+[31merror[39m: Error: Forbidden
+    at D:\ROINode_Backend\src\middlewares\auth.js:18:21
+    at JwtStrategy.strategy.success (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:219:18)
+    at verified (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/company 403 - 79.277 ms - message: Forbidden

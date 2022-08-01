@@ -14435,3 +14435,4413 @@
 [32minfo[39m: Number of CPUs is 8
 [32minfo[39m: Master 25992 is running
 [32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: GET /v1/dashboard/roi/list 200 - 332.433 ms
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 16964 is running
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: GET /v1/docs 301 - 9.407 ms
+[32minfo[39m: GET /v1/docs/ 200 - 8.760 ms
+[32minfo[39m: GET /v1/docs/swagger-ui-init.js 200 - 13.681 ms
+[32minfo[39m: GET /v1/docs/swagger-ui.css 200 - 63.075 ms
+[32minfo[39m: GET /v1/docs/swagger-ui-standalone-preset.js 200 - 9.896 ms
+[32minfo[39m: GET /v1/docs/swagger-ui-bundle.js 200 - 23.634 ms
+[32minfo[39m: GET /v1/docs/favicon-32x32.png 200 - 16.531 ms
+[31merror[39m: Error: Password reset failed
+    at Object.resetPassword (D:\ROINode_Backend\src\services\auth.service.js:70:11)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\auth.controller.js:36:3
+[31merror[39m: POST /v1/auth/reset-password?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MjgyNDdiMTllMmExZDNhNWVmOGI5YWQiLCJjaWQiOiI2Mjg3NzgzMzFmMGQyYTFkZWMyNzU0MDQiLCJpYXQiOjE2NTkwNzgzMTYsImV4cCI6MTY1OTE2NDcxNiwidHlwZSI6ImFjY2VzcyJ9.hNhaHhBOFjBy_uExr5sfwuu5Bo1OjSI4wiwySv5KeGQ 401 - 342.184 ms - message: Password reset failed
+[31merror[39m: Error: Password reset failed
+    at Object.resetPassword (D:\ROINode_Backend\src\services\auth.service.js:70:11)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\auth.controller.js:36:3
+[31merror[39m: POST /v1/auth/reset-password?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MjgyNDdiMTllMmExZDNhNWVmOGI5YWQiLCJjaWQiOiI2Mjg3NzgzMzFmMGQyYTFkZWMyNzU0MDQiLCJpYXQiOjE2NTkwNzgzMTYsImV4cCI6MTY1OTE2NDcxNiwidHlwZSI6ImFjY2VzcyJ9.hNhaHhBOFjBy_uExr5sfwuu5Bo1OjSI4wiwySv5KeGQ 401 - 71.770 ms - message: Password reset failed
+[31merror[39m: Error: "token" is required
+    at D:\ROINode_Backend\src\middlewares\validate.js:15:17
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (D:\ROINode_Backend\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (D:\ROINode_Backend\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\ROINode_Backend\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (D:\ROINode_Backend\node_modules\express\lib\router\index.js:175:3)
+[31merror[39m: POST /v1/auth/reset-password 400 - 7.594 ms - message: "token" is required
+[31merror[39m: Error: Password reset failed
+    at Object.resetPassword (D:\ROINode_Backend\src\services\auth.service.js:70:11)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\auth.controller.js:36:3
+[31merror[39m: POST /v1/auth/reset-password?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MjgyNDdiMTllMmExZDNhNWVmOGI5YWQiLCJjaWQiOiI2Mjg3NzgzMzFmMGQyYTFkZWMyNzU0MDQiLCJpYXQiOjE2NTkwNzgzMTYsImV4cCI6MTY1OTE2NDcxNiwidHlwZSI6ImFjY2VzcyJ9.hNhaHhBOFjBy_uExr5sfwuu5Bo1OjSI4wiwySv5KeGQ 401 - 66.493 ms - message: Password reset failed
+[31merror[39m: Error: "token" is required
+    at D:\ROINode_Backend\src\middlewares\validate.js:15:17
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (D:\ROINode_Backend\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (D:\ROINode_Backend\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\ROINode_Backend\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (D:\ROINode_Backend\node_modules\express\lib\router\index.js:175:3)
+[31merror[39m: POST /v1/auth/reset-password 400 - 6.258 ms - message: "token" is required
+[31merror[39m: Error: Password reset failed
+    at Object.resetPassword (D:\ROINode_Backend\src\services\auth.service.js:70:11)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\auth.controller.js:36:3
+[31merror[39m: POST /v1/auth/reset-password?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MjgyNDdiMTllMmExZDNhNWVmOGI5YWQiLCJjaWQiOiI2Mjg3NzgzMzFmMGQyYTFkZWMyNzU0MDQiLCJpYXQiOjE2NTkwNzg0NjMsImV4cCI6MTY1OTE2NDg2MywidHlwZSI6ImFjY2VzcyJ9._Ic5PxRI03dlxWrCasYZgz7zDRzv_qXfzuhNDQjvPhA 401 - 78.746 ms - message: Password reset failed
+[31merror[39m: Error: Password reset failed
+    at Object.resetPassword (D:\ROINode_Backend\src\services\auth.service.js:70:11)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\auth.controller.js:36:3
+[31merror[39m: POST /v1/auth/reset-password?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MjgyNDdiMTllMmExZDNhNWVmOGI5YWQiLCJjaWQiOiI2Mjg3NzgzMzFmMGQyYTFkZWMyNzU0MDQiLCJpYXQiOjE2NTkwNzg0NjMsImV4cCI6MTY1OTE2NDg2MywidHlwZSI6ImFjY2VzcyJ9._Ic5PxRI03dlxWrCasYZgz7zDRzv_qXfzuhNDQjvPhA 401 - 69.459 ms - message: Password reset failed
+[31merror[39m: Error: Password reset failed
+    at Object.resetPassword (D:\ROINode_Backend\src\services\auth.service.js:70:11)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\auth.controller.js:36:3
+[31merror[39m: POST /v1/auth/reset-password?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MjgyNDdiMTllMmExZDNhNWVmOGI5YWQiLCJjaWQiOiI2Mjg3NzgzMzFmMGQyYTFkZWMyNzU0MDQiLCJpYXQiOjE2NTkwNzg0NjMsImV4cCI6MTY1OTE2NDg2MywidHlwZSI6ImFjY2VzcyJ9._Ic5PxRI03dlxWrCasYZgz7zDRzv_qXfzuhNDQjvPhA 401 - 71.743 ms - message: Password reset failed
+[31merror[39m: TypeError: expires.unix is not a function
+    at generateToken (D:\ROINode_Backend\src\services\token.service.js:23:18)
+    at Object.generateResetPasswordToken (D:\ROINode_Backend\src\services\token.service.js:100:30)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\auth.controller.js:30:30
+[31merror[39m: POST /v1/auth/forgot-password 500 - 87.953 ms - message: expires.unix is not a function
+[31merror[39m: TypeError: expires.unix is not a function
+    at generateToken (D:\ROINode_Backend\src\services\token.service.js:23:18)
+    at Object.generateResetPasswordToken (D:\ROINode_Backend\src\services\token.service.js:100:30)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\auth.controller.js:30:30
+[31merror[39m: POST /v1/auth/forgot-password 500 - 70.021 ms - message: expires.unix is not a function
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 19692 is running
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[31merror[39m: TypeError: expires.unix is not a function
+    at generateToken (D:\ROINode_Backend\src\services\token.service.js:24:18)
+    at Object.generateResetPasswordToken (D:\ROINode_Backend\src\services\token.service.js:101:30)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\auth.controller.js:30:30
+[31merror[39m: POST /v1/auth/forgot-password 500 - 123.683 ms - message: expires.unix is not a function
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 12444 is running
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[31merror[39m: TypeError: expires.unix is not a function
+    at generateToken (D:\ROINode_Backend\src\services\token.service.js:24:18)
+    at Object.generateResetPasswordToken (D:\ROINode_Backend\src\services\token.service.js:101:30)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\auth.controller.js:30:30
+[31merror[39m: POST /v1/auth/forgot-password 500 - 107.521 ms - message: expires.unix is not a function
+[32minfo[39m: worker 5244 died
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 18480 is running
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[31merror[39m: TypeError: expires.unix is not a function
+    at generateToken (D:\ROINode_Backend\src\services\token.service.js:24:18)
+    at Object.generateResetPasswordToken (D:\ROINode_Backend\src\services\token.service.js:101:30)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\auth.controller.js:30:30
+[31merror[39m: POST /v1/auth/forgot-password 500 - 119.231 ms - message: expires.unix is not a function
+[32minfo[39m: worker 5564 died
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 26932 is running
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 30056 is running
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[31merror[39m: TypeError: expires.unix is not a function
+    at generateToken (D:\ROINode_Backend\src\services\token.service.js:24:18)
+    at Object.generateResetPasswordToken (D:\ROINode_Backend\src\services\token.service.js:101:30)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\auth.controller.js:30:30
+[31merror[39m: POST /v1/auth/forgot-password 500 - 101.959 ms - message: expires.unix is not a function
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 12356 is running
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 13008 is running
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: POST /v1/auth/forgot-password 204 - 3699.516 ms
+[32minfo[39m: POST /v1/auth/forgot-password 204 - 3433.401 ms
+[31merror[39m: Error: Not found
+    at D:\ROINode_Backend\src\app.js:64:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at initialize (D:\ROINode_Backend\node_modules\passport\lib\middleware\initialize.js:53:5)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at cors (D:\ROINode_Backend\node_modules\cors\lib\index.js:188:7)
+    at D:\ROINode_Backend\node_modules\cors\lib\index.js:224:17
+    at originCallback (D:\ROINode_Backend\node_modules\cors\lib\index.js:214:15)
+    at D:\ROINode_Backend\node_modules\cors\lib\index.js:219:13
+[31merror[39m: POST /reset-password?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MjgyNDdiMTllMmExZDNhNWVmOGI5YWQiLCJjaWQiOm51bGwsImlhdCI6MTY1OTA4MDAwNSwiZXhwIjoxNjU5MDgwNjA1LCJ0eXBlIjoicmVzZXRQYXNzd29yZCJ9.NI0ZysLc1zw9y1oQeTT0m1Rq0tKg3aQL-vwWm6WcMUk 404 - 13.142 ms - message: Not found
+[32minfo[39m: POST /v1/auth/reset-password?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MjgyNDdiMTllMmExZDNhNWVmOGI5YWQiLCJjaWQiOm51bGwsImlhdCI6MTY1OTA4MDAwNSwiZXhwIjoxNjU5MDgwNjA1LCJ0eXBlIjoicmVzZXRQYXNzd29yZCJ9.NI0ZysLc1zw9y1oQeTT0m1Rq0tKg3aQL-vwWm6WcMUk 204 - 555.032 ms
+[31merror[39m: Error: Please authenticate
+    at D:\ROINode_Backend\src\middlewares\auth.js:9:19
+    at allFailed (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:107:18)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:180:28)
+    at JwtStrategy.strategy.fail (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:302:9)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:106:33
+    at D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:152:16
+    at getSecret (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:94:10)
+    at Function.module.exports [as JwtVerifier] (D:\ROINode_Backend\node_modules\passport-jwt\lib\verify_jwt.js:4:16)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:40:13)
+    at JwtStrategy.authenticate (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:99:10)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:366:16)
+    at authenticate (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:367:7)
+    at D:\ROINode_Backend\src\middlewares\auth.js:26:107
+    at new Promise (<anonymous>)
+[31merror[39m: PATCH /v1/users/62d51bec4c27ff3b583b8bd4 401 - 8.511 ms - message: Please authenticate
+[31merror[39m: Error: password must be at least 8 characters
+    at D:\ROINode_Backend\src\middlewares\validate.js:15:17
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:28:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: PATCH /v1/users/62d51bec4c27ff3b583b8bd4 400 - 111.475 ms - message: password must be at least 8 characters
+[31merror[39m: Error: password must contain at least 1 letter and 1 number
+    at D:\ROINode_Backend\src\middlewares\validate.js:15:17
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:28:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: PATCH /v1/users/62d51bec4c27ff3b583b8bd4 400 - 71.544 ms - message: password must contain at least 1 letter and 1 number
+[32minfo[39m: PATCH /v1/users/62d51bec4c27ff3b583b8bd4 200 - 325.572 ms
+[32minfo[39m: worker 26028 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 8392 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 18896 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 6656 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 25344 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 32096 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 23956 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 26136 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 31184 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 31596 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 12204 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 16416 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 31576 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 29124 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 28656 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 20176 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 21852 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 20308 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22784 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 16552 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22372 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 25068 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 32436 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 12040 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 8172 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 17352 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22100 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 2492 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22448 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 28408 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 5888 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 10976 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22512 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 25836 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 21788 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 10860 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 29624 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 29308 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 29368 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 1376 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 6960 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 19996 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 31776 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 3464 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 17944 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 5524 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 7652 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 16236 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 25736 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 21308 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 25400 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 6704 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 5744 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 12156 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 7712 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22752 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 16452 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 15732 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 10968 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 27644 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 31800 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 23620 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 21760 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 7216 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 12076 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 19204 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 26160 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 18808 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 29772 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 17372 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 32544 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22104 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 17168 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 31704 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 9224 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 11108 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 31096 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 28164 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 9792 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 27792 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 10164 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 24408 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 23612 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 10024 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 26336 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 32732 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 17300 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 18352 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 27512 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 14776 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 9616 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 30092 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 31492 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 5164 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 12144 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 28264 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 32376 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 21464 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 17236 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 9652 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22676 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 30628 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 28516 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 28712 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 26444 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 31432 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 24516 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 14468 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 32200 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 6876 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22740 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 15968 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 14840 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 14096 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 10992 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 4972 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 6768 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 15772 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 29436 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 13232 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 6916 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 12744 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 972 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 18512 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 30344 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 16864 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 13396 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 19352 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 12128 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 29652 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 23856 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 16084 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 2556 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 17772 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 28952 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 21072 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 10484 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 23224 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 12540 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 9604 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 3380 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 28448 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 27388 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 17284 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 21084 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 9804 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 26940 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 31356 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 21400 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 13372 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 1164 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 19932 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 11224 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 24308 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22768 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 18248 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 17716 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 32444 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 31700 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 12824 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 19420 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 4856 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 24268 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 21064 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 19596 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 14272 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 10360 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 976 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 27696 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 23992 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 21276 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 19940 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 15868 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 20840 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 30372 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 15228 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 19200 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 8220 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 25880 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 3132 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 16992 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 6952 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 29780 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 29092 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 11636 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22200 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22260 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 28916 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 8092 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 30864 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 18452 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 4644 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 24664 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 29248 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 31056 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 14780 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 21176 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 21452 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 17080 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 21164 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 27584 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 11212 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 16960 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 2824 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 3872 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 26548 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 27700 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 15644 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 27084 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 18532 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 31052 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 31428 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 1188 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 13616 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 29848 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 11820 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 32380 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 21116 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 24904 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 16460 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 27772 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 29752 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 9648 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 14596 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 17948 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 32528 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 32056 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 10848 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 18848 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 19888 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 3256 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 3924 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22828 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 30200 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 20920 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 10396 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 32012 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 21916 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 12084 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 3236 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 11232 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 3504 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 2156 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 13680 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 28056 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 19300 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 13544 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 32000 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 14660 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 24320 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 15920 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 21724 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 30852 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 10220 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 25772 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 23268 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 27796 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 14508 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 13548 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 21748 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 23932 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 8812 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 13900 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 16980 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 16556 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 16184 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22060 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 7824 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 21456 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 3252 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 26536 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 2720 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 5520 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 2248 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 7836 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 6072 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 15704 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 28704 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 11940 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 12304 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 21500 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 28192 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 26288 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 13144 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 20156 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 15660 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 13996 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 31912 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 31156 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 23640 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 26432 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 28844 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 32208 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 20436 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 9512 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 3172 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 29804 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 15584 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 12688 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 7392 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 8452 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 27996 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 21980 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 12088 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22936 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 14968 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 14804 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 18600 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 29316 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22568 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 4868 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 21284 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22044 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 32084 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 31468 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 4292 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 18160 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 9852 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 20268 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 26392 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 1236 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 13932 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 11632 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 12800 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 18636 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 7788 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 9404 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 17092 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 21988 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 9212 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 17152 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22380 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 15460 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 11400 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 30288 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 15176 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 32400 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 14228 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 26244 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 6920 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 29676 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 18548 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 7516 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 24852 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 1112 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 3612 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 23892 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 27140 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 18388 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 504 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 17880 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 25332 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22736 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 30140 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 10428 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 2404 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22524 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 32296 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 19408 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 18040 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 7636 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 24048 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 1712 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 10000 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 14304 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 20756 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 18072 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 14004 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 18816 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 6412 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 18828 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 11564 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22536 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 25412 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 21068 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 27684 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22868 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 13416 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 29572 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 8196 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 11900 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 32584 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 31184 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 18652 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 8396 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 16416 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 9552 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 2220 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 19148 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 20176 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 15436 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 20348 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 6724 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 16076 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 23228 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 18320 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 5436 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 29008 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 11292 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 29856 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 30440 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 16552 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 10336 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 28668 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 20432 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 27860 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 29056 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 27436 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 30228 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 30104 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 10300 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 17352 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22100 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 16712 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 14608 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22392 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 28408 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 26676 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 20068 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 1500 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 16424 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 14024 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 12640 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 20236 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 4408 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 15096 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 28720 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 29448 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 27848 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 9532 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 9732 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 25312 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 25088 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 16824 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 16388 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 29180 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 6320 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 26332 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 29352 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 25764 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 1776 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 13516 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 5024 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 5432 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 11036 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 21136 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 26640 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 23040 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22484 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 19996 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 31776 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 26240 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 25540 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 14300 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 25796 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 5056 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 6648 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 25952 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 4744 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 28780 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 11196 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 16764 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 25840 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 19040 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 18908 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 20044 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 30768 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 1540 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 18536 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 30824 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 12156 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 30968 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 26036 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 25048 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22752 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 24284 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 30020 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 11376 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 26820 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 6776 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 12100 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 12908 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 13684 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 13104 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 2308 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 12460 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 18808 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 21472 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 7912 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 32544 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 5096 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 14864 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 13420 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 11176 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 16204 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 14808 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 27080 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 26164 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 21712 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 18760 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22972 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 1836 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 24204 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 4332 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 28380 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 25184 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 25680 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 8916 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 1128 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 14120 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 28284 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 23456 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 7776 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 24564 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 9756 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 20620 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 11596 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 18256 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 14732 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 19836 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 9064 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 18940 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 2080 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 5576 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 6680 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 2944 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 1728 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 14132 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 30924 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22620 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22600 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 32212 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 5836 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 12320 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 30464 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 29532 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22532 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 17132 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 26052 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 23772 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 20108 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 10624 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 12160 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 31980 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22468 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 16880 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 15112 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 17236 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 9624 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 11136 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 32204 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 8856 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 15004 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 27948 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 31604 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 18844 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 8408 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 10760 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 17012 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 23940 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 14240 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 16088 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 23304 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 3712 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 25232 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 4452 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 31696 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22864 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 24292 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 18060 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 8432 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 16420 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 28132 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 20784 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 24828 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 17376 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 6916 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 20576 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 21336 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 23868 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 18512 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 32660 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 26128 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 7068 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 5556 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 15212 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 5160 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 19352 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 16224 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 7876 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22652 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 12836 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 12128 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 4484 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 30072 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 2428 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 17740 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 17536 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 27124 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 23352 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 20500 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 28052 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22480 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 8844 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 31636 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 10484 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 4624 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 16736 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 29852 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 1072 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 17764 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 16020 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 32196 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 8572 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 13052 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 20232 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 20796 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 19844 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 1044 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 20240 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 15632 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 12412 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 29260 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 30044 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 17444 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 18492 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 29136 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 5616 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 15700 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 10676 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 9804 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 28172 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 31356 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 25140 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 10140 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 31544 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22012 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 10120 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 19956 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 30204 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 11020 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 19932 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 32396 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 17648 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 9268 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22716 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 30032 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 11236 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 24264 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 16208 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 32228 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22928 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 21208 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 14272 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 23252 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 23972 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 19980 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 16972 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 19208 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 19940 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 31268 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 19928 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 17456 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 10208 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 29416 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 9544 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 6120 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 31804 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 15216 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 8372 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 15056 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 30372 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 13412 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 31272 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 14896 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 3028 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 30408 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 16768 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 14860 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 32044 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 15260 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 19488 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 12072 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 628 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22596 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 2176 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22276 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 27900 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 9760 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 19164 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 23012 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 27260 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 18916 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 11636 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 21024 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 24356 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 27744 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 7888 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 19088 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 21984 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 15128 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 31144 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 5684 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 31496 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 26316 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 19760 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 10720 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 19428 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 24800 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 16704 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 30864 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 24416 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 27060 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 16628 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 27728 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 26284 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 18668 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 17604 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 8624 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 23768 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 20676 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 10256 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 30416 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 32384 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 6504 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 20996 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 21452 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 13468 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 11912 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 19808 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 25024 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 8444 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 11952 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 23488 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 7148 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 9492 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 21436 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 13860 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 16004 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 13568 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 13876 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 9144 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 6232 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 30492 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 24832 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 17424 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 13732 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22508 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 4044 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 30984 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 8800 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 25272 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 9420 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 31420 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 16044 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22500 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 27084 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 30392 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 31052 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 20612 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 31316 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 18964 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 8492 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 3696 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 31204 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 29816 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 8132 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 11124 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 17256 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 29460 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 13692 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 24336 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 30048 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 4604 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 13828 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 21028 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 32104 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22452 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 30880 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 11820 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 11080 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 15164 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 1488 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 17232 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 9168 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 28788 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 17948 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 2652 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 32056 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 2184 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 19888 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 13236 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 1856 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22828 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 28588 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 19504 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 23776 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 10396 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 24924 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 31808 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 12084 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 20656 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 1168 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 19616 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 24488 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 21948 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 21556 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 8500 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 28268 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 31048 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 30652 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 32000 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 14660 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 18612 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 24296 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 10268 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 25368 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 3852 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 23268 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 27796 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 14508 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 3588 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 29064 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 8812 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 19840 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 30808 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 17852 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 4432 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 20488 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 2520 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22860 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 21456 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 12012 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 12792 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 17512 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 7836 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 6072 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 15704 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 20508 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 27672 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 8128 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 15472 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 2196 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 26748 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 27088 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 17280 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 15660 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 29236 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 18012 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 27624 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 14952 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 14688 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 21940 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 8664 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 8160 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 10196 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 1796 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 14148 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 14856 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 2760 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 31032 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 24764 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 30012 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 25864 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 30276 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 12088 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22936 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 17228 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 13884 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 30096 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 26064 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 9620 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 19720 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 23512 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 10948 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22428 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 1508 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 19624 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 13944 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 17872 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 30008 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 27504 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 31140 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 13932 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 31012 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 11632 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 17396 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 7788 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 9404 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 28816 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 17092 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 9212 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 21968 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 25480 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 17176 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 13816 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 20628 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 31172 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 17640 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 19712 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 28048 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 17616 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 5408 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 10964 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 27652 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 31736 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 17700 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 28676 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 4328 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 32636 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 28096 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 5868 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 11432 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 30268 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 24276 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 16196 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 16860 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 23924 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 26576 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 17328 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22800 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 9276 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 30504 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 19948 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22772 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 28396 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 20984 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 7636 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 23928 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 26764 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 23860 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 24748 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 3856 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 32096 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 18072 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 14004 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 18816 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 28880 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 12520 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 11564 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 23704 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 26136 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22916 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 26980 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 3208 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 26384 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 16212 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 7380 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 12604 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 720 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 31184 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 18652 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 31576 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 11308 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 9552 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 23996 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 28936 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22724 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 15040 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 9856 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 6420 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 21700 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 16076 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 23228 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 18320 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 5436 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 16624 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 29008 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 26060 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 30440 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 32460 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 18496 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 1616 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22848 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 3324 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 27444 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 24116 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 9252 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 32164 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 24008 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 11360 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 28716 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 13060 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 16228 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 28408 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 26676 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 20644 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 20068 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 16424 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 14024 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 21644 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 23468 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 26532 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 15096 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 25980 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 29348 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 27848 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 19220 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 11180 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 10480 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 14532 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 25836 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 20496 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 12404 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 6752 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 20360 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 12260 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 1776 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 13984 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 29368 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 23680 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 1376 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 6336 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 25284 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 18312 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 11052 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 25252 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 7172 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 13820 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 27676 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 7652 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 31008 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 2072 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 21592 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 4264 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 21300 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 16656 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 11196 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 16764 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 25840 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 19040 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 13908 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 24976 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 31688 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 21408 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 1540 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 32048 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 10856 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 32340 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 25784 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 11024 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22752 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 24284 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 30020 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 11376 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 26820 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 12572 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 7216 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 12076 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 18956 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 26292 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 23580 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 12460 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 14652 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 5828 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 15572 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 5748 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 25360 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 26816 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 30800 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 17724 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 30016 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 29512 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 27080 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 21712 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 3280 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22972 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 1836 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 24204 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 11084 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 8260 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 19324 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 13528 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 26564 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 26660 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 17004 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 28284 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 19652 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 11620 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 21148 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 4824 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 3076 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 20380 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 14732 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 19836 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 28792 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 18940 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 2080 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 5576 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 30148 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 26076 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 23172 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 2004 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 25580 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 9296 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 9164 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 27396 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 14776 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 4672 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 31560 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 16964 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 13988 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 1708 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 26740 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 440 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 1660 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 10624 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 12160 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 6308 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 20084 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 15788 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 16620 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 17236 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 9624 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 11136 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 21976 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22676 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22068 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 20352 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 20976 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 18844 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 17544 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 15776 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 27108 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 13388 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 13728 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 988 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 23736 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22204 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 25364 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 20816 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 11312 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 14840 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 17128 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 23592 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 28808 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 19812 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 14884 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 17056 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 17900 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 27752 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 14416 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 10560 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 14500 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 14492 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 30344 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22208 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 25608 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 9368 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 13396 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 21944 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 29808 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 3140 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 13136 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 18288 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 14928 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 4484 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 3748 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 2556 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 28240 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 31236 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 27124 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 8236 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 21344 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 29328 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 15452 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 21396 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 20080 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22480 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 19052 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 26788 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 19212 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 7736 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 19124 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 27120 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 19620 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 26224 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 28448 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 13956 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 18080 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 27976 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 12952 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 17556 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 20312 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 20056 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 32068 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 31020 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 29260 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 30044 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 17444 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 26612 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 31996 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 11948 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 20036 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 29192 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 23564 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 28172 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 31356 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 25140 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 10140 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 9384 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 24096 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 30548 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 5232 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 17668 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 14648 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 30524 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 25860 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 20028 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 12816 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 18028 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 11236 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 24264 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 16208 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 32228 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 8072 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 18440 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 14272 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 14760 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 26424 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 4808 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 15488 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 30612 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 26412 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 21708 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 13284 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 23508 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 28544 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 7312 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 14488 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 25996 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 31804 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 8372 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 21972 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 30372 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 13412 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 1624 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 12672 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 12228 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 21512 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 28772 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 21412 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22168 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 11220 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 27992 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 24328 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 28320 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 18220 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 18752 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 18200 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 6252 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 27488 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 27148 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 20248 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 14404 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 17768 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 12996 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 23160 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 1408 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 11556 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 30108 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 19108 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 29912 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 7360 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 18772 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 8024 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 28684 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 23504 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 23800 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 32240 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 28168 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 30864 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 28076 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 30388 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 29932 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 4384 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 27428 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 18236 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 27400 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 30384 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 11944 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 23808 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 18564 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 14780 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 17112 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 7812 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 9500 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 21164 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 14092 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 11912 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 19808 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 25024 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 12768 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 28400 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 14368 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 24064 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 15956 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 29452 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 5480 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 30116 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 2824 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 9144 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 6232 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 30492 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 15068 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 27912 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 23384 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 7832 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 4044 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 29836 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 9092 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 28044 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 24248 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 11740 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 16044 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 20972 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 18656 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 8256 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 10748 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 30336 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 17560 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 1576 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 13616 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 26664 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 3428 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 29816 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 11124 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22272 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 25712 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 10692 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 27892 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 29748 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 14112 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 28548 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 23896 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 32380 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 6728 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 18148 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 16944 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 16460 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 19236 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 14596 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 26932 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 16800 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 28788 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 17948 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 6708 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 32056 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 2184 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 11984 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 30164 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 23600 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 10620 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 19188 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 19504 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 23776 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 10396 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 7948 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 3236 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 12084 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 28644 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 18756 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 23852 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 2156 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 15008 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 28620 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 8500 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 27236 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 12808 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 18984 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 32000 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 14660 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 18612 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 4352 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 10488 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 2452 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 28832 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 21296 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 13548 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 14508 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 3588 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 13900 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 27716 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 16556 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 31508 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 12988 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 26572 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 17360 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 13040 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 26536 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 5520 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 8692 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22912 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 19892 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 23920 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 28704 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 12304 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 17860 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 24140 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 26288 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 13904 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 27692 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 29284 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 22900 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 16852 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 30936 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 13788 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 23640 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 26432 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 25148 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 20744 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 21940 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 2316 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 15496 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 31552 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 21244 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 31152 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 13976 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 10044 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 27996 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 21980 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 24184 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 6284 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: worker 17660 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 23620 is running
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 14516 is running
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[31merror[39m: Error: Incorrect email or password
+    at Object.loginUserWithEmailAndPassword (D:\ROINode_Backend\src\services\auth.service.js:17:11)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\auth.controller.js:14:16
+[31merror[39m: POST /v1/auth/login 401 - 329.716 ms - message: Incorrect email or password
+[32minfo[39m: POST /v1/auth/login 200 - 222.321 ms
+[31merror[39m: Error: Incorrect email or password
+    at Object.loginUserWithEmailAndPassword (D:\ROINode_Backend\src\services\auth.service.js:17:11)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\auth.controller.js:14:16
+[31merror[39m: POST /v1/auth/login 401 - 72.184 ms - message: Incorrect email or password
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 10260 is running
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[31merror[39m: Error: Incorrect email or password
+    at Object.loginUserWithEmailAndPassword (D:\ROINode_Backend\src\services\auth.service.js:18:11)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\auth.controller.js:14:16
+[31merror[39m: POST /v1/auth/login 401 - 129.951 ms - message: Incorrect email or password
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 13356 is running
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[31merror[39m: Error: Incorrect email or password
+    at Object.loginUserWithEmailAndPassword (D:\ROINode_Backend\src\services\auth.service.js:19:11)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\auth.controller.js:14:16
+[31merror[39m: POST /v1/auth/login 401 - 139.333 ms - message: Incorrect email or password
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 32128 is running
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[31merror[39m: TypeError: Cannot read properties of null (reading 'id')
+    at Object.generateAuthTokens (D:\ROINode_Backend\src\services\token.service.js:72:42)
+    at D:\ROINode_Backend\src\controllers\auth.controller.js:15:37
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/auth/login 500 - 100.748 ms - message: Cannot read properties of null (reading 'id')
+[32minfo[39m: worker 11304 died
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 24488 is running
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[31merror[39m: TypeError: Cannot read properties of null (reading 'id')
+    at Object.generateAuthTokens (D:\ROINode_Backend\src\services\token.service.js:72:42)
+    at D:\ROINode_Backend\src\controllers\auth.controller.js:15:37
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/auth/login 500 - 123.805 ms - message: Cannot read properties of null (reading 'id')
+[32minfo[39m: POST /v1/auth/login 200 - 179.496 ms
+[31merror[39m: TypeError: Cannot read properties of null (reading 'id')
+    at Object.generateAuthTokens (D:\ROINode_Backend\src\services\token.service.js:72:42)
+    at D:\ROINode_Backend\src\controllers\auth.controller.js:15:37
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/auth/login 500 - 75.574 ms - message: Cannot read properties of null (reading 'id')
+[32minfo[39m: POST /v1/auth/login 200 - 143.125 ms
+[32minfo[39m: POST /v1/auth/login 200 - 160.790 ms
+[32minfo[39m: POST /v1/auth/login 200 - 149.437 ms
+[32minfo[39m: POST /v1/auth/login 200 - 137.019 ms
+[32minfo[39m: POST /v1/auth/login 200 - 144.866 ms
+[32minfo[39m: worker 18300 died
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 7912 is running
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 18220 is running
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: POST /v1/auth/login 200 - 244.600 ms
+[31merror[39m: Error: Please authenticate
+    at D:\ROINode_Backend\src\middlewares\auth.js:9:19
+    at allFailed (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:107:18)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:180:28)
+    at JwtStrategy.strategy.fail (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:302:9)
+    at JwtStrategy.authenticate (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:96:21)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:366:16)
+    at authenticate (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:367:7)
+    at D:\ROINode_Backend\src\middlewares\auth.js:26:107
+    at new Promise (<anonymous>)
+    at D:\ROINode_Backend\src\middlewares\auth.js:25:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:138:14)
+    at Route.dispatch (D:\ROINode_Backend\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:284:15
+[31merror[39m: GET /v1/company 401 - 10.647 ms - message: Please authenticate
+[32minfo[39m: POST /v1/auth/login 200 - 162.031 ms
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'includes')
+    at D:\ROINode_Backend\src\middlewares\auth.js:15:82
+    at Array.every (<anonymous>)
+    at D:\ROINode_Backend\src\middlewares\auth.js:15:46
+    at JwtStrategy.strategy.success (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:219:18)
+    at verified (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[32minfo[39m: Server closed
+[32minfo[39m: worker 9416 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 13892 is running
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'includes')
+    at D:\ROINode_Backend\src\middlewares\auth.js:15:82
+    at Array.every (<anonymous>)
+    at D:\ROINode_Backend\src\middlewares\auth.js:15:46
+    at JwtStrategy.strategy.success (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:219:18)
+    at verified (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Server closed
+[32minfo[39m: worker 25224 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: POST /v1/auth/login 200 - 294.311 ms
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'includes')
+    at D:\ROINode_Backend\src\middlewares\auth.js:15:82
+    at Array.every (<anonymous>)
+    at D:\ROINode_Backend\src\middlewares\auth.js:15:46
+    at JwtStrategy.strategy.success (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:219:18)
+    at verified (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'includes')
+    at D:\ROINode_Backend\src\middlewares\auth.js:15:82
+    at Array.every (<anonymous>)
+    at D:\ROINode_Backend\src\middlewares\auth.js:15:46
+    at JwtStrategy.strategy.success (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:219:18)
+    at verified (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: Error: Not found
+    at D:\ROINode_Backend\src\app.js:64:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:646:15
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:265:14)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:646:15
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:265:14)
+    at Function.handle (D:\ROINode_Backend\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\ROINode_Backend\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+[31merror[39m: POST /v1/company/company/logo 404 - 23.127 ms - message: Not found
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 9084 is running
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'includes')
+    at D:\ROINode_Backend\src\middlewares\auth.js:15:82
+    at Array.every (<anonymous>)
+    at D:\ROINode_Backend\src\middlewares\auth.js:15:46
+    at JwtStrategy.strategy.success (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:219:18)
+    at verified (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[32minfo[39m: POST /v1/auth/login 200 - 337.595 ms
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'includes')
+    at D:\ROINode_Backend\src\middlewares\auth.js:15:82
+    at Array.every (<anonymous>)
+    at D:\ROINode_Backend\src\middlewares\auth.js:15:46
+    at JwtStrategy.strategy.success (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:219:18)
+    at verified (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[32minfo[39m: POST /v1/auth/login 200 - 246.362 ms
+[32minfo[39m: Server closed
+[32minfo[39m: worker 19412 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: GET /v1/company 200 - 376.668 ms
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 9296 is running
+[32minfo[39m: worker 30952 died
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 30000 is running
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: POST /v1/auth/login 200 - 413.340 ms
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'includes')
+    at D:\ROINode_Backend\src\middlewares\auth.js:15:82
+    at Array.every (<anonymous>)
+    at D:\ROINode_Backend\src\middlewares\auth.js:15:46
+    at JwtStrategy.strategy.success (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:219:18)
+    at verified (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[32minfo[39m: worker 11164 died
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 12900 is running
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'includes')
+    at D:\ROINode_Backend\src\middlewares\auth.js:15:82
+    at Array.every (<anonymous>)
+    at D:\ROINode_Backend\src\middlewares\auth.js:15:46
+    at JwtStrategy.strategy.success (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:219:18)
+    at verified (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 24196 is running
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: worker 22052 died
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 19180 is running
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'includes')
+    at D:\ROINode_Backend\src\middlewares\auth.js:15:82
+    at Array.every (<anonymous>)
+    at D:\ROINode_Backend\src\middlewares\auth.js:15:46
+    at JwtStrategy.strategy.success (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:219:18)
+    at verified (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[32minfo[39m: POST /v1/auth/login 200 - 265.601 ms
+[32minfo[39m: POST /v1/auth/login 200 - 157.760 ms
+[32minfo[39m: Server closed
+[32minfo[39m: worker 20000 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: GET /v1/company 200 - 378.714 ms
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: POST /v1/auth/login 200 - 226.123 ms
+[32minfo[39m: worker 22040 died
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 32388 is running
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: POST /v1/auth/login 200 - 261.357 ms
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'includes')
+    at D:\ROINode_Backend\src\middlewares\auth.js:16:82
+    at Array.every (<anonymous>)
+    at D:\ROINode_Backend\src\middlewares\auth.js:16:46
+    at JwtStrategy.strategy.success (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:219:18)
+    at verified (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[32minfo[39m: Server closed
+[32minfo[39m: worker 7360 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: GET /v1/company 200 - 552.915 ms
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 29200 is running
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: worker 31512 died
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 14540 is running
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'includes')
+    at D:\ROINode_Backend\src\middlewares\auth.js:15:82
+    at Array.every (<anonymous>)
+    at D:\ROINode_Backend\src\middlewares\auth.js:15:46
+    at JwtStrategy.strategy.success (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:219:18)
+    at verified (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[32minfo[39m: worker 5428 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 14484 is running
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'includes')
+    at D:\ROINode_Backend\src\middlewares\auth.js:16:82
+    at Array.every (<anonymous>)
+    at D:\ROINode_Backend\src\middlewares\auth.js:16:46
+    at JwtStrategy.strategy.success (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:219:18)
+    at verified (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[32minfo[39m: worker 22616 died
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 19144 is running
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'includes')
+    at D:\ROINode_Backend\src\middlewares\auth.js:16:82
+    at Array.every (<anonymous>)
+    at D:\ROINode_Backend\src\middlewares\auth.js:16:46
+    at JwtStrategy.strategy.success (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:219:18)
+    at verified (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[32minfo[39m: Connected to email server
+[32minfo[39m: Server closed
+[32minfo[39m: worker 1316 died
+[32minfo[39m: Let's fork another worker!
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'includes')
+    at D:\ROINode_Backend\src\middlewares\auth.js:16:82
+    at Array.every (<anonymous>)
+    at D:\ROINode_Backend\src\middlewares\auth.js:16:46
+    at JwtStrategy.strategy.success (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:219:18)
+    at verified (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: worker 13684 died
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 8236 is running
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'includes')
+    at D:\ROINode_Backend\src\middlewares\auth.js:16:82
+    at Array.every (<anonymous>)
+    at D:\ROINode_Backend\src\middlewares\auth.js:16:46
+    at JwtStrategy.strategy.success (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:219:18)
+    at verified (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Server closed
+[32minfo[39m: worker 8460 died
+[32minfo[39m: Let's fork another worker!
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'includes')
+    at D:\ROINode_Backend\src\middlewares\auth.js:16:82
+    at Array.every (<anonymous>)
+    at D:\ROINode_Backend\src\middlewares\auth.js:16:46
+    at JwtStrategy.strategy.success (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:219:18)
+    at verified (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 23736 is running
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'includes')
+    at D:\ROINode_Backend\src\middlewares\auth.js:17:82
+    at Array.every (<anonymous>)
+    at D:\ROINode_Backend\src\middlewares\auth.js:17:46
+    at JwtStrategy.strategy.success (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:219:18)
+    at verified (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 1244 is running
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[31merror[39m: Error: Forbidden
+    at D:\ROINode_Backend\src\middlewares\auth.js:18:21
+    at JwtStrategy.strategy.success (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:219:18)
+    at verified (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/company 403 - 100.346 ms - message: Forbidden
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 13788 is running
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[31merror[39m: Error: Forbidden
+    at D:\ROINode_Backend\src\middlewares\auth.js:18:21
+    at JwtStrategy.strategy.success (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:219:18)
+    at verified (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/company 403 - 125.153 ms - message: Forbidden
+[31merror[39m: Error: Forbidden
+    at D:\ROINode_Backend\src\middlewares\auth.js:18:21
+    at JwtStrategy.strategy.success (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:219:18)
+    at verified (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/company 403 - 106.533 ms - message: Forbidden
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 3252 is running
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[31merror[39m: Error: Forbidden
+    at D:\ROINode_Backend\src\middlewares\auth.js:18:21
+    at JwtStrategy.strategy.success (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:219:18)
+    at verified (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/company 403 - 99.745 ms - message: Forbidden
+[32minfo[39m: worker 15468 died
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 28092 is running
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: POST /v1/auth/login 200 - 233.609 ms
+[32minfo[39m: GET /v1/company 200 - 428.986 ms
+[32minfo[39m: worker 11704 died
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 3504 is running
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: GET /v1/company 200 - 619.654 ms
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: POST /v1/auth/login 200 - 215.034 ms
+[31merror[39m: Error: Incorrect email or password
+    at Object.loginUserWithEmailAndPassword (D:\ROINode_Backend\src\services\auth.service.js:17:11)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\auth.controller.js:14:16
+[31merror[39m: POST /v1/auth/login 401 - 79.749 ms - message: Incorrect email or password
+[32minfo[39m: POST /v1/auth/login 200 - 165.932 ms
+[32minfo[39m: GET /v1/company 200 - 389.845 ms
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 30764 is running
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: GET /v1/company 200 - 405.644 ms
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: worker 28788 died
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 8884 is running
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: GET /v1/company 200 - 470.320 ms
+[32minfo[39m: worker 23332 died
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 32572 is running
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Number of CPUs is 8
+[32minfo[39m: Master 8064 is running
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Connected to MongoDB
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: Listening to port 3000
+[32minfo[39m: GET /v1/company 200 - 518.538 ms
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: Connected to email server
+[32minfo[39m: POST /v1/auth/login 200 - 233.566 ms
+[32minfo[39m: GET /v1/company 200 - 205.431 ms
+[32minfo[39m: GET /v1/company 200 - 454.330 ms
+[31merror[39m: Error: Incorrect email or password
+    at Object.loginUserWithEmailAndPassword (D:\ROINode_Backend\src\services\auth.service.js:17:11)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\auth.controller.js:14:16
+[31merror[39m: POST /v1/auth/login 401 - 70.820 ms - message: Incorrect email or password
+[32minfo[39m: POST /v1/auth/login 200 - 228.360 ms
+[31merror[39m: Error: Forbidden
+    at D:\ROINode_Backend\src\middlewares\auth.js:18:21
+    at JwtStrategy.strategy.success (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:219:18)
+    at verified (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/company 403 - 79.277 ms - message: Forbidden
+[32minfo[39m: POST /v1/auth/login 200 - 164.002 ms
+[32minfo[39m: GET /v1/company 200 - 222.455 ms
