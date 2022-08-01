@@ -57,13 +57,23 @@ const getCompany = async(uid,comp)=>{
  * @returns {Promise<Company>}
  */
  const getAllCompany = async(uid)=>{
-    const user = userService.getUserById(uid);
-    
+    const user =await userService.getUserById(uid);
     if(!user){
         throw new ApiError(httpStatus.NOT_FOUND, 'User not found');
     }
 
-   return  fetchAllCompany();
+    switch (user.role) {
+        case "company-admin":            
+            return getCompanyById(user.company_id);
+        case "admin":
+            return  fetchAllCompany();
+    
+        default:
+            const error = new ApiError(httpStatus.NOT_FOUND, 'User not found');
+            return error            
+    }
+
+   
 
 }
 

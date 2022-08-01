@@ -16,6 +16,7 @@ const { tokenTypes } = require('../config/tokens');
  * @returns {string}
  */
 const generateToken = (userId, company_id, expires, type, secret = config.jwt.secret) => {
+ 
   const payload = {
     sub: userId,
     cid: company_id,
@@ -97,7 +98,7 @@ const generateResetPasswordToken = async (email) => {
     throw new ApiError(httpStatus.NOT_FOUND, 'No users found with this email');
   }
   const expires = moment().add(config.jwt.resetPasswordExpirationMinutes, 'minutes');
-  const resetPasswordToken = generateToken(user.id, expires, tokenTypes.RESET_PASSWORD);
+  const resetPasswordToken = generateToken(user.id, null, expires, tokenTypes.RESET_PASSWORD);
   await saveToken(resetPasswordToken, user.id, expires, tokenTypes.RESET_PASSWORD);
   return resetPasswordToken;
 };
@@ -109,7 +110,7 @@ const generateResetPasswordToken = async (email) => {
  */
 const generateVerifyEmailToken = async (user) => {
   const expires = moment().add(config.jwt.verifyEmailExpirationMinutes, 'minutes');
-  const verifyEmailToken = generateToken(user.id, expires, tokenTypes.VERIFY_EMAIL);
+  const verifyEmailToken = generateToken(user.id, null, expires, tokenTypes.VERIFY_EMAIL);
   await saveToken(verifyEmailToken, user.id, expires, tokenTypes.VERIFY_EMAIL);
   return verifyEmailToken;
 };

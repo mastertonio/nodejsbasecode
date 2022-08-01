@@ -86,6 +86,7 @@ const getCompany = catchAsync(async (req, res) =>{
 
 const getAllCompany = catchAsync(async (req, res) =>{
     const token = jwtExtract(req);
+    console.log(token)
     const getAll_company = await companyService.getAllCompany(token);
     res.send(getAll_company);
 })
