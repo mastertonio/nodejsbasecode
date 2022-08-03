@@ -2173,3 +2173,228 @@
     at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
     at processTicksAndRejections (node:internal/process/task_queues:96:5)
 [31merror[39m: GET /v1/company 403 - 79.277 ms - message: Forbidden
+[31merror[39m: [Company Module] Error: ReferenceError: companyBody is not defined
+[31merror[39m: Error: ReferenceError: companyBody is not defined
+    at Object.createNewTempalete (D:\ROINode_Backend\src\services\company.service.js:103:17)
+    at D:\ROINode_Backend\src\controllers\company.controller.js:175:50
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company/template 422 - 277.689 ms - message: ReferenceError: companyBody is not defined
+[31merror[39m: ValidationError: Template validation failed: name: Path `name` is required.
+    at model.Document.invalidate (D:\ROINode_Backend\node_modules\mongoose\lib\document.js:2782:32)
+    at D:\ROINode_Backend\node_modules\mongoose\lib\document.js:2574:17
+    at D:\ROINode_Backend\node_modules\mongoose\lib\schematype.js:1273:9
+    at processTicksAndRejections (node:internal/process/task_queues:78:11)
+[31merror[39m: ValidationError: Template validation failed: name: Path `name` is required.
+    at model.Document.invalidate (D:\ROINode_Backend\node_modules\mongoose\lib\document.js:2782:32)
+    at D:\ROINode_Backend\node_modules\mongoose\lib\document.js:2574:17
+    at D:\ROINode_Backend\node_modules\mongoose\lib\schematype.js:1273:9
+    at processTicksAndRejections (node:internal/process/task_queues:78:11)
+[31merror[39m: POST /v1/company/template 400 - 306.812 ms - message: Template validation failed: name: Path `name` is required.
+[31merror[39m: ValidationError: Template validation failed: create_by: Path `create_by` is required.
+    at model.Document.invalidate (D:\ROINode_Backend\node_modules\mongoose\lib\document.js:2782:32)
+    at D:\ROINode_Backend\node_modules\mongoose\lib\document.js:2574:17
+    at D:\ROINode_Backend\node_modules\mongoose\lib\schematype.js:1273:9
+    at processTicksAndRejections (node:internal/process/task_queues:78:11)
+[31merror[39m: POST /v1/company/template 400 - 420.310 ms - message: Template validation failed: create_by: Path `create_by` is required.
+[31merror[39m: Error: Forbidden
+    at D:\ROINode_Backend\src\middlewares\auth.js:18:21
+    at JwtStrategy.strategy.success (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:219:18)
+    at verified (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company/template/version 403 - 195.077 ms - message: Forbidden
+[31merror[39m: Error: Forbidden
+    at D:\ROINode_Backend\src\middlewares\auth.js:18:21
+    at JwtStrategy.strategy.success (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:219:18)
+    at verified (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company/template/version 403 - 135.572 ms - message: Forbidden
+[31merror[39m: Error: Forbidden
+    at D:\ROINode_Backend\src\middlewares\auth.js:18:21
+    at JwtStrategy.strategy.success (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:219:18)
+    at verified (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company/template/version 403 - 141.261 ms - message: Forbidden
+[31merror[39m: Error: "notes" is required, "note" is not allowed
+    at D:\ROINode_Backend\src\middlewares\validate.js:15:17
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:34:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company/template/version 400 - 152.403 ms - message: "notes" is required, "note" is not allowed
+[31merror[39m: CastError: Cast to ObjectId failed for value "{ company_id: 62b2a6f9061ed2a095b55555 }" (type Object) at path "_id" for model "Company"
+    at model.Query.exec (D:\ROINode_Backend\node_modules\mongoose\lib\query.js:4498:21)
+    at model.Query.Query.then (D:\ROINode_Backend\node_modules\mongoose\lib\query.js:4592:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company/template/version 400 - 388.828 ms - message: Cast to ObjectId failed for value "{ company_id: 62b2a6f9061ed2a095b55555 }" (type Object) at path "_id" for model "Company"
+[31merror[39m: Error: Please authenticate
+    at D:\ROINode_Backend\src\middlewares\auth.js:10:19
+    at allFailed (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:107:18)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:180:28)
+    at JwtStrategy.strategy.fail (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:302:9)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:106:33
+    at D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:152:16
+    at getSecret (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:94:10)
+    at Function.module.exports [as JwtVerifier] (D:\ROINode_Backend\node_modules\passport-jwt\lib\verify_jwt.js:4:16)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:40:13)
+    at JwtStrategy.authenticate (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:99:10)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:366:16)
+    at authenticate (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:367:7)
+    at D:\ROINode_Backend\src\middlewares\auth.js:32:107
+    at new Promise (<anonymous>)
+[31merror[39m: POST /v1/company/template 401 - 11.119 ms - message: Please authenticate
+[31merror[39m: CastError: Cast to ObjectId failed for value "{ company_id: 62b2a6f9061ed2a095b55555 }" (type Object) at path "_id" for model "Company"
+    at model.Query.exec (D:\ROINode_Backend\node_modules\mongoose\lib\query.js:4498:21)
+    at model.Query.Query.then (D:\ROINode_Backend\node_modules\mongoose\lib\query.js:4592:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company/template/version 400 - 310.390 ms - message: Cast to ObjectId failed for value "{ company_id: 62b2a6f9061ed2a095b55555 }" (type Object) at path "_id" for model "Company"
+[31merror[39m: CastError: Cast to ObjectId failed for value "{ company_id: 62b2a6f9061ed2a095b55555 }" (type Object) at path "_id" for model "Company"
+    at model.Query.exec (D:\ROINode_Backend\node_modules\mongoose\lib\query.js:4498:21)
+    at model.Query.Query.then (D:\ROINode_Backend\node_modules\mongoose\lib\query.js:4592:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company/template/version 400 - 312.659 ms - message: Cast to ObjectId failed for value "{ company_id: 62b2a6f9061ed2a095b55555 }" (type Object) at path "_id" for model "Company"
+[31merror[39m: CastError: Cast to ObjectId failed for value "{ company_id: 62b2a6f9061ed2a095b55555 }" (type Object) at path "_id" for model "Template"
+    at model.Query.exec (D:\ROINode_Backend\node_modules\mongoose\lib\query.js:4498:21)
+    at model.Query.Query.then (D:\ROINode_Backend\node_modules\mongoose\lib\query.js:4592:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company/template/version 400 - 340.410 ms - message: Cast to ObjectId failed for value "{ company_id: 62b2a6f9061ed2a095b55555 }" (type Object) at path "_id" for model "Template"
+[31merror[39m: ValidationError: TemplateVersion validation failed: template_id: Path `template_id` is required.
+    at model.Document.invalidate (D:\ROINode_Backend\node_modules\mongoose\lib\document.js:2782:32)
+    at D:\ROINode_Backend\node_modules\mongoose\lib\document.js:2574:17
+    at D:\ROINode_Backend\node_modules\mongoose\lib\schematype.js:1273:9
+    at processTicksAndRejections (node:internal/process/task_queues:78:11)
+[31merror[39m: POST /v1/company/template/version 400 - 713.169 ms - message: TemplateVersion validation failed: template_id: Path `template_id` is required.
+[31merror[39m: ValidationError: TemplateVersion validation failed: template_id: Path `template_id` is required.
+    at model.Document.invalidate (D:\ROINode_Backend\node_modules\mongoose\lib\document.js:2782:32)
+    at D:\ROINode_Backend\node_modules\mongoose\lib\document.js:2574:17
+    at D:\ROINode_Backend\node_modules\mongoose\lib\schematype.js:1273:9
+    at processTicksAndRejections (node:internal/process/task_queues:78:11)
+[31merror[39m: POST /v1/company/template/version 400 - 497.626 ms - message: TemplateVersion validation failed: template_id: Path `template_id` is required.
+[31merror[39m: Error: Please authenticate
+    at D:\ROINode_Backend\src\middlewares\auth.js:10:19
+    at allFailed (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:107:18)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:180:28)
+    at JwtStrategy.strategy.fail (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:302:9)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:106:33
+    at D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:152:16
+    at getSecret (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:94:10)
+    at Function.module.exports [as JwtVerifier] (D:\ROINode_Backend\node_modules\passport-jwt\lib\verify_jwt.js:4:16)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:40:13)
+    at JwtStrategy.authenticate (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:99:10)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:366:16)
+    at authenticate (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:367:7)
+    at D:\ROINode_Backend\src\middlewares\auth.js:32:107
+    at new Promise (<anonymous>)
+[31merror[39m: POST /v1/company/template/version 401 - 33.691 ms - message: Please authenticate
+[31merror[39m: ValidationError: TemplateVersion validation failed: template_id: Path `template_id` is required.
+    at model.Document.invalidate (D:\ROINode_Backend\node_modules\mongoose\lib\document.js:2782:32)
+    at D:\ROINode_Backend\node_modules\mongoose\lib\document.js:2574:17
+    at D:\ROINode_Backend\node_modules\mongoose\lib\schematype.js:1273:9
+    at processTicksAndRejections (node:internal/process/task_queues:78:11)
+[31merror[39m: POST /v1/company/template/version 400 - 416.361 ms - message: TemplateVersion validation failed: template_id: Path `template_id` is required.
+[31merror[39m: ValidationError: TemplateVersion validation failed: template_id: Path `template_id` is required.
+    at model.Document.invalidate (D:\ROINode_Backend\node_modules\mongoose\lib\document.js:2782:32)
+    at D:\ROINode_Backend\node_modules\mongoose\lib\document.js:2574:17
+    at D:\ROINode_Backend\node_modules\mongoose\lib\schematype.js:1273:9
+    at processTicksAndRejections (node:internal/process/task_queues:78:11)
+[31merror[39m: POST /v1/company/template/version 400 - 458.558 ms - message: TemplateVersion validation failed: template_id: Path `template_id` is required.
+[31merror[39m: ValidationError: TemplateVersion validation failed: template_id: Path `template_id` is required.
+    at model.Document.invalidate (D:\ROINode_Backend\node_modules\mongoose\lib\document.js:2782:32)
+    at D:\ROINode_Backend\node_modules\mongoose\lib\document.js:2574:17
+    at D:\ROINode_Backend\node_modules\mongoose\lib\schematype.js:1273:9
+    at processTicksAndRejections (node:internal/process/task_queues:78:11)
+[31merror[39m: POST /v1/company/template/version 400 - 401.472 ms - message: TemplateVersion validation failed: template_id: Path `template_id` is required.
+[31merror[39m: ValidationError: TemplateVersion validation failed: template_id: Path `template_id` is required.
+    at model.Document.invalidate (D:\ROINode_Backend\node_modules\mongoose\lib\document.js:2782:32)
+    at D:\ROINode_Backend\node_modules\mongoose\lib\document.js:2574:17
+    at D:\ROINode_Backend\node_modules\mongoose\lib\schematype.js:1273:9
+    at processTicksAndRejections (node:internal/process/task_queues:78:11)
+[31merror[39m: POST /v1/company/template/version 400 - 519.648 ms - message: TemplateVersion validation failed: template_id: Path `template_id` is required.
+[31merror[39m: ValidationError: TemplateVersion validation failed: template_id: Path `template_id` is required.
+    at model.Document.invalidate (D:\ROINode_Backend\node_modules\mongoose\lib\document.js:2782:32)
+    at D:\ROINode_Backend\node_modules\mongoose\lib\document.js:2574:17
+    at D:\ROINode_Backend\node_modules\mongoose\lib\schematype.js:1273:9
+    at processTicksAndRejections (node:internal/process/task_queues:78:11)
+[31merror[39m: POST /v1/company/template/version 400 - 372.688 ms - message: TemplateVersion validation failed: template_id: Path `template_id` is required.
+[31merror[39m: Error: Please authenticate
+    at D:\ROINode_Backend\src\middlewares\auth.js:10:19
+    at allFailed (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:107:18)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:180:28)
+    at JwtStrategy.strategy.fail (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:302:9)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:106:33
+    at D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:152:16
+    at getSecret (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:94:10)
+    at Function.module.exports [as JwtVerifier] (D:\ROINode_Backend\node_modules\passport-jwt\lib\verify_jwt.js:4:16)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:40:13)
+    at JwtStrategy.authenticate (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:99:10)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:366:16)
+    at authenticate (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:367:7)
+    at D:\ROINode_Backend\src\middlewares\auth.js:32:107
+    at new Promise (<anonymous>)
+[31merror[39m: POST /v1/company/template 401 - 47.278 ms - message: Please authenticate
+[31merror[39m: ReferenceError: _ is not defined
+    at Object.getCompanyTemplateByCompanyId (D:\ROINode_Backend\src\services\company.service.js:12:5)
+    at D:\ROINode_Backend\src\controllers\company.controller.js:269:45
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/company/template 500 - 433.503 ms - message: _ is not defined
+[31merror[39m: Error: Please authenticate
+    at D:\ROINode_Backend\src\middlewares\auth.js:10:19
+    at allFailed (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:107:18)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:180:28)
+    at JwtStrategy.strategy.fail (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:302:9)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:106:33
+    at D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:152:16
+    at getSecret (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:94:10)
+    at Function.module.exports [as JwtVerifier] (D:\ROINode_Backend\node_modules\passport-jwt\lib\verify_jwt.js:4:16)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:40:13)
+    at JwtStrategy.authenticate (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:99:10)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:366:16)
+    at authenticate (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:367:7)
+    at D:\ROINode_Backend\src\middlewares\auth.js:32:107
+    at new Promise (<anonymous>)
+[31merror[39m: POST /v1/company/user 401 - 27.748 ms - message: Please authenticate
+[31merror[39m: Error: "template" must be of type object
+    at D:\ROINode_Backend\src\middlewares\validate.js:15:17
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:34:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company/user 400 - 105.250 ms - message: "template" must be of type object
+[31merror[39m: Error: "template" must be of type object
+    at D:\ROINode_Backend\src\middlewares\validate.js:15:17
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:34:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company/user 400 - 67.655 ms - message: "template" must be of type object
+[31merror[39m: TypeError: company_data.mapReduce is not a function
+    at D:\ROINode_Backend\src\controllers\company.controller.js:108:43
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: Error: Please authenticate
+    at D:\ROINode_Backend\src\middlewares\auth.js:10:19
+    at allFailed (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:107:18)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:180:28)
+    at JwtStrategy.strategy.fail (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:302:9)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:106:33
+    at D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:152:16
+    at getSecret (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:94:10)
+    at Function.module.exports [as JwtVerifier] (D:\ROINode_Backend\node_modules\passport-jwt\lib\verify_jwt.js:4:16)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:40:13)
+    at JwtStrategy.authenticate (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:99:10)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:366:16)
+    at authenticate (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:367:7)
+    at D:\ROINode_Backend\src\middlewares\auth.js:32:107
+    at new Promise (<anonymous>)
+[31merror[39m: GET /v1/company 401 - 15.556 ms - message: Please authenticate

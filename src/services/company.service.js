@@ -5,8 +5,19 @@ const commonService = require('./common.service');
 const userService = require('./user.service');
 const ObjectId = require('mongodb').ObjectID;
 
-const {Company} = require('../models');
+const {Company, Template, TemplateVersion} = require('../models');
 const logger = require('../config/logger');
+const _ = require("underscore")
+
+const getCompanyTemplateByCompanyId = async (_id) =>{
+    if(_.isNull(_id)){
+        return Template.find();
+    }else{
+        const o_id = new ObjectId(_id); 
+        return Template.find({company_id:o_id});
+    }
+    
+}
 
 const getCompanyById = async (_id) =>{
     const o_id = new ObjectId(_id);
@@ -14,7 +25,26 @@ const getCompanyById = async (_id) =>{
 }
 
 const fetchAllCompany = async() =>{
-    return Company.find();
+    // return Company.find();
+    return Company.aggregate([
+        {
+            $project:
+            {
+                name: "$name",
+                alias: "$alias",
+                licenses: "$licenses",
+                contract_file: "$contract_file",
+                contract_start_date: "$contract_start_date",
+                contract_end_date: "$contract_end_date",
+                notes: "$notes",
+                templates: "$templates",
+                default_active_value: "$active",
+                active:{
+                    $cond : { if: { $eq: [ "$active", 1 ] }, then: 'active', else: 'inactive' }
+                } 
+            }
+        }
+    ])
 }
 
 /**
@@ -94,12 +124,40 @@ const patchCompany = async(uid,comp,UpdateBody)=>{
     return company;
 }
 
+const createNewTempalete = async(req)=>{
+    try {
+        let TemplateData = Template.create(req);
+        logger.info(`[Company Module] successfully Inserted Company Template; ${JSON.stringify(TemplateData)}`);
+        return TemplateData;
+    } catch (error) {
+        let e = new ApiError(httpStatus.UNPROCESSABLE_ENTITY,error);
+        logger.error(`[Company Module Template] ${e}`)
+        throw e;
+    }
+}
+
+const createTemplateVersion = async(req)=>{
+    try {
+        let TemplateData = TemplateVersion.create(req);
+        logger.info(`[Company Module] successfully Inserted Company Template Version; ${JSON.stringify(TemplateData)}`);
+        return TemplateData;
+    } catch (error) {
+        let e = new ApiError(httpStatus.UNPROCESSABLE_ENTITY,error);
+        logger.error(`[Company Module Template Version] ${e}`)
+        throw e;
+    }
+}
+
 
   
 
 module.exports = {
+    getCompanyTemplateByCompanyId,
+    createNewTempalete,
+    getCompanyById,
     createCompany,
     getCompany,
     getAllCompany,
-    patchCompany
+    patchCompany,
+    createTemplateVersion
 }

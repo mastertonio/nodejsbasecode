@@ -1,3 +1,4 @@
+const { string } = require("joi");
 const mongoose = require("mongoose");
 const { toJSON } = require("./plugins");
 
@@ -18,6 +19,18 @@ const templateVersionSchema = mongoose.Schema(
         level: {
             type: Number,
             default: 1
+        },
+        notes: {
+            type: String,
+
+        },
+        version: {
+            type: Number,
+            default: 1
+        },
+        created_by: {
+            type: mongoose.SchemaTypes.ObjectId,
+            required:true
         }
     },
     {
