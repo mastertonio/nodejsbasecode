@@ -3,11 +3,12 @@ const httpStatus = require('http-status');
 const catchAsync = require('../utils/catchAsync');
 const {companyService, userService} = require('../services');
 const { create } = require('../models/token.model');
-const { jwtExtract } = require('./common.controller');
+const { jwtExtract, getCID } = require('./common.controller');
 
 const AWSs3 =  require('../services/s3.service');
 const { info } = require('../config/logger');
 const logger = require('../config/logger');
+const { User } = require('../models');
 
 const getFile = catchAsync(async (req, res)=>{
     /**
@@ -84,10 +85,29 @@ const getCompany = catchAsync(async (req, res) =>{
     res.send(get_company);
 })
 
+/**
+ * Get comapnay by user role
+ * if the user role is admin it will return all the company
+ * if the user role is company-admin it will return own company info
+ */
 const getAllCompany = catchAsync(async (req, res) =>{
-    const token = jwtExtract(req);
-    console.log(token)
-    const getAll_company = await companyService.getAllCompany(token);
+     /**
+  * extracting JWT Token to get the User Id
+  */
+   const token = jwtExtract(req);
+   /**
+       * validating the user Account base on the response of the extraction
+       */
+   const is_user = await userService.getUserById(token);
+   if(!is_user){
+     let error = new ApiError(httpStatus.NOT_FOUND, 'User not found');
+     logger.error(`[Invalid TOken] ${error}`);
+     throw error;
+   }
+
+
+    const getAll_company = await companyService.getAllCompany(token);     
+    
     res.send(getAll_company);
 })
 
@@ -98,12 +118,171 @@ const patchCompany = catchAsync(async (req,res) => {
     const patch_company = await companyService.patchCompany(token, req.params, req.body);
     res.send(patch_company);
 })
+/**
+ * create user company
+ * only the admin or the company admin can create user account for specific company
+ * 
+ */
+
+const createCompanyUser = catchAsync(async (req, res) => {
+  
+  /**
+  * extracting JWT Token to get the User Id
+  */
+   const token = jwtExtract(req);
+   /**
+       * validating the user Account base on the response of the extraction
+       */
+   const is_user = await userService.getUserById(token);
+   if(!is_user){
+     let error = new ApiError(httpStatus.NOT_FOUND, 'User not found');
+     logger.error(`[Invalid TOken] ${error}`);
+     throw error;
+   }
+
+
+  const create_user = await companyService.getAllCompany(token);
+  
+  res.send()
+})
+
+/**
+ * create company template
+ */
+const createCompanyTemplate = catchAsync(async (req, res)=>{
+  /**
+    * extracting JWT Token to get the User Id
+    */
+    const token = jwtExtract(req);
+    /**
+      * validating the user Account base on the response of the extraction
+      */
+    const is_user = await userService.getUserById(token);
+    if(!is_user){
+      let error = new ApiError(httpStatus.NOT_FOUND, 'User not found');
+      logger.error(`[Invalid TOken] ${error}`);
+      throw error;
+    }
+    const company_id = getCID(req);
+    /**
+     * validate if the company id is valid
+     */
+    const is_company = await companyService.getCompanyById(company_id);
+    
+    if(!is_company) {
+      let error = new ApiError(httpStatus.NOT_FOUND, 'Company id not found');
+     logger.error(`[Invalid TOken] ${error}`);
+     throw error;
+    }
+
+    /**
+     * Add body parameters company_id and created by which can be extract in the JWT token
+     * cid = company id => company_id
+     * sub = user id => token
+     */
+    req.body.company_id = company_id;
+    req.body.created_by = token;
+    const create_template = await companyService.createNewTempalete(req.body)
+    res.send(create_template);
+
+});
+
+/**
+ * create company template Version
+ */
+const createCompnayTemplateVersion = catchAsync(async (req, res)=>{
+   /**
+    * extracting JWT Token to get the User Id
+    */
+    const token = jwtExtract(req);
+    /**
+      * validating the user Account base on the response of the extraction
+      */
+    const is_user = await userService.getUserById(token);
+    if(!is_user){
+      let error = new ApiError(httpStatus.NOT_FOUND, 'User not found');
+      logger.error(`[Invalid TOken] ${error}`);
+      throw error;
+    }
+    const company_id = getCID(req);
+    /**
+     * validate if the company id is valid
+     */
+    const is_company = await companyService.getCompanyById(company_id);
+    
+    if(!is_company) {
+      let error = new ApiError(httpStatus.NOT_FOUND, 'Company id not found');
+     logger.error(`[Invalid TOken] ${error}`);
+     throw error;
+    }
+    
+    /**
+     * Add body parameters company_id and created by which can be extract in the JWT token
+     * cid = company id => company_id
+     * sub = user id => token
+     * getTemplateVersion(template_id)
+     * getCompanyTemplateByCompanyId (company_id)
+     */
+
+    const template = await companyService.getCompanyTemplateByCompanyId(company_id);
+    req.body.template_id = template[0]._id;
+    req.body.created_by = token;
+    
+    const templateVersion = await companyService.createTemplateVersion(req.body);
+    res.send(templateVersion);
+})
+
+  const listCompanyTemplate = catchAsync(async(req,res)=>{
+    /**
+    * extracting JWT Token to get the User Id
+    */
+     const token = jwtExtract(req);
+     /**
+       * validating the user Account base on the response of the extraction
+       */
+     const is_user = await userService.getUserById(token);
+     if(!is_user){
+       let error = new ApiError(httpStatus.NOT_FOUND, 'User not found');
+       logger.error(`[Invalid TOken] ${error}`);
+       throw error;
+     }
+     const company_id = getCID(req);
+     /**
+      * validate if the company id is valid
+      */
+     const is_company = await companyService.getCompanyById(company_id);
+     
+     if(!is_company) {
+       let error = new ApiError(httpStatus.NOT_FOUND, 'Company id not found');
+      logger.error(`[Invalid TOken] ${error}`);
+      throw error;
+     }
+     
+     /**
+      * Add body parameters company_id and created by which can be extract in the JWT token
+      * cid = company id => company_id
+      * sub = user id => token
+      * getTemplateVersion(template_id)
+      * getCompanyTemplateByCompanyId (company_id)
+      */
+    
+
+     let comp_id = (is_user.role == "company-admin")? company_id : null;
+     const template = await companyService.getCompanyTemplateByCompanyId(comp_id);
+      
+     res.send(template)
+      
+  })
   
   module.exports = {
+    createCompanyTemplate,
+    createCompanyUser,
     createCompany,
     getFile,
     getCompany,
     getAllCompany,
-    patchCompany
+    patchCompany,
+    createCompnayTemplateVersion,
+    listCompanyTemplate
   }
   

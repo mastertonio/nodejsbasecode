@@ -14,6 +14,21 @@ router
   //auth('createCompany'), validate(companyValidation.createCompany),
   .post(  companyController.createCompany)
   .get(auth('getCompany'), validate(companyValidation.getCompany), companyController.getAllCompany);
+
+router
+  .route('/user')
+  .post(auth('createCompanyUser'), validate(companyValidation.createCompanyUser), companyController.createCompanyUser);
+
+router
+  .route('/template')
+  .post(auth('createCompnayTemplate'), validate(companyValidation.createCompnayTemplate), companyController.createCompanyTemplate)
+  .get(auth('listCompanyTemplate'), validate(companyValidation.listCompanyTemplate), companyController.listCompanyTemplate)
+
+router
+  .route('/template/version')
+  .post(auth('createCompnayTemplateVersion'), validate(companyValidation.createCompnayTemplateVersion), companyController.createCompnayTemplateVersion);
+
+
 router
   .route('/company/logo/:_id')
   .get(auth('createCompany'),companyController.getFile)
