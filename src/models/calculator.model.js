@@ -29,11 +29,11 @@ const calculatorSchema = mongoose.Schema(
         },
         visits: {
             type: Number,
-            default: null
+            default: 0
         },
         unique_ip: {
             type: String,
-            default: null
+            default: 0
         },
         dt: {
             type: Date,
@@ -45,7 +45,7 @@ const calculatorSchema = mongoose.Schema(
         },
         is_sf_opportunity: {
             type: Number,
-            default: null
+            default: 0
         },
         salesforce_id: {
             type: String,
@@ -61,11 +61,11 @@ const calculatorSchema = mongoose.Schema(
         },
         folder: {
             type: Number,
-            default: null
+            default: 0
         },
         linked_title: {
             type: Number,
-            default: null
+            default: 0
         },
         version: {
             type: Number,
@@ -73,15 +73,15 @@ const calculatorSchema = mongoose.Schema(
         },
         status: {
             type: Number,
-            default: null
+            default: 0
         },
         importance: {
             type: Number,
-            default: null
+            default: 0
         },
         cloned_from_parent: {
             type: Number,
-            default: null
+            default: 0
         }
     },
     {
