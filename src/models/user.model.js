@@ -61,7 +61,7 @@ const userSchema = mongoose.Schema(
     },
     currency: {
       type: String,
-      default: null
+      default: 'USD'
     },
     email_verified_at: {
       type: Date,
@@ -83,7 +83,15 @@ const userSchema = mongoose.Schema(
     avatar: {
       type: String,
       default: null
-    }
+    },
+    status: {
+      type: Number,
+      default: 1
+    },
+    created_by: {
+      type: mongoose.SchemaTypes.ObjectId,
+      required: true
+    },
   },
   {
     timestamps: true,

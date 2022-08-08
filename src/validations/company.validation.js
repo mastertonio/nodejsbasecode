@@ -2,13 +2,17 @@ const Joi = require('joi');
 const { password, objectId } = require('./custom.validation');
 
 const createCompanyUser = {
+  params: Joi.object().keys({
+    company_id: Joi.required().custom(objectId),
+  }),
     body: Joi.object().keys({
         first_name: Joi.string().required(),
         last_name: Joi.string().required(),
         email: Joi.string().email().required(),
         password: Joi.string().required().custom(password),
         currency: Joi.string().min(2).max(5).required(),
-        userType: Joi.number().integer().required(),
+        role: Joi.string(),
+        manager: Joi.custom(objectId),
         template: Joi.array().required()      
     }),
   };
@@ -45,12 +49,39 @@ const createCompanyUser = {
         data: Joi.object(),
       }),
   };
-  const listCompanyTemplate = {
+  const getCurrency = {
+    query: Joi.object().keys({
+        data: Joi.object(),
+      }),
+  };
+  const getManager = {
+    query: Joi.object().keys({
+        data: Joi.object(),
+      }),
+  };
+  const getAllCompanyUser = {
     query: Joi.object().keys({
         data: Joi.object(),
       }),
   };
 
+
+  const listCompanyTemplate = {
+    query: Joi.object().keys({
+        data: Joi.object(),
+      }),
+  };
+  const transferTemplate = {
+    
+    params: Joi.object().keys({
+      company_id: Joi.required().custom(objectId),
+    }),
+    body: Joi.object()
+      .keys({
+        roi_new_uid: Joi.required().custom(objectId),
+        roi_source_uid: Joi.required().custom(objectId)
+      })
+  };
 
   const patchCompany = {
     params: Joi.object().keys({
@@ -66,6 +97,24 @@ const createCompanyUser = {
       .min(1),
   };
 
+  const patchCompanyUser = {
+    params: Joi.object().keys({
+      userId: Joi.required().custom(objectId),
+      company_id: Joi.required().custom(objectId),
+    }),
+    body: Joi.object()
+      .keys({
+        first_name: Joi.string(),
+        last_name: Joi.string(),
+        email: Joi.string().email(),
+        password: Joi.string().custom(password),
+        currency: Joi.string().min(2).max(5),
+        manager: Joi.custom(objectId),
+        template: Joi.array(),
+        role: Joi.string()
+      })
+  };
+
 
 module.exports = {
     createCompany,
@@ -74,5 +123,10 @@ module.exports = {
     patchCompany,
     createCompnayTemplate,
     createCompnayTemplateVersion,
-    listCompanyTemplate
+    listCompanyTemplate,
+    getCurrency,
+    getManager,
+    getAllCompanyUser,
+    transferTemplate,
+    patchCompanyUser
   };
