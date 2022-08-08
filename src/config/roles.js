@@ -1,12 +1,16 @@
 const allRoles = {
   user: [],
-  admin: ['getUsers', 'manageUsers', 'getDashboard','createCompany','getCompany',
-          'patchCompany','updateCompany','createCompanyUser',
-          'createCompnayTemplate', 'listCompanyTemplate',
+  "company-manager": [],
+  "company-agent": [],
+  admin: ['getUsers', 'manageUsers', 'getDashboard','createCompany','getCompany','getUser',
+          'patchCompany','updateCompany',
+          'createCompanyUser','getManager','getCurrency','getAllUser','patchCompanyUser',
+          'createCompnayTemplate', 'listCompanyTemplate','transferTemplate',
           "createCompnayTemplateVersion"],
-  "company-admin": ['getCompany','createCompany','createCompanyUser',
+  "company-admin": ['getCompany','createCompany','createCompanyUser','getUsers','getUser',
                     'createCompnayTemplate','listCompanyTemplate',
-                    'createCompnayTemplateVersion']
+                    'createCompnayTemplateVersion','getAllUser','transferTemplate','patchCompanyUser',
+                    'getCurrency','getManager']
 };
 
 const roles = Object.keys(allRoles);

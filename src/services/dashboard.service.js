@@ -565,5 +565,6 @@ const getDashboard = async (userId,filter, options) => {
       getRoiAdmin,
       getRoiGraph,
       getRanking,
-      dashboardData
+      dashboardData,
+      getCalculatorStatistic
   }

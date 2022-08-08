@@ -1,4 +1,7 @@
+const { array } = require("joi");
+const logger = require("../config/logger");
 const pick = require("../utils/pick");
+const ObjectId = require('mongodb').ObjectID;
 
 const dashboardData = async (data_col) => {
     let data;
@@ -98,9 +101,24 @@ const indexKeyValidator = async (data) => {
     return container.every(n => n == 1);
 
 }
-
+const findMultipleid = async(docs,_ids)=>{
+    try {
+         const n_ids = [];
+        _ids.map(v=>{
+            let o_id = new ObjectId(v); 
+            n_ids.push(o_id)
+        })
+        return docs.find({_id:{"$in":n_ids}});
+    } catch (error) {
+        logger.error(`[UNPROCESSABLE_ENTITY] - ${error}`)
+       throw new ApiError(httpStatus.UNPROCESSABLE_ENTITY,error);
+    }
+   
+    
+}
 
 module.exports = {
 setChart,
-indexKeyValidator
+indexKeyValidator,
+findMultipleid
 }
