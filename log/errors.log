@@ -4202,3 +4202,21 @@ Content-Disposition: form-data; name" is not allowed
     at TLSSocket.Readable.push (node:internal/streams/readable:228:10)
     at TLSWrap.onStreamRead (node:internal/stream_base_commons:190:23)
 [31merror[39m: GET /v1/company 500 - 434.551 ms - message: Executor error during getMore :: caused by :: $first's argument must be an array, but is string
+[31merror[39m: Error: Please authenticate
+    at D:\ROINode_Backend\src\middlewares\auth.js:10:19
+    at allFailed (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:107:18)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:180:28)
+    at JwtStrategy.strategy.fail (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:302:9)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:106:33
+    at D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:152:16
+    at getSecret (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:94:10)
+    at Function.module.exports [as JwtVerifier] (D:\ROINode_Backend\node_modules\passport-jwt\lib\verify_jwt.js:4:16)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:40:13)
+    at JwtStrategy.authenticate (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:99:10)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:366:16)
+    at authenticate (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:367:7)
+    at D:\ROINode_Backend\src\middlewares\auth.js:32:107
+    at new Promise (<anonymous>)
+[31merror[39m: GET /v1/company/62b2a6f9061ed2a095b55555/template 401 - 10.107 ms - message: Please authenticate

@@ -276,7 +276,7 @@ const createCompnayTemplateVersion = catchAsync(async (req, res)=>{
        logger.error(`[Invalid TOken] ${error}`);
        throw error;
      }
-     const company_id = getCID(req);
+     const company_id = req.params.company_id;
      /**
       * validate if the company id is valid
       */
@@ -297,8 +297,7 @@ const createCompnayTemplateVersion = catchAsync(async (req, res)=>{
       */
     
 
-     let comp_id = (is_user.role == "company-admin")? company_id : null;
-     const template = await companyService.getCompanyTemplateByCompanyId(comp_id);
+     const template = await companyService.getCompanyTemplateByCompanyId(company_id);
       
      res.send(template)
       
@@ -349,7 +348,7 @@ const createCompnayTemplateVersion = catchAsync(async (req, res)=>{
        logger.error(`[Invalid TOken] ${error}`);
        throw error;
      }
-     const company_id = getCID(req);
+     const company_id = req.params.company_id;
      /**
       * validate if the company id is valid
       */
@@ -360,7 +359,8 @@ const createCompnayTemplateVersion = catchAsync(async (req, res)=>{
       logger.error(`[Invalid TOken] ${error}`);
       throw error;
      }
-     let comp_id = (is_user.role == "company-admin")? company_id : null;
+     let comp_id = company_id;
+     
      const companyMangerAccount = await companyService.getManagerByCompanyId(comp_id);
      res.send(companyMangerAccount);
   })
