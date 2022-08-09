@@ -10,7 +10,7 @@ const companySchema = mongoose.Schema(
         },
         alias: {
             type: String,
-            default: null
+            default: ""
         },
         active: {
             type: Number,
@@ -39,22 +39,22 @@ const companySchema = mongoose.Schema(
         contract_file:{
             type: String,
             required:false,
-            default: null
+            default: ""
         },
         contract_start_date:{
             type: Date,
             required: false,
-            default: null
+            default: ""
         },
         contract_end_date:{
             type: Date,
             required: false,
-            default: null
+            default: ""
         },
         notes:{
             type: String,
             required: false,
-            default: null
+            default: ""
         },
         templates: {
             type: Number,

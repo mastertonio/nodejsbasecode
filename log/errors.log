@@ -3862,3 +3862,343 @@
     at D:\ROINode_Backend\src\middlewares\auth.js:34:17
     at processTicksAndRejections (node:internal/process/task_queues:96:5)
 [31merror[39m: GET /v1/company/user 500 - 76.076 ms - message: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+[31merror[39m: PayloadTooLargeError: request entity too large
+    at readStream (D:\ROINode_Backend\node_modules\raw-body\index.js:156:17)
+    at getRawBody (D:\ROINode_Backend\node_modules\raw-body\index.js:109:12)
+    at read (D:\ROINode_Backend\node_modules\body-parser\lib\read.js:79:3)
+    at jsonParser (D:\ROINode_Backend\node_modules\body-parser\lib\types\json.js:135:5)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at internalNext (D:\ROINode_Backend\node_modules\helmet\dist\index.js:142:6)
+    at xXssProtectionMiddleware (D:\ROINode_Backend\node_modules\helmet\dist\middlewares\x-xss-protection\index.js:6:3)
+    at internalNext (D:\ROINode_Backend\node_modules\helmet\dist\index.js:145:6)
+    at referrerPolicyMiddleware (D:\ROINode_Backend\node_modules\helmet\dist\middlewares\referrer-policy\index.js:24:3)
+    at internalNext (D:\ROINode_Backend\node_modules\helmet\dist\index.js:145:6)
+    at xPermittedCrossDomainPoliciesMiddleware (D:\ROINode_Backend\node_modules\helmet\dist\middlewares\x-permitted-cross-domain-policies\index.js:15:3)
+    at internalNext (D:\ROINode_Backend\node_modules\helmet\dist\index.js:145:6)
+[31merror[39m: POST /v1/company 400 - 26.442 ms - message: request entity too large
+[31merror[39m: SyntaxError: Unexpected token - in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (D:\ROINode_Backend\node_modules\body-parser\lib\types\json.js:160:10)
+    at parse (D:\ROINode_Backend\node_modules\body-parser\lib\types\json.js:83:15)
+    at D:\ROINode_Backend\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:202:9)
+    at invokeCallback (D:\ROINode_Backend\node_modules\raw-body\index.js:231:16)
+    at done (D:\ROINode_Backend\node_modules\raw-body\index.js:220:7)
+    at IncomingMessage.onEnd (D:\ROINode_Backend\node_modules\raw-body\index.js:280:7)
+    at IncomingMessage.emit (node:events:539:35)
+    at IncomingMessage.emit (node:domain:475:12)
+    at endReadableNT (node:internal/streams/readable:1345:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[31merror[39m: POST /v1/company 400 - 227.627 ms - message: Unexpected token - in JSON at position 0
+[31merror[39m: SyntaxError: Unexpected token - in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (D:\ROINode_Backend\node_modules\body-parser\lib\types\json.js:160:10)
+    at parse (D:\ROINode_Backend\node_modules\body-parser\lib\types\json.js:83:15)
+    at D:\ROINode_Backend\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:202:9)
+    at invokeCallback (D:\ROINode_Backend\node_modules\raw-body\index.js:231:16)
+    at done (D:\ROINode_Backend\node_modules\raw-body\index.js:220:7)
+    at IncomingMessage.onEnd (D:\ROINode_Backend\node_modules\raw-body\index.js:280:7)
+    at IncomingMessage.emit (node:events:539:35)
+    at IncomingMessage.emit (node:domain:475:12)
+    at endReadableNT (node:internal/streams/readable:1345:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[31merror[39m: POST /v1/company 400 - 9.059 ms - message: Unexpected token - in JSON at position 0
+[31merror[39m: PayloadTooLargeError: request entity too large
+    at readStream (D:\ROINode_Backend\node_modules\raw-body\index.js:156:17)
+    at getRawBody (D:\ROINode_Backend\node_modules\raw-body\index.js:109:12)
+    at read (D:\ROINode_Backend\node_modules\body-parser\lib\read.js:79:3)
+    at jsonParser (D:\ROINode_Backend\node_modules\body-parser\lib\types\json.js:135:5)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at internalNext (D:\ROINode_Backend\node_modules\helmet\dist\index.js:142:6)
+    at xXssProtectionMiddleware (D:\ROINode_Backend\node_modules\helmet\dist\middlewares\x-xss-protection\index.js:6:3)
+    at internalNext (D:\ROINode_Backend\node_modules\helmet\dist\index.js:145:6)
+    at referrerPolicyMiddleware (D:\ROINode_Backend\node_modules\helmet\dist\middlewares\referrer-policy\index.js:24:3)
+    at internalNext (D:\ROINode_Backend\node_modules\helmet\dist\index.js:145:6)
+    at xPermittedCrossDomainPoliciesMiddleware (D:\ROINode_Backend\node_modules\helmet\dist\middlewares\x-permitted-cross-domain-policies\index.js:15:3)
+    at internalNext (D:\ROINode_Backend\node_modules\helmet\dist\index.js:145:6)
+[31merror[39m: POST /v1/company 400 - 10.313 ms - message: request entity too large
+[31merror[39m: SyntaxError: Unexpected token - in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (D:\ROINode_Backend\node_modules\body-parser\lib\types\json.js:160:10)
+    at parse (D:\ROINode_Backend\node_modules\body-parser\lib\types\json.js:83:15)
+    at D:\ROINode_Backend\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:202:9)
+    at invokeCallback (D:\ROINode_Backend\node_modules\raw-body\index.js:231:16)
+    at done (D:\ROINode_Backend\node_modules\raw-body\index.js:220:7)
+    at IncomingMessage.onEnd (D:\ROINode_Backend\node_modules\raw-body\index.js:280:7)
+    at IncomingMessage.emit (node:events:539:35)
+    at IncomingMessage.emit (node:domain:475:12)
+    at endReadableNT (node:internal/streams/readable:1345:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[31merror[39m: POST /v1/company 400 - 28.424 ms - message: Unexpected token - in JSON at position 0
+[31merror[39m: SyntaxError: Unexpected token - in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (D:\ROINode_Backend\node_modules\body-parser\lib\types\json.js:160:10)
+    at parse (D:\ROINode_Backend\node_modules\body-parser\lib\types\json.js:83:15)
+    at D:\ROINode_Backend\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:202:9)
+    at invokeCallback (D:\ROINode_Backend\node_modules\raw-body\index.js:231:16)
+    at done (D:\ROINode_Backend\node_modules\raw-body\index.js:220:7)
+    at IncomingMessage.onEnd (D:\ROINode_Backend\node_modules\raw-body\index.js:280:7)
+    at IncomingMessage.emit (node:events:539:35)
+    at IncomingMessage.emit (node:domain:475:12)
+    at endReadableNT (node:internal/streams/readable:1345:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[31merror[39m: POST /v1/company 400 - 24.830 ms - message: Unexpected token - in JSON at position 0
+[31merror[39m: SyntaxError: Unexpected token - in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (D:\ROINode_Backend\node_modules\body-parser\lib\types\json.js:160:10)
+    at parse (D:\ROINode_Backend\node_modules\body-parser\lib\types\json.js:83:15)
+    at D:\ROINode_Backend\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:202:9)
+    at invokeCallback (D:\ROINode_Backend\node_modules\raw-body\index.js:231:16)
+    at done (D:\ROINode_Backend\node_modules\raw-body\index.js:220:7)
+    at IncomingMessage.onEnd (D:\ROINode_Backend\node_modules\raw-body\index.js:280:7)
+    at IncomingMessage.emit (node:events:539:35)
+    at IncomingMessage.emit (node:domain:475:12)
+    at endReadableNT (node:internal/streams/readable:1345:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[31merror[39m: POST /v1/company 400 - 25.429 ms - message: Unexpected token - in JSON at position 0
+[31merror[39m: SyntaxError: Unexpected token - in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (D:\ROINode_Backend\node_modules\body-parser\lib\types\json.js:160:10)
+    at parse (D:\ROINode_Backend\node_modules\body-parser\lib\types\json.js:83:15)
+    at D:\ROINode_Backend\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:202:9)
+    at invokeCallback (D:\ROINode_Backend\node_modules\raw-body\index.js:231:16)
+    at done (D:\ROINode_Backend\node_modules\raw-body\index.js:220:7)
+    at IncomingMessage.onEnd (D:\ROINode_Backend\node_modules\raw-body\index.js:280:7)
+    at IncomingMessage.emit (node:events:539:35)
+    at IncomingMessage.emit (node:domain:475:12)
+    at endReadableNT (node:internal/streams/readable:1345:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[31merror[39m: POST /v1/company 400 - 45.235 ms - message: Unexpected token - in JSON at position 0
+[31merror[39m: SyntaxError: Unexpected token - in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (D:\ROINode_Backend\node_modules\body-parser\lib\types\json.js:160:10)
+    at parse (D:\ROINode_Backend\node_modules\body-parser\lib\types\json.js:83:15)
+    at D:\ROINode_Backend\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:202:9)
+    at invokeCallback (D:\ROINode_Backend\node_modules\raw-body\index.js:231:16)
+    at done (D:\ROINode_Backend\node_modules\raw-body\index.js:220:7)
+    at IncomingMessage.onEnd (D:\ROINode_Backend\node_modules\raw-body\index.js:280:7)
+    at IncomingMessage.emit (node:events:539:35)
+    at IncomingMessage.emit (node:domain:475:12)
+    at endReadableNT (node:internal/streams/readable:1345:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[31merror[39m: POST /v1/company 400 - 21.283 ms - message: Unexpected token - in JSON at position 0
+[31merror[39m: SyntaxError: Unexpected token - in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (D:\ROINode_Backend\node_modules\body-parser\lib\types\json.js:160:10)
+    at parse (D:\ROINode_Backend\node_modules\body-parser\lib\types\json.js:83:15)
+    at D:\ROINode_Backend\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:202:9)
+    at invokeCallback (D:\ROINode_Backend\node_modules\raw-body\index.js:231:16)
+    at done (D:\ROINode_Backend\node_modules\raw-body\index.js:220:7)
+    at IncomingMessage.onEnd (D:\ROINode_Backend\node_modules\raw-body\index.js:280:7)
+    at IncomingMessage.emit (node:events:539:35)
+    at IncomingMessage.emit (node:domain:475:12)
+    at endReadableNT (node:internal/streams/readable:1345:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[31merror[39m: POST /v1/company 400 - 30.064 ms - message: Unexpected token - in JSON at position 0
+[31merror[39m: SyntaxError: Unexpected token - in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (D:\ROINode_Backend\node_modules\body-parser\lib\types\json.js:160:10)
+    at parse (D:\ROINode_Backend\node_modules\body-parser\lib\types\json.js:83:15)
+    at D:\ROINode_Backend\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:202:9)
+    at invokeCallback (D:\ROINode_Backend\node_modules\raw-body\index.js:231:16)
+    at done (D:\ROINode_Backend\node_modules\raw-body\index.js:220:7)
+    at IncomingMessage.onEnd (D:\ROINode_Backend\node_modules\raw-body\index.js:280:7)
+    at IncomingMessage.emit (node:events:539:35)
+    at IncomingMessage.emit (node:domain:475:12)
+    at endReadableNT (node:internal/streams/readable:1345:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[31merror[39m: POST /v1/company 400 - 51.864 ms - message: Unexpected token - in JSON at position 0
+[31merror[39m: SyntaxError: Unexpected token - in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (D:\ROINode_Backend\node_modules\body-parser\lib\types\json.js:160:10)
+    at parse (D:\ROINode_Backend\node_modules\body-parser\lib\types\json.js:83:15)
+    at D:\ROINode_Backend\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:202:9)
+    at invokeCallback (D:\ROINode_Backend\node_modules\raw-body\index.js:231:16)
+    at done (D:\ROINode_Backend\node_modules\raw-body\index.js:220:7)
+    at IncomingMessage.onEnd (D:\ROINode_Backend\node_modules\raw-body\index.js:280:7)
+    at IncomingMessage.emit (node:events:539:35)
+    at IncomingMessage.emit (node:domain:475:12)
+    at endReadableNT (node:internal/streams/readable:1345:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[31merror[39m: POST /v1/company 400 - 14.010 ms - message: Unexpected token - in JSON at position 0
+[31merror[39m: Error: "name" is required, "licenses" is required, "contact_fname" is required, "contact_lname" is required, "contact_email" is required, "contact_phone" is required, "notes" is required, "------WebKitFormBoundary1KFlJVAy1Vzrzajx
+Content-Disposition: form-data; name" is not allowed
+    at D:\ROINode_Backend\src\middlewares\validate.js:15:17
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:34:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company 400 - 349.781 ms - message: "name" is required, "licenses" is required, "contact_fname" is required, "contact_lname" is required, "contact_email" is required, "contact_phone" is required, "notes" is required, "------WebKitFormBoundary1KFlJVAy1Vzrzajx
+Content-Disposition: form-data; name" is not allowed
+[31merror[39m: Error: "name" is required, "licenses" is required, "contact_fname" is required, "contact_lname" is required, "contact_email" is required, "contact_phone" is required, "notes" is required, "------WebKitFormBoundarybH4ZE1GZpHZXyJKA
+Content-Disposition: form-data; name" is not allowed
+    at D:\ROINode_Backend\src\middlewares\validate.js:15:17
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:34:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company 400 - 117.363 ms - message: "name" is required, "licenses" is required, "contact_fname" is required, "contact_lname" is required, "contact_email" is required, "contact_phone" is required, "notes" is required, "------WebKitFormBoundarybH4ZE1GZpHZXyJKA
+Content-Disposition: form-data; name" is not allowed
+[31merror[39m: Error: "name" is required, "licenses" is required, "contact_fname" is required, "contact_lname" is required, "contact_email" is required, "contact_phone" is required, "notes" is required, "------WebKitFormBoundaryNTH6CHIA4jYmEpsB
+Content-Disposition: form-data; name" is not allowed
+    at D:\ROINode_Backend\src\middlewares\validate.js:15:17
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:34:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company 400 - 124.156 ms - message: "name" is required, "licenses" is required, "contact_fname" is required, "contact_lname" is required, "contact_email" is required, "contact_phone" is required, "notes" is required, "------WebKitFormBoundaryNTH6CHIA4jYmEpsB
+Content-Disposition: form-data; name" is not allowed
+[31merror[39m: Error: "name" is required, "licenses" is required, "contact_fname" is required, "contact_lname" is required, "contact_email" is required, "contact_phone" is required, "notes" is required, "------WebKitFormBoundaryrjmfc8aeJmMkYVQF
+Content-Disposition: form-data; name" is not allowed
+    at D:\ROINode_Backend\src\middlewares\validate.js:15:17
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:34:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company 400 - 105.921 ms - message: "name" is required, "licenses" is required, "contact_fname" is required, "contact_lname" is required, "contact_email" is required, "contact_phone" is required, "notes" is required, "------WebKitFormBoundaryrjmfc8aeJmMkYVQF
+Content-Disposition: form-data; name" is not allowed
+[31merror[39m: Error: Please authenticate
+    at D:\ROINode_Backend\src\middlewares\auth.js:10:19
+    at allFailed (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:107:18)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:180:28)
+    at JwtStrategy.strategy.fail (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:302:9)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:106:33
+    at D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:152:16
+    at getSecret (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:94:10)
+    at Function.module.exports [as JwtVerifier] (D:\ROINode_Backend\node_modules\passport-jwt\lib\verify_jwt.js:4:16)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:40:13)
+    at JwtStrategy.authenticate (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:99:10)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:366:16)
+    at authenticate (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:367:7)
+    at D:\ROINode_Backend\src\middlewares\auth.js:32:107
+    at new Promise (<anonymous>)
+[31merror[39m: GET /v1/company/62b2a6f9061ed2a095b55555/user 401 - 11.069 ms - message: Please authenticate
+[31merror[39m: [Invalid TOken] Error: Company id not found
+[31merror[39m: Error: Company id not found
+    at D:\ROINode_Backend\src\controllers\company.controller.js:389:20
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/company/62d51bec4c27ff3b583b8bd4/user 404 - 229.243 ms - message: Company id not found
+[31merror[39m: Error: Please authenticate
+    at D:\ROINode_Backend\src\middlewares\auth.js:10:19
+    at allFailed (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:107:18)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:180:28)
+    at JwtStrategy.strategy.fail (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:302:9)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:106:33
+    at D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:152:16
+    at getSecret (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:94:10)
+    at Function.module.exports [as JwtVerifier] (D:\ROINode_Backend\node_modules\passport-jwt\lib\verify_jwt.js:4:16)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:40:13)
+    at JwtStrategy.authenticate (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:99:10)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:366:16)
+    at authenticate (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:367:7)
+    at D:\ROINode_Backend\src\middlewares\auth.js:32:107
+    at new Promise (<anonymous>)
+[31merror[39m: POST /v1/company 401 - 26.697 ms - message: Please authenticate
+[31merror[39m: Error: "name" is required, "licenses" is required, "contact_fname" is required, "contact_lname" is required, "contact_email" is required, "contact_phone" is required, "notes" is required, "------WebKitFormBoundary2TncAzj3t2wYe73b
+Content-Disposition: form-data; name" is not allowed
+    at D:\ROINode_Backend\src\middlewares\validate.js:15:17
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:34:17
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company 400 - 111.166 ms - message: "name" is required, "licenses" is required, "contact_fname" is required, "contact_lname" is required, "contact_email" is required, "contact_phone" is required, "notes" is required, "------WebKitFormBoundary2TncAzj3t2wYe73b
+Content-Disposition: form-data; name" is not allowed
+[31merror[39m: Error: "name" is required, "licenses" is required, "contact_fname" is required, "contact_lname" is required, "contact_email" is required, "contact_phone" is required, "notes" is required
+    at D:\ROINode_Backend\src\middlewares\validate.js:15:17
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:34:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company 400 - 112.257 ms - message: "name" is required, "licenses" is required, "contact_fname" is required, "contact_lname" is required, "contact_email" is required, "contact_phone" is required, "notes" is required
+[31merror[39m: Error: Please authenticate
+    at D:\ROINode_Backend\src\middlewares\auth.js:10:19
+    at allFailed (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:107:18)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:180:28)
+    at JwtStrategy.strategy.fail (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:302:9)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:106:33
+    at D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:152:16
+    at getSecret (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:94:10)
+    at Function.module.exports [as JwtVerifier] (D:\ROINode_Backend\node_modules\passport-jwt\lib\verify_jwt.js:4:16)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:40:13)
+    at JwtStrategy.authenticate (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:99:10)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:366:16)
+    at authenticate (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:367:7)
+    at D:\ROINode_Backend\src\middlewares\auth.js:32:107
+    at new Promise (<anonymous>)
+[31merror[39m: POST /v1/company 401 - 28.677 ms - message: Please authenticate
+[31merror[39m: Error: Please authenticate
+    at D:\ROINode_Backend\src\middlewares\auth.js:10:19
+    at allFailed (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:107:18)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:180:28)
+    at JwtStrategy.strategy.fail (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:302:9)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:106:33
+    at D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:152:16
+    at getSecret (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:94:10)
+    at Function.module.exports [as JwtVerifier] (D:\ROINode_Backend\node_modules\passport-jwt\lib\verify_jwt.js:4:16)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:40:13)
+    at JwtStrategy.authenticate (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:99:10)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:366:16)
+    at authenticate (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:367:7)
+    at D:\ROINode_Backend\src\middlewares\auth.js:32:107
+    at new Promise (<anonymous>)
+[31merror[39m: GET /v1/company 401 - 25.234 ms - message: Please authenticate
+[31merror[39m: MongoError: Executor error during getMore :: caused by :: $first's argument must be an array, but is string
+    at MessageStream.messageHandler (D:\ROINode_Backend\node_modules\mongodb\lib\cmap\connection.js:299:20)
+    at MessageStream.emit (node:events:527:28)
+    at MessageStream.emit (node:domain:475:12)
+    at processIncomingData (D:\ROINode_Backend\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (D:\ROINode_Backend\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at writeOrBuffer (node:internal/streams/writable:389:12)
+    at _write (node:internal/streams/writable:330:10)
+    at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+    at TLSSocket.ondata (node:internal/streams/readable:754:22)
+    at TLSSocket.emit (node:events:527:28)
+    at TLSSocket.emit (node:domain:475:12)
+    at addChunk (node:internal/streams/readable:315:12)
+    at readableAddChunk (node:internal/streams/readable:289:9)
+    at TLSSocket.Readable.push (node:internal/streams/readable:228:10)
+    at TLSWrap.onStreamRead (node:internal/stream_base_commons:190:23)
+[31merror[39m: GET /v1/company 500 - 435.318 ms - message: Executor error during getMore :: caused by :: $first's argument must be an array, but is string
+[31merror[39m: MongoError: Executor error during getMore :: caused by :: $first's argument must be an array, but is string
+    at MessageStream.messageHandler (D:\ROINode_Backend\node_modules\mongodb\lib\cmap\connection.js:299:20)
+    at MessageStream.emit (node:events:527:28)
+    at MessageStream.emit (node:domain:475:12)
+    at processIncomingData (D:\ROINode_Backend\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (D:\ROINode_Backend\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at writeOrBuffer (node:internal/streams/writable:389:12)
+    at _write (node:internal/streams/writable:330:10)
+    at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+    at TLSSocket.ondata (node:internal/streams/readable:754:22)
+    at TLSSocket.emit (node:events:527:28)
+    at TLSSocket.emit (node:domain:475:12)
+    at addChunk (node:internal/streams/readable:315:12)
+    at readableAddChunk (node:internal/streams/readable:289:9)
+    at TLSSocket.Readable.push (node:internal/streams/readable:228:10)
+    at TLSWrap.onStreamRead (node:internal/stream_base_commons:190:23)
+[31merror[39m: GET /v1/company 500 - 434.551 ms - message: Executor error during getMore :: caused by :: $first's argument must be an array, but is string
