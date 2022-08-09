@@ -28,10 +28,10 @@ const ApiError = require('./utils/ApiError');
   app.use(helmet());
 
   // parse json request body
-  app.use(express.json());
+  app.use(express.json({limit:'50mb'}));
 
   // parse urlencoded request body
-  app.use(express.urlencoded({ extended: true }));
+  app.use(express.urlencoded({limit:'50mb', extended: true }));
 
   // sanitize request data
   app.use(xss());

@@ -11,10 +11,13 @@ const userController = require('../../controllers/user.controller');
 
 const router = express.Router();
 
+/**
+ * company creattion
+ * 
+ */
 router
   .route('/')
-  //auth('createCompany'), validate(companyValidation.createCompany),
-  .post(  companyController.createCompany)
+  .post(auth('createCompany'), companyController.createCompany)
   .get(auth('getCompany'), validate(companyValidation.getCompany), companyController.getAllCompany);
 
 
@@ -42,7 +45,13 @@ router
  .patch(auth('patchCompanyUser'), validate(companyValidation.patchCompanyUser), companyController.patchCompanyUser)
  .get(auth('getUser'), validate( userValidation.getUser), userController.getUser);
 
-
+/**
+ * get company by id
+ */
+ router
+ .route('/:_id')
+ .get(auth('getCompany'), validate(companyValidation.getCompany), companyController.getCompany)
+ .patch(auth('getCompany'), validate(companyValidation.patchCompany), companyController.patchCompany);
 
 
 
@@ -93,13 +102,7 @@ router
   .route('/company/logo/:_id')
   .get(auth('createCompany'),companyController.getFile)
 
-  /**
-   * get company by id
-   */
-router
-  .route('/:_id')
-  .get(auth('getCompany'), validate(companyValidation.getCompany), companyController.getCompany)
-  .patch(auth('getCompany'), validate(companyValidation.patchCompany), companyController.patchCompany);
+  
   
   
 
