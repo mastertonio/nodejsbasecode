@@ -40,51 +40,54 @@ const getFile = catchAsync(async (req, res)=>{
 });
 
 const createCompany = catchAsync(async (req, res) =>{
-    /**
-     * extracting JWT Token to get the User Id
-     */
-    const token = jwtExtract(req);
-    /**
-     * validating the user Account base on the response of the extraction
-     */
-    const is_user = await userService.getUserById(token);
-    let bucketLocation = null;
-    if(!is_user){
-      let error = new ApiError(httpStatus.NOT_FOUND, 'User not found');
-      logger.error(`[Invalid TOken] ${error}`);
-      throw error;
-    }
+  console.log('create company')
+//     /**
+//      * extracting JWT Token to get the User Id
+//      */
+//     const token = jwtExtract(req);
+//     /**
+//      * validating the user Account base on the response of the extraction
+//      */
+//     const is_user = await userService.getUserById(token);
+//     let bucketLocation = null;
+//     if(!is_user){
+//       let error = new ApiError(httpStatus.NOT_FOUND, 'User not found');
+//       logger.error(`[Invalid TOken] ${error}`);
+//       throw error;
+//     }
 
-    /**
-     * get the file and upload to s3bucket services
-     */
-    if(req.files.contract_file !== 'undefined'){
-      const file = req.files.contract_file;
-      const awsService = await new AWSs3(file);
-      await awsService.upload_file;
-      bucketLocation = file.name;
+//     /**
+//      * get the file and upload to s3bucket services
+//      */
+//     if(req.files.contract_file !== 'undefined'){
+//       const file = req.files.contract_file;
+//       const awsService = await new AWSs3(file);
+//       await awsService.upload_file;
+//       bucketLocation = file.name;
       
-    }
-    /**
-     * construct company info
-     */
-    const data = {};
-    data.name = req.body.name;
-    data.alias = req.body.alias;
-    data.active = req.body.active;
-    data.licenses = req.body.licenses;
-    data.contact_fname = req.body.contact_fname;
-    data.contact_lname = req.body.contact_lname;
-    data.contact_email = req.body.contact_email;
-    data.contact_phone = req.body.contact_phone;
-    data.contract_file = bucketLocation;
-    data.contract_start_date = req.body.contract_start_date;
-    data.contract_end_date = req.body.contract_end_date;
-    data.notes = req.body.notes;
+//     }
+
+
+//     /**
+//      * construct company info
+//      */
+//     const data = {};
+//     data.name = req.body.name;
+//     data.alias = req.body.alias;
+//     data.active = req.body.active;
+//     data.licenses = req.body.licenses;
+//     data.contact_fname = req.body.contact_fname;
+//     data.contact_lname = req.body.contact_lname;
+//     data.contact_email = req.body.contact_email;
+//     data.contact_phone = req.body.contact_phone;
+//     data.contract_file = bucketLocation;
+//     data.contract_start_date = req.body.contract_start_date;
+//     data.contract_end_date = req.body.contract_end_date;
+//     data.notes = req.body.notes;
     
-    const create_company = await companyService.createCompany(data);
-    logger.info(`[Company endpoint] response: ${create_company}`)
-    res.send(create_company);
+//     const create_company = await companyService.createCompany(data);
+//     logger.info(`[Company endpoint] response: ${create_company}`)
+//     res.send(create_company);
   });
 
 const getCompany = catchAsync(async (req, res) =>{
@@ -376,7 +379,7 @@ const createCompnayTemplateVersion = catchAsync(async (req, res)=>{
        logger.error(`[Invalid TOken] ${error}`);
        throw error;
      }
-     const company_id = getCID(req);
+     const company_id = req.params.company_id;
      /**
       * validate if the company id is valid
       */
@@ -387,8 +390,8 @@ const createCompnayTemplateVersion = catchAsync(async (req, res)=>{
       logger.error(`[Invalid TOken] ${error}`);
       throw error;
      }
-     let comp_id = (is_user.role == "company-admin")? company_id : null;
-     const companyUserAccount = await companyService.companyUserAccount(comp_id);
+    //  let comp_id = (is_user.role == "company-admin")? company_id : null;
+     const companyUserAccount = await companyService.companyUserAccount(company_id);
      
      
      
