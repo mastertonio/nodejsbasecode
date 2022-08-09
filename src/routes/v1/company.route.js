@@ -71,7 +71,7 @@ router
 
 //list of manager
 router
-  .route('/manager')
+  .route('/:company_id/manager')
   .get(auth('getManager'), validate(companyValidation.getManager), companyController.getAllManager);
 
 //list of currency
@@ -83,7 +83,7 @@ router
  * Company Template
  */
 router
-  .route('/template')
+  .route('/:company_id/template')
   .post(auth('createCompnayTemplate'), validate(companyValidation.createCompnayTemplate), companyController.createCompanyTemplate)
   .get(auth('listCompanyTemplate'), validate(companyValidation.listCompanyTemplate), companyController.listCompanyTemplate)
 

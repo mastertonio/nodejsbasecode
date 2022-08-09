@@ -22,13 +22,14 @@ const getCompanyTemplateByCompanyId = async (_id) =>{
 }
 
 const getManagerByCompanyId = async (cid) =>{ 
+   
     if(_.isNull(cid)){
-        return User.find({role:"company-agent"});
+        return User.find({role:"company-manager"});
     }else{        
         const _cid = new ObjectId(cid); 
         return User.find({
             $and:[
-                {role:"company-agent"},
+                {role:"company-manager"},
                 {company_id: _cid}
             ]
         });
