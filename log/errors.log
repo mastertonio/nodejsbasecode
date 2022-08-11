@@ -4394,3 +4394,35 @@ Content-Disposition: form-data; name" is not allowed
     at D:\ROINode_Backend\node_modules\mongoose\lib\schematype.js:1273:9
     at processTicksAndRejections (node:internal/process/task_queues:78:11)
 [31merror[39m: POST /v1/dashboard/62e7cd720940d04618c8fe9e 400 - 696.542 ms - message: Calculator validation failed: template_version_id: Path `template_version_id` is required.
+[31merror[39m: TypeError: Cannot read properties of undefined (reading '_id')
+    at Object.createCalculator (D:\ROINode_Backend\src\services\dashboard.service.js:375:67)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:93:29
+[31merror[39m: POST /v1/dashboard/62d51bec4c27ff3b583b8bd4 500 - 534.276 ms - message: Cannot read properties of undefined (reading '_id')
+[31merror[39m: TypeError: Cannot read properties of undefined (reading '_id')
+    at Object.createCalculator (D:\ROINode_Backend\src\services\dashboard.service.js:376:67)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:93:29
+[31merror[39m: POST /v1/dashboard/62d51bec4c27ff3b583b8bd4 500 - 588.381 ms - message: Cannot read properties of undefined (reading '_id')
+[31merror[39m: TypeError: Cannot read properties of undefined (reading '_id')
+    at Object.createCalculator (D:\ROINode_Backend\src\services\dashboard.service.js:376:67)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:93:29
+[31merror[39m: POST /v1/dashboard/62d51bec4c27ff3b583b8bd4 500 - 605.927 ms - message: Cannot read properties of undefined (reading '_id')
+[31merror[39m: TypeError: Cannot read properties of undefined (reading '_id')
+    at Object.createCalculator (D:\ROINode_Backend\src\services\dashboard.service.js:376:67)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:93:29
+[31merror[39m: POST /v1/dashboard/62d51bec4c27ff3b583b8bd4 500 - 572.065 ms - message: Cannot read properties of undefined (reading '_id')
+[31merror[39m: Error: no record found  on Template version collection!
+    at Object.createCalculator (D:\ROINode_Backend\src\services\dashboard.service.js:370:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:93:29
+[31merror[39m: POST /v1/dashboard/62d51bec4c27ff3b583b8bd4 404 - 540.649 ms - message: no record found  on Template version collection!
+[31merror[39m: ReferenceError: _ is not defined
+    at D:\ROINode_Backend\src\controllers\dashboard.controller.js:146:5
+    at Array.map (<anonymous>)
+    at D:\ROINode_Backend\src\controllers\dashboard.controller.js:145:12
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/dashboard/template/list 500 - 384.423 ms - message: _ is not defined
