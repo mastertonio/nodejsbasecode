@@ -8,7 +8,7 @@ const router = express.Router();
 
 router
   .route('/:userId')
-  .get(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.getDashboard)
+  // .get(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.getDashboard)
   .put(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.updateTemplateStatus)
   .post(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.createCalculator);
 
