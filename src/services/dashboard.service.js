@@ -216,7 +216,7 @@ const getDashboard = async (userId,filter, options) => {
 
     //check the number of roi per account
     data.welcome = {
-        account_name: name.toString().toUpperCase(),
+        account_name: name,
         current_roi: all_roi.length,
         active_roi: active_roi.length
     };
