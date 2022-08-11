@@ -12,8 +12,13 @@ const { CostExplorer } = require('aws-sdk');
 const { required } = require('joi');
 const { map, get } = require('underscore');
 
-const getAllTemplate = async () => {
-    return Template.find();
+const getAllTemplate = async (cond) => {
+    if(cond == null){
+        return Template.find();
+    }else{
+        return Template.find({company_id:cond})
+    }
+    
 }
 const getCalculatorStatistic = async (uid) =>{
    return Calculator.aggregate([
@@ -345,26 +350,33 @@ const getDashboard = async (userId,filter, options) => {
     return calculator;
   }
 
-  const createCalculator = async(params,paramBody) =>{
-    const user = await userService.getUserById(params.userId);
+  const createCalculator = async(userId,paramBody) =>{
+
+    const user = await userService.getUserById(userId);
     if (!user) {
         throw new ApiError(httpStatus.NOT_FOUND, 'User not found');
     }
-    // const template_id = paramBody.template_id;
-    const template_id = "628779c3ec4e045f4806f775";
-    const templateVersion = await getTemplateVersion(template_id);    
+
+    const template = await Template.find({company_id:paramBody.cid});
+    if(!template){
+        throw new ApiError(httpStatus.NOT_FOUND, `no record found on Template collection!`)
+    }
+
+
+    const template_id = new ObjectId(paramBody.template_id);
+    const templateVersion = await TemplateVersion.find({template_id: template_id,stage:1});   
+    
     if(!templateVersion){
-        throw new ApiError(httpStatus.NOT_FOUND, `no record found!`)
+        throw new ApiError(httpStatus.NOT_FOUND, `no record found  on Template version collection!`)
     }
     
-    const data = {};
-    const templateVersionID = new ObjectId("628779c3ec4e045f4806f775");
-    data.user_id = params.userId;
-    data.title = paramBody.name;
-    // data.template_version_id = paramBody.templateVersion_id;
-    data.template_version_id = templateVersionID;
+    const templateVersion_data = {};
+    templateVersion_data.user_id = userId;
+    templateVersion_data.title = paramBody.name;
+    templateVersion_data.template_version_id = templateVersion._id;
 
-    return Calculator.create(data);
+    return Calculator.create(templateVersion_data);
+    
   }
 
   const deleteCalculator = async(params) =>{
@@ -479,13 +491,14 @@ const getDashboard = async (userId,filter, options) => {
     return data;
   }
 
-  const getRoiTemplates = async(uid) =>{
+  const getRoiTemplates = async(comp_id,user) =>{
     
-    const user = await userService.getUserById(uid);
-    if (!user) {
-        throw new ApiError(httpStatus.NOT_FOUND, 'User not found');
+    if(user.role == 'admin'){
+        return  getAllTemplate(null);
+    }else{
+        return getAllTemplate(comp_id)
     }
-    return  getAllTemplate();
+    
   }
 
   const getRoiAdmin = async(uid) => {

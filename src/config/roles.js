@@ -1,6 +1,6 @@
 const allRoles = {
   user: [],
-  "company-manager": [],
+  "company-manager": ['getDashboard'],
   "company-agent": [],
   admin: ['getUsers', 'manageUsers', 'getDashboard','patchCompany','createCompany','getCompany','getUser',
           'updateCompany',
@@ -10,7 +10,7 @@ const allRoles = {
   "company-admin": ['getCompany','createCompanyUser','getUsers','getUser',
                     'createCompnayTemplate','listCompanyTemplate',
                     'createCompnayTemplateVersion','getAllUser','transferTemplate','patchCompanyUser',
-                    'getCurrency','getManager']
+                    'getCurrency','getManager','getDashboard']
 };
 
 const roles = Object.keys(allRoles);

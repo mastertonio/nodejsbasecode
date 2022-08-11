@@ -14,7 +14,7 @@ const templateVersionSchema = mongoose.Schema(
         },
         stage: {
             type: Number,
-            default: 1
+            default: 0
         },
         level: {
             type: Number,
