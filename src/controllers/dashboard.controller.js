@@ -147,16 +147,7 @@ const getRoiTemplate = catchAsync(async (req, res)=>{
     if(!_.isEmpty(v.TemplateVersionData)){
       v.TemplateVersionData.map(k=>{
         if(k.stage == 1){
-          data.push({
-            _id:v._id,
-            active:v.active,
-            name:v.name,
-            company_id:v.company_id,
-            notes:v.notes,
-            created_by:v.created_by,
-            createdAt:v.createdAt,
-            updatedAt:v.updatedAt
-          })
+          data.push(v)
         }
       })
     }
