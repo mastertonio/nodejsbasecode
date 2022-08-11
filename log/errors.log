@@ -4220,3 +4220,141 @@ Content-Disposition: form-data; name" is not allowed
     at D:\ROINode_Backend\src\middlewares\auth.js:32:107
     at new Promise (<anonymous>)
 [31merror[39m: GET /v1/company/62b2a6f9061ed2a095b55555/template 401 - 10.107 ms - message: Please authenticate
+[31merror[39m: Error: Please authenticate
+    at D:\ROINode_Backend\src\middlewares\auth.js:10:19
+    at allFailed (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:107:18)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:180:28)
+    at JwtStrategy.strategy.fail (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:302:9)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:106:33
+    at D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:152:16
+    at getSecret (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:94:10)
+    at Function.module.exports [as JwtVerifier] (D:\ROINode_Backend\node_modules\passport-jwt\lib\verify_jwt.js:4:16)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:40:13)
+    at JwtStrategy.authenticate (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:99:10)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:366:16)
+    at authenticate (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:367:7)
+    at D:\ROINode_Backend\src\middlewares\auth.js:32:107
+    at new Promise (<anonymous>)
+[31merror[39m: POST /v1/dashboard/62e7cd720940d04618c8fe9e 401 - 35.237 ms - message: Please authenticate
+[31merror[39m: Error: Forbidden
+    at D:\ROINode_Backend\src\middlewares\auth.js:23:21
+    at JwtStrategy.strategy.success (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:219:18)
+    at verified (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/dashboard/62e7cd720940d04618c8fe9e 403 - 52.166 ms - message: Forbidden
+[31merror[39m: Error: Forbidden
+    at D:\ROINode_Backend\src\middlewares\auth.js:23:21
+    at JwtStrategy.strategy.success (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:219:18)
+    at verified (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/dashboard/62e7cd720940d04618c8fe9e 403 - 150.738 ms - message: Forbidden
+[31merror[39m: Error: Forbidden
+    at D:\ROINode_Backend\src\middlewares\auth.js:23:21
+    at JwtStrategy.strategy.success (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:219:18)
+    at verified (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/dashboard/62e7cd720940d04618c8fe9e 403 - 202.965 ms - message: Forbidden
+[31merror[39m: Error: Forbidden
+    at D:\ROINode_Backend\src\middlewares\auth.js:23:21
+    at JwtStrategy.strategy.success (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:219:18)
+    at verified (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/dashboard/62e7cd720940d04618c8fe9e 403 - 54.340 ms - message: Forbidden
+[31merror[39m: ReferenceError: userService is not defined
+    at D:\ROINode_Backend\src\controllers\dashboard.controller.js:60:20
+    at D:\ROINode_Backend\src\utils\catchAsync.js:2:19
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\validate.js:18:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:34:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/dashboard/62e7cd720940d04618c8fe9e 500 - 86.696 ms - message: userService is not defined
+[31merror[39m: Error: Forbidden
+    at D:\ROINode_Backend\src\middlewares\auth.js:23:21
+    at JwtStrategy.strategy.success (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:219:18)
+    at verified (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/dashboard/template/list 403 - 73.296 ms - message: Forbidden
+[31merror[39m: Error: User not found
+    at Object.createCalculator (D:\ROINode_Backend\src\services\dashboard.service.js:357:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:71:29
+[31merror[39m: POST /v1/dashboard/62e7cd720940d04618c8fe9e 404 - 147.290 ms - message: User not found
+[31merror[39m: Error: User not found
+    at Object.createCalculator (D:\ROINode_Backend\src\services\dashboard.service.js:357:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:71:29
+[31merror[39m: POST /v1/dashboard/62e7cd720940d04618c8fe9e 404 - 169.171 ms - message: User not found
+[31merror[39m: Error: User not found
+    at Object.createCalculator (D:\ROINode_Backend\src\services\dashboard.service.js:357:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:72:29
+[31merror[39m: POST /v1/dashboard/62e7cd720940d04618c8fe9e 404 - 463.339 ms - message: User not found
+[31merror[39m: Error: User not found
+    at Object.createCalculator (D:\ROINode_Backend\src\services\dashboard.service.js:357:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:73:29
+[31merror[39m: POST /v1/dashboard/62e7cd720940d04618c8fe9e 404 - 290.743 ms - message: User not found
+[31merror[39m: Error: User not found
+    at Object.createCalculator (D:\ROINode_Backend\src\services\dashboard.service.js:357:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:73:29
+[31merror[39m: POST /v1/dashboard/62e7cd720940d04618c8fe9e 404 - 141.771 ms - message: User not found
+[31merror[39m: Error: no record found!
+    at Object.createCalculator (D:\ROINode_Backend\src\services\dashboard.service.js:369:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:72:29
+[31merror[39m: POST /v1/dashboard/62e7cd720940d04618c8fe9e 404 - 323.783 ms - message: no record found!
+[31merror[39m: Error: no record found  on Template version collection!
+    at Object.createCalculator (D:\ROINode_Backend\src\services\dashboard.service.js:369:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:72:29
+[31merror[39m: POST /v1/dashboard/62e7cd720940d04618c8fe9e 404 - 271.813 ms - message: no record found  on Template version collection!
+[31merror[39m: Error: no record found  on Template version collection!
+    at Object.createCalculator (D:\ROINode_Backend\src\services\dashboard.service.js:369:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:72:29
+[31merror[39m: POST /v1/dashboard/62e7cd720940d04618c8fe9e 404 - 225.683 ms - message: no record found  on Template version collection!
+[31merror[39m: CastError: Cast to ObjectId failed for value "{ template_id: '62e7d2ab3278943180e0749e' }" (type Object) at path "_id" for model "TemplateVersion"
+    at model.Query.exec (D:\ROINode_Backend\node_modules\mongoose\lib\query.js:4498:21)
+    at model.Query.Query.then (D:\ROINode_Backend\node_modules\mongoose\lib\query.js:4592:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/dashboard/62e7cd720940d04618c8fe9e 400 - 246.362 ms - message: Cast to ObjectId failed for value "{ template_id: '62e7d2ab3278943180e0749e' }" (type Object) at path "_id" for model "TemplateVersion"
+[31merror[39m: CastError: Cast to ObjectId failed for value "{ template_id: 62e7d2ab3278943180e0749e }" (type Object) at path "_id" for model "TemplateVersion"
+    at model.Query.exec (D:\ROINode_Backend\node_modules\mongoose\lib\query.js:4498:21)
+    at model.Query.Query.then (D:\ROINode_Backend\node_modules\mongoose\lib\query.js:4592:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/dashboard/62e7cd720940d04618c8fe9e 400 - 247.580 ms - message: Cast to ObjectId failed for value "{ template_id: 62e7d2ab3278943180e0749e }" (type Object) at path "_id" for model "TemplateVersion"
+[31merror[39m: ValidationError: Calculator validation failed: template_version_id: Path `template_version_id` is required., title: Path `title` is required., user_id: Path `user_id` is required.
+    at model.Document.invalidate (D:\ROINode_Backend\node_modules\mongoose\lib\document.js:2782:32)
+    at D:\ROINode_Backend\node_modules\mongoose\lib\document.js:2574:17
+    at D:\ROINode_Backend\node_modules\mongoose\lib\schematype.js:1273:9
+    at processTicksAndRejections (node:internal/process/task_queues:78:11)
+[31merror[39m: POST /v1/dashboard/62e7cd720940d04618c8fe9e 400 - 719.906 ms - message: Calculator validation failed: template_version_id: Path `template_version_id` is required., title: Path `title` is required., user_id: Path `user_id` is required.
+[31merror[39m: ValidationError: Calculator validation failed: template_version_id: Path `template_version_id` is required., title: Path `title` is required., user_id: Path `user_id` is required.
+    at model.Document.invalidate (D:\ROINode_Backend\node_modules\mongoose\lib\document.js:2782:32)
+    at D:\ROINode_Backend\node_modules\mongoose\lib\document.js:2574:17
+    at D:\ROINode_Backend\node_modules\mongoose\lib\schematype.js:1273:9
+    at processTicksAndRejections (node:internal/process/task_queues:78:11)
+[31merror[39m: POST /v1/dashboard/62e7cd720940d04618c8fe9e 400 - 303.273 ms - message: Calculator validation failed: template_version_id: Path `template_version_id` is required., title: Path `title` is required., user_id: Path `user_id` is required.
+[31merror[39m: ValidationError: Calculator validation failed: template_version_id: Path `template_version_id` is required., title: Path `title` is required., user_id: Path `user_id` is required.
+    at model.Document.invalidate (D:\ROINode_Backend\node_modules\mongoose\lib\document.js:2782:32)
+    at D:\ROINode_Backend\node_modules\mongoose\lib\document.js:2574:17
+    at D:\ROINode_Backend\node_modules\mongoose\lib\schematype.js:1273:9
+    at processTicksAndRejections (node:internal/process/task_queues:78:11)
+[31merror[39m: POST /v1/dashboard/62e7cd720940d04618c8fe9e 400 - 581.990 ms - message: Calculator validation failed: template_version_id: Path `template_version_id` is required., title: Path `title` is required., user_id: Path `user_id` is required.
+[31merror[39m: ValidationError: Calculator validation failed: template_version_id: Path `template_version_id` is required., title: Path `title` is required., user_id: Path `user_id` is required.
+    at model.Document.invalidate (D:\ROINode_Backend\node_modules\mongoose\lib\document.js:2782:32)
+    at D:\ROINode_Backend\node_modules\mongoose\lib\document.js:2574:17
+    at D:\ROINode_Backend\node_modules\mongoose\lib\schematype.js:1273:9
+    at processTicksAndRejections (node:internal/process/task_queues:78:11)
+[31merror[39m: POST /v1/dashboard/62e7cd720940d04618c8fe9e 400 - 309.732 ms - message: Calculator validation failed: template_version_id: Path `template_version_id` is required., title: Path `title` is required., user_id: Path `user_id` is required.

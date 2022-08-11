@@ -1,8 +1,8 @@
 const httpStatus = require('http-status');
 const catchAsync = require('../utils/catchAsync');
 const pick = require('../utils/pick');
-const {dashboadService} = require('../services');
-const { jwtExtract } = require('./common.controller');
+const {dashboadService, userService} = require('../services');
+const { jwtExtract, getCID } = require('./common.controller');
 
 
 const getDashboard = catchAsync(async (req, res) => {
@@ -50,7 +50,26 @@ const updateroiTable = catchAsync(async (req, res) =>{
  * create calculator
  */
 const createCalculator = catchAsync(async (req,res)=>{
-  const create_calculator = await dashboadService.createCalculator(req.params, req.body);
+  /**
+    * extracting JWT Token to get the User Id
+    */
+   const token = jwtExtract(req);
+   /**
+     * validating the user Account base on the response of the extraction
+     */
+   
+   const is_user = await userService.getUserById(token);
+   if(!is_user){
+     let error = new ApiError(httpStatus.NOT_FOUND, 'User not found');
+     logger.error(`[Invalid TOken] ${error}`);
+     throw error;
+   }
+
+   const comp_id = await getCID(req);
+   req.body.cid = comp_id;
+
+
+  const create_calculator = await dashboadService.createCalculator(token, req.body);
   res.send(create_calculator);
 });
 
@@ -83,8 +102,23 @@ const getRoiTable = catchAsync(async (req, res)=>{
  */
 
 const getRoiTemplate = catchAsync(async (req, res)=>{
-  const uid = jwtExtract(req);
-  const roiTable = await dashboadService.getRoiTemplates(uid);
+  /**
+    * extracting JWT Token to get the User Id
+    */
+   const token = jwtExtract(req);
+   /**
+     * validating the user Account base on the response of the extraction
+     */
+   const is_user = await userService.getUserById(token);
+   if(!is_user){
+     let error = new ApiError(httpStatus.NOT_FOUND, 'User not found');
+     logger.error(`[Invalid TOken] ${error}`);
+     throw error;
+   }
+
+  const comp_id = await getCID(req);
+
+  const roiTable = await dashboadService.getRoiTemplates(comp_id,is_user);
   res.send(roiTable);
 });
 
