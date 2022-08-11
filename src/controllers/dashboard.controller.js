@@ -3,6 +3,8 @@ const catchAsync = require('../utils/catchAsync');
 const pick = require('../utils/pick');
 const {dashboadService, userService} = require('../services');
 const { jwtExtract, getCID } = require('./common.controller');
+const { data } = require('../config/logger');
+const _ = require('underscore');
 
 
 const getDashboard = catchAsync(async (req, res) => {
@@ -140,7 +142,29 @@ const getRoiTemplate = catchAsync(async (req, res)=>{
   const comp_id = await getCID(req);
 
   const roiTable = await dashboadService.getRoiTemplates(comp_id,is_user);
-  res.send(roiTable);
+  const data = [];
+  roiTable.map(v=>{
+    if(!_.isEmpty(v.TemplateVersionData)){
+      v.TemplateVersionData.map(k=>{
+        if(k.stage == 1){
+          data.push({
+            _id:v._id,
+            active:v.active,
+            name:v.name,
+            company_id:v.company_id,
+            notes:v.notes,
+            created_by:v.created_by,
+            createdAt:v.createdAt,
+            updatedAt:v.updatedAt
+          })
+        }
+      })
+    }
+    
+    // if(!_.isEmpty(v.TemplateVersionData) && v.TemplateVersionData)
+    // console.log(v.TemplateVersionData);
+  });
+  res.send(data);
 });
 
 /**

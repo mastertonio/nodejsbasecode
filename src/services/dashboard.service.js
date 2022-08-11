@@ -16,7 +16,28 @@ const getAllTemplate = async (cond) => {
     if(cond == null){
         return Template.find();
     }else{
-        return Template.find({company_id:cond})
+        // const template = await Template.find({company_id:cond})
+        // template.map(v=>{
+
+        // })
+        // return Template.find({company_id:cond})
+        let o_id = new ObjectId(cond);  
+
+        return Template.aggregate([
+            {
+                $match: {
+                    company_id:o_id
+                }
+            },
+            {
+                $lookup: {
+                    from: 'templateversions',
+                    localField: '_id',
+                    foreignField: 'template_id',
+                    as: 'TemplateVersionData'
+                }
+            }
+        ])
     }
     
 }
@@ -366,9 +387,10 @@ const getDashboard = async (userId,filter, options) => {
     const template_id = new ObjectId(paramBody.template_id);
     const templateVersion = await TemplateVersion.find({template_id: template_id,stage:1});   
     
-    if(!templateVersion){
+    if(!templateVersion || _.isEmpty(templateVersion)){
         throw new ApiError(httpStatus.NOT_FOUND, `no record found  on Template version collection!`)
     }
+    console.log(templateVersion)
     const templateVersion_data = {};
     templateVersion_data.user_id = userId;
     templateVersion_data.title = paramBody.name;
