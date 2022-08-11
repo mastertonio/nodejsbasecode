@@ -369,11 +369,11 @@ const getDashboard = async (userId,filter, options) => {
     if(!templateVersion){
         throw new ApiError(httpStatus.NOT_FOUND, `no record found  on Template version collection!`)
     }
-    
     const templateVersion_data = {};
     templateVersion_data.user_id = userId;
     templateVersion_data.title = paramBody.name;
-    templateVersion_data.template_version_id = templateVersion._id;
+    templateVersion_data.template_version_id = templateVersion[0]._id;
+    console.log(templateVersion_data)
 
     return Calculator.create(templateVersion_data);
     
