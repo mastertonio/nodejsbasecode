@@ -13,32 +13,36 @@ const { required } = require('joi');
 const { map, get } = require('underscore');
 
 const getAllTemplate = async (cond) => {
+    let condition = [];
     if(cond == null){
-        return Template.find();
-    }else{
-        // const template = await Template.find({company_id:cond})
-        // template.map(v=>{
-
-        // })
-        // return Template.find({company_id:cond})
-        let o_id = new ObjectId(cond);  
-
-        return Template.aggregate([
-            {
-                $match: {
-                    company_id:o_id
-                }
-            },
-            {
-                $lookup: {
-                    from: 'templateversions',
-                    localField: '_id',
-                    foreignField: 'template_id',
-                    as: 'TemplateVersionData'
-                }
+        condition =[{
+            $lookup: {
+                from: 'templateversions',
+                localField: '_id',
+                foreignField: 'template_id',
+                as: 'TemplateVersionData'
             }
-        ])
+        }]
+    }else{
+       
+        let o_id = new ObjectId(cond);  
+        condition =[{
+            $match: {
+                company_id:o_id
+            }
+        },{
+            $lookup: {
+                from: 'templateversions',
+                localField: '_id',
+                foreignField: 'template_id',
+                as: 'TemplateVersionData'
+            }
+        }]
+
+        
     }
+
+    return Template.aggregate(condition)
     
 }
 const getCalculatorStatistic = async (uid) =>{
