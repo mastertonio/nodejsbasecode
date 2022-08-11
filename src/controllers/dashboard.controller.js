@@ -9,8 +9,29 @@ const getDashboard = catchAsync(async (req, res) => {
     const filter = pick(req.query, ['title']);
     const options = pick(req.query, ['sortBy', 'limit', 'page']);
 
-    console.log(options)
+    /**
+    * extracting JWT Token to get the User Id
+    */
+   const token = jwtExtract(req);
+   /**
+     * validating the user Account base on the response of the extraction
+     */
+   const is_user = await userService.getUserById(token);
+   if(!is_user){
+     let error = new ApiError(httpStatus.NOT_FOUND, 'User not found');
+     logger.error(`[Invalid TOken] ${error}`);
+     throw error;
+   }
+
+  const comp_id = await getCID(req);
+
+  const template_list = await dashboadService.getRoiTemplates(comp_id,is_user);
+
+
+
+
     const dashboard = await dashboadService.getDashboard(req.params.userId, filter, options);
+    dashboard.template_list = template_list;
     res.send(dashboard);
   });
 
