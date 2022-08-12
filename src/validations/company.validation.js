@@ -44,8 +44,8 @@ const createCompanyUser = {
         contact_lname: Joi.string().required(),
         contact_email: Joi.string().required(),
         contact_phone: Joi.string().length(10).pattern(/[6-9]{1}[0-9]{9}/).required(),
-        contract_start_date: Joi.date().iso(),
-        contract_end_date: Joi.date().iso(),
+        contract_start_date: Joi.date(),
+        contract_end_date: Joi.date(),
         notes: Joi.string().required()
     })
   };
