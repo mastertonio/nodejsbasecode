@@ -4445,3 +4445,10 @@ Content-Disposition: form-data; name" is not allowed
     at D:\ROINode_Backend\node_modules\mongoose\lib\schematype.js:1273:9
     at processTicksAndRejections (node:internal/process/task_queues:78:11)
 [31merror[39m: PATCH /v1/company/62a30fc5bc3b08450041d790 400 - 172.351 ms - message: Company validation failed: contact_phone: Path `contact_phone` is required., contact_email: Path `contact_email` is required., contact_lname: Path `contact_lname` is required., contact_fname: Path `contact_fname` is required.
+[31merror[39m: Error: Forbidden
+    at D:\ROINode_Backend\src\middlewares\auth.js:23:21
+    at JwtStrategy.strategy.success (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:219:18)
+    at verified (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company 403 - 109.336 ms - message: Forbidden
