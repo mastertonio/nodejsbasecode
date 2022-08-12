@@ -80,7 +80,8 @@ const createCompany = catchAsync(async (req, res) =>{
     data.contact_lname = req.body.contact_lname;
     data.contact_email = req.body.contact_email;
     data.contact_phone = req.body.contact_phone;
-    data.contract_file = bucketLocation;
+    data.contract_file = "NA";
+    // data.contract_file = bucketLocation;
     data.contract_start_date = req.body.contract_start_date;
     data.contract_end_date = req.body.contract_end_date;
     data.notes = req.body.notes;
