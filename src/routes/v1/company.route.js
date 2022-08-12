@@ -13,11 +13,11 @@ const router = express.Router();
 
 /**
  * company creattion
- * 
+ * auth('createCompany'),
  */
 router
   .route('/')
-  .post(auth('createCompany'), companyController.createCompany)
+  .post( companyController.createCompany)
   .get(auth('getCompany'), validate(companyValidation.getCompany), companyController.getAllCompany);
 
 

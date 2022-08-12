@@ -59,13 +59,13 @@ const createCompany = catchAsync(async (req, res) =>{
     /**
      * get the file and upload to s3bucket services
      */
-    if(req.files.contract_file !== 'undefined'){
-      const file = req.files.contract_file;
-      const awsService = await new AWSs3(file);
-      await awsService.upload_file;
-      bucketLocation = file.name;
+    // if(req.files.contract_file !== 'undefined' || req.files.contract_file !== null){
+    //   const file = req.files.contract_file;
+    //   const awsService = await new AWSs3(file);
+    //   await awsService.upload_file;
+    //   bucketLocation = file.name;
       
-    }
+    // }
 
 
     /**

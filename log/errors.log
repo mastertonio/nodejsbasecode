@@ -4452,3 +4452,32 @@ Content-Disposition: form-data; name" is not allowed
     at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
     at processTicksAndRejections (node:internal/process/task_queues:96:5)
 [31merror[39m: POST /v1/company 403 - 109.336 ms - message: Forbidden
+[31merror[39m: Error: Forbidden
+    at D:\ROINode_Backend\src\middlewares\auth.js:23:21
+    at JwtStrategy.strategy.success (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:219:18)
+    at verified (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company 403 - 139.903 ms - message: Forbidden
+[31merror[39m: Error: Forbidden
+    at D:\ROINode_Backend\src\middlewares\auth.js:23:21
+    at JwtStrategy.strategy.success (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:219:18)
+    at verified (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company 403 - 70.886 ms - message: Forbidden
+[31merror[39m: TypeError: Cannot read properties of null (reading 'contract_file')
+    at D:\ROINode_Backend\src\controllers\company.controller.js:62:18
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company 500 - 112.264 ms - message: Cannot read properties of null (reading 'contract_file')
+[31merror[39m: TypeError: Cannot read properties of null (reading 'contract_file')
+    at D:\ROINode_Backend\src\controllers\company.controller.js:62:18
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company 500 - 289.026 ms - message: Cannot read properties of null (reading 'contract_file')
+[31merror[39m: Error: Forbidden
+    at D:\ROINode_Backend\src\middlewares\auth.js:23:21
+    at JwtStrategy.strategy.success (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:219:18)
+    at verified (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company 403 - 156.025 ms - message: Forbidden
