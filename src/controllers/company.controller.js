@@ -59,13 +59,13 @@ const createCompany = catchAsync(async (req, res) =>{
     /**
      * get the file and upload to s3bucket services
      */
-    // if(req.files.contract_file !== 'undefined' || req.files.contract_file !== null){
-    //   const file = req.files.contract_file;
-    //   const awsService = await new AWSs3(file);
-    //   await awsService.upload_file;
-    //   bucketLocation = file.name;
+    if(req.files.contract_file !== 'undefined' || req.files.contract_file !== null){
+      const file = req.files.contract_file;
+      const awsService = await new AWSs3(file);
+      await awsService.upload_file;
+      bucketLocation = file.name;
       
-    // }
+    }
 
 
     /**
@@ -80,8 +80,7 @@ const createCompany = catchAsync(async (req, res) =>{
     data.contact_lname = req.body.contact_lname;
     data.contact_email = req.body.contact_email;
     data.contact_phone = req.body.contact_phone;
-    data.contract_file = "NA";
-    // data.contract_file = bucketLocation;
+    data.contract_file = bucketLocation;
     data.contract_start_date = req.body.contract_start_date;
     data.contract_end_date = req.body.contract_end_date;
     data.notes = req.body.notes;
