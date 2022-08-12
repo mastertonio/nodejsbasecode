@@ -96,8 +96,8 @@ const createCompanyUser = {
     }),
     body: Joi.object()
       .keys({
-        alias: Joi.string().required(),
-        name: Joi.string().required(),
+        alias: Joi.string(),
+        name: Joi.string(),
         active: Joi.number().integer(),
         licenses: Joi.number().integer()
       })

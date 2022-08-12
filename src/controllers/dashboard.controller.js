@@ -144,8 +144,8 @@ const getRoiTemplate = catchAsync(async (req, res)=>{
   const roiTable = await dashboadService.getRoiTemplates(comp_id,is_user);
   const data = [];
   roiTable.map(v=>{
-    if(!_.isEmpty(v.TemplateVersionData)){
-      v.TemplateVersionData.map(k=>{
+    if(!_.isEmpty(v.build)){
+      v.build.map(k=>{
         if(k.stage == 1){
           
           data.push({id:v._id,...v,})

@@ -20,7 +20,7 @@ const getAllTemplate = async (cond) => {
                 from: 'templateversions',
                 localField: '_id',
                 foreignField: 'template_id',
-                as: 'TemplateVersionData'
+                as: 'build'
             }
         }]
     }else{
@@ -35,7 +35,7 @@ const getAllTemplate = async (cond) => {
                 from: 'templateversions',
                 localField: '_id',
                 foreignField: 'template_id',
-                as: 'TemplateVersionData'
+                as: 'build'
             }
         }]
 

@@ -4426,3 +4426,22 @@ Content-Disposition: form-data; name" is not allowed
     at D:\ROINode_Backend\src\controllers\dashboard.controller.js:145:12
     at processTicksAndRejections (node:internal/process/task_queues:96:5)
 [31merror[39m: GET /v1/dashboard/template/list 500 - 384.423 ms - message: _ is not defined
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'map')
+    at D:\ROINode_Backend\src\controllers\dashboard.controller.js:148:29
+    at Array.map (<anonymous>)
+    at D:\ROINode_Backend\src\controllers\dashboard.controller.js:146:12
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/dashboard/template/list 500 - 460.781 ms - message: Cannot read properties of undefined (reading 'map')
+[31merror[39m: Error: "templates" is not allowed
+    at D:\ROINode_Backend\src\middlewares\validate.js:15:17
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:34:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: PATCH /v1/company/62a30fc5bc3b08450041d790 400 - 255.175 ms - message: "templates" is not allowed
+[31merror[39m: ValidationError: Company validation failed: contact_phone: Path `contact_phone` is required., contact_email: Path `contact_email` is required., contact_lname: Path `contact_lname` is required., contact_fname: Path `contact_fname` is required.
+    at model.Document.invalidate (D:\ROINode_Backend\node_modules\mongoose\lib\document.js:2782:32)
+    at D:\ROINode_Backend\node_modules\mongoose\lib\document.js:2574:17
+    at D:\ROINode_Backend\node_modules\mongoose\lib\schematype.js:1273:9
+    at processTicksAndRejections (node:internal/process/task_queues:78:11)
+[31merror[39m: PATCH /v1/company/62a30fc5bc3b08450041d790 400 - 172.351 ms - message: Company validation failed: contact_phone: Path `contact_phone` is required., contact_email: Path `contact_email` is required., contact_lname: Path `contact_lname` is required., contact_fname: Path `contact_fname` is required.

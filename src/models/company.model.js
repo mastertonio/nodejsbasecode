@@ -22,19 +22,19 @@ const companySchema = mongoose.Schema(
         },
         contact_fname:{
             type: String,
-            required: true
+            required: false
         },
         contact_lname:{
             type: String,
-            required: true
+            required: false
         },
         contact_email:{
             type: String,
-            required: true
+            required: false
         },
         contact_phone:{
             type: String,
-            required: true
+            required: false
         },
         contract_file:{
             type: String,
