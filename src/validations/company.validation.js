@@ -96,10 +96,17 @@ const createCompanyUser = {
     }),
     body: Joi.object()
       .keys({
-        alias: Joi.string(),
-        name: Joi.string(),
         active: Joi.number().integer(),
-        licenses: Joi.number().integer()
+        name: Joi.string(),
+        alias: Joi.string(),
+        licenses: Joi.number().integer(),
+        contact_fname: Joi.string(),
+        contact_lname: Joi.string(),
+        contact_email: Joi.string(),
+        contact_phone: Joi.string().length(10).pattern(/[6-9]{1}[0-9]{9}/),
+        contract_start_date: Joi.date().iso(),
+        contract_end_date: Joi.date().iso(),
+        notes: Joi.string()
       })
       .min(1),
   };
