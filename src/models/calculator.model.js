@@ -47,6 +47,10 @@ const calculatorSchema = mongoose.Schema(
             type: Number,
             default: 0
         },
+        template_link:{
+            type: String,
+            default: null
+        },
         salesforce_id: {
             type: String,
             default: null

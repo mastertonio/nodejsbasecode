@@ -173,8 +173,23 @@ const getRoiAdmin =catchAsync(async (req, res) =>{
  * fetch graph data
  */
  const getRoiGraph =catchAsync(async (req, res) =>{
-  const uid = jwtExtract(req);
-  const roiGraph = await dashboadService.getRoiGraph(uid);
+  /**
+    * extracting JWT Token to get the User Id
+    */
+   const token = jwtExtract(req);
+   /**
+     * validating the user Account base on the response of the extraction
+     */
+   const is_user = await userService.getUserById(token);
+   if(!is_user){
+     let error = new ApiError(httpStatus.NOT_FOUND, 'User not found');
+     logger.error(`[Invalid TOken] ${error}`);
+     throw error;
+   }
+
+  const comp_id = await getCID(req);
+
+  const roiGraph = await dashboadService.getRoiGraph(is_user, comp_id);
   res.send(roiGraph);
 });
 

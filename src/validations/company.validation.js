@@ -18,14 +18,57 @@ const createCompanyUser = {
   };
 
   const createCompnayTemplateVersion = {
+    params: Joi.object().keys({
+      company_id: Joi.required().custom(objectId),
+      template_id: Joi.required().custom(objectId)
+    }),
     body: Joi.object().keys({
       name: Joi.string().required(),
       version: Joi.number().integer().required(),
       notes: Joi.string().required()
     })
   }
+ 
+
+  const getCompnayTemplateVersion = {
+    params: Joi.object().keys({
+      company_id: Joi.required().custom(objectId),
+      template_id: Joi.required().custom(objectId)
+    }),
+    query: Joi.object().keys({
+      data: Joi.object(),
+    })
+  }
+
+  const getCompnayTemplateVersionInfo = {
+    params: Joi.object().keys({
+      company_id: Joi.required().custom(objectId),
+      template_id: Joi.required().custom(objectId),
+      version_id: Joi.required().custom(objectId)
+    }),
+    query: Joi.object().keys({
+      data: Joi.object(),
+    })
+  }
+
+  const patchCompnayTemplateVersion = {
+    params: Joi.object().keys({
+      company_id: Joi.required().custom(objectId),
+      template_id: Joi.required().custom(objectId),
+      version_id: Joi.required().custom(objectId)
+    }),
+    body: Joi.object().keys({
+      name: Joi.string(),
+      version: Joi.number().integer(),
+      notes: Joi.string(),
+      status: Joi.number().integer().valid(0,1)
+    })
+  }
 
   const createCompnayTemplate = {
+    params: Joi.object().keys({
+      company_id: Joi.required().custom(objectId),
+    }),
     body: Joi.object().keys({
       name: Joi.string().required(),
       status: Joi.number().integer().required(),
@@ -34,18 +77,31 @@ const createCompanyUser = {
     })
   }
 
-  const createCompany  = {
+  const patchCompnayTemplate = {
+    params: Joi.object().keys({
+      company_id: Joi.required().custom(objectId),
+      template_id: Joi.required().custom(objectId)
+    }),
     body: Joi.object().keys({
-        
+      name: Joi.string(),
+      status: Joi.number().integer(),
+      notes: Joi.string()
+
+    })
+  }
+
+  const createCompany  = {
+    body: Joi.object().keys({        
         name: Joi.string().required(),
         alias: Joi.string(),
         licenses: Joi.number().integer().required(),
+        active: Joi.number().integer().required(),
         contact_fname: Joi.string().required(),
         contact_lname: Joi.string().required(),
         contact_email: Joi.string().required(),
-        contact_phone: Joi.string().length(10).pattern(/[6-9]{1}[0-9]{9}/).required(),
-        contract_start_date: Joi.date(),
-        contract_end_date: Joi.date(),
+        contact_phone: Joi.string().min(10).max(15),
+        contract_start_date: Joi.date().iso(),
+        contract_end_date: Joi.date().iso(),
         notes: Joi.string().required()
     })
   };
@@ -78,7 +134,7 @@ const createCompanyUser = {
         data: Joi.object(),
       }),
   };
-  const transferTemplate = {
+  const transferTemplates = {
     
     params: Joi.object().keys({
       company_id: Joi.required().custom(objectId),
@@ -87,6 +143,19 @@ const createCompanyUser = {
       .keys({
         roi_new_uid: Joi.required().custom(objectId),
         roi_source_uid: Joi.required().custom(objectId)
+      })
+  };
+
+  const transferTemplate = {
+    
+    params: Joi.object().keys({
+      company_id: Joi.required().custom(objectId),
+    }),
+    body: Joi.object()
+      .keys({
+        roi_new_uid: Joi.required().custom(objectId),
+        roi_source_uid: Joi.required().custom(objectId),
+        template_id: Joi.required().custom(objectId)
       })
   };
 
@@ -125,10 +194,16 @@ const createCompanyUser = {
         currency: Joi.string().min(2).max(5),
         manager: Joi.custom(objectId),
         template: Joi.array(),
+        status: Joi.number().integer().valid(1,0),
         role: Joi.string()
       })
   };
 
+  const getTemplateInfo = {
+    query: Joi.object().keys({
+        data: Joi.object(),
+      }),
+  };
 
 module.exports = {
     createCompany,
@@ -142,5 +217,11 @@ module.exports = {
     getManager,
     getAllCompanyUser,
     transferTemplate,
-    patchCompanyUser
+    transferTemplates,
+    patchCompanyUser,
+    patchCompnayTemplate,
+    getTemplateInfo,
+    patchCompnayTemplateVersion,
+    getCompnayTemplateVersion,
+    getCompnayTemplateVersionInfo
   };
