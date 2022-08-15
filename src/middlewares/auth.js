@@ -3,6 +3,7 @@ const httpStatus = require('http-status');
 const ApiError = require('../utils/ApiError');
 const { roleRights } = require('../config/roles');
 const _ = require("underscore");
+const logger = require('../config/logger');
 
 const verifyCallback = (req, resolve, reject, requiredRights) => async (err, user, info) => {
  
@@ -13,7 +14,7 @@ const verifyCallback = (req, resolve, reject, requiredRights) => async (err, use
   
   if (requiredRights.length) {
     const userRights = roleRights.get(user.role);   
-    console.log(userRights)
+    logger.info(userRights)
     if(_.isUndefined(userRights)) {
       return reject(new ApiError(httpStatus.FORBIDDEN, 'Forbidden'));
     }

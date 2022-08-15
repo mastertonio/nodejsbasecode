@@ -4481,3 +4481,1157 @@ Content-Disposition: form-data; name" is not allowed
     at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
     at processTicksAndRejections (node:internal/process/task_queues:96:5)
 [31merror[39m: POST /v1/company 403 - 156.025 ms - message: Forbidden
+[31merror[39m: ReferenceError: graphData is not defined
+    at Object.getRoiGraph (D:\ROINode_Backend\src\services\dashboard.service.js:542:17)
+    at D:\ROINode_Backend\src\controllers\dashboard.controller.js:192:42
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/dashboard/data/graph 500 - 182.905 ms - message: graphData is not defined
+[31merror[39m: ReferenceError: graphData is not defined
+    at Object.getRoiGraph (D:\ROINode_Backend\src\services\dashboard.service.js:542:17)
+    at D:\ROINode_Backend\src\controllers\dashboard.controller.js:192:42
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/dashboard/data/graph 500 - 210.491 ms - message: graphData is not defined
+[31merror[39m: MongooseError: Mongoose 5.x disallows passing a spread of operators to `Model.aggregate()`. Instead of `Model.aggregate({ $match }, { $skip })`, do `Model.aggregate([{ $match }, { $skip }])`
+    at Function.aggregate (D:\ROINode_Backend\node_modules\mongoose\lib\model.js:4217:11)
+    at getCalculatorStatistic (D:\ROINode_Backend\src\services\dashboard.service.js:85:32)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async Object.getRoiGraph (D:\ROINode_Backend\src\services\dashboard.service.js:577:23)
+    at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:192:20
+[31merror[39m: GET /v1/dashboard/data/graph 400 - 236.511 ms - message: Mongoose 5.x disallows passing a spread of operators to `Model.aggregate()`. Instead of `Model.aggregate({ $match }, { $skip })`, do `Model.aggregate([{ $match }, { $skip }])`
+[31merror[39m: MongoError: Unrecognized expression '$email'
+    at MessageStream.messageHandler (D:\ROINode_Backend\node_modules\mongodb\lib\cmap\connection.js:299:20)
+    at MessageStream.emit (node:events:527:28)
+    at MessageStream.emit (node:domain:475:12)
+    at processIncomingData (D:\ROINode_Backend\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (D:\ROINode_Backend\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at writeOrBuffer (node:internal/streams/writable:389:12)
+    at _write (node:internal/streams/writable:330:10)
+    at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+    at TLSSocket.ondata (node:internal/streams/readable:754:22)
+    at TLSSocket.emit (node:events:527:28)
+    at TLSSocket.emit (node:domain:475:12)
+    at addChunk (node:internal/streams/readable:315:12)
+    at readableAddChunk (node:internal/streams/readable:289:9)
+    at TLSSocket.Readable.push (node:internal/streams/readable:228:10)
+    at TLSWrap.onStreamRead (node:internal/stream_base_commons:190:23)
+[31merror[39m: GET /v1/dashboard/data/graph 500 - 370.617 ms - message: Unrecognized expression '$email'
+[31merror[39m: MongoError: Unrecognized expression '$push'
+    at MessageStream.messageHandler (D:\ROINode_Backend\node_modules\mongodb\lib\cmap\connection.js:299:20)
+    at MessageStream.emit (node:events:527:28)
+    at MessageStream.emit (node:domain:475:12)
+    at processIncomingData (D:\ROINode_Backend\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (D:\ROINode_Backend\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at writeOrBuffer (node:internal/streams/writable:389:12)
+    at _write (node:internal/streams/writable:330:10)
+    at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+    at TLSSocket.ondata (node:internal/streams/readable:754:22)
+    at TLSSocket.emit (node:events:527:28)
+    at TLSSocket.emit (node:domain:475:12)
+    at addChunk (node:internal/streams/readable:315:12)
+    at readableAddChunk (node:internal/streams/readable:289:9)
+    at TLSSocket.Readable.push (node:internal/streams/readable:228:10)
+    at TLSWrap.onStreamRead (node:internal/stream_base_commons:190:23)
+[31merror[39m: GET /v1/dashboard/data/graph 500 - 590.275 ms - message: Unrecognized expression '$push'
+[31merror[39m: TypeError: graph_data.push is not a function
+    at D:\ROINode_Backend\src\services\dashboard.service.js:114:28
+    at Array.map (<anonymous>)
+    at D:\ROINode_Backend\src\services\dashboard.service.js:109:26
+    at Array.map (<anonymous>)
+    at getCalculatorStatistic (D:\ROINode_Backend\src\services\dashboard.service.js:108:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async Object.getRoiGraph (D:\ROINode_Backend\src\services\dashboard.service.js:618:23)
+    at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:192:20
+[31merror[39m: GET /v1/dashboard/data/graph 500 - 366.211 ms - message: graph_data.push is not a function
+[31merror[39m: ReferenceError: calculator is not defined
+    at getCalculatorStatistic (D:\ROINode_Backend\src\services\dashboard.service.js:108:24)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async Object.getRoiGraph (D:\ROINode_Backend\src\services\dashboard.service.js:631:23)
+    at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:192:20
+[31merror[39m: GET /v1/dashboard/data/graph 500 - 357.062 ms - message: calculator is not defined
+[31merror[39m: TypeError: data.statistic.map is not a function
+    at Object.setChart (D:\ROINode_Backend\src\services\common.service.js:64:20)
+    at Object.getRoiGraph (D:\ROINode_Backend\src\services\dashboard.service.js:630:26)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:192:20
+[31merror[39m: GET /v1/dashboard/data/graph 500 - 459.235 ms - message: data.statistic.map is not a function
+[31merror[39m: TypeError: data.statistic.map is not a function
+    at Object.setChart (D:\ROINode_Backend\src\services\common.service.js:64:20)
+    at Object.getRoiGraph (D:\ROINode_Backend\src\services\dashboard.service.js:636:26)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:192:20
+[31merror[39m: GET /v1/dashboard/data/graph 500 - 897.848 ms - message: data.statistic.map is not a function
+[31merror[39m: SyntaxError: Unexpected token o in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at getCalculatorStatistic (D:\ROINode_Backend\src\services\dashboard.service.js:147:18)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async Object.getRoiGraph (D:\ROINode_Backend\src\services\dashboard.service.js:634:23)
+    at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:192:20
+[31merror[39m: GET /v1/dashboard/data/graph 500 - 544.749 ms - message: Unexpected token o in JSON at position 1
+[31merror[39m: TypeError: data.statistic.map is not a function
+    at Object.setChart (D:\ROINode_Backend\src\services\common.service.js:64:20)
+    at Object.getRoiGraph (D:\ROINode_Backend\src\services\dashboard.service.js:636:26)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:192:20
+[31merror[39m: GET /v1/dashboard/data/graph 500 - 447.958 ms - message: data.statistic.map is not a function
+[31merror[39m: TypeError: data.statistic.map is not a function
+    at Object.setChart (D:\ROINode_Backend\src\services\common.service.js:64:20)
+    at Object.getRoiGraph (D:\ROINode_Backend\src\services\dashboard.service.js:630:26)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:192:20
+[31merror[39m: GET /v1/dashboard/data/graph 500 - 511.974 ms - message: data.statistic.map is not a function
+[31merror[39m: TypeError: data.statistic.map is not a function
+    at Object.setChart (D:\ROINode_Backend\src\services\common.service.js:64:20)
+    at Object.getRoiGraph (D:\ROINode_Backend\src\services\dashboard.service.js:632:26)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:192:20
+[31merror[39m: GET /v1/dashboard/data/graph 500 - 490.030 ms - message: data.statistic.map is not a function
+[31merror[39m: TypeError: data.statistic.map is not a function
+    at Object.setChart (D:\ROINode_Backend\src\services\common.service.js:64:20)
+    at Object.getRoiGraph (D:\ROINode_Backend\src\services\dashboard.service.js:632:26)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:192:20
+[31merror[39m: GET /v1/dashboard/data/graph 500 - 497.984 ms - message: data.statistic.map is not a function
+[31merror[39m: Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+    at new ObjectID (D:\ROINode_Backend\node_modules\bson\lib\bson\objectid.js:59:11)
+    at getCompanyById (D:\ROINode_Backend\src\services\company.service.js:118:18)
+    at Object.getCompany (D:\ROINode_Backend\src\services\company.service.js:177:27)
+    at D:\ROINode_Backend\src\controllers\company.controller.js:95:46
+    at D:\ROINode_Backend\src\utils\catchAsync.js:2:19
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\validate.js:18:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:34:17
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/company/currency 500 - 103.825 ms - message: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+[31merror[39m: Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+    at new ObjectID (D:\ROINode_Backend\node_modules\bson\lib\bson\objectid.js:59:11)
+    at getCompanyById (D:\ROINode_Backend\src\services\company.service.js:118:18)
+    at Object.getCompany (D:\ROINode_Backend\src\services\company.service.js:177:27)
+    at D:\ROINode_Backend\src\controllers\company.controller.js:95:46
+    at D:\ROINode_Backend\src\utils\catchAsync.js:2:19
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\validate.js:18:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:34:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/company/currency 500 - 144.279 ms - message: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+[31merror[39m: Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+    at new ObjectID (D:\ROINode_Backend\node_modules\bson\lib\bson\objectid.js:59:11)
+    at getCompanyById (D:\ROINode_Backend\src\services\company.service.js:118:18)
+    at Object.getCompany (D:\ROINode_Backend\src\services\company.service.js:177:27)
+    at D:\ROINode_Backend\src\controllers\company.controller.js:95:46
+    at D:\ROINode_Backend\src\utils\catchAsync.js:2:19
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\validate.js:18:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:34:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/company/currency 500 - 99.356 ms - message: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+[31merror[39m: Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+    at new ObjectID (D:\ROINode_Backend\node_modules\bson\lib\bson\objectid.js:59:11)
+    at getCompanyById (D:\ROINode_Backend\src\services\company.service.js:118:18)
+    at Object.getCompany (D:\ROINode_Backend\src\services\company.service.js:177:27)
+    at D:\ROINode_Backend\src\controllers\company.controller.js:95:46
+    at D:\ROINode_Backend\src\utils\catchAsync.js:2:19
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\validate.js:18:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:34:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/company/currency 500 - 91.547 ms - message: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+[31merror[39m: Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+    at new ObjectID (D:\ROINode_Backend\node_modules\bson\lib\bson\objectid.js:59:11)
+    at getCompanyById (D:\ROINode_Backend\src\services\company.service.js:118:18)
+    at Object.getCompany (D:\ROINode_Backend\src\services\company.service.js:177:27)
+    at D:\ROINode_Backend\src\controllers\company.controller.js:95:46
+    at D:\ROINode_Backend\src\utils\catchAsync.js:2:19
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\validate.js:18:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:34:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/company/currency 500 - 105.006 ms - message: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+[31merror[39m: Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+    at new ObjectID (D:\ROINode_Backend\node_modules\bson\lib\bson\objectid.js:59:11)
+    at getCompanyById (D:\ROINode_Backend\src\services\company.service.js:118:18)
+    at Object.getCompany (D:\ROINode_Backend\src\services\company.service.js:177:27)
+    at D:\ROINode_Backend\src\controllers\company.controller.js:95:46
+    at D:\ROINode_Backend\src\utils\catchAsync.js:2:19
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\validate.js:18:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:34:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/company/currency 500 - 152.033 ms - message: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+[31merror[39m: Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+    at new ObjectID (D:\ROINode_Backend\node_modules\bson\lib\bson\objectid.js:59:11)
+    at getCompanyById (D:\ROINode_Backend\src\services\company.service.js:118:18)
+    at Object.getCompany (D:\ROINode_Backend\src\services\company.service.js:177:27)
+    at D:\ROINode_Backend\src\controllers\company.controller.js:95:46
+    at D:\ROINode_Backend\src\utils\catchAsync.js:2:19
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\validate.js:18:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:34:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/company/currency 500 - 73.150 ms - message: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+[31merror[39m: CastError: Cast to ObjectId failed for value "{ _id: 'currency' }" (type Object) at path "_id" for model "Company"
+    at model.Query.exec (D:\ROINode_Backend\node_modules\mongoose\lib\query.js:4498:21)
+    at model.Query.Query.then (D:\ROINode_Backend\node_modules\mongoose\lib\query.js:4592:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/company/currency 400 - 118.426 ms - message: Cast to ObjectId failed for value "{ _id: 'currency' }" (type Object) at path "_id" for model "Company"
+[31merror[39m: Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+    at new ObjectID (D:\ROINode_Backend\node_modules\bson\lib\bson\objectid.js:59:11)
+    at getCompanyById (D:\ROINode_Backend\src\services\company.service.js:118:18)
+    at Object.getCompany (D:\ROINode_Backend\src\services\company.service.js:177:27)
+    at D:\ROINode_Backend\src\controllers\company.controller.js:95:46
+    at D:\ROINode_Backend\src\utils\catchAsync.js:2:19
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\validate.js:18:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:34:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/company/currency 500 - 105.897 ms - message: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+[31merror[39m: Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+    at new ObjectID (D:\ROINode_Backend\node_modules\bson\lib\bson\objectid.js:59:11)
+    at getCompanyById (D:\ROINode_Backend\src\services\company.service.js:118:18)
+    at Object.getCompany (D:\ROINode_Backend\src\services\company.service.js:177:27)
+    at D:\ROINode_Backend\src\controllers\company.controller.js:95:46
+    at D:\ROINode_Backend\src\utils\catchAsync.js:2:19
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\validate.js:18:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:34:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/company/currency 500 - 268.175 ms - message: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+[31merror[39m: Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+    at new ObjectID (D:\ROINode_Backend\node_modules\bson\lib\bson\objectid.js:59:11)
+    at getCompanyById (D:\ROINode_Backend\src\services\company.service.js:118:18)
+    at Object.getCompany (D:\ROINode_Backend\src\services\company.service.js:177:27)
+    at D:\ROINode_Backend\src\controllers\company.controller.js:95:46
+    at D:\ROINode_Backend\src\utils\catchAsync.js:2:19
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\validate.js:18:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:34:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/company/currency 500 - 103.332 ms - message: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+[31merror[39m: Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+    at new ObjectID (D:\ROINode_Backend\node_modules\bson\lib\bson\objectid.js:59:11)
+    at getCompanyById (D:\ROINode_Backend\src\services\company.service.js:118:18)
+    at Object.getCompany (D:\ROINode_Backend\src\services\company.service.js:177:27)
+    at D:\ROINode_Backend\src\controllers\company.controller.js:95:46
+    at D:\ROINode_Backend\src\utils\catchAsync.js:2:19
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\validate.js:18:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:34:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/company/currency 500 - 107.387 ms - message: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+[31merror[39m: Error: Not found
+    at D:\ROINode_Backend\src\app.js:64:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:646:15
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:265:14)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:646:15
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:265:14)
+    at Function.handle (D:\ROINode_Backend\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\ROINode_Backend\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+[31merror[39m: GET /v1/company/currency/use 404 - 23.749 ms - message: Not found
+[31merror[39m: Error: Please authenticate
+    at D:\ROINode_Backend\src\middlewares\auth.js:10:19
+    at allFailed (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:107:18)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:180:28)
+    at JwtStrategy.strategy.fail (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:302:9)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:106:33
+    at D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:152:16
+    at getSecret (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:94:10)
+    at Function.module.exports [as JwtVerifier] (D:\ROINode_Backend\node_modules\passport-jwt\lib\verify_jwt.js:4:16)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:40:13)
+    at JwtStrategy.authenticate (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:99:10)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:366:16)
+    at authenticate (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:367:7)
+    at D:\ROINode_Backend\src\middlewares\auth.js:32:107
+    at new Promise (<anonymous>)
+[31merror[39m: POST /v1/company 401 - 29.904 ms - message: Please authenticate
+[31merror[39m: Error: Forbidden
+    at D:\ROINode_Backend\src\middlewares\auth.js:23:21
+    at JwtStrategy.strategy.success (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:219:18)
+    at verified (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company 403 - 107.011 ms - message: Forbidden
+[31merror[39m: Error: "contact_phone" length must be 10 characters long, "contact_phone" with value "123456789" fails to match the required pattern: /[6-9]{1}[0-9]{9}/, "contract_start_date" must be a valid date, "contract_end_date" must be a valid date, "active" is not allowed
+    at D:\ROINode_Backend\src\middlewares\validate.js:15:17
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:34:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company 400 - 80.714 ms - message: "contact_phone" length must be 10 characters long, "contact_phone" with value "123456789" fails to match the required pattern: /[6-9]{1}[0-9]{9}/, "contract_start_date" must be a valid date, "contract_end_date" must be a valid date, "active" is not allowed
+[31merror[39m: Error: "contact_phone" length must be 10 characters long, "contact_phone" with value "123456789" fails to match the required pattern: /[6-9]{1}[0-9]{9}/, "contract_start_date" must be a valid date, "contract_end_date" must be a valid date, "active" is not allowed
+    at D:\ROINode_Backend\src\middlewares\validate.js:15:17
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:34:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company 400 - 71.214 ms - message: "contact_phone" length must be 10 characters long, "contact_phone" with value "123456789" fails to match the required pattern: /[6-9]{1}[0-9]{9}/, "contract_start_date" must be a valid date, "contract_end_date" must be a valid date, "active" is not allowed
+[31merror[39m: Error: "contact_phone" with value "1234567890" fails to match the required pattern: /[6-9]{1}[0-9]{9}/, "contract_start_date" must be a valid date, "contract_end_date" must be a valid date, "active" is not allowed
+    at D:\ROINode_Backend\src\middlewares\validate.js:15:17
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:34:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company 400 - 93.896 ms - message: "contact_phone" with value "1234567890" fails to match the required pattern: /[6-9]{1}[0-9]{9}/, "contract_start_date" must be a valid date, "contract_end_date" must be a valid date, "active" is not allowed
+[31merror[39m: Error: "contact_phone" with value "5417543010" fails to match the required pattern: /[6-9]{1}[0-9]{9}/, "contract_start_date" must be a valid date, "contract_end_date" must be a valid date, "active" is not allowed
+    at D:\ROINode_Backend\src\middlewares\validate.js:15:17
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:34:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company 400 - 73.803 ms - message: "contact_phone" with value "5417543010" fails to match the required pattern: /[6-9]{1}[0-9]{9}/, "contract_start_date" must be a valid date, "contract_end_date" must be a valid date, "active" is not allowed
+[31merror[39m: Error: "contact_phone" with value "5417543010" fails to match the required pattern: /^\d[0-9]{10}$/, "contract_start_date" must be a valid date, "contract_end_date" must be a valid date, "active" is not allowed
+    at D:\ROINode_Backend\src\middlewares\validate.js:15:17
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:34:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company 400 - 105.475 ms - message: "contact_phone" with value "5417543010" fails to match the required pattern: /^\d[0-9]{10}$/, "contract_start_date" must be a valid date, "contract_end_date" must be a valid date, "active" is not allowed
+[31merror[39m: Error: "contact_phone" length must be 15 characters long, "contract_start_date" must be a valid date, "contract_end_date" must be a valid date, "active" is not allowed
+    at D:\ROINode_Backend\src\middlewares\validate.js:15:17
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:34:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company 400 - 126.282 ms - message: "contact_phone" length must be 15 characters long, "contract_start_date" must be a valid date, "contract_end_date" must be a valid date, "active" is not allowed
+[31merror[39m: Error: "contact_phone" length must be 15 characters long, "contract_start_date" must be a valid date, "contract_end_date" must be a valid date, "active" is not allowed
+    at D:\ROINode_Backend\src\middlewares\validate.js:15:17
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:34:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company 400 - 102.373 ms - message: "contact_phone" length must be 15 characters long, "contract_start_date" must be a valid date, "contract_end_date" must be a valid date, "active" is not allowed
+[31merror[39m: Error: "contact_phone" length must be 15 characters long, "contract_start_date" must be a valid date, "contract_end_date" must be a valid date, "active" is not allowed
+    at D:\ROINode_Backend\src\middlewares\validate.js:15:17
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:34:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company 400 - 112.169 ms - message: "contact_phone" length must be 15 characters long, "contract_start_date" must be a valid date, "contract_end_date" must be a valid date, "active" is not allowed
+[31merror[39m: Error: "contract_start_date" must be a valid date, "contract_end_date" must be a valid date, "active" is not allowed
+    at D:\ROINode_Backend\src\middlewares\validate.js:15:17
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:34:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company 400 - 109.809 ms - message: "contract_start_date" must be a valid date, "contract_end_date" must be a valid date, "active" is not allowed
+[31merror[39m: Error: "active" is not allowed
+    at D:\ROINode_Backend\src\middlewares\validate.js:15:17
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:34:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company 400 - 165.065 ms - message: "active" is not allowed
+[31merror[39m: Error: "active" is not allowed
+    at D:\ROINode_Backend\src\middlewares\validate.js:15:17
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:34:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company 400 - 112.294 ms - message: "active" is not allowed
+[31merror[39m: TypeError: Cannot read properties of null (reading 'contract_file')
+    at D:\ROINode_Backend\src\controllers\company.controller.js:62:18
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company 500 - 177.412 ms - message: Cannot read properties of null (reading 'contract_file')
+[31merror[39m: Error: Please authenticate
+    at D:\ROINode_Backend\src\middlewares\auth.js:10:19
+    at allFailed (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:107:18)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:180:28)
+    at JwtStrategy.strategy.fail (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:302:9)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:106:33
+    at D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:152:16
+    at getSecret (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:94:10)
+    at Function.module.exports [as JwtVerifier] (D:\ROINode_Backend\node_modules\passport-jwt\lib\verify_jwt.js:4:16)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:40:13)
+    at JwtStrategy.authenticate (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:99:10)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:366:16)
+    at authenticate (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:367:7)
+    at D:\ROINode_Backend\src\middlewares\auth.js:32:107
+    at new Promise (<anonymous>)
+[31merror[39m: POST /v1/company 401 - 74.269 ms - message: Please authenticate
+[31merror[39m: TypeError: Cannot read properties of null (reading 'contract_file')
+    at D:\ROINode_Backend\src\controllers\company.controller.js:62:27
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company 500 - 155.736 ms - message: Cannot read properties of null (reading 'contract_file')
+[31merror[39m: TypeError: Cannot read properties of null (reading 'contract_file')
+    at D:\ROINode_Backend\src\controllers\company.controller.js:62:27
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company 500 - 216.976 ms - message: Cannot read properties of null (reading 'contract_file')
+[31merror[39m: TypeError: Cannot read properties of null (reading 'contract_file')
+    at D:\ROINode_Backend\src\controllers\company.controller.js:63:18
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company 500 - 182.303 ms - message: Cannot read properties of null (reading 'contract_file')
+[31merror[39m: TypeError: Cannot read properties of null (reading 'contract_file')
+    at D:\ROINode_Backend\src\controllers\company.controller.js:63:18
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company 500 - 148.333 ms - message: Cannot read properties of null (reading 'contract_file')
+[31merror[39m: Error: Please authenticate
+    at D:\ROINode_Backend\src\middlewares\auth.js:10:19
+    at allFailed (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:107:18)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:180:28)
+    at JwtStrategy.strategy.fail (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:302:9)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:106:33
+    at D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:152:16
+    at getSecret (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:94:10)
+    at Function.module.exports [as JwtVerifier] (D:\ROINode_Backend\node_modules\passport-jwt\lib\verify_jwt.js:4:16)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:40:13)
+    at JwtStrategy.authenticate (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:99:10)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:366:16)
+    at authenticate (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:367:7)
+    at D:\ROINode_Backend\src\middlewares\auth.js:32:107
+    at new Promise (<anonymous>)
+[31merror[39m: POST /v1/company 401 - 40.697 ms - message: Please authenticate
+[31merror[39m: Error: Please authenticate
+    at D:\ROINode_Backend\src\middlewares\auth.js:10:19
+    at allFailed (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:107:18)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:180:28)
+    at JwtStrategy.strategy.fail (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:302:9)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:106:33
+    at D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:152:16
+    at getSecret (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:94:10)
+    at Function.module.exports [as JwtVerifier] (D:\ROINode_Backend\node_modules\passport-jwt\lib\verify_jwt.js:4:16)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:40:13)
+    at JwtStrategy.authenticate (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:99:10)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:366:16)
+    at authenticate (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:367:7)
+    at D:\ROINode_Backend\src\middlewares\auth.js:32:107
+    at new Promise (<anonymous>)
+[31merror[39m: GET /v1/company/currency 401 - 23.247 ms - message: Please authenticate
+[31merror[39m: Error: Please authenticate
+    at D:\ROINode_Backend\src\middlewares\auth.js:10:19
+    at allFailed (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:107:18)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:180:28)
+    at JwtStrategy.strategy.fail (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:302:9)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:106:33
+    at D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:152:16
+    at getSecret (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:94:10)
+    at Function.module.exports [as JwtVerifier] (D:\ROINode_Backend\node_modules\passport-jwt\lib\verify_jwt.js:4:16)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:40:13)
+    at JwtStrategy.authenticate (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:99:10)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:366:16)
+    at authenticate (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:367:7)
+    at D:\ROINode_Backend\src\middlewares\auth.js:32:107
+    at new Promise (<anonymous>)
+[31merror[39m: GET /v1/company/currency 401 - 7.457 ms - message: Please authenticate
+[31merror[39m: Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+    at new ObjectID (D:\ROINode_Backend\node_modules\bson\lib\bson\objectid.js:59:11)
+    at getCompanyById (D:\ROINode_Backend\src\services\company.service.js:118:18)
+    at Object.getCompany (D:\ROINode_Backend\src\services\company.service.js:177:27)
+    at D:\ROINode_Backend\src\controllers\company.controller.js:96:46
+    at D:\ROINode_Backend\src\utils\catchAsync.js:2:19
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\validate.js:18:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:34:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/company/currency 500 - 98.196 ms - message: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+[31merror[39m: Error: Please authenticate
+    at D:\ROINode_Backend\src\middlewares\auth.js:10:19
+    at allFailed (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:107:18)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:180:28)
+    at JwtStrategy.strategy.fail (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:302:9)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:106:33
+    at D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:152:16
+    at getSecret (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:94:10)
+    at Function.module.exports [as JwtVerifier] (D:\ROINode_Backend\node_modules\passport-jwt\lib\verify_jwt.js:4:16)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:40:13)
+    at JwtStrategy.authenticate (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:99:10)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:366:16)
+    at authenticate (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:367:7)
+    at D:\ROINode_Backend\src\middlewares\auth.js:32:107
+    at new Promise (<anonymous>)
+[31merror[39m: POST /v1/company/62b2a6f9061ed2a095b55555/roi/transfer 401 - 7.052 ms - message: Please authenticate
+[31merror[39m: Error: Please authenticate
+    at D:\ROINode_Backend\src\middlewares\auth.js:10:19
+    at allFailed (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:107:18)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:180:28)
+    at JwtStrategy.strategy.fail (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:302:9)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:106:33
+    at D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:152:16
+    at getSecret (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:94:10)
+    at Function.module.exports [as JwtVerifier] (D:\ROINode_Backend\node_modules\passport-jwt\lib\verify_jwt.js:4:16)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:40:13)
+    at JwtStrategy.authenticate (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:99:10)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:366:16)
+    at authenticate (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:367:7)
+    at D:\ROINode_Backend\src\middlewares\auth.js:32:107
+    at new Promise (<anonymous>)
+[31merror[39m: GET /v1/company/currency 401 - 9.804 ms - message: Please authenticate
+[31merror[39m: Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+    at new ObjectID (D:\ROINode_Backend\node_modules\bson\lib\bson\objectid.js:59:11)
+    at getCompanyById (D:\ROINode_Backend\src\services\company.service.js:120:18)
+    at Object.getCompany (D:\ROINode_Backend\src\services\company.service.js:179:27)
+    at D:\ROINode_Backend\src\controllers\company.controller.js:96:46
+    at D:\ROINode_Backend\src\utils\catchAsync.js:2:19
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\validate.js:18:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:34:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/company/currency 500 - 95.865 ms - message: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+[31merror[39m: Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+    at new ObjectID (D:\ROINode_Backend\node_modules\bson\lib\bson\objectid.js:59:11)
+    at getCompanyById (D:\ROINode_Backend\src\services\company.service.js:120:18)
+    at Object.getCompany (D:\ROINode_Backend\src\services\company.service.js:179:27)
+    at D:\ROINode_Backend\src\controllers\company.controller.js:96:46
+    at D:\ROINode_Backend\src\utils\catchAsync.js:2:19
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\validate.js:18:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:34:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/company/currency 500 - 228.687 ms - message: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+[31merror[39m: Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+    at new ObjectID (D:\ROINode_Backend\node_modules\bson\lib\bson\objectid.js:59:11)
+    at getCompanyById (D:\ROINode_Backend\src\services\company.service.js:120:18)
+    at Object.getCompany (D:\ROINode_Backend\src\services\company.service.js:179:27)
+    at D:\ROINode_Backend\src\controllers\company.controller.js:96:46
+    at D:\ROINode_Backend\src\utils\catchAsync.js:2:19
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\validate.js:18:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:34:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/company/currency 500 - 77.051 ms - message: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+[31merror[39m: Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+    at new ObjectID (D:\ROINode_Backend\node_modules\bson\lib\bson\objectid.js:59:11)
+    at getCompanyById (D:\ROINode_Backend\src\services\company.service.js:120:18)
+    at Object.getCompany (D:\ROINode_Backend\src\services\company.service.js:179:27)
+    at D:\ROINode_Backend\src\controllers\company.controller.js:96:46
+    at D:\ROINode_Backend\src\utils\catchAsync.js:2:19
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\validate.js:18:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:34:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/company/currency 500 - 96.215 ms - message: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+[31merror[39m: Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+    at new ObjectID (D:\ROINode_Backend\node_modules\bson\lib\bson\objectid.js:59:11)
+    at getCompanyById (D:\ROINode_Backend\src\services\company.service.js:120:18)
+    at Object.getCompany (D:\ROINode_Backend\src\services\company.service.js:179:27)
+    at D:\ROINode_Backend\src\controllers\company.controller.js:96:46
+    at D:\ROINode_Backend\src\utils\catchAsync.js:2:19
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\validate.js:18:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:34:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/company/currency 500 - 96.053 ms - message: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+[31merror[39m: Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+    at new ObjectID (D:\ROINode_Backend\node_modules\bson\lib\bson\objectid.js:59:11)
+    at getCompanyById (D:\ROINode_Backend\src\services\company.service.js:120:18)
+    at Object.getCompany (D:\ROINode_Backend\src\services\company.service.js:179:27)
+    at D:\ROINode_Backend\src\controllers\company.controller.js:96:46
+    at D:\ROINode_Backend\src\utils\catchAsync.js:2:19
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\validate.js:18:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:34:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/company/currency 500 - 97.901 ms - message: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+[31merror[39m: Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+    at new ObjectID (D:\ROINode_Backend\node_modules\bson\lib\bson\objectid.js:59:11)
+    at getCompanyById (D:\ROINode_Backend\src\services\company.service.js:120:18)
+    at Object.getCompany (D:\ROINode_Backend\src\services\company.service.js:179:27)
+    at D:\ROINode_Backend\src\controllers\company.controller.js:96:46
+    at D:\ROINode_Backend\src\utils\catchAsync.js:2:19
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\validate.js:18:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:34:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/company/currency 500 - 255.613 ms - message: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+[31merror[39m: Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+    at new ObjectID (D:\ROINode_Backend\node_modules\bson\lib\bson\objectid.js:59:11)
+    at getCompanyById (D:\ROINode_Backend\src\services\company.service.js:120:18)
+    at Object.getCompany (D:\ROINode_Backend\src\services\company.service.js:179:27)
+    at D:\ROINode_Backend\src\controllers\company.controller.js:96:46
+    at D:\ROINode_Backend\src\utils\catchAsync.js:2:19
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\validate.js:18:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:34:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/company/currency 500 - 74.463 ms - message: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+[31merror[39m: Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+    at new ObjectID (D:\ROINode_Backend\node_modules\bson\lib\bson\objectid.js:59:11)
+    at getCompanyById (D:\ROINode_Backend\src\services\company.service.js:120:18)
+    at Object.getCompany (D:\ROINode_Backend\src\services\company.service.js:179:27)
+    at D:\ROINode_Backend\src\controllers\company.controller.js:96:46
+    at D:\ROINode_Backend\src\utils\catchAsync.js:2:19
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\validate.js:18:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:34:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/company/currency 500 - 186.218 ms - message: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+[31merror[39m: Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+    at new ObjectID (D:\ROINode_Backend\node_modules\bson\lib\bson\objectid.js:59:11)
+    at getCompanyById (D:\ROINode_Backend\src\services\company.service.js:120:18)
+    at Object.getCompany (D:\ROINode_Backend\src\services\company.service.js:179:27)
+    at D:\ROINode_Backend\src\controllers\company.controller.js:96:46
+    at D:\ROINode_Backend\src\utils\catchAsync.js:2:19
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\validate.js:18:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:34:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/company/currency 500 - 94.374 ms - message: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+[31merror[39m: Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+    at new ObjectID (D:\ROINode_Backend\node_modules\bson\lib\bson\objectid.js:59:11)
+    at getCompanyById (D:\ROINode_Backend\src\services\company.service.js:120:18)
+    at Object.getCompany (D:\ROINode_Backend\src\services\company.service.js:179:27)
+    at D:\ROINode_Backend\src\controllers\company.controller.js:96:46
+    at D:\ROINode_Backend\src\utils\catchAsync.js:2:19
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\validate.js:18:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:34:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/company/currency 500 - 73.561 ms - message: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+[31merror[39m: Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+    at new ObjectID (D:\ROINode_Backend\node_modules\bson\lib\bson\objectid.js:59:11)
+    at getCompanyById (D:\ROINode_Backend\src\services\company.service.js:120:18)
+    at Object.getCompany (D:\ROINode_Backend\src\services\company.service.js:179:27)
+    at D:\ROINode_Backend\src\controllers\company.controller.js:96:46
+    at D:\ROINode_Backend\src\utils\catchAsync.js:2:19
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\validate.js:18:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:35:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/company/currency 500 - 89.332 ms - message: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+[31merror[39m: Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+    at new ObjectID (D:\ROINode_Backend\node_modules\bson\lib\bson\objectid.js:59:11)
+    at getCompanyById (D:\ROINode_Backend\src\services\company.service.js:120:18)
+    at Object.getCompany (D:\ROINode_Backend\src\services\company.service.js:179:27)
+    at D:\ROINode_Backend\src\controllers\company.controller.js:96:46
+    at D:\ROINode_Backend\src\utils\catchAsync.js:2:19
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\validate.js:18:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:35:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/company/currency 500 - 101.368 ms - message: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+[31merror[39m: Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+    at new ObjectID (D:\ROINode_Backend\node_modules\bson\lib\bson\objectid.js:59:11)
+    at getCompanyById (D:\ROINode_Backend\src\services\company.service.js:121:18)
+    at Object.getCompany (D:\ROINode_Backend\src\services\company.service.js:180:27)
+    at D:\ROINode_Backend\src\controllers\company.controller.js:96:46
+    at D:\ROINode_Backend\src\utils\catchAsync.js:2:19
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\validate.js:18:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:35:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/company/currency 500 - 96.594 ms - message: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+[31merror[39m: Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+    at new ObjectID (D:\ROINode_Backend\node_modules\bson\lib\bson\objectid.js:59:11)
+    at getCompanyById (D:\ROINode_Backend\src\services\company.service.js:121:18)
+    at Object.getCompany (D:\ROINode_Backend\src\services\company.service.js:180:27)
+    at D:\ROINode_Backend\src\controllers\company.controller.js:96:46
+    at D:\ROINode_Backend\src\utils\catchAsync.js:2:19
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\validate.js:18:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:35:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/company/currency 500 - 181.834 ms - message: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+[31merror[39m: Error: Please authenticate
+    at D:\ROINode_Backend\src\middlewares\auth.js:11:19
+    at allFailed (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:107:18)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:180:28)
+    at JwtStrategy.strategy.fail (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:302:9)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:106:33
+    at D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:152:16
+    at getSecret (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:94:10)
+    at Function.module.exports [as JwtVerifier] (D:\ROINode_Backend\node_modules\passport-jwt\lib\verify_jwt.js:4:16)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:40:13)
+    at JwtStrategy.authenticate (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:99:10)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:366:16)
+    at authenticate (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:367:7)
+    at D:\ROINode_Backend\src\middlewares\auth.js:33:107
+    at new Promise (<anonymous>)
+[31merror[39m: GET /v1/company/62b2a6f9061ed2a095b55555/user 401 - 23.831 ms - message: Please authenticate
+[31merror[39m: Error: Please authenticate
+    at D:\ROINode_Backend\src\middlewares\auth.js:11:19
+    at allFailed (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:107:18)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:180:28)
+    at JwtStrategy.strategy.fail (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:302:9)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:106:33
+    at D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:152:16
+    at getSecret (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:94:10)
+    at Function.module.exports [as JwtVerifier] (D:\ROINode_Backend\node_modules\passport-jwt\lib\verify_jwt.js:4:16)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:40:13)
+    at JwtStrategy.authenticate (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:99:10)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:366:16)
+    at authenticate (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:367:7)
+    at D:\ROINode_Backend\src\middlewares\auth.js:33:107
+    at new Promise (<anonymous>)
+[31merror[39m: GET /v1/company/62b2a6f9061ed2a095b55555/user 401 - 6.442 ms - message: Please authenticate
+[31merror[39m: Error: Please authenticate
+    at D:\ROINode_Backend\src\middlewares\auth.js:11:19
+    at allFailed (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:107:18)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:180:28)
+    at JwtStrategy.strategy.fail (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:302:9)
+    at JwtStrategy.authenticate (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:96:21)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:366:16)
+    at authenticate (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:367:7)
+    at D:\ROINode_Backend\src\middlewares\auth.js:33:107
+    at new Promise (<anonymous>)
+    at D:\ROINode_Backend\src\middlewares\auth.js:32:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:138:14)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:138:14)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:138:14)
+    at Route.dispatch (D:\ROINode_Backend\node_modules\express\lib\router\route.js:114:3)
+[31merror[39m: GET /v1/company/62b2a6f9061ed2a095b55555/user 401 - 12.362 ms - message: Please authenticate
+[31merror[39m: TypeError: companyService.getAllUserTemplate is not a function
+    at D:\ROINode_Backend\src\controllers\company.controller.js:396:51
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/company/62b2a6f9061ed2a095b55555/user/templates 500 - 195.991 ms - message: companyService.getAllUserTemplate is not a function
+[31merror[39m: Error: Please authenticate
+    at D:\ROINode_Backend\src\middlewares\auth.js:11:19
+    at allFailed (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:107:18)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:180:28)
+    at JwtStrategy.strategy.fail (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:302:9)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:106:33
+    at D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:152:16
+    at getSecret (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:94:10)
+    at Function.module.exports [as JwtVerifier] (D:\ROINode_Backend\node_modules\passport-jwt\lib\verify_jwt.js:4:16)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:40:13)
+    at JwtStrategy.authenticate (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:99:10)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:366:16)
+    at authenticate (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:367:7)
+    at D:\ROINode_Backend\src\middlewares\auth.js:33:107
+    at new Promise (<anonymous>)
+[31merror[39m: GET /v1/company/62b2a6f9061ed2a095b55555/user/templates 401 - 14.439 ms - message: Please authenticate
+[31merror[39m: Error: Please authenticate
+    at D:\ROINode_Backend\src\middlewares\auth.js:11:19
+    at allFailed (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:107:18)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:180:28)
+    at JwtStrategy.strategy.fail (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:302:9)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:106:33
+    at D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:152:16
+    at getSecret (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:94:10)
+    at Function.module.exports [as JwtVerifier] (D:\ROINode_Backend\node_modules\passport-jwt\lib\verify_jwt.js:4:16)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:40:13)
+    at JwtStrategy.authenticate (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:99:10)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:366:16)
+    at authenticate (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:367:7)
+    at D:\ROINode_Backend\src\middlewares\auth.js:33:107
+    at new Promise (<anonymous>)
+[31merror[39m: GET /v1/company/62b2a6f9061ed2a095b55555/user 401 - 7.406 ms - message: Please authenticate
+[31merror[39m: Error: Please authenticate
+    at D:\ROINode_Backend\src\middlewares\auth.js:11:19
+    at allFailed (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:107:18)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:180:28)
+    at JwtStrategy.strategy.fail (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:302:9)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:106:33
+    at D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:152:16
+    at getSecret (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:94:10)
+    at Function.module.exports [as JwtVerifier] (D:\ROINode_Backend\node_modules\passport-jwt\lib\verify_jwt.js:4:16)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:40:13)
+    at JwtStrategy.authenticate (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:99:10)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:366:16)
+    at authenticate (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:367:7)
+    at D:\ROINode_Backend\src\middlewares\auth.js:33:107
+    at new Promise (<anonymous>)
+[31merror[39m: PATCH /v1/company/62b2a6f9061ed2a095b55555/user/62f0e5c6c82a2324b4f6c796 401 - 6.657 ms - message: Please authenticate
+[31merror[39m: [Company Module ROI Template] Error: MongoError: E11000 duplicate key error collection: 6203df06c056e021281729cc_myFirstDatabase.users index: email_1 dup key: { email: "melissa.nix@abc.com" }
+[31merror[39m: Error: MongoError: E11000 duplicate key error collection: 6203df06c056e021281729cc_myFirstDatabase.users index: email_1 dup key: { email: "melissa.nix@abc.com" }
+    at Object.updateUserAccount (D:\ROINode_Backend\src\services\company.service.js:347:17)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:568:31
+[31merror[39m: PATCH /v1/company/62b2a6f9061ed2a095b55555/user/62f0e5c6c82a2324b4f6c796 422 - 359.692 ms - message: MongoError: E11000 duplicate key error collection: 6203df06c056e021281729cc_myFirstDatabase.users index: email_1 dup key: { email: "melissa.nix@abc.com" }
+[31merror[39m: [Company Module ROI Template] Error: MongoError: E11000 duplicate key error collection: 6203df06c056e021281729cc_myFirstDatabase.users index: email_1 dup key: { email: "melissa.nix@abc.com" }
+[31merror[39m: Error: MongoError: E11000 duplicate key error collection: 6203df06c056e021281729cc_myFirstDatabase.users index: email_1 dup key: { email: "melissa.nix@abc.com" }
+    at Object.updateUserAccount (D:\ROINode_Backend\src\services\company.service.js:347:17)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:568:31
+[31merror[39m: PATCH /v1/company/62b2a6f9061ed2a095b55555/user/62f0e5c6c82a2324b4f6c796 422 - 351.130 ms - message: MongoError: E11000 duplicate key error collection: 6203df06c056e021281729cc_myFirstDatabase.users index: email_1 dup key: { email: "melissa.nix@abc.com" }
+[31merror[39m: Error: "active" is not allowed
+    at D:\ROINode_Backend\src\middlewares\validate.js:15:17
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:35:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: PATCH /v1/company/62b2a6f9061ed2a095b55555/user/62f0e5c6c82a2324b4f6c796 400 - 80.995 ms - message: "active" is not allowed
+[31merror[39m: Error: Please authenticate
+    at D:\ROINode_Backend\src\middlewares\auth.js:11:19
+    at allFailed (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:107:18)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:180:28)
+    at JwtStrategy.strategy.fail (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:302:9)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:106:33
+    at D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:152:16
+    at getSecret (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:94:10)
+    at Function.module.exports [as JwtVerifier] (D:\ROINode_Backend\node_modules\passport-jwt\lib\verify_jwt.js:4:16)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:40:13)
+    at JwtStrategy.authenticate (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:99:10)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:366:16)
+    at authenticate (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:367:7)
+    at D:\ROINode_Backend\src\middlewares\auth.js:33:107
+    at new Promise (<anonymous>)
+[31merror[39m: GET /v1/company/62b2a6f9061ed2a095b55555/user/templates 401 - 5.740 ms - message: Please authenticate
+[31merror[39m: [Company Module Template] Error: TypeError: TemplateData.map is not a function
+[31merror[39m: Error: TypeError: TemplateData.map is not a function
+    at Object.createNewTempalete (D:\ROINode_Backend\src\services\company.service.js:265:17)
+    at D:\ROINode_Backend\src\controllers\company.controller.js:216:50
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company/62b2a6f9061ed2a095b55555/template 422 - 238.449 ms - message: TypeError: TemplateData.map is not a function
+[31merror[39m: [Company Module Template] Error: TypeError: TemplateData.map is not a function
+[31merror[39m: Error: TypeError: TemplateData.map is not a function
+    at Object.createNewTempalete (D:\ROINode_Backend\src\services\company.service.js:265:17)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:216:29
+[31merror[39m: POST /v1/company/62b2a6f9061ed2a095b55555/template 422 - 336.731 ms - message: TypeError: TemplateData.map is not a function
+[31merror[39m: TypeError: create_template.map is not a function
+    at D:\ROINode_Backend\src\controllers\company.controller.js:218:21
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company/62b2a6f9061ed2a095b55555/template 500 - 310.586 ms - message: create_template.map is not a function
+[31merror[39m: ReferenceError: templateContainer is not defined
+    at D:\ROINode_Backend\src\controllers\company.controller.js:229:14
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company/62b2a6f9061ed2a095b55555/template 500 - 738.101 ms - message: templateContainer is not defined
+[31merror[39m: TypeError: create_template.map is not a function
+    at D:\ROINode_Backend\src\controllers\company.controller.js:219:21
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company/62b2a6f9061ed2a095b55555/template 500 - 327.415 ms - message: create_template.map is not a function
+[31merror[39m: ReferenceError: V is not defined
+    at D:\ROINode_Backend\src\controllers\company.controller.js:231:19
+    at Function.each (D:\ROINode_Backend\node_modules\underscore\underscore-node-f.cjs:1328:7)
+    at D:\ROINode_Backend\src\controllers\company.controller.js:230:7
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company/62b2a6f9061ed2a095b55555/template 500 - 776.178 ms - message: V is not defined
+[31merror[39m: TypeError: create_template.map is not a function
+    at D:\ROINode_Backend\src\controllers\company.controller.js:219:21
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company/62b2a6f9061ed2a095b55555/template 500 - 382.970 ms - message: create_template.map is not a function
+[31merror[39m: Error: Please authenticate
+    at D:\ROINode_Backend\src\middlewares\auth.js:11:19
+    at allFailed (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:107:18)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:180:28)
+    at JwtStrategy.strategy.fail (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:302:9)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:106:33
+    at D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:152:16
+    at getSecret (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:94:10)
+    at Function.module.exports [as JwtVerifier] (D:\ROINode_Backend\node_modules\passport-jwt\lib\verify_jwt.js:4:16)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:40:13)
+    at JwtStrategy.authenticate (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:99:10)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:366:16)
+    at authenticate (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:367:7)
+    at D:\ROINode_Backend\src\middlewares\auth.js:33:107
+    at new Promise (<anonymous>)
+[31merror[39m: POST /v1/company/62b2a6f9061ed2a095b55555/template 401 - 31.722 ms - message: Please authenticate
+[31merror[39m: Error: Please authenticate
+    at D:\ROINode_Backend\src\middlewares\auth.js:11:19
+    at allFailed (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:107:18)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:180:28)
+    at JwtStrategy.strategy.fail (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:302:9)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:106:33
+    at D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:152:16
+    at getSecret (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:94:10)
+    at Function.module.exports [as JwtVerifier] (D:\ROINode_Backend\node_modules\passport-jwt\lib\verify_jwt.js:4:16)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:40:13)
+    at JwtStrategy.authenticate (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:99:10)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:366:16)
+    at authenticate (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:367:7)
+    at D:\ROINode_Backend\src\middlewares\auth.js:33:107
+    at new Promise (<anonymous>)
+[31merror[39m: POST /v1/company/62b2a6f9061ed2a095b55555/template 401 - 6.986 ms - message: Please authenticate
+[31merror[39m: Error: "template_id" is not allowed
+    at D:\ROINode_Backend\src\middlewares\validate.js:15:17
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:35:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: PATCH /v1/company/62b2a6f9061ed2a095b55555/template/62f859d4e68844531894644a 400 - 88.890 ms - message: "template_id" is not allowed
+[31merror[39m: TypeError: companyService.updateTemplate is not a constructor
+    at D:\ROINode_Backend\src\controllers\company.controller.js:261:21
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: PATCH /v1/company/62b2a6f9061ed2a095b55555/template/62f859d4e68844531894644a 500 - 255.032 ms - message: companyService.updateTemplate is not a constructor
+[31merror[39m: ReferenceError: updateBody is not defined
+    at Object.updateTemplate (D:\ROINode_Backend\src\services\company.service.js:147:50)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:261:21
+[31merror[39m: PATCH /v1/company/62b2a6f9061ed2a095b55555/template/62f859d4e68844531894644a 500 - 301.983 ms - message: updateBody is not defined
+[31merror[39m: TypeError: Cannot convert undefined or null to object
+    at Function.assign (<anonymous>)
+    at Object.updateTemplate (D:\ROINode_Backend\src\services\company.service.js:147:12)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:261:21
+[31merror[39m: PATCH /v1/company/62b2a6f9061ed2a095b55555/template/62f859d4e68844531894644a 500 - 297.289 ms - message: Cannot convert undefined or null to object
+[31merror[39m: TypeError: Cannot convert undefined or null to object
+    at Function.assign (<anonymous>)
+    at Object.updateTemplate (D:\ROINode_Backend\src\services\company.service.js:147:12)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:261:21
+[31merror[39m: PATCH /v1/company/62b2a6f9061ed2a095b55555/template/62f859d4e68844531894644a 500 - 379.051 ms - message: Cannot convert undefined or null to object
+[31merror[39m: TypeError: Cannot convert undefined or null to object
+    at Function.assign (<anonymous>)
+    at Object.updateTemplate (D:\ROINode_Backend\src\services\company.service.js:147:12)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:261:21
+[31merror[39m: PATCH /v1/company/62b2a6f9061ed2a095b55555/template/62f859d4e68844531894644a 500 - 404.360 ms - message: Cannot convert undefined or null to object
+[31merror[39m: [Invalid Token] Error: Templte id not found
+[31merror[39m: Error: Templte id not found
+    at Object.updateTemplate (D:\ROINode_Backend\src\services\company.service.js:142:17)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:261:21
+[31merror[39m: PATCH /v1/company/62b2a6f9061ed2a095b55555/template/62f859d4e68844531894644a 404 - 296.192 ms - message: Templte id not found
+[31merror[39m: [Invalid Token] Error: Templte id not found
+[31merror[39m: Error: Templte id not found
+    at Object.updateTemplate (D:\ROINode_Backend\src\services\company.service.js:142:17)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\company.controller.js:261:21
+[31merror[39m: PATCH /v1/company/62b2a6f9061ed2a095b55555/template/62f859d4e68844531894644a 404 - 314.311 ms - message: Templte id not found
+[31merror[39m: Error: Please authenticate
+    at D:\ROINode_Backend\src\middlewares\auth.js:11:19
+    at allFailed (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:107:18)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:180:28)
+    at JwtStrategy.strategy.fail (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:302:9)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:106:33
+    at D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:152:16
+    at getSecret (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:94:10)
+    at Function.module.exports [as JwtVerifier] (D:\ROINode_Backend\node_modules\passport-jwt\lib\verify_jwt.js:4:16)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:40:13)
+    at JwtStrategy.authenticate (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:99:10)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:366:16)
+    at authenticate (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:367:7)
+    at D:\ROINode_Backend\src\middlewares\auth.js:33:107
+    at new Promise (<anonymous>)
+[31merror[39m: POST /v1/company/62b2a6f9061ed2a095b55555/template 401 - 62.481 ms - message: Please authenticate
+[31merror[39m: Error: "name" is required
+    at D:\ROINode_Backend\src\middlewares\validate.js:15:17
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:35:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company/62b2a6f9061ed2a095b55555/template 400 - 78.633 ms - message: "name" is required
+[31merror[39m: Error: Please authenticate
+    at D:\ROINode_Backend\src\middlewares\auth.js:11:19
+    at allFailed (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:107:18)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:180:28)
+    at JwtStrategy.strategy.fail (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:302:9)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:106:33
+    at D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:152:16
+    at getSecret (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:94:10)
+    at Function.module.exports [as JwtVerifier] (D:\ROINode_Backend\node_modules\passport-jwt\lib\verify_jwt.js:4:16)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:40:13)
+    at JwtStrategy.authenticate (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:99:10)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:366:16)
+    at authenticate (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:367:7)
+    at D:\ROINode_Backend\src\middlewares\auth.js:33:107
+    at new Promise (<anonymous>)
+[31merror[39m: PATCH /v1/company/62b2a6f9061ed2a095b55555/template/62f859d4e68844531894644a 401 - 8.581 ms - message: Please authenticate
+[31merror[39m: Error: Please authenticate
+    at D:\ROINode_Backend\src\middlewares\auth.js:11:19
+    at allFailed (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:107:18)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:180:28)
+    at JwtStrategy.strategy.fail (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:302:9)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:106:33
+    at D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:152:16
+    at getSecret (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:94:10)
+    at Function.module.exports [as JwtVerifier] (D:\ROINode_Backend\node_modules\passport-jwt\lib\verify_jwt.js:4:16)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:40:13)
+    at JwtStrategy.authenticate (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:99:10)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:366:16)
+    at authenticate (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:367:7)
+    at D:\ROINode_Backend\src\middlewares\auth.js:33:107
+    at new Promise (<anonymous>)
+[31merror[39m: GET /v1/company/62b2a6f9061ed2a095b55555/template 401 - 39.532 ms - message: Please authenticate
+[31merror[39m: Error: Not found
+    at D:\ROINode_Backend\src\app.js:64:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:646:15
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:265:14)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:646:15
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:265:14)
+    at Function.handle (D:\ROINode_Backend\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\ROINode_Backend\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+[31merror[39m: POST /v1/company/62b2a6f9061ed2a095b55555/template/version 404 - 11.792 ms - message: Not found
+[31merror[39m: ReferenceError: version_id is not defined
+    at D:\ROINode_Backend\src\controllers\company.controller.js:391:78
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: PATCH /v1/company/62b2a6f9061ed2a095b55555/template/62e7b3b4e5cd5e62445be6cc/version/62f87cc36e73cd36c47c4a1c 500 - 367.043 ms - message: version_id is not defined
+[31merror[39m: TypeError: companyService.updateTemplateVersion is not a function
+    at D:\ROINode_Backend\src\controllers\company.controller.js:392:56
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: PATCH /v1/company/62b2a6f9061ed2a095b55555/template/62e7b3b4e5cd5e62445be6cc/version/62f87cc36e73cd36c47c4a1c 500 - 382.109 ms - message: companyService.updateTemplateVersion is not a function
+[31merror[39m: Error: Please authenticate
+    at D:\ROINode_Backend\src\middlewares\auth.js:11:19
+    at allFailed (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:107:18)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:180:28)
+    at JwtStrategy.strategy.fail (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:302:9)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:106:33
+    at D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:152:16
+    at getSecret (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\ROINode_Backend\node_modules\jsonwebtoken\verify.js:94:10)
+    at Function.module.exports [as JwtVerifier] (D:\ROINode_Backend\node_modules\passport-jwt\lib\verify_jwt.js:4:16)
+    at D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:40:13)
+    at JwtStrategy.authenticate (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:99:10)
+    at attempt (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:366:16)
+    at authenticate (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:367:7)
+    at D:\ROINode_Backend\src\middlewares\auth.js:33:107
+    at new Promise (<anonymous>)
+[31merror[39m: POST /v1/company/62b2a6f9061ed2a095b55555/template/62e7b3b4e5cd5e62445be6cc/version 401 - 16.622 ms - message: Please authenticate
+[31merror[39m: Error: "name" is required, "version" is required, "notes" is required
+    at D:\ROINode_Backend\src\middlewares\validate.js:15:17
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:35:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: PATCH /v1/company/62b2a6f9061ed2a095b55555/template/62e7b3b4e5cd5e62445be6cc/version/62f87cc36e73cd36c47c4a1c 400 - 71.348 ms - message: "name" is required, "version" is required, "notes" is required
+[31merror[39m: [Invalid TOken] Error: Template id not found
+[31merror[39m: Error: Template id not found
+    at D:\ROINode_Backend\src\controllers\company.controller.js:366:18
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: PATCH /v1/company/62b2a6f9061ed2a095b55555/template/62f882cdc1f0165e6cf1a267/version/62f87cc36e73cd36c47c4a1c 404 - 304.432 ms - message: Template id not found
+[31merror[39m: [Invalid TOken] Error: Unable to activate this template.
+[31merror[39m: Error: Unable to activate this template.
+    at D:\ROINode_Backend\src\controllers\company.controller.js:383:19
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: Error: Not found
+    at D:\ROINode_Backend\src\app.js:64:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:646:15
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:265:14)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:646:15
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:265:14)
+    at Function.handle (D:\ROINode_Backend\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\ROINode_Backend\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+[31merror[39m: GET /v1/company/62b2a6f9061ed2a095b55555/template/62e7b3b4e5cd5e62445be6cc/version/62f882cdc1f0165e6cf1a267 404 - 9.607 ms - message: Not found
+[31merror[39m: Error: "version_id" is not allowed
+    at D:\ROINode_Backend\src\middlewares\validate.js:15:17
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\route.js:144:13)
+    at D:\ROINode_Backend\src\middlewares\auth.js:35:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/company/62b2a6f9061ed2a095b55555/template/62e7b3b4e5cd5e62445be6cc/version/62f882cdc1f0165e6cf1a267 400 - 99.857 ms - message: "version_id" is not allowed

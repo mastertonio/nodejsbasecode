@@ -6,8 +6,6 @@ const companyValidation = require('../../validations/company.validation');
 const companyController = require('../../controllers/company.controller');
 const userValidation = require('../../validations/user.validation');
 const userController = require('../../controllers/user.controller');
-// const dashboardController = require('../../controllers/dashboard.controller');
-// const { get } = require('mongoose');
 
 const router = express.Router();
 
@@ -17,9 +15,8 @@ const router = express.Router();
  */
 router
   .route('/')
-  .post( companyController.createCompany)
+  .post(auth('createCompany'), validate(companyValidation.createCompany), companyController.createCompany)
   .get(auth('getCompany'), validate(companyValidation.getCompany), companyController.getAllCompany);
-
 
 /**
  * Company user
@@ -29,10 +26,17 @@ router
   .post(auth('createCompanyUser'), validate(companyValidation.createCompanyUser), companyController.createCompanyUser)
   .get(auth('getAllUser'), validate(companyValidation.getAllCompanyUser), companyController.getAllCompanyUser);
 
+router
+  .route('/:company_id/user/templates')
+  .get(auth('getAllUserTemplate'), validate(companyValidation.getAllCompanyUser), companyController.getAllUserTemplate);
 
 /**
  * transfer ROI 
  */
+ router
+ .route('/:company_id/roi/transfer/all')
+ .post(auth('transferTemplate'), validate(companyValidation.transferTemplates), companyController.transferAllTemplateAccount)
+
  router
  .route('/:company_id/roi/transfer')
  .post(auth('transferTemplate'), validate(companyValidation.transferTemplate), companyController.transferTemplateAccount)
@@ -53,22 +57,6 @@ router
  .get(auth('getCompany'), validate(companyValidation.getCompany), companyController.getCompany)
  .patch(auth('getCompany'), validate(companyValidation.patchCompany), companyController.patchCompany);
 
-
-
-
-
-
-
-
-
-
-
-  
-
-
-//list of user
-
-
 //list of manager
 router
   .route('/:company_id/manager')
@@ -76,7 +64,7 @@ router
 
 //list of currency
 router
-  .route('/currency')
+  .route('/currency/list')
   .get(auth('getCurrency'), validate(companyValidation.getCurrency), companyController.getAllCurrency);
 
 /**
@@ -87,13 +75,24 @@ router
   .post(auth('createCompnayTemplate'), validate(companyValidation.createCompnayTemplate), companyController.createCompanyTemplate)
   .get(auth('listCompanyTemplate'), validate(companyValidation.listCompanyTemplate), companyController.listCompanyTemplate)
 
+router
+  .route('/:company_id/template/:template_id')
+  .patch(auth('patchCompnayTemplate'), validate(companyValidation.patchCompnayTemplate), companyController.patchCompnayTemplate)
+  .get(auth('CompnayTemplateInfo'), validate(companyValidation.getTemplateInfo), companyController.getTemplateInfo)
+
 /**
  * Company Template version
  */
 router
-  .route('/template/version')
-  .post(auth('createCompnayTemplateVersion'), validate(companyValidation.createCompnayTemplateVersion), companyController.createCompnayTemplateVersion);
+  .route('/:company_id/template/:template_id/version')
+  .post(auth('createCompnayTemplateVersion'), validate(companyValidation.createCompnayTemplateVersion), companyController.createCompnayTemplateVersion)
+  .get(auth('getCompnayTemplateVersion'), validate(companyValidation.getCompnayTemplateVersion), companyController.getCompnayTemplateVersion)
 
+
+router
+  .route('/:company_id/template/:template_id/version/:version_id')
+  .patch(auth('patchCompnayTemplateVersion'), validate(companyValidation.patchCompnayTemplateVersion), companyController.patchCompnayTemplateVersion)
+  .get(auth('getCompnayTemplateVersion'), validate(companyValidation.getCompnayTemplateVersionInfo), companyController.getCompnayTemplateVersionInfo);
 
 /**
  * Capture company logo
@@ -101,9 +100,5 @@ router
 router
   .route('/company/logo/:_id')
   .get(auth('createCompany'),companyController.getFile)
-
-  
-  
-  
 
 module.exports = router;

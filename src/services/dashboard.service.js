@@ -45,23 +45,106 @@ const getAllTemplate = async (cond) => {
     return Template.aggregate(condition)
     
 }
-const getCalculatorStatistic = async (uid) =>{
-   return Calculator.aggregate([
-    {
-        $match: {
-            user_id:uid
-        }
-    },
-    {
-      $group: {
-        _id: {
-          month: { $month: "$createdAt" },
-          year: { $year: "$createdAt" }
-        },
-        count: { $sum: 1 }
-      }
+const getCalculatorStatistic = async (data) =>{
+    let cond={};
+    switch (data.access) {
+        case 'admin':
+            cond =[{
+                $group: {
+                  _id: {
+                    month: { $month: "$createdAt" },
+                    year: { $year: "$createdAt" }
+                  },
+                  count: { $sum: 1 }
+                }
+              }];
+            break;
+        case 'company-admin':
+            const users = await User.find({company_id:data.cid});
+            const _ids = [];
+            users.map(v=>{
+                _ids.push(v._id)
+            })
+           
+
+            cond = [{
+                        $match: {
+                                user_id:{$in:_ids}
+                            }
+                        },
+                        {
+                        $group: {
+                            _id: "$user_id",
+                            count: { $sum: 1 }
+                        }
+                    }];
+           
+            
+            break;
+        default:
+            cond = [{
+                $match: {
+                    user_id:data.oid
+                }
+            },
+            {
+              $group: {
+                _id: {
+                  month: { $month: "$createdAt" },
+                  year: { $year: "$createdAt" }
+                },
+                count: { $sum: 1 }
+              }
+            }];
+            break;
     }
-  ])
+    let graph;
+    if(data.access == "company-admin" || data.access=="company-manager"){
+        const templateData = await Calculator.aggregate(cond);
+        const usersData = await User.find({company_id:data.cid});
+        const graph_data = [];
+        const myData = await Calculator.aggregate([{
+            $match: {
+                user_id:data.oid
+            }
+        },
+        {
+          $group: {
+            _id: {
+              month: { $month: "$createdAt" },
+              year: { $year: "$createdAt" }
+            },
+            count: { $sum: 1 }
+          }
+        }])
+        usersData.map(v=>{
+            let n_count = templateData.map(k=>{
+                let count =0;
+                if(JSON.stringify(v._id) === JSON.stringify(k._id)){
+                    count = k.count;
+                }
+                return count
+            });
+
+            graph_data.push({
+                _id:v._id,
+                email:v.email,
+                count:n_count.reduce((partialSum, a) => partialSum + a, 0)
+                
+            })
+
+        });
+        graph = {company_data:graph_data,my_graph:myData};
+    }else{
+        graph = {company_data:[],my_graph:myData};
+    }
+
+    console.log(graph);
+
+
+
+
+  return graph;
 }
 
 const getAllCalculators = async (id) => {
@@ -536,16 +619,17 @@ const getDashboard = async (userId,filter, options) => {
     return getAllAdmin();
   }
 
-  const getRoiGraph = async(uid) =>{
-    const user = await userService.getUserById(uid);
-    if (!user) {
-        throw new ApiError(httpStatus.NOT_FOUND, 'User not found');
-    }
-    let o_id = new ObjectId(uid);     
-    const statistic = await getCalculatorStatistic(o_id);
+  const getRoiGraph = async(uid,cid) =>{
+    const graphData={};
+    let o_id = new ObjectId(uid._id);
+                graphData.oid = new ObjectId(uid._id);
+                graphData.cid = new ObjectId(cid);
+                graphData.access = uid.role;
+
+         
+    const statistic = await getCalculatorStatistic(graphData);
     
-     return commonService.setChart({type:'bargraph',uid:uid, statistic})
-    // return setChart;
+    return commonService.setChart({type:'bargraph',uid:uid._id, statistic});
   }
 
   const getRanking = async(uid) =>{
