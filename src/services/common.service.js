@@ -1,55 +1,78 @@
 const { array } = require("joi");
+const { data } = require("../config/logger");
 const logger = require("../config/logger");
 const pick = require("../utils/pick");
 const ObjectId = require('mongodb').ObjectID;
 
 const dashboardData = async (data_col) => {
-    let data;
+    const allowed = ["company-manager","company-admin"]
+   const user_role = data_col.role;
+
+  const role = allowed.some(element => {
+    return element.toLowerCase() === user_role.toLowerCase();
+  });
+  const chartData={};
+  if(role){
+    let categories=[];
+    let count = [];
+    data_col.collection.statistic.map(v=>{
+        categories.push(v.email);
+        count.push(v.count)
+    })
+    chartData.categories=categories;
+    chartData.count=count;
+  }else{
+
+    const d = new Date();
+    let year = d.getFullYear();
+    const ncollection = [];
+    console.log(data_col)
+    data_col.collection.statistic.map(v=>{
+        if(year == v._id.year){
+            ncollection.push({
+                month: v._id.month,
+                count: v.count
+            })
+        }
+    })
+
     let monthlyCount = [0,0,0,0,0,0,0,0,0,0,0,0];
     
-    data_col.collection.map(v=>{
+    ncollection.map(v=>{
         monthlyCount[v.month-1] = v.count 
-    })
-    console.log(monthlyCount)
+    });
+
+    chartData.categories=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    chartData.count=monthlyCount;
+  }
+
+
+  return{
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'ROI CREATED'
+    },
    
-    data ={
-        chart: {
-            type: 'column'
-        },
+    xAxis: {
+        categories: chartData.categories,
+        crosshair: true
+    },
+    yAxis: {
+        min: 0,
         title: {
-            text: 'ROI CREATED'
-        },
-       
-        xAxis: {
-            categories: [
-                'Jan',
-                'Feb',
-                'Mar',
-                'Apr',
-                'May',
-                'Jun',
-                'Jul',
-                'Aug',
-                'Sep',
-                'Oct',
-                'Nov',
-                'Dec'
-            ],
-            crosshair: true
-        },
-        yAxis: {
-            min: 0,
-            title: {
-                text: ''
-            }
-        },
-        series: [{
-            name: 'ROI CREATED',
-            data: monthlyCount
+            text: ''
+        }
+    },
+    series: [{
+        name: 'ROI CREATED',
+        data: chartData.count
+
+    }]
+};
+
     
-        }]
-    };
-    return data;
     
 }
 
@@ -58,23 +81,12 @@ const piegraph = async (uid) =>{
 }
 const setChart = async (data) => {
     
-    const d = new Date();
-    let year = d.getFullYear();
-    const data_col = [];
-    data.statistic.map(v=>{
-        console.log(v._id.month)
-        if(year == v._id.year){
-            data_col.push({
-                month: v._id.month,
-                count: v.count
-            })
-        }
-    })
+   
     const n_data_col = {
-        y:year,
-        collection: data_col
+        collection: data,
+        role:data.role
     }
-    console.log(n_data_col)
+    
  switch (data.type) {
     case 'bargraph':
         return  dashboardData(n_data_col);

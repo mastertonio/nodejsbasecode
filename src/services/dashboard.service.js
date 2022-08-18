@@ -5,7 +5,7 @@ const userService = require('./user.service');
 const ObjectId = require('mongodb').ObjectID;
 const pick = require('../utils/pick');
 const _ = require('underscore');
-
+const logger = require('../config/logger');
 const { Calculator, Company, Template, TemplateVersion, User} = require('../models');
 const { data } = require('../config/logger');
 const { CostExplorer } = require('aws-sdk');
@@ -49,7 +49,7 @@ const getCalculatorStatistic = async (data) =>{
     let cond={};
     switch (data.access) {
         case 'admin':
-            cond =[{
+            return  Calculator.aggregate([{
                 $group: {
                   _id: {
                     month: { $month: "$createdAt" },
@@ -57,8 +57,7 @@ const getCalculatorStatistic = async (data) =>{
                   },
                   count: { $sum: 1 }
                 }
-              }];
-            break;
+              }]);
         case 'company-admin':
             const users = await User.find({company_id:data.cid});
             const _ids = [];
@@ -134,17 +133,12 @@ const getCalculatorStatistic = async (data) =>{
             })
 
         });
-        graph = {company_data:graph_data,my_graph:myData};
+        return graph_data;
     }else{
+        const myData = await Calculator.aggregate(cond);
         graph = {company_data:[],my_graph:myData};
     }
 
-    console.log(graph);
-
-
-
-
-  return graph;
 }
 
 const getAllCalculators = async (id) => {
@@ -543,7 +537,161 @@ const getDashboard = async (userId,filter, options) => {
     return Calculator.create(response_data);
   }
 
-  const getRoiTable = async(params,uid) =>{
+  const getSuperAdminRoiTable = async(params,uid) =>{
+    const data = [];
+    const filter = pick(params.query, ['title']);
+    const options = pick(params.query, ['sortBy', 'limit', 'page']);  
+    
+   
+    const user = await userService.getUserById(uid);
+    if (!user) {
+        throw new ApiError(httpStatus.NOT_FOUND, 'User not found');
+    }
+    filter.user_id = new ObjectId(uid)
+    options.sortBy = {createdAt:-1};
+    let o_id = new ObjectId(uid);
+    const roi_table = await  Calculator.aggregate([
+        {
+            $lookup: {
+                from: 'templateversions',
+                localField: 'template_version_id',
+                foreignField: '_id',
+                as: 'TemplateVersionData'
+            }
+        }
+    ]).sort({createdAt:-1})
+    const months = [
+        'January',
+        'February',
+        'March',
+        'April',
+        'May',
+        'June',
+        'July',
+        'August',
+        'September',
+        'October',
+        'November',
+        'December'
+      ];
+
+    roi_table.map(v=>{    
+       
+        let d=new Date(v.createdAt);     
+        let monthIndex  =  d.getMonth();
+        let monthName = months[monthIndex]
+        let getDate = d.getDate();
+            getDate = (String(Math.abs(getDate)).charAt(0) == getDate) ? `0${getDate}` : getDate;
+        let getYear = d.getFullYear();
+        let n_d = d.toLocaleString();
+            n_d= n_d.split(', ');
+        // console.log()
+            data.push({
+                id: v._id,
+                link: v.linked_title,
+                importance: Number(v.importance),
+                name: v.title,
+                source_id: v.template_version_id,
+                source_name: v.TemplateVersionData[0].name,
+                dateCreated:`${monthName} ${getDate},${getYear} ${n_d[1]}`,
+                views: Number(v.visits),
+                uniqueViews: Number(v.unique_ip),
+                status: v.status
+            })
+    });
+    // roi_table.results = data;
+    return data;
+  }
+  const getCompanyRoiTable = async(params,uid,cid) =>{
+    const data = [];
+    
+    let c_id = new ObjectId(cid);
+    const templateVersion_collection = [];
+    const templateData = await Template.aggregate([
+                {
+                    $match: {
+                        company_id:c_id
+                    }
+                },{
+                    $lookup: {
+                        from: 'templateversions',
+                        localField: '_id',
+                        foreignField: 'template_id',
+                        as: 'TemplateVersionData'
+                    }
+                }
+                ]);
+        
+        // {company_id:c_id});
+    templateData.map(t=>{
+        if(!_.isEmpty(t.TemplateVersionData)){
+            t.TemplateVersionData.map(tv=>{
+                templateVersion_collection.push(tv._id)
+            });
+        }
+    })
+    let o_id = new ObjectId(uid);
+    const roi_table = await  Calculator.aggregate([ {
+            $match: {
+                template_version_id:{$in:templateVersion_collection}
+            }
+        },
+        {
+            $lookup: {
+                from: 'templateversions',
+                localField: 'template_version_id',
+                foreignField: '_id',
+                as: 'TemplateVersionData'
+            }
+        }
+    ]).sort({createdAt:-1})
+
+
+
+
+    const months = [
+        'January',
+        'February',
+        'March',
+        'April',
+        'May',
+        'June',
+        'July',
+        'August',
+        'September',
+        'October',
+        'November',
+        'December'
+      ];
+
+    roi_table.map(v=>{    
+       
+        let d=new Date(v.createdAt);     
+        let monthIndex  =  d.getMonth();
+        let monthName = months[monthIndex]
+        let getDate = d.getDate();
+            getDate = (String(Math.abs(getDate)).charAt(0) == getDate) ? `0${getDate}` : getDate;
+        let getYear = d.getFullYear();
+        let n_d = d.toLocaleString();
+            n_d= n_d.split(', ');
+        // console.log()
+            data.push({
+                id: v._id,
+                link: v.linked_title,
+                importance: Number(v.importance),
+                name: v.title,
+                source_id: v.template_version_id,
+                source_name: v.TemplateVersionData[0].name,
+                dateCreated:`${monthName} ${getDate},${getYear} ${n_d[1]}`,
+                views: Number(v.visits),
+                uniqueViews: Number(v.unique_ip),
+                status: v.status
+            })
+    });
+    // roi_table.results = data;
+    return data;
+  }
+  const getSCompanyRoiTable = async(params,uid) =>{
     const data = [];
     const filter = pick(params.query, ['title']);
     const options = pick(params.query, ['sortBy', 'limit', 'page']);  
@@ -619,17 +767,61 @@ const getDashboard = async (userId,filter, options) => {
     return getAllAdmin();
   }
 
-  const getRoiGraph = async(uid,cid) =>{
+  const getMyRoiGraph = async(uid,cid) =>{
     const graphData={};
-    let o_id = new ObjectId(uid._id);
-                graphData.oid = new ObjectId(uid._id);
-                graphData.cid = new ObjectId(cid);
-                graphData.access = uid.role;
+    graphData.oid = new ObjectId(uid._id);
+    graphData.cid = new ObjectId(cid);
+    graphData.access = uid.role;
 
          
-    const statistic = await getCalculatorStatistic(graphData);
+    const statistic = await Calculator.aggregate([
+            {
+                $match: {
+                    user_id:graphData.oid
+                }
+            },{
+            $group: {
+            _id: {
+                month: { $month: "$createdAt" },
+                year: { $year: "$createdAt" }
+            },
+            count: { $sum: 1 }
+            }
+        }]);
     
-    return commonService.setChart({type:'bargraph',uid:uid._id, statistic});
+    return commonService.setChart({type:'bargraph',uid:uid._id, statistic,role:uid.role});
+    
+  }
+  const getCompanyRoiGraph = async(uid,cid) =>{
+    const graphData={};
+    graphData.oid = new ObjectId(uid._id);
+    graphData.cid = new ObjectId(cid);
+    graphData.access = uid.role;
+
+    const statistic = await getCalculatorStatistic(graphData);
+    console.log(statistic)
+
+    return commonService.setChart({type:'bargraph',uid:uid._id, statistic,role:uid.role});
+  }
+  const getSuperAdminRoiGraph = async(uid,cid) =>{
+    const graphData={};
+    graphData.oid = new ObjectId(uid._id);
+    graphData.cid = new ObjectId(cid);
+    graphData.access = uid.role;
+
+         
+    const statistic = await Calculator.aggregate([{
+            $group: {
+            _id: {
+                month: { $month: "$createdAt" },
+                year: { $year: "$createdAt" }
+            },
+            count: { $sum: 1 }
+            }
+        }]);
+    
+    return commonService.setChart({type:'bargraph',uid:uid._id, statistic,role:uid.role});
+    
   }
 
   const getRanking = async(uid) =>{
@@ -683,11 +875,14 @@ const getDashboard = async (userId,filter, options) => {
       createCalculator,
       deleteCalculator,
       cloneCalculator,
-      getRoiTable,
+      getSuperAdminRoiTable,
       getRoiTemplates,
       getRoiAdmin,
-      getRoiGraph,
+      getMyRoiGraph,
       getRanking,
       dashboardData,
-      getCalculatorStatistic
+      getCalculatorStatistic,
+      getSuperAdminRoiGraph,
+      getCompanyRoiGraph,
+      getCompanyRoiTable
   }

@@ -1,7 +1,7 @@
 const allRoles = {
   user: [],
   "company-manager": ['getDashboard'],
-  "company-agent": [],
+  "company-agent": ['getDashboard'],
   admin: ['getUsers', 'manageUsers', 'getDashboard','patchCompany','createCompany','getCompany','getUser',
           'updateCompany',
           'createCompanyUser','getManager','getCurrency','getAllUser','patchCompanyUser',

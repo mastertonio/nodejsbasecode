@@ -5,7 +5,8 @@ const {dashboadService, userService} = require('../services');
 const { jwtExtract, getCID } = require('./common.controller');
 const { data } = require('../config/logger');
 const _ = require('underscore');
-
+const ApiError = require('../utils/ApiError');
+const logger = require('../config/logger');
 
 const getDashboard = catchAsync(async (req, res) => {
     const filter = pick(req.query, ['title']);
@@ -114,9 +115,15 @@ const cloneCalculators = catchAsync(async (req,res)=>{
  * get roi table
  */
 
-const getRoiTable = catchAsync(async (req, res)=>{
+const getSuperAdminRoiTable = catchAsync(async (req, res)=>{
   const uid = jwtExtract(req);
-  const roiTable = await dashboadService.getRoiTable(req,uid);
+  const roiTable = await dashboadService.getSuperAdminRoiTable(req,uid);
+  res.send(roiTable);
+});
+const getCompanyRoiTable = catchAsync(async (req, res)=>{
+  const uid = jwtExtract(req);
+  const cid = getCID(req);
+  const roiTable = await dashboadService.getCompanyRoiTable(req,uid,cid);
   res.send(roiTable);
 });
 
@@ -172,7 +179,33 @@ const getRoiAdmin =catchAsync(async (req, res) =>{
 /**
  * fetch graph data
  */
- const getRoiGraph =catchAsync(async (req, res) =>{
+ const getMyRoiGraph =catchAsync(async (req, res) =>{
+  /**
+    * extracting JWT Token to get the User Id
+    */
+   const token = jwtExtract(req);
+   /**
+     * validating the user Account base on the response of the extraction
+     */
+   const is_user = await userService.getUserById(token);
+   if(!is_user){
+     let error = new ApiError(httpStatus.NOT_FOUND, 'User not found');
+     logger.error(`[Invalid TOken] ${error}`);
+     throw error;
+   }
+   console.log(is_user)
+
+
+  const comp_id = await getCID(req);
+
+  const roiGraph = await dashboadService.getMyRoiGraph(is_user, comp_id);
+  res.send(roiGraph);
+});
+
+/**
+ * fetch graph data super admin
+ */
+ const getRoiGraphSuperAdmin =catchAsync(async (req, res) =>{
   /**
     * extracting JWT Token to get the User Id
     */
@@ -187,12 +220,51 @@ const getRoiAdmin =catchAsync(async (req, res) =>{
      throw error;
    }
 
+   if(is_user.role !="admin"){
+    let error = new  ApiError(httpStatus.UNAUTHORIZED, 'Unauthorized access');
+    logger.error(`[Invalid TOken] ${error}`);
+    throw error;
+  }
+
   const comp_id = await getCID(req);
 
-  const roiGraph = await dashboadService.getRoiGraph(is_user, comp_id);
+  const roiGraph = await dashboadService.getSuperAdminRoiGraph(is_user, comp_id);
   res.send(roiGraph);
 });
+/**
+ * fetch graph data Company admin || company manager
+ */
+ const getRoiGraphCompany =catchAsync(async (req, res) =>{
+  /**
+    * extracting JWT Token to get the User Id
+    */
+   const token = jwtExtract(req);
+   /**
+     * validating the user Account base on the response of the extraction
+     */
+   const is_user = await userService.getUserById(token);
+   if(!is_user){
+     let error = new ApiError(httpStatus.NOT_FOUND, 'User not found');
+     logger.error(`[Invalid TOken] ${error}`);
+     throw error;
+   }
+   const allowed = ["company-manager","company-admin"]
+   const user_role = is_user.role;
 
+  const role = allowed.some(element => {
+    return element.toLowerCase() === user_role.toLowerCase();
+  });
+  if(!role){
+    let error = new  ApiError(httpStatus.UNAUTHORIZED, 'Unauthorized access');
+    logger.error(`[Invalid TOken] ${error}`);
+    throw error;
+  }
+
+  const comp_id = await getCID(req);
+
+  const roiGraph = await dashboadService.getCompanyRoiGraph(is_user, comp_id);
+  res.send(roiGraph);
+});
 /**
  * fetch Ranking
  */
@@ -222,10 +294,14 @@ module.exports = {
     createCalculator,
     deleteCalculator,
     cloneCalculators,
-    getRoiTable,
+    getSuperAdminRoiTable,
     getRoiTemplate,
     getRoiAdmin,
-    getRoiGraph,
+    getMyRoiGraph,
     getRanking,
-    dashboardData
+    dashboardData,
+    getRoiGraphSuperAdmin,
+    getRoiGraphCompany,
+    getCompanyRoiTable
+
 }

@@ -18,9 +18,19 @@ router
 router
   .route('/ranking/list')
   .get(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.getRanking);
+/**
+ * ROI LIST
+ */
 router
-  .route('/roi/list')
-  .get(auth('getDashboard'), validate(dashboardValidation.getROIS), dashboardController.getRoiTable)
+  .route('/super/admin/roi/list')
+  .get(auth('getDashboard'), validate(dashboardValidation.getROIS), dashboardController.getSuperAdminRoiTable)
+
+  router
+  .route('/company/roi/list')
+  .get(auth('getDashboard'), validate(dashboardValidation.getROIS), dashboardController.getCompanyRoiTable)
+
+
+
 router
   .route('/template/list')
   .get(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.getRoiTemplate)
@@ -30,7 +40,13 @@ router
 
 router
   .route('/data/graph')
-  .get(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.getRoiGraph);
+  .get(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.getMyRoiGraph)
+router
+  .route('/data/super/admin/graph')
+  .get(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.getRoiGraphSuperAdmin)
+  router
+  .route('/data/company/graph')
+  .get(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.getRoiGraphCompany)
 
 router
   .route('/roi/:templateId/:userId')
