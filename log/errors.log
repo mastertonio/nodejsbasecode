@@ -5635,3 +5635,333 @@ Content-Disposition: form-data; name" is not allowed
     at D:\ROINode_Backend\src\middlewares\auth.js:35:17
     at processTicksAndRejections (node:internal/process/task_queues:96:5)
 [31merror[39m: GET /v1/company/62b2a6f9061ed2a095b55555/template/62e7b3b4e5cd5e62445be6cc/version/62f882cdc1f0165e6cf1a267 400 - 99.857 ms - message: "version_id" is not allowed
+[31merror[39m: Error: connect ETIMEDOUT 52.77.81.2:27017
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)
+[31merror[39m: Error: connect ETIMEDOUT 52.77.81.2:27017
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)
+[31merror[39m: Error: connect ETIMEDOUT 52.77.81.2:27017
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)
+[31merror[39m: TypeError: data.statistic.map is not a function
+    at Object.setChart (D:\ROINode_Backend\src\services\common.service.js:64:20)
+    at Object.getRoiGraph (D:\ROINode_Backend\src\services\dashboard.service.js:632:26)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:192:20
+[31merror[39m: GET /v1/dashboard/data/graph 500 - 467.990 ms - message: data.statistic.map is not a function
+[31merror[39m: Error: connect ETIMEDOUT 52.77.81.2:27017
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)
+[31merror[39m: Error: connect ETIMEDOUT 52.77.81.2:27017
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)
+[31merror[39m: Error: connect ETIMEDOUT 52.77.81.2:27017
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)
+[31merror[39m: Error: connect ETIMEDOUT 52.77.81.2:27017
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)
+[31merror[39m: Error: connect ETIMEDOUT 52.77.81.2:27017
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)
+[31merror[39m: Error: connect ETIMEDOUT 52.77.81.2:27017
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)
+[31merror[39m: Error: connect ETIMEDOUT 52.77.81.2:27017
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)
+[31merror[39m: Error: connect ETIMEDOUT 52.77.81.2:27017
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)
+[31merror[39m: Error: connect ETIMEDOUT 52.77.81.2:27017
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)
+[31merror[39m: Error: connect ETIMEDOUT 52.77.81.2:27017
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)
+[31merror[39m: Error: connect ETIMEDOUT 52.77.81.2:27017
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'map')
+    at Object.setChart (D:\ROINode_Backend\src\services\common.service.js:65:23)
+    at Object.getRoiGraph (D:\ROINode_Backend\src\services\dashboard.service.js:632:26)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:192:20
+[31merror[39m: GET /v1/dashboard/data/graph 500 - 435.685 ms - message: Cannot read properties of undefined (reading 'map')
+[31merror[39m: Error: connect ETIMEDOUT 52.77.81.2:27017
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)
+[31merror[39m: Error: connect ETIMEDOUT 52.77.81.2:27017
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)
+[31merror[39m: Error: connect ETIMEDOUT 52.77.81.2:27017
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)
+[31merror[39m: Error: connect ETIMEDOUT 52.77.81.2:27017
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)
+[31merror[39m: Error: connect ETIMEDOUT 52.77.81.2:27017
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)
+[31merror[39m: Error: connect ETIMEDOUT 52.77.81.2:27017
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)
+[31merror[39m: Error: connect ETIMEDOUT 52.77.81.2:27017
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)
+[31merror[39m: Error: connect ETIMEDOUT 52.77.81.2:27017
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)
+[31merror[39m: Error: connect ETIMEDOUT 52.77.81.2:27017
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)
+[31merror[39m: Error: connect ETIMEDOUT 52.77.81.2:27017
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)
+[31merror[39m: Error: connect ETIMEDOUT 52.77.81.2:27017
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)
+[31merror[39m: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/
+    at NativeConnection.Connection.openUri (D:\ROINode_Backend\node_modules\mongoose\lib\connection.js:847:32)
+    at D:\ROINode_Backend\node_modules\mongoose\lib\index.js:351:10
+    at D:\ROINode_Backend\node_modules\mongoose\lib\helpers\promiseOrCallback.js:32:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (D:\ROINode_Backend\node_modules\mongoose\lib\helpers\promiseOrCallback.js:31:10)
+    at Mongoose._promiseOrCallback (D:\ROINode_Backend\node_modules\mongoose\lib\index.js:1149:10)
+    at Mongoose.connect (D:\ROINode_Backend\node_modules\mongoose\lib\index.js:350:20)
+    at Object.<anonymous> (D:\ROINode_Backend\src\index.js:26:12)
+    at Module._compile (node:internal/modules/cjs/loader:1105:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)
+    at node:internal/main/run_main_module:17:47
+[31merror[39m: Error: connect ETIMEDOUT 52.77.81.2:27017
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)
+[31merror[39m: Error: connect ETIMEDOUT 52.77.81.2:27017
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)
+[31merror[39m: Error: connect ETIMEDOUT 52.77.81.2:27017
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)
+[31merror[39m: Error: connect ETIMEDOUT 52.77.81.2:27017
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)
+[31merror[39m: Error: connect ETIMEDOUT 52.77.81.2:27017
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)
+[31merror[39m: Error: connect ETIMEDOUT 52.77.81.2:27017
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)
+[31merror[39m: Error: connect ETIMEDOUT 52.77.81.2:27017
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)
+[31merror[39m: Error: connect ETIMEDOUT 52.77.81.2:27017
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)
+[31merror[39m: Error: connect ETIMEDOUT 52.77.81.2:27017
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)
+[31merror[39m: Error: connect ETIMEDOUT 52.77.81.2:27017
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)
+[31merror[39m: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/
+    at NativeConnection.Connection.openUri (D:\ROINode_Backend\node_modules\mongoose\lib\connection.js:847:32)
+    at D:\ROINode_Backend\node_modules\mongoose\lib\index.js:351:10
+    at D:\ROINode_Backend\node_modules\mongoose\lib\helpers\promiseOrCallback.js:32:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (D:\ROINode_Backend\node_modules\mongoose\lib\helpers\promiseOrCallback.js:31:10)
+    at Mongoose._promiseOrCallback (D:\ROINode_Backend\node_modules\mongoose\lib\index.js:1149:10)
+    at Mongoose.connect (D:\ROINode_Backend\node_modules\mongoose\lib\index.js:350:20)
+    at Object.<anonymous> (D:\ROINode_Backend\src\index.js:26:12)
+    at Module._compile (node:internal/modules/cjs/loader:1105:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)
+    at node:internal/main/run_main_module:17:47
+[31merror[39m: Error: connect ETIMEDOUT 52.77.81.2:27017
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)
+[31merror[39m: Error: querySrv ETIMEOUT _mongodb._tcp.cluster0.ejokl.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:dns:213:19)
+[31merror[39m: ReferenceError: myData is not defined
+    at getCalculatorStatistic (D:\ROINode_Backend\src\services\dashboard.service.js:139:43)
+    at Object.getRoiGraph (D:\ROINode_Backend\src\services\dashboard.service.js:630:29)
+    at D:\ROINode_Backend\src\controllers\dashboard.controller.js:192:42
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/dashboard/data/graph 500 - 163.163 ms - message: myData is not defined
+[31merror[39m: ReferenceError: myData is not defined
+    at getCalculatorStatistic (D:\ROINode_Backend\src\services\dashboard.service.js:139:43)
+    at Object.getRoiGraph (D:\ROINode_Backend\src\services\dashboard.service.js:630:29)
+    at D:\ROINode_Backend\src\controllers\dashboard.controller.js:192:42
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/dashboard/data/graph 500 - 356.720 ms - message: myData is not defined
+[31merror[39m: ReferenceError: myData is not defined
+    at getCalculatorStatistic (D:\ROINode_Backend\src\services\dashboard.service.js:139:43)
+    at Object.getRoiGraph (D:\ROINode_Backend\src\services\dashboard.service.js:630:29)
+    at D:\ROINode_Backend\src\controllers\dashboard.controller.js:192:42
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/dashboard/data/graph 500 - 193.519 ms - message: myData is not defined
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'map')
+    at Object.setChart (D:\ROINode_Backend\src\services\common.service.js:65:23)
+    at Object.getRoiGraph (D:\ROINode_Backend\src\services\dashboard.service.js:628:26)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:192:20
+[31merror[39m: GET /v1/dashboard/data/graph 500 - 238.835 ms - message: Cannot read properties of undefined (reading 'map')
+[31merror[39m: TypeError: data.map is not a function
+    at Object.setChart (D:\ROINode_Backend\src\services\common.service.js:65:10)
+    at Object.getRoiGraph (D:\ROINode_Backend\src\services\dashboard.service.js:625:26)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:192:20
+[31merror[39m: GET /v1/dashboard/data/graph 500 - 250.549 ms - message: data.map is not a function
+[31merror[39m: TypeError: data.map is not a function
+    at Object.setChart (D:\ROINode_Backend\src\services\common.service.js:65:10)
+    at Object.getRoiGraph (D:\ROINode_Backend\src\services\dashboard.service.js:625:26)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:192:20
+[31merror[39m: GET /v1/dashboard/data/graph 500 - 243.902 ms - message: data.map is not a function
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'oid')
+    at Object.getMyRoiGraph (D:\ROINode_Backend\src\services\dashboard.service.js:626:34)
+    at D:\ROINode_Backend\src\controllers\dashboard.controller.js:194:42
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/dashboard/data/graph 500 - 176.398 ms - message: Cannot read properties of undefined (reading 'oid')
+[31merror[39m: ReferenceError: ApiError is not defined
+    at D:\ROINode_Backend\src\controllers\dashboard.controller.js:217:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/dashboard/data/graph/super/admin 500 - 168.252 ms - message: ApiError is not defined
+[31merror[39m: ReferenceError: logger is not defined
+    at D:\ROINode_Backend\src\controllers\dashboard.controller.js:218:5
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/dashboard/data/graph/super/admin 500 - 169.646 ms - message: logger is not defined
+[31merror[39m: [Invalid TOken] Error: Unauthorized access
+[31merror[39m: Error: Unauthorized access
+    at D:\ROINode_Backend\src\controllers\dashboard.controller.js:218:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/dashboard/data/graph/super/admin 401 - 401.625 ms - message: Unauthorized access
+[31merror[39m: [Invalid TOken] Error: Unauthorized access
+[31merror[39m: Error: Unauthorized access
+    at D:\ROINode_Backend\src\controllers\dashboard.controller.js:218:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/dashboard/data/graph/super/admin 401 - 145.534 ms - message: Unauthorized access
+[31merror[39m: [Invalid TOken] Error: Unauthorized access
+[31merror[39m: Error: Unauthorized access
+    at D:\ROINode_Backend\src\controllers\dashboard.controller.js:218:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/dashboard/data/graph/super/admin 401 - 182.281 ms - message: Unauthorized access
+[31merror[39m: Error: Not found
+    at D:\ROINode_Backend\src\app.js:64:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:646:15
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:265:14)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:646:15
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:265:14)
+    at Function.handle (D:\ROINode_Backend\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\ROINode_Backend\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+[31merror[39m: GET /v1/dashboard/data/super/admin/graph 404 - 7.597 ms - message: Not found
+[31merror[39m: [Invalid TOken] Error: Unauthorized access
+[31merror[39m: Error: Unauthorized access
+    at D:\ROINode_Backend\src\controllers\dashboard.controller.js:218:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/dashboard/data/super/admin/graph 401 - 168.415 ms - message: Unauthorized access
+[31merror[39m: [Invalid TOken] Error: Unauthorized access
+[31merror[39m: Error: Unauthorized access
+    at D:\ROINode_Backend\src\controllers\dashboard.controller.js:247:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/dashboard/data/company/graph 401 - 221.441 ms - message: Unauthorized access
+[31merror[39m: [Invalid TOken] Error: Unauthorized access
+[31merror[39m: Error: Unauthorized access
+    at D:\ROINode_Backend\src\controllers\dashboard.controller.js:247:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/dashboard/data/company/graph 401 - 156.550 ms - message: Unauthorized access
+[31merror[39m: [Invalid TOken] Error: Unauthorized access
+[31merror[39m: Error: Unauthorized access
+    at D:\ROINode_Backend\src\controllers\dashboard.controller.js:247:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/dashboard/data/company/graph 401 - 166.404 ms - message: Unauthorized access
+[31merror[39m: [Invalid TOken] Error: Unauthorized access
+[31merror[39m: Error: Unauthorized access
+    at D:\ROINode_Backend\src\controllers\dashboard.controller.js:247:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/dashboard/data/company/graph 401 - 182.923 ms - message: Unauthorized access
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'map')
+    at Object.setChart (D:\ROINode_Backend\src\services\common.service.js:64:20)
+    at Object.getCompanyRoiGraph (D:\ROINode_Backend\src\services\dashboard.service.js:649:26)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:255:20
+[31merror[39m: GET /v1/dashboard/data/company/graph 500 - 552.307 ms - message: Cannot read properties of undefined (reading 'map')
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'map')
+    at Object.setChart (D:\ROINode_Backend\src\services\common.service.js:64:20)
+    at Object.getCompanyRoiGraph (D:\ROINode_Backend\src\services\dashboard.service.js:649:26)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:255:20
+[31merror[39m: GET /v1/dashboard/data/company/graph 500 - 453.017 ms - message: Cannot read properties of undefined (reading 'map')
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'map')
+    at Object.setChart (D:\ROINode_Backend\src\services\common.service.js:64:20)
+    at Object.getCompanyRoiGraph (D:\ROINode_Backend\src\services\dashboard.service.js:649:26)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:255:20
+[31merror[39m: GET /v1/dashboard/data/company/graph 500 - 497.955 ms - message: Cannot read properties of undefined (reading 'map')
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'map')
+    at Object.setChart (D:\ROINode_Backend\src\services\common.service.js:64:20)
+    at Object.getCompanyRoiGraph (D:\ROINode_Backend\src\services\dashboard.service.js:649:26)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:255:20
+[31merror[39m: GET /v1/dashboard/data/company/graph 500 - 341.159 ms - message: Cannot read properties of undefined (reading 'map')
+[31merror[39m: [Invalid TOken] Error: Unauthorized access
+[31merror[39m: Error: Unauthorized access
+    at D:\ROINode_Backend\src\controllers\dashboard.controller.js:252:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/dashboard/data/company/graph 401 - 164.501 ms - message: Unauthorized access
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'map')
+    at Object.setChart (D:\ROINode_Backend\src\services\common.service.js:64:20)
+    at Object.getCompanyRoiGraph (D:\ROINode_Backend\src\services\dashboard.service.js:649:26)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:259:20
+[31merror[39m: GET /v1/dashboard/data/company/graph 500 - 453.677 ms - message: Cannot read properties of undefined (reading 'map')
+[31merror[39m: Error: Not found
+    at D:\ROINode_Backend\src\app.js:64:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:646:15
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:265:14)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:646:15
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:265:14)
+    at Function.handle (D:\ROINode_Backend\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\ROINode_Backend\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+[31merror[39m: GET /v1/dashboard/data/graph/super/admin 404 - 13.875 ms - message: Not found
+[31merror[39m: Error: Not found
+    at D:\ROINode_Backend\src\app.js:64:10
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:280:10)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:646:15
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:265:14)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:646:15
+    at next (D:\ROINode_Backend\node_modules\express\lib\router\index.js:265:14)
+    at Function.handle (D:\ROINode_Backend\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\ROINode_Backend\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (D:\ROINode_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\ROINode_Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\ROINode_Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\ROINode_Backend\node_modules\express\lib\router\index.js:346:12)
+[31merror[39m: GET /v1/dashboard/data/graph/super/admin 404 - 12.442 ms - message: Not found
+[31merror[39m: ReferenceError: is_user is not defined
+    at dashboardData (D:\ROINode_Backend\src\services\common.service.js:8:22)
+    at Object.setChart (D:\ROINode_Backend\src\services\common.service.js:96:17)
+    at Object.getSuperAdminRoiGraph (D:\ROINode_Backend\src\services\dashboard.service.js:669:26)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:225:20
+[31merror[39m: GET /v1/dashboard/data/super/admin/graph 500 - 263.168 ms - message: is_user is not defined
+[31merror[39m: TypeError: data_col.collection.map is not a function
+    at dashboardData (D:\ROINode_Backend\src\services\common.service.js:23:25)
+    at Object.setChart (D:\ROINode_Backend\src\services\common.service.js:96:17)
+    at Object.getSuperAdminRoiGraph (D:\ROINode_Backend\src\services\dashboard.service.js:669:26)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:225:20
+[31merror[39m: GET /v1/dashboard/data/super/admin/graph 500 - 250.583 ms - message: data_col.collection.map is not a function
+[31merror[39m: TypeError: data_col.collection.map is not a function
+    at dashboardData (D:\ROINode_Backend\src\services\common.service.js:23:25)
+    at Object.setChart (D:\ROINode_Backend\src\services\common.service.js:96:17)
+    at Object.getSuperAdminRoiGraph (D:\ROINode_Backend\src\services\dashboard.service.js:669:26)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:225:20
+[31merror[39m: GET /v1/dashboard/data/super/admin/graph 500 - 262.448 ms - message: data_col.collection.map is not a function
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'map')
+    at dashboardData (D:\ROINode_Backend\src\services\common.service.js:36:28)
+    at Object.setChart (D:\ROINode_Backend\src\services\common.service.js:96:17)
+    at Object.getSuperAdminRoiGraph (D:\ROINode_Backend\src\services\dashboard.service.js:669:26)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async D:\ROINode_Backend\src\controllers\dashboard.controller.js:225:20
+[31merror[39m: GET /v1/dashboard/data/super/admin/graph 500 - 300.494 ms - message: Cannot read properties of undefined (reading 'map')
+[31merror[39m: Error: Forbidden
+    at D:\ROINode_Backend\src\middlewares\auth.js:24:21
+    at JwtStrategy.strategy.success (D:\ROINode_Backend\node_modules\passport\lib\middleware\authenticate.js:219:18)
+    at verified (D:\ROINode_Backend\node_modules\passport-jwt\lib\strategy.js:115:41)
+    at JwtStrategy.jwtVerify [as _verify] (D:\ROINode_Backend\src\config\passport.js:20:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/dashboard/data/graph 403 - 73.348 ms - message: Forbidden
