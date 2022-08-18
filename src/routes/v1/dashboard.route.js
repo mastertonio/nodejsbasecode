@@ -26,6 +26,10 @@ router
   .get(auth('getDashboard'), validate(dashboardValidation.getROIS), dashboardController.getSuperAdminRoiTable)
 
   router
+  .route('/roi/list')
+  .get(auth('getDashboard'), validate(dashboardValidation.getROIS), dashboardController.getRoiTable)
+
+  router
   .route('/company/roi/list')
   .get(auth('getDashboard'), validate(dashboardValidation.getROIS), dashboardController.getCompanyRoiTable)
 

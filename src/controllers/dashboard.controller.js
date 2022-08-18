@@ -115,6 +115,11 @@ const cloneCalculators = catchAsync(async (req,res)=>{
  * get roi table
  */
 
+const getRoiTable = catchAsync(async (req, res)=>{
+  const uid = jwtExtract(req);
+  const roiTable = await dashboadService.getRoiTable(req,uid);
+  res.send(roiTable);
+});
 const getSuperAdminRoiTable = catchAsync(async (req, res)=>{
   const uid = jwtExtract(req);
   const roiTable = await dashboadService.getSuperAdminRoiTable(req,uid);
@@ -302,6 +307,7 @@ module.exports = {
     dashboardData,
     getRoiGraphSuperAdmin,
     getRoiGraphCompany,
-    getCompanyRoiTable
+    getCompanyRoiTable,
+    getRoiTable
 
 }
