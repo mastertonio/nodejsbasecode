@@ -537,6 +537,76 @@ const getDashboard = async (userId,filter, options) => {
     return Calculator.create(response_data);
   }
 
+  const getRoiTable = async(params,uid) =>{
+    const data = [];
+    const filter = pick(params.query, ['title']);
+    const options = pick(params.query, ['sortBy', 'limit', 'page']);  
+    
+   
+    const user = await userService.getUserById(uid);
+    if (!user) {
+        throw new ApiError(httpStatus.NOT_FOUND, 'User not found');
+    }
+    filter.user_id = new ObjectId(uid)
+    options.sortBy = {createdAt:-1};
+    let o_id = new ObjectId(uid);
+    const roi_table = await  Calculator.aggregate([
+        {
+            $match: {
+                user_id:o_id
+            }
+        },
+        {
+            $lookup: {
+                from: 'templateversions',
+                localField: 'template_version_id',
+                foreignField: '_id',
+                as: 'TemplateVersionData'
+            }
+        }
+    ]).sort({createdAt:-1})
+    const months = [
+        'January',
+        'February',
+        'March',
+        'April',
+        'May',
+        'June',
+        'July',
+        'August',
+        'September',
+        'October',
+        'November',
+        'December'
+      ];
+
+    roi_table.map(v=>{    
+       
+        let d=new Date(v.createdAt);     
+        let monthIndex  =  d.getMonth();
+        let monthName = months[monthIndex]
+        let getDate = d.getDate();
+            getDate = (String(Math.abs(getDate)).charAt(0) == getDate) ? `0${getDate}` : getDate;
+        let getYear = d.getFullYear();
+        let n_d = d.toLocaleString();
+            n_d= n_d.split(', ');
+        // console.log()
+            data.push({
+                id: v._id,
+                link: v.linked_title,
+                importance: Number(v.importance),
+                name: v.title,
+                source_id: v.template_version_id,
+                source_name: v.TemplateVersionData[0].name,
+                dateCreated:`${monthName} ${getDate},${getYear} ${n_d[1]}`,
+                views: Number(v.visits),
+                uniqueViews: Number(v.unique_ip),
+                status: v.status
+            })
+    });
+    // roi_table.results = data;
+    return data;
+  }
   const getSuperAdminRoiTable = async(params,uid) =>{
     const data = [];
     const filter = pick(params.query, ['title']);
@@ -635,61 +705,54 @@ const getDashboard = async (userId,filter, options) => {
             $match: {
                 template_version_id:{$in:templateVersion_collection}
             }
-        },
-        {
-            $lookup: {
-                from: 'templateversions',
-                localField: 'template_version_id',
-                foreignField: '_id',
-                as: 'TemplateVersionData'
-            }
         }
     ]).sort({createdAt:-1})
 
+    console.log(roi_table)
 
 
+    // const months = [
+    //     'January',
+    //     'February',
+    //     'March',
+    //     'April',
+    //     'May',
+    //     'June',
+    //     'July',
+    //     'August',
+    //     'September',
+    //     'October',
+    //     'November',
+    //     'December'
+    //   ];
 
-    const months = [
-        'January',
-        'February',
-        'March',
-        'April',
-        'May',
-        'June',
-        'July',
-        'August',
-        'September',
-        'October',
-        'November',
-        'December'
-      ];
-
-    roi_table.map(v=>{    
+    // roi_table.map(v=>{    
        
-        let d=new Date(v.createdAt);     
-        let monthIndex  =  d.getMonth();
-        let monthName = months[monthIndex]
-        let getDate = d.getDate();
-            getDate = (String(Math.abs(getDate)).charAt(0) == getDate) ? `0${getDate}` : getDate;
-        let getYear = d.getFullYear();
-        let n_d = d.toLocaleString();
-            n_d= n_d.split(', ');
-        // console.log()
-            data.push({
-                id: v._id,
-                link: v.linked_title,
-                importance: Number(v.importance),
-                name: v.title,
-                source_id: v.template_version_id,
-                source_name: v.TemplateVersionData[0].name,
-                dateCreated:`${monthName} ${getDate},${getYear} ${n_d[1]}`,
-                views: Number(v.visits),
-                uniqueViews: Number(v.unique_ip),
-                status: v.status
-            })
-    });
-    // roi_table.results = data;
-    return data;
+    //     let d=new Date(v.createdAt);     
+    //     let monthIndex  =  d.getMonth();
+    //     let monthName = months[monthIndex]
+    //     let getDate = d.getDate();
+    //         getDate = (String(Math.abs(getDate)).charAt(0) == getDate) ? `0${getDate}` : getDate;
+    //     let getYear = d.getFullYear();
+    //     let n_d = d.toLocaleString();
+    //         n_d= n_d.split(', ');
+    //     // console.log()
+    //         data.push({
+    //             id: v._id,
+    //             link: v.linked_title,
+    //             importance: Number(v.importance),
+    //             name: v.title,
+    //             source_id: v.template_version_id,
+    //             source_name: v.TemplateVersionData[0].name,
+    //             dateCreated:`${monthName} ${getDate},${getYear} ${n_d[1]}`,
+    //             views: Number(v.visits),
+    //             uniqueViews: Number(v.unique_ip),
+    //             status: v.status
+    //         })
+    // });
+    // return data;
+    return {};
+
   }
   const getSCompanyRoiTable = async(params,uid) =>{
     const data = [];
@@ -884,5 +947,6 @@ const getDashboard = async (userId,filter, options) => {
       getCalculatorStatistic,
       getSuperAdminRoiGraph,
       getCompanyRoiGraph,
-      getCompanyRoiTable
+      getCompanyRoiTable,
+      getRoiTable
   }
