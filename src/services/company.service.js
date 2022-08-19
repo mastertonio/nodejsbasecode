@@ -393,7 +393,10 @@ const transferAccount = async (data) =>{
         if(!user){
             throw new ApiError(httpStatus.NOT_FOUND, 'User not found');
         }
-
+        
+        if(_.isUndefined(user.created_by)){
+            data.created_by= user._id
+        }
         Object.assign(user,data);
         await user.save();
         return user;
