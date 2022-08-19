@@ -699,10 +699,10 @@ const createCompnayTemplateVersion = catchAsync(async (req, res)=>{
               
               container.push({
                 user_id: v._id,
+                template_id: p._id,
                 template_name: p.name,
                 calculator_name: k.title,
                 username: v.email,
-                // roiName: k.templates,
                 link: (k.verification_code == "" || k.verification_code == null || k.verification_code == "null") ? "" : `https://www.theroishop.com/enterprise/${v._id}/?roi=35acaf126d430c17d1a438bf8ae424ccc5d94885`,
                 createdAt: `${monthName} ${getDate},${getYear} ${n_d[1]}`,
                 visits: k.visits,
