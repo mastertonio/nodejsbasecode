@@ -134,15 +134,17 @@ const companyUserAccount = async (cid) =>{
                
             })
             console.log(manger_info)
+            const managerinfo = manger_info.filter(function (el) {
+                return el != null;
+              })
             container.push({
                 _id:v._id,
                 first_name:v.first_name,
                 last_name:v.last_name,
                 email:v.email,
                 role:v.role,
-                manager:(v.manager == null) ? "": manger_info.filter(function (el) {
-                    return el != null;
-                  }),
+                manager_id:(v.manager == null) ? "":managerinfo[0]._id,
+                manager_email:(v.manager == null) ? "":managerinfo[0].email,
                 currency:(v.currency == null) ? 'USD': v.currency,
                 status:(v.status ===1)?'active':'inactive',
                 created_rois: n_count.reduce((partialSum, a) => partialSum + a, 0)
