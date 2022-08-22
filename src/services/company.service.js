@@ -10,7 +10,7 @@ const logger = require('../config/logger');
 const _ = require("underscore");
 const { map } = require('underscore');
 const { objectId } = require('../validations/custom.validation');
-const { LOGGER_INVALID_TOKEN } = require('../common/staticValue.common');
+const { LOGGER_INVALID_TOKEN, INSUFFICIENT_LICENSE, LICENSE_ERROR } = require('../common/staticValue.common');
 
 const getCompanyTemplateByCompanyId = async (_id) =>{
     const conatainer =[];
@@ -462,8 +462,48 @@ const transferAccount = async (data) =>{
     }
  }
   
+ const getCompanylicenseStatus = async(company) =>{
+    try {
+       
+        if(company.licenses < 0 ){
+            let e = new ApiError(httpStatus.UNAVAILABLE_FOR_LEGAL_REASONS, INSUFFICIENT_LICENSE);
+            logger.error(`${LICENSE_ERROR} ${e}`)
+            throw e;
+        }
+
+        const user = await User.aggregate([
+            {
+                $match: {
+                    company_id: company._id
+                }
+            },{
+                $group:{
+                    _id: null,
+                    count:{
+                        $sum:1
+                    }
+                }
+            }
+        ]);
+        const ret_val = {};
+        ret_val.user_count = user[0].count;
+        ret_val.company_license = company.licenses;
+        ret_val.company_name = company.name;
+        ret_val.remarks = INSUFFICIENT_LICENSE;
+
+        return ret_val;
+
+    } catch (error) {
+        let e = new ApiError(httpStatus.UNPROCESSABLE_ENTITY,error);
+        logger.error(`${LICENSE_ERROR} ${e}`)
+        throw e;
+    }
+    
+
+ }
 
 module.exports = {
+    getCompanylicenseStatus,
     getCompanyTemplateByCompanyId,
     createNewTempalete,
     getCompanyById,

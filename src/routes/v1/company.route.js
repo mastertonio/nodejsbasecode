@@ -18,6 +18,10 @@ router
   .post(auth('createCompany'), validate(companyValidation.createCompany), companyController.createCompany)
   .get(auth('getCompany'), validate(companyValidation.getCompany), companyController.getAllCompany);
 
+router
+.route('/:company_id/license')
+.get(auth('getCompany'), validate(companyValidation.getCompany), companyController.getCompanylicenseStatus);
+
 /**
  * Company user
  */

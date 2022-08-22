@@ -888,6 +888,36 @@ const transferTemplateAccount = catchAsync(async(req,res)=>{
     const template_info = await companyService.templateInfo(is_company,template_id);
     res.send(template_info)
   })
+
+  const getCompanylicenseStatus = catchAsync(async(req,res)=>{
+    /**
+      * extracting JWT Token to get the User Id
+      */
+     const token = jwtExtract(req);
+     /**
+      * validating the user Account base on the response of the extraction
+      */
+     const is_user = await userService.getUserById(token);
+     if(!is_user){
+       let error = new ApiError(httpStatus.NOT_FOUND, 'User not found');
+       logger.error(`${LOGGER_INVALID_TOKEN} ${error}`);
+       throw error;
+     }
+     const company_id = req.params.company_id;
+     /**
+       * validate if the company id is valid
+       */
+     const is_company = await companyService.getCompanyById(company_id);
+     
+     if(!is_company) {
+       let error = new ApiError(httpStatus.NOT_FOUND, 'Company id not found');
+       logger.error(`${LOGGER_INVALID_TOKEN} ${error}`);
+       throw error;
+     }
+
+     const countRemainingLicense = await companyService.getCompanylicenseStatus(is_company);
+     res.send(countRemainingLicense);
+  })
   module.exports = {
     createCompanyTemplate,
     createCompanyUser,
@@ -909,6 +939,7 @@ const transferTemplateAccount = catchAsync(async(req,res)=>{
     getTemplateInfo,
     patchCompnayTemplateVersion,
     getCompnayTemplateVersion,
-    getCompnayTemplateVersionInfo
+    getCompnayTemplateVersionInfo,
+    getCompanylicenseStatus
   }
   
