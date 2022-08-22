@@ -10,7 +10,7 @@ const logger = require('../config/logger');
 const _ = require("underscore");
 const { map } = require('underscore');
 const { objectId } = require('../validations/custom.validation');
-const { LOGGER_INVALID_TOKEN, INSUFFICIENT_LICENSE, LICENSE_ERROR } = require('../common/staticValue.common');
+const { LOGGER_INVALID_TOKEN, INSUFFICIENT_LICENSE, LICENSE_ERROR, ROLE, USER_ERROR, NO_RECORD_FOUND } = require('../common/staticValue.common');
 
 const getCompanyTemplateByCompanyId = async (_id) =>{
     const conatainer =[];
@@ -296,20 +296,39 @@ const getCompany = async(uid,comp)=>{
 
 
 const patchCompany = async(uid,comp,UpdateBody)=>{
-    const user = userService.getUserById(uid);
-    
-    if(!user){
-        throw new ApiError(httpStatus.NOT_FOUND, 'User not found');
+    try {
+
+        const user = await userService.getUserById(uid);
+        
+        if(!user){
+            let user_query_error = new ApiError(httpStatus.NOT_FOUND, USER_ERROR.NOT_FOUND);
+            logger.error(user_query_error)
+            throw user_query_error;
+        }
+       
+        if(user.role != ROLE.ADMIN){
+            let user_role_error = new ApiError(httpStatus.UNAUTHORIZED, USER_ERROR.UNAUTHORIZED);
+            logger.error(user_role_error)
+            throw user_role_error;
+        }
+
+        const company = await getCompanyById(comp._id);
+
+        if(!company){
+            let company_query_error = new ApiError(httpStatus.NOT_FOUND, NO_RECORD_FOUND);
+            logger.error(company_query_error);
+            throw company_query_error;
+        }
+
+        Object.assign(company,UpdateBody);
+        await company.save();
+        return company;
+
+    } catch (error) {
+        let e = new ApiError(httpStatus.UNPROCESSABLE_ENTITY,error);
+        logger.error(`[Company Module] ${e}`)
+        throw e;
     }
-    console.log('--service---',UpdateBody)
-    const company = await getCompanyById(comp._id);
-    console.log(company)
-    if(!company){
-        throw new ApiError(httpStatus.NOT_FOUND, `no record found!`)
-    }
-    Object.assign(company,UpdateBody);
-    await company.save();
-    return company;
 }
 
 const createNewTempalete = async(req)=>{
