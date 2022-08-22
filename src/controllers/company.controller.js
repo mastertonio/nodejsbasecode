@@ -684,11 +684,11 @@ const createCompnayTemplateVersion = catchAsync(async (req, res)=>{
     const template_container = [];
 
      const getTemplateList = await companyService.getAllUserTemplate(company_id);
-     const template = await Template.find({company_id:company_id});
+    
+     
+
      getTemplateList.map(v=>{
-      if(!_.isEmpty(v.templates)){
-        v.templates.map(k=>{
-          let d=new Date(k.createdAt);     
+          let d=new Date(v.created_calculator.createdAt);     
           let monthIndex  =  d.getMonth();
           let monthName = months[monthIndex]
           let getDate = d.getDate();
@@ -698,18 +698,22 @@ const createCompnayTemplateVersion = catchAsync(async (req, res)=>{
               n_d= n_d.split(', ');
 
               container.push({
-                            user_id: k.user_id,
-                            template_id: k._id,
-                            template_name: k.name,                            
-                            calculator_name: k.title,
+                            user_id: v.user_id,
+                            template_id: v.templateVersion._id,
+                            template_name: v.templateVersion.name,                            
+                            calculator_name: v.created_calculator.title,
                             username: v.email,
-                            link: (k.verification_code == "" || k.verification_code == null || k.verification_code == "null") ? "" : `https://www.theroishop.com/enterprise/${v._id}/?roi=35acaf126d430c17d1a438bf8ae424ccc5d94885`,
+                            link: (v.created_calculator.verification_code == "" || v.created_calculator.verification_code == null || v.created_calculator.verification_code == "null") ? "" : `https://www.theroishop.com/enterprise/${v._id}/?roi=35acaf126d430c17d1a438bf8ae424ccc5d94885`,
                             createdAt: `${monthName} ${getDate},${getYear} ${n_d[1]}`,
-                            visits: k.visits,
-                            unique_ip: parseInt(k.unique_ip)
+                            visits: v.created_calculator.visits,
+                            unique_ip: parseInt(v.created_calculator.unique_ip)
                           })
-        })        
-      }
+      // if(!_.isEmpty(v.templates)){
+      
+
+      
+      //   })        
+      // }
      
      })
      res.send(container)

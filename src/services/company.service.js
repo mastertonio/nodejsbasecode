@@ -62,19 +62,49 @@ const getManagerByCompanyId = async (cid) =>{
 const getAllUserTemplate = async (cid) =>{
     let _cid = new ObjectId(cid);
     return User.aggregate([
-        {
-            $match:{
-                company_id: _cid
-            }
-        },
+       
         {
             $lookup: {
                 from: "calculators",
                 localField: "_id",
                 foreignField: "user_id",
+                as: "created_calculator"
+            }
+        },{
+            $unwind:{ 
+                "path" : "$created_calculator"
+            }
+        },{
+            $lookup: {
+                from: "templateversions",
+                localField: "created_calculator.template_version_id",
+                foreignField: "_id",
+                as: "templateVersion"
+            }
+        },{
+            $unwind:{ 
+                "path" : "$templateVersion"
+            }
+        },{
+            $lookup: {
+                from: "templates",
+                localField: "templateVersion.template_id",
+                foreignField: "_id",
                 as: "templates"
             }
+        },
+        {
+            $unwind:{
+                "path": "$templates"
+
+            }
+        },
+        {
+            $match:{
+                company_id: _cid
+            }
         }
+
     ])
 }
 const companyUserAccount = async (cid) =>{ 
