@@ -699,7 +699,7 @@ const createCompnayTemplateVersion = catchAsync(async (req, res)=>{
 
               container.push({
                             user_id: v.user_id,
-                            template_id: v.templateVersion._id,
+                            template_id: v.created_calculator._id,
                             template_name: v.templateVersion.name,                            
                             calculator_name: v.created_calculator.title,
                             username: v.email,
