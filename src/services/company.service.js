@@ -356,12 +356,44 @@ const updateTemplateVersion = async(verion_id, parameters) =>{
 
 const company_user = async(req) => {
     try {
-        let user_entry = User.create(req);
-        logger.info(`[Company Module] successfully Inserted Company Template; ${JSON.stringify(user_entry)}`);
+        let user_entry = await User.create(req);
+        logger.info(`[USER Module] successfully Inserted Company Template; ${JSON.stringify(user_entry)}`);
+        if(!user_entry){
+            let e = new ApiError(httpStatus.UNPROCESSABLE_ENTITY,'Error upon inserting on User table');
+            logger.error(`[USER Module ] ${e}`)
+            throw e;
+        }
+
+        
+        const updateLicense = await Company.updateOne(
+            {
+                _id:req.company_id
+            },[{
+                $set:{
+                    licenses:{
+                        $subtract:["$licenses",1]
+                    }
+                }
+     } ])
+        
+        
+        // await Company.aggregate([
+        //     {
+        //         $project: {
+        //             Actual_license: {
+        //                 $subtract:["$licenses",1]
+        //             }
+        //         }
+
+
+        //     }
+        // ]);
+        // console.log(updateLicense);
         return user_entry;
+        
     } catch (error) {
         let e = new ApiError(httpStatus.UNPROCESSABLE_ENTITY,error);
-        logger.error(`[Company Module Template] ${e}`)
+        logger.error(`[USER Module ] ${e}`)
         throw e;
     }
 

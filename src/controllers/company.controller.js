@@ -166,10 +166,13 @@ const createCompanyUser = catchAsync(async (req, res) => {
     logger.error(`[Invalid TOken] ${error}`);
     throw error;
    }
-   if(is_company.licenses == 0){
+
+   if(is_company.licenses <= 0){
     let error = new ApiError(httpStatus.NOT_ACCEPTABLE, 'Unable to create new user account');
     logger.error(`[Company Module] ${error}`)
+    throw error;
    }
+   
   req.body = getUserRole(req.body);
 
    //create new user under specific company
@@ -179,8 +182,7 @@ const createCompanyUser = catchAsync(async (req, res) => {
    user_req.status = 1;
    
    const createUser = await companyService.company_user(user_req);
-
-
+  
 
   res.send(createUser)
 })
