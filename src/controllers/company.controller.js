@@ -698,9 +698,8 @@ const createCompnayTemplateVersion = catchAsync(async (req, res)=>{
           let getYear = d.getFullYear();
           let n_d = d.toLocaleString();
               n_d= n_d.split(', ');
-
               container.push({
-                            user_id: v.user_id,
+                            user_id: v._id,
                             template_id: v.created_calculator._id,
                             template_name: v.templateVersion.name,                            
                             calculator_name: v.created_calculator.title,
