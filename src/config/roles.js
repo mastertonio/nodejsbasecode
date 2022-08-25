@@ -1,6 +1,9 @@
 const allRoles = {
   user: [],
-  "company-manager": ['getDashboard'],
+  "company-manager": ['getCompany','createCompanyUser','getUsers','getUser',
+  'createCompnayTemplate','listCompanyTemplate',
+  'createCompnayTemplateVersion','getAllUser','transferTemplate','patchCompanyUser','getAllUserTemplate','patchCompnayTemplate','CompnayTemplateInfo','patchCompnayTemplateVersion',
+  'getCompnayTemplateVersion','getCurrency','getManager','getDashboard'],
   "company-agent": ['getDashboard'],
   admin: ['getUsers', 'manageUsers', 'getDashboard','patchCompany','createCompany','getCompany','getUser',
           'updateCompany',
