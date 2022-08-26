@@ -63,8 +63,7 @@ const getCalculatorStatistic = async (data) =>{
             const _ids = [];
             users.map(v=>{
                 _ids.push(v._id)
-            })
-           
+            })          
 
             cond = [{
                         $match: {
@@ -466,11 +465,13 @@ const getDashboard = async (userId,filter, options) => {
 
 
     const template_id = new ObjectId(paramBody.template_id);
-    const templateVersion = await TemplateVersion.find({template_id: template_id,stage:1});   
+    // const templateVersion = await TemplateVersion.find({template_id: template_id,stage:1});   
+    const templateVersion = await TemplateVersion.find({template_id: template_id});   
     
     if(!templateVersion || _.isEmpty(templateVersion)){
         throw new ApiError(httpStatus.NOT_FOUND, `no record found  on Template version collection!`)
     }
+
     console.log(templateVersion)
     const templateVersion_data = {};
     templateVersion_data.user_id = userId;
@@ -607,6 +608,7 @@ const getDashboard = async (userId,filter, options) => {
     // roi_table.results = data;
     return data;
   }
+  
   const getSuperAdminRoiTable = async(params,uid) =>{
     const data = [];
     const filter = pick(params.query, ['title']);
@@ -705,53 +707,59 @@ const getDashboard = async (userId,filter, options) => {
             $match: {
                 template_version_id:{$in:templateVersion_collection}
             }
+        },{
+            $lookup: {
+                from: 'templateversions',
+                localField: '_id',
+                foreignField: 'template_version_id',
+                as: 'TemplateVersionData'
+            }
         }
     ]).sort({createdAt:-1})
 
     console.log(roi_table)
 
 
-    // const months = [
-    //     'January',
-    //     'February',
-    //     'March',
-    //     'April',
-    //     'May',
-    //     'June',
-    //     'July',
-    //     'August',
-    //     'September',
-    //     'October',
-    //     'November',
-    //     'December'
-    //   ];
+    const months = [
+        'January',
+        'February',
+        'March',
+        'April',
+        'May',
+        'June',
+        'July',
+        'August',
+        'September',
+        'October',
+        'November',
+        'December'
+      ];
 
-    // roi_table.map(v=>{    
+    roi_table.map(v=>{    
        
-    //     let d=new Date(v.createdAt);     
-    //     let monthIndex  =  d.getMonth();
-    //     let monthName = months[monthIndex]
-    //     let getDate = d.getDate();
-    //         getDate = (String(Math.abs(getDate)).charAt(0) == getDate) ? `0${getDate}` : getDate;
-    //     let getYear = d.getFullYear();
-    //     let n_d = d.toLocaleString();
-    //         n_d= n_d.split(', ');
-    //     // console.log()
-    //         data.push({
-    //             id: v._id,
-    //             link: v.linked_title,
-    //             importance: Number(v.importance),
-    //             name: v.title,
-    //             source_id: v.template_version_id,
-    //             source_name: v.TemplateVersionData[0].name,
-    //             dateCreated:`${monthName} ${getDate},${getYear} ${n_d[1]}`,
-    //             views: Number(v.visits),
-    //             uniqueViews: Number(v.unique_ip),
-    //             status: v.status
-    //         })
-    // });
-    // return data;
-    return {};
+        let d=new Date(v.createdAt);     
+        let monthIndex  =  d.getMonth();
+        let monthName = months[monthIndex]
+        let getDate = d.getDate();
+            getDate = (String(Math.abs(getDate)).charAt(0) == getDate) ? `0${getDate}` : getDate;
+        let getYear = d.getFullYear();
+        let n_d = d.toLocaleString();
+            n_d= n_d.split(', ');
+        // console.log()
+            data.push({
+                id: v._id,
+                link: v.linked_title,
+                importance: Number(v.importance),
+                name: v.title,
+                source_id: v.template_version_id,
+                source_name: v.TemplateVersionData[0].name,
+                dateCreated:`${monthName} ${getDate},${getYear} ${n_d[1]}`,
+                views: Number(v.visits),
+                uniqueViews: Number(v.unique_ip),
+                status: v.status
+            })
+    });
+    return data;
 
   }
   const getSCompanyRoiTable = async(params,uid) =>{
