@@ -229,7 +229,12 @@ const allUserByCompany = async () => {
 }
 
 const getAllAdmin = async () => {
-    return User.find({role: "admin"},{name:1})
+    const allAdmin = await User.find({role: "admin"});
+    const container = [];
+    allAdmin.map(i=>{        
+        container.push({_id:i._id, name:i.name? i.name:""})
+    })
+    return container
 }
 
 const getActiveROI = async (userId) =>{

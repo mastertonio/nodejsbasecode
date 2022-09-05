@@ -179,6 +179,7 @@ const createCompanyUser = catchAsync(async (req, res) => {
    const user_req = {...req.body};
    user_req.company_id = company_id;
    user_req.created_by = token;
+   user_req.name = `${req.body.first_name} ${req.body.last_name}`
    user_req.status = 1;
    
    const createUser = await companyService.company_user(user_req);
