@@ -722,8 +722,6 @@ const getDashboard = async (userId,filter, options) => {
         }
     ]).sort({createdAt:-1})
 
-    console.log(roi_table)
-
 
     const months = [
         'January',
@@ -750,14 +748,14 @@ const getDashboard = async (userId,filter, options) => {
         let getYear = d.getFullYear();
         let n_d = d.toLocaleString();
             n_d= n_d.split(', ');
-        // console.log()
+        
             data.push({
                 id: v._id,
                 link: v.linked_title,
                 importance: Number(v.importance),
                 name: v.title,
                 source_id: v.template_version_id,
-                source_name: v.TemplateVersionData[0].name,
+                source_name: _.isEmpty(v.TemplateVersionData)?"":v.TemplateVersionData[0].name,
                 dateCreated:`${monthName} ${getDate},${getYear} ${n_d[1]}`,
                 views: Number(v.visits),
                 uniqueViews: Number(v.unique_ip),
