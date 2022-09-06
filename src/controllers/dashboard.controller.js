@@ -116,9 +116,42 @@ const cloneCalculators = catchAsync(async (req,res)=>{
  */
 
 const getRoiTable = catchAsync(async (req, res)=>{
+   /**
+    * extracting JWT Token to get the User Id
+    */
+   const token = jwtExtract(req);
+   const comp_id = getCID(req);
+   /**
+     * validating the user Account base on the response of the extraction
+     */
+   const is_user = await userService.getUserById(token);
+   if(!is_user){
+     let error = new ApiError(httpStatus.NOT_FOUND, 'User not found');
+     logger.error(`[Invalid TOken] ${error}`);
+     throw error;
+   }
   const uid = jwtExtract(req);
-  const roiTable = await dashboadService.getRoiTable(req,uid);
-  res.send(roiTable);
+  const cid = getCID(req);
+  switch (is_user.role) {
+    case "admin":
+      const adminRoiTable = await dashboadService.getSuperAdminRoiTable(req,uid);
+      res.send(adminRoiTable);
+      break;
+    case "company-admin":
+    case "company-manager":
+      
+      const companyroiTable = await dashboadService.getCompanyRoiTable(req,uid,cid);
+      res.send(companyroiTable);
+      break;
+  
+    default:
+      //get specific list
+      const roiTable = await dashboadService.getRoiTable(req,uid);
+      res.send(roiTable);
+      break;
+  }
+  
+ 
 });
 const getSuperAdminRoiTable = catchAsync(async (req, res)=>{
   const uid = jwtExtract(req);
@@ -184,11 +217,12 @@ const getRoiAdmin =catchAsync(async (req, res) =>{
 /**
  * fetch graph data
  */
- const getMyRoiGraph =catchAsync(async (req, res) =>{
+const getMyRoiGraph =catchAsync(async (req, res) =>{
   /**
     * extracting JWT Token to get the User Id
     */
    const token = jwtExtract(req);
+   const comp_id = await getCID(req);
    /**
      * validating the user Account base on the response of the extraction
      */
@@ -198,13 +232,23 @@ const getRoiAdmin =catchAsync(async (req, res) =>{
      logger.error(`[Invalid TOken] ${error}`);
      throw error;
    }
-   console.log(is_user)
-
-
-  const comp_id = await getCID(req);
-
-  const roiGraph = await dashboadService.getMyRoiGraph(is_user, comp_id);
-  res.send(roiGraph);
+  
+   switch (is_user.role) {
+    case "admin":
+      const adminGraph= await dashboadService.getSuperAdminRoiGraph(is_user, comp_id);
+          res.send(adminGraph)
+      break;
+    case "company-admin":
+    case "company-manager":
+      const roiGraph = await dashboadService.getCompanyRoiGraph(is_user, comp_id);
+        res.send(roiGraph)
+      break;
+    default:
+      const myroiGraph= await dashboadService.getMyRoiGraph(is_user, comp_id);
+          res.send(myroiGraph)
+      break;
+   }
+  
 });
 
 /**
@@ -233,8 +277,8 @@ const getRoiAdmin =catchAsync(async (req, res) =>{
 
   const comp_id = await getCID(req);
 
-  const roiGraph = await dashboadService.getSuperAdminRoiGraph(is_user, comp_id);
-  res.send(roiGraph);
+  return dashboadService.getSuperAdminRoiGraph(is_user, comp_id);
+  
 });
 /**
  * fetch graph data Company admin || company manager
