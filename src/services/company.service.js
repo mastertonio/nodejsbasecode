@@ -42,7 +42,16 @@ const getCompanyTemplateByCompanyId = async (_id) =>{
     }
     return conatainer;
 }
-
+const getActiveTemplateVersionByTemplateId = async (temp_id) =>{
+    const template_version = await TemplateVersion.find({template_id:temp_id});
+    let flag = [];
+    template_version.map(v=>{
+        if(v.stage != 0){
+            flag.push(v)
+        }
+    });
+    return flag;
+}
 const getManagerByCompanyId = async (cid) =>{ 
    
     if(_.isNull(cid)){
@@ -572,5 +581,6 @@ module.exports = {
     getAllUserTemplate,
     updateTemplate,
     templateInfo,
-    updateTemplateVersion
+    updateTemplateVersion,
+    getActiveTemplateVersionByTemplateId
 }

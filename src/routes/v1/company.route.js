@@ -83,6 +83,7 @@ router
   .route('/:company_id/template/:template_id')
   .patch(auth('patchCompnayTemplate'), validate(companyValidation.patchCompnayTemplate), companyController.patchCompnayTemplate)
   .get(auth('CompnayTemplateInfo'), validate(companyValidation.getTemplateInfo), companyController.getTemplateInfo)
+  .delete(auth('deleteTemplate'), validate(companyValidation.deleteTemplate), companyController.deleteTemplate)
 
 /**
  * Company Template version
@@ -96,7 +97,9 @@ router
 router
   .route('/:company_id/template/:template_id/version/:version_id')
   .patch(auth('patchCompnayTemplateVersion'), validate(companyValidation.patchCompnayTemplateVersion), companyController.patchCompnayTemplateVersion)
-  .get(auth('getCompnayTemplateVersion'), validate(companyValidation.getCompnayTemplateVersionInfo), companyController.getCompnayTemplateVersionInfo);
+  .get(auth('getCompnayTemplateVersion'), validate(companyValidation.getCompnayTemplateVersionInfo), companyController.getCompnayTemplateVersionInfo)
+  .delete(auth('deleteTemplateVersion'), validate(companyValidation.deleteTemplateVersion), companyController.deleteCompanyTemplateVersionInfo)
+
 
 /**
  * Capture company logo

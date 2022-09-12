@@ -861,9 +861,9 @@ const transferTemplateAccount = catchAsync(async(req,res)=>{
    * get template info
    */
   const getTemplateInfo = catchAsync(async(req,res)=>{
-     /**
+    /**
       * extracting JWT Token to get the User Id
-      */
+    */
     const token = jwtExtract(req);
     /**
      * validating the user Account base on the response of the extraction
@@ -889,7 +889,7 @@ const transferTemplateAccount = catchAsync(async(req,res)=>{
 
     const template_info = await companyService.templateInfo(is_company,template_id);
     res.send(template_info)
-  })
+  });
 
   const getCompanylicenseStatus = catchAsync(async(req,res)=>{
     /**
@@ -920,6 +920,114 @@ const transferTemplateAccount = catchAsync(async(req,res)=>{
      const countRemainingLicense = await companyService.getCompanylicenseStatus(is_company);
      res.send(countRemainingLicense);
   })
+
+
+  const deleteCompanyTemplateVersionInfo = catchAsync(async(req,res)=>{
+    /**
+      * extracting JWT Token to get the User Id
+      */
+     const token = jwtExtract(req);
+     /**
+      * validating the user Account base on the response of the extraction
+      */
+     const is_user = await userService.getUserById(token);
+     if(!is_user){
+       let error = new ApiError(httpStatus.NOT_FOUND, 'User not found');
+       logger.error(`${LOGGER_INVALID_TOKEN} ${error}`);
+       throw error;
+     }
+     const company_id = req.params.company_id;
+     /**
+       * validate if the company id is valid
+       */
+     const is_company = await companyService.getCompanyById(company_id);
+     
+     if(!is_company) {
+       let error = new ApiError(httpStatus.NOT_FOUND, 'Company id not found');
+       logger.error(`${LOGGER_INVALID_TOKEN} ${error}`);
+       throw error;
+     }
+      const template_id = req.params.template_id;
+      /**
+      * validate template 
+      */
+      const is_template = await Template.findById(template_id);
+
+      if(!is_template){
+        let error = new ApiError(httpStatus.NOT_FOUND, 'Template ID not found');
+        logger.error(`${LOGGER_INVALID_TOKEN} ${error}`);
+        throw error;
+      }
+      const version_id = req.params.version_id;
+      /**
+      * validate template 
+      */
+     const is_template_version = await TemplateVersion.findById(version_id);
+     if(!is_template_version){
+        let error = new ApiError(httpStatus.NOT_FOUND, 'Template Version ID not found');
+        logger.error(`${LOGGER_INVALID_TOKEN} ${error}`);
+        throw error;
+     }
+     if(is_template_version.stage != 0){
+        let error = new ApiError(httpStatus.UNPROCESSABLE_ENTITY, `Unable to delete Template version id ${version_id}`);
+        logger.error(`${LOGGER_INVALID_TOKEN} ${error}`);
+        throw error;
+     }
+
+     
+
+     await is_template_version.remove()
+    res.status(httpStatus.NO_CONTENT).send();
+
+    res.send({})
+  })
+
+  const deleteTemplate = catchAsync(async(req,res)=>{
+    /**
+      * extracting JWT Token to get the User Id
+      */
+     const token = jwtExtract(req);
+     /**
+      * validating the user Account base on the response of the extraction
+      */
+     const is_user = await userService.getUserById(token);
+     if(!is_user){
+       let error = new ApiError(httpStatus.NOT_FOUND, 'User not found');
+       logger.error(`${LOGGER_INVALID_TOKEN} ${error}`);
+       throw error;
+     }
+     const company_id = req.params.company_id;
+     /**
+       * validate if the company id is valid
+       */
+     const is_company = await companyService.getCompanyById(company_id);
+     
+     if(!is_company) {
+       let error = new ApiError(httpStatus.NOT_FOUND, 'Company id not found');
+       logger.error(`${LOGGER_INVALID_TOKEN} ${error}`);
+       throw error;
+     }
+      const template_id = req.params.template_id;
+      /**
+      * validate template 
+      */
+      const is_template = await Template.findById(template_id);
+
+      if(!is_template){
+        let error = new ApiError(httpStatus.NOT_FOUND, 'Template ID not found');
+        logger.error(`${LOGGER_INVALID_TOKEN} ${error}`);
+        throw error;
+      }
+
+      const haveActiveVersion  = await companyService.getActiveTemplateVersionByTemplateId(template_id);
+      if(haveActiveVersion){
+        let error = new ApiError(httpStatus.UNPROCESSABLE_ENTITY, `Unable to delete Template id ${template_id}, Please deactivate template version and Active Calculators`);
+        logger.error(`${LOGGER_INVALID_TOKEN} ${error}`);
+        throw error;
+      }
+      await is_template.remove()
+      res.status(httpStatus.NO_CONTENT).send();
+  })
   module.exports = {
     createCompanyTemplate,
     createCompanyUser,
@@ -942,6 +1050,8 @@ const transferTemplateAccount = catchAsync(async(req,res)=>{
     patchCompnayTemplateVersion,
     getCompnayTemplateVersion,
     getCompnayTemplateVersionInfo,
-    getCompanylicenseStatus
+    getCompanylicenseStatus,
+    deleteCompanyTemplateVersionInfo,
+    deleteTemplate
   }
   
