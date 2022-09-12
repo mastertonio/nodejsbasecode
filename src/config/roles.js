@@ -3,17 +3,17 @@ const allRoles = {
   "company-manager": ['getCompany','createCompanyUser','getUsers','getUser',
   'createCompnayTemplate','listCompanyTemplate',
   'createCompnayTemplateVersion','getAllUser','transferTemplate','patchCompanyUser','getAllUserTemplate','patchCompnayTemplate','CompnayTemplateInfo','patchCompnayTemplateVersion',
-  'getCompnayTemplateVersion','getCurrency','getManager','getDashboard'],
+  'getCompnayTemplateVersion','getCurrency','getManager','getDashboard','deleteTemplateVersion','deleteTemplate'],
   "company-agent": ['getDashboard'],
   admin: ['getUsers', 'manageUsers', 'getDashboard','patchCompany','createCompany','getCompany','getUser',
           'updateCompany',
           'createCompanyUser','getManager','getCurrency','getAllUser','patchCompanyUser',
           'createCompnayTemplate', 'listCompanyTemplate','transferTemplate','getAllUserTemplate','patchCompnayTemplate','CompnayTemplateInfo','patchCompnayTemplateVersion',
-          'getCompnayTemplateVersion',"createCompnayTemplateVersion"],
+          'getCompnayTemplateVersion',"createCompnayTemplateVersion","deleteTemplateVersion",'deleteTemplate'],
   "company-admin": ['getCompany','createCompanyUser','getUsers','getUser',
                     'createCompnayTemplate','listCompanyTemplate',
                     'createCompnayTemplateVersion','getAllUser','transferTemplate','patchCompanyUser','getAllUserTemplate','patchCompnayTemplate','CompnayTemplateInfo','patchCompnayTemplateVersion',
-                    'getCompnayTemplateVersion','getCurrency','getManager','getDashboard']
+                    'getCompnayTemplateVersion','getCurrency','getManager','getDashboard',"deleteTemplateVersion",'deleteTemplate']
 };
 
 const roles = Object.keys(allRoles);

@@ -205,6 +205,24 @@ const createCompanyUser = {
       }),
   };
 
+  const deleteTemplateVersion = {
+    params: Joi.object().keys({
+      company_id: Joi.required().custom(objectId),
+      template_id: Joi.required().custom(objectId),
+      version_id: Joi.required().custom(objectId)
+    })
+  }
+
+  const deleteTemplate = {
+    params: Joi.object().keys({
+      company_id: Joi.required().custom(objectId),
+      template_id: Joi.required().custom(objectId)
+    })
+  }
+
+
+
+
 module.exports = {
     createCompany,
     createCompanyUser,
@@ -223,5 +241,7 @@ module.exports = {
     getTemplateInfo,
     patchCompnayTemplateVersion,
     getCompnayTemplateVersion,
-    getCompnayTemplateVersionInfo
+    getCompnayTemplateVersionInfo,
+    deleteTemplateVersion,
+    deleteTemplate
   };

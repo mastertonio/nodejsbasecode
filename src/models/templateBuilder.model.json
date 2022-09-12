@@ -1,0 +1,129 @@
+{
+    "dashBoard":{
+        "header":{
+            "company":"ABC Comp",
+            "title":"ROI Dashboard",
+            "projection": "1 Year Projection",
+            "grandTotal":{
+                "format":"$0,0.00",
+                "type":"Currency",
+                "value": 100
+            }
+            
+        },
+        "cards":[
+            {
+                "id":"d6a9450dc08555d6ecfaf7162e5267f401e6dd9a",
+                "title":"Reduce Ramp Time",
+                "type":"slider",
+                "conservative_factor":{
+                    "format":"0%",
+                    "type":"Percentages",
+                    "value":47
+                },
+                "total": {
+                    "format":"$0,0.00",
+                    "type":"Currency",
+                    "value": 100
+                }
+            }
+        ]
+        
+    },
+    "Sidbar":{
+        "logo":"example.jpg",
+        "menu":[
+            {
+                "roi_section":[
+                    {
+                        "id":"ccdcd43d63e635348109ac612ee410cca3c1bc38",
+                        "name":"Reduce Ramp Time",
+                        "sectionLink":"b090f5ab87723433ab77785834d05272d177c88b"
+                    }
+                ]
+            }
+        ]
+
+    },
+    "sections":[
+        {
+            "id":"b090f5ab87723433ab77785834d05272d177c88b",
+            "columns":[
+                {   
+                    
+                    "cell1":[
+                        {
+                            "_id": "A0",
+                            "label": "Reduce Ramp Time",
+                            "type": "header"
+                        },
+                        {
+                            "_id": "A1",
+                            "label": "Number of Sales Reps",
+                            "format": "0,0",
+                            "type": "numeric",
+                            "value": 10
+                        },{
+                            "_id": "A2",
+                            "label": "Average Opportunity Size",
+                            "format": "$0,0.00",
+                            "type": "numeric",
+                            "value": 0
+                        },{
+                            "_id": "A3",
+                            "label": "Total Revenue",
+                            "format": "$0,0.00",
+                            "type": "numeric",
+                            "formula": "A1 * A2"
+                        },
+                        {
+                            "_id": "A4", 
+                            "type": "hr"
+                        },
+                        {
+                            "_id": "A5", 
+                            "type": "cells",
+                            "microcells":[
+                                {
+                                    "microcell1":[
+                                        {
+                                            "_id": "A100",
+                                            "label": "Reduce Ramp Time Details",
+                                            "type": "header"
+                                        },
+                                        {
+                                            "_id":"A101",
+                                            "label": "The quick brown fox jumps over the lazy dog",
+                                            "type": "paragraph"
+                                        }
+                                    ],
+                                    "microcell2":[
+                                        {
+                                            "_id":"A103",
+                                            "type": "image",
+                                            "url": "exmample.jpg"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "cell2":[
+                        {
+                            "_id": "A011",
+                            "label": "Reduce Ramp Time",
+                            "type": "header"
+                        },
+                        {
+                            "_id": "A012",
+                            "label": "Number of Sales Reps",
+                            "format": "0,0",
+                            "type": "numeric",
+                            "value": 10
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

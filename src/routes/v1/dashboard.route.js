@@ -8,7 +8,7 @@ const router = express.Router();
 
 router
   .route('/:userId')
-  // .get(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.getDashboard)
+  .get(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.getDashboard)
   .put(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.updateTemplateStatus)
   .post(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.createCalculator);
 
@@ -25,32 +25,38 @@ router
   .route('/super/admin/roi/list')
   .get(auth('getDashboard'), validate(dashboardValidation.getROIS), dashboardController.getSuperAdminRoiTable)
 
-  router
+router
   .route('/roi/list')
   .get(auth('getDashboard'), validate(dashboardValidation.getROIS), dashboardController.getRoiTable)
-
-  router
-  .route('/company/roi/list')
-  .get(auth('getDashboard'), validate(dashboardValidation.getROIS), dashboardController.getCompanyRoiTable)
-
-
 
 router
   .route('/template/list')
   .get(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.getRoiTemplate)
+
+
+
+router
+  .route('/company/roi/list')
+  .get(auth('getDashboard'), validate(dashboardValidation.getROIS), dashboardController.getCompanyRoiTable)
+
 router
   .route('/admin/list')
   .get(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.getRoiAdmin);
 
+
+
 router
   .route('/data/graph')
   .get(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.getMyRoiGraph)
+
 router
   .route('/data/super/admin/graph')
   .get(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.getRoiGraphSuperAdmin)
-  router
+router
   .route('/data/company/graph')
   .get(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.getRoiGraphCompany)
+
+
 
 router
   .route('/roi/:templateId/:userId')
