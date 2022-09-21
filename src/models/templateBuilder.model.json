@@ -1,9 +1,176 @@
-{
-    "dashBoard":{
+{   
+    "dash_board":[ // section 
+        {
+            "id": "TEMP_1663243073",
+            "address":"TEMP",
+            "seq":null,
+            "format": null,
+            "formula": null,
+            "rules": null,
+            "link": null,
+            "label": "Sample template",
+            "value": null
+
+        },
+        {
+            "id": "GT_1663243073",
+            "address":"GT",
+            "seq":null,
+            "format": "($0,0)",
+            "rules": null,
+            "link": null,
+            "formula":{
+                "SUM":["ST_1663245642"]
+            },
+            "label": "Grand Total",
+            "value": 1000
+        },
+        {
+            "id": "CMP_1663243073",
+            "address":"CMP",
+            "seq":null,
+            "format": null,
+            "formula": null,
+            "rules": null,
+            "link": null,
+            "label": "ABC Inc. ",
+            "value": null
+
+        },
+        {
+            "id": "POD_1663245642",
+            "address":"POD",
+            "seq":1,
+            "format": "($0,0)",
+            "rules": null,
+            "formula":null,
+            "link": "SEC_1663245642",
+            "label": "Improve Win Rate",
+            "value": "ST_1663245642"
+        }
+    ],
+    "sideBar":{
+        "roi_section":[
+            {
+                "id": "MI_1663245642",
+                "address":"MI",
+                "seq":null,
+                "format": null,
+                "formula": null,
+                "rules": null,
+                "link": "SEC_1663245642",
+                "label": "Improve Win Rate",
+                "value": null
+            }
+        ]
+    },
+    "section":[
+        {
+            "id":"SEC_1663245642",
+            "address":"SEC",
+            "seq":1,
+            "content":{
+                "section_description":[
+                    {
+                        "address":"SECHEADER",                        
+                        "text": "Improve Win Rate"
+                    },
+                    {
+                        "address":"SECTOTAL",                        
+                        "label": null,
+                        "format": "($0,0)",
+                        "rules": null,
+                        "link": null,
+                        "formula":{
+                            "SUM":["SECEL_1663245642","A2"] '(A1*2)/A2'
+                        },
+                        "value": 1000
+                    },
+                    {
+                        "address":"SECWU",                       
+                        "children":[{
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "text": "Studies show that 40 - 60% of all opportunities will end in a no decision. This happens so often because prospects have a difficult time quantifying your benefits / value.. Companies will make a purchasing decision for two main reasons:"
+                                },
+                                {
+                                    "type": "numberlist",
+                                    "children":[
+                                        "You're going to make them money",
+                                        "You're going to save them money"
+                                    ]
+                                },
+                                {
+                                    "text": "Yet the majority of salespeople do not have the tools to engage in these types of financial discussions. Therefore they are only left to sell features and functionality."
+                                }
+                            ]
+                        }]
+                    },
+                    {
+                        "address":"SECATTM",
+                        "children":[{
+                            "sys": {
+                                "contentType": {
+                                "sys": {
+                                  "type": "Link",
+                                  "linkType": "ContentType",
+                                  "id": "videoEmbed"
+                                }
+                              }
+                            },
+                            "fields": {
+                              "title": "Example video embed",
+                              "embedUrl": "https://www.youtube.com/embed/12345"
+                            }
+                          }]
+                    }
+                ],
+                "section_formula":{
+                    "cel_r":[
+                        {
+                            "address":"CELHEADER",
+                            "seq":1,                        
+                            "text": "Please tell us a little about your sales organization"
+                        },
+                        {
+                            "address":"CELF",
+                            "children":[
+                                {
+                                    "id": "SECEL_1663245642",
+                                    "address":"SECEL",
+                                    "seq":1,
+                                    "format": "($0,0)",
+                                    "formula": "( SECEL_1663245642 * 10)/ 0.1",
+                                    "rules": null,
+                                    "link": null,
+                                    "label": "Number of salespeople",
+                                    "value": 0
+                        
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+                
+            
+        }
+    ] 
+}
+
+
+
+
+
+
+
+
+    "dash_board":{
         "header":{
             "company":"ABC Comp",
             "title":"ROI Dashboard",
-            "projection": "1 Year Projection",
+            "projection": 1,
             "grandTotal":{
                 "format":"$0,0.00",
                 "type":"Currency",
@@ -11,9 +178,9 @@
             }
             
         },
-        "cards":[
+        "pods":[
             {
-                "id":"d6a9450dc08555d6ecfaf7162e5267f401e6dd9a",
+                "id":"pod_1663238719",
                 "title":"Reduce Ramp Time",
                 "type":"slider",
                 "conservative_factor":{
@@ -58,7 +225,7 @@
                             "type": "header"
                         },
                         {
-                            "_id": "A1",
+                            "_id": "SECD112345",
                             "label": "Number of Sales Reps",
                             "format": "0,0",
                             "type": "numeric",
