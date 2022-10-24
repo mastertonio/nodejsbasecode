@@ -16,7 +16,7 @@ const { errorConverter, errorHandler } = require('./middlewares/error');
 const ApiError = require('./utils/ApiError');
 
 const cookieParser = require("cookie-parser");
-const header = new Headers();
+// const header = new Headers();
 const MongoDBSession = require('connect-mongodb-session');
 const session = require('express-session');
 
@@ -61,8 +61,8 @@ const session = require('express-session');
 
   app.use((req,res,next)=>{
     req.headers['authorization'] = `Bearer ${req.cookies['x-access-token']}`;
-    res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
+    // res.headers("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
+    // res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
     
     next();
   });
