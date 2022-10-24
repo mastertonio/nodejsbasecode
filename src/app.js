@@ -15,6 +15,11 @@ const routes = require('./routes/v1');
 const { errorConverter, errorHandler } = require('./middlewares/error');
 const ApiError = require('./utils/ApiError');
 
+const cookieParser = require("cookie-parser");
+const header = new Headers();
+const MongoDBSession = require('connect-mongodb-session');
+const session = require('express-session');
+
 
   const app = express();
   
@@ -24,9 +29,16 @@ const ApiError = require('./utils/ApiError');
     app.use(morgan.errorHandler);
   }
 
+  const MongoSession = MongoDBSession(session)
+  const store = new MongoSession({
+      uri: config.mongoose.url,
+      collection: "Session"
+  })
+
   // set security HTTP headers
   app.use(helmet());
-
+  // set cookie-parser
+  app.use(cookieParser(config.cookie))
   // parse json request body
   app.use(express.json({limit:'50mb'}));
 
@@ -41,9 +53,27 @@ const ApiError = require('./utils/ApiError');
   // gzip compression
   app.use(compression());
 
+  // (All)10mins- if no activity
+ 
   // enable cors
   app.use(cors());
   app.options('*', cors());
+
+  app.use((req,res,next)=>{
+    req.headers['authorization'] = `Bearer ${req.cookies['x-access-token']}`;
+    res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
+    
+    next();
+  });
+  app.use(
+    session({
+        secret: config.cookie,
+        resave: false,
+        saveUninitialized: false,
+        store:store
+   })
+  );
 
   // jwt authentication
   app.use(passport.initialize());
