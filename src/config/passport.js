@@ -3,11 +3,20 @@ const config = require('./config');
 const { tokenTypes } = require('./tokens');
 const { User } = require('../models');
 
+const cookieExtractor = req => {
+  let jwt = null 
+
+  if (req && req.cookies) {
+      jwt = req.cookies['x-access-token']
+  }
+  return jwt
+}
+
+
 const jwtOptions = {
   secretOrKey: config.jwt.secret,
   jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
 };
-
 const jwtVerify = async (payload, done) => {
   try {
     if (payload.type !== tokenTypes.ACCESS) {

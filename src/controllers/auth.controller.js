@@ -4,7 +4,7 @@ const { authService, userService, tokenService, emailService } = require('../ser
 
 const register = catchAsync(async (req, res) => {
   const user = await userService.createUser(req.body);
-  const tokens = await tokenService.generateAuthTokens(user);
+  const tokens = await tokenService.generateAuthTokens(user , req);
   res.status(httpStatus.CREATED).send({ user, tokens });
 });
 
@@ -12,7 +12,12 @@ const login = catchAsync(async (req, res) => {
   const { email, password } = req.body;
  
   const user = await authService.loginUserWithEmailAndPassword(email, password);
-  const tokens = await tokenService.generateAuthTokens(user);
+  const tokens = await tokenService.generateAuthTokens(user, req );
+  res.cookie('x-access-token', 
+    tokens.access.token,
+    {httpOnly:true,
+    secure:false,}
+    ); 
   res.send({ user, tokens });
 });
 

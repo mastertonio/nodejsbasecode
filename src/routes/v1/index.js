@@ -3,6 +3,7 @@ const authRoute = require('./auth.route');
 const userRoute = require('./user.route');
 const dashboardRoute = require('./dashboard.route');
 const companyRoute = require('./company.route');
+const templateBuilder = require('./templateBuilder.route');
 const docsRoute = require('./docs.route');
 const config = require('../../config/config');
 
@@ -24,6 +25,10 @@ const defaultRoutes = [
   {
     path: '/company',
     route: companyRoute
+  },
+  {
+    path: '/templateBuilder',
+    route: templateBuilder
   }
 ];
 

@@ -35,6 +35,7 @@ if (error) {
 
 module.exports = {
   env: envVars.NODE_ENV,
+  cookie: envVars.COOKIE,
   port: envVars.PORT,
   host: envVars.HOST,
   s3_key_id: envVars.AWS_S3_ACCESS_KEY_ID,

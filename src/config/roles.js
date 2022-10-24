@@ -9,11 +9,11 @@ const allRoles = {
           'updateCompany',
           'createCompanyUser','getManager','getCurrency','getAllUser','patchCompanyUser',
           'createCompnayTemplate', 'listCompanyTemplate','transferTemplate','getAllUserTemplate','patchCompnayTemplate','CompnayTemplateInfo','patchCompnayTemplateVersion',
-          'getCompnayTemplateVersion',"createCompnayTemplateVersion","deleteTemplateVersion",'deleteTemplate'],
+          'getCompnayTemplateVersion',"createCompnayTemplateVersion","deleteTemplateVersion",'deleteTemplate','createROI'],
   "company-admin": ['getCompany','createCompanyUser','getUsers','getUser',
                     'createCompnayTemplate','listCompanyTemplate',
                     'createCompnayTemplateVersion','getAllUser','transferTemplate','patchCompanyUser','getAllUserTemplate','patchCompnayTemplate','CompnayTemplateInfo','patchCompnayTemplateVersion',
-                    'getCompnayTemplateVersion','getCurrency','getManager','getDashboard',"deleteTemplateVersion",'deleteTemplate']
+                    'getCompnayTemplateVersion','getCurrency','getManager','getDashboard',"deleteTemplateVersion",'deleteTemplate','createROI']
 };
 
 const roles = Object.keys(allRoles);
