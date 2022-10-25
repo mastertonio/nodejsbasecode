@@ -68,14 +68,16 @@ const session = require('express-session');
   //   'preflightContinue': false
   // }));
   app.use((req, res, next) => {
-    //allow access to current url. work for https as well
+    //allow access from every, elminate CORS
     res.setHeader('Access-Control-Allow-Origin','*');
     res.removeHeader('x-powered-by');
-    //allow access to current method
-    res.setHeader('Access-Control-Allow-Methods',req.method);
+    //set the allowed HTTP methods to be requested
+    res.setHeader('Access-Control-Allow-Methods','POST');
+    //headers clients can use in their requests
     res.setHeader('Access-Control-Allow-Headers','Content-Type');
+    //allow request to continue and be handled by routes
     next();
-  })
+  });
   app.use((req,res,next)=>{
     req.headers['authorization'] = `Bearer ${req.cookies['x-access-token']}`;
     // res.headers("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
