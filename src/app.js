@@ -69,7 +69,7 @@ const session = require('express-session');
   // }));
   app.use((req, res, next) => {
     //allow access to current url. work for https as well
-    res.setHeader('Access-Control-Allow-Origin',req.header('Origin'));
+    res.setHeader('Access-Control-Allow-Origin','*');
     res.removeHeader('x-powered-by');
     //allow access to current method
     res.setHeader('Access-Control-Allow-Methods',req.method);
