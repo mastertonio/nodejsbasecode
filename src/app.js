@@ -58,17 +58,17 @@ const session = require('express-session');
   // enable cors
   app.use(cors());
   // app.options('*', cors());
-  app.use(cors({
-    'allowedHeaders': ['sessionId', 'Content-Type'],
-    'exposedHeaders': ['sessionId'],
-    'origin': '*',
-    'methods': 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    'preflightContinue': false
-  }));
+  // app.use(cors({
+  //   'allowedHeaders': ['sessionId', 'Content-Type'],
+  //   'exposedHeaders': ['sessionId'],
+  //   'origin': '*',
+  //   'methods': 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  //   'preflightContinue': false
+  // }));
 
   app.use((req,res,next)=>{
     req.headers['authorization'] = `Bearer ${req.cookies['x-access-token']}`;
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8888');
+    res.headers['access-control-allow-origin'] = "*";
 
     // res.headers("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
     // res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
