@@ -56,6 +56,9 @@ const session = require('express-session');
   // (All)10mins- if no activity
  
 
+    // enable cors
+    app.use(cors());
+    app.options('*', cors());
 
   // app.use(cors({
   //   'allowedHeaders': ['sessionId', 'Content-Type'],
@@ -64,7 +67,15 @@ const session = require('express-session');
   //   'methods': 'GET,HEAD,PUT,PATCH,POST,DELETE',
   //   'preflightContinue': false
   // }));
-
+  app.use((req, res, next) => {
+    //allow access to current url. work for https as well
+    res.setHeader('Access-Control-Allow-Origin',req.header('Origin'));
+    res.removeHeader('x-powered-by');
+    //allow access to current method
+    res.setHeader('Access-Control-Allow-Methods',req.method);
+    res.setHeader('Access-Control-Allow-Headers','Content-Type');
+    next();
+  })
   app.use((req,res,next)=>{
     req.headers['authorization'] = `Bearer ${req.cookies['x-access-token']}`;
     // res.headers("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
@@ -81,9 +92,6 @@ const session = require('express-session');
    })
   );
 
-    // enable cors
-    app.use(cors({credentials: true, origin: true, exposedHeaders: '*'}));
-    app.options('*', cors());
 
   // jwt authentication
   app.use(passport.initialize());
