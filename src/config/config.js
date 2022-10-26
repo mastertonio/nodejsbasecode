@@ -34,6 +34,7 @@ if (error) {
 
 
 module.exports = {
+  corsOption:{origin:[envVars.DEV_1,envVars.DEV_2,envVars.DEV_3,envVars.SANDBOX],credentials: true},
   env: envVars.NODE_ENV,
   cookie: envVars.COOKIE,
   port: envVars.PORT,
