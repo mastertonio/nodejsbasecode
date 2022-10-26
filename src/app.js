@@ -102,6 +102,8 @@ const session = require('express-session');
 
   // jwt authentication
   app.use(passport.initialize());
+  app.use(passport.session());
+
   passport.use('jwt', jwtStrategy);
 
   // limit repeated failed requests to auth endpoints
