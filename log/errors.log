@@ -9249,3 +9249,32 @@ Content-Disposition: form-data; name" is not allowed
     at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:284:15
     at param (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:365:14)
 [31merror[39m: GET /v1/dashboard/628247b19e2a1d3a5ef8b9ad 401 - 8.428 ms - message: Please authenticate
+[31merror[39m: Error: Not found
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/app.js:121:10
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:328:13)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:280:10)
+    at strategy.pass (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:346:9)
+    at SessionStrategy.authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/strategies/session.js:75:10)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:369:16)
+    at authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:370:7)
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:328:13)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:280:10)
+    at initialize (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/initialize.js:98:5)
+[31merror[39m: GET / 404 - 9.486 ms - message: Not found
+[31merror[39m: Error: write EPIPE
+    at target._send (node:internal/child_process:865:20)
+    at target.send (node:internal/child_process:738:19)
+    at sendHelper (node:internal/cluster/utils:28:15)
+    at send (node:internal/cluster/child:229:10)
+    at cluster._getServer (node:internal/cluster/child:100:3)
+    at listenInCluster (node:net:1547:11)
+    at Server.listen (node:net:1621:7)
+    at Function.listen (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/application.js:635:24)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/index.js:28:18
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)

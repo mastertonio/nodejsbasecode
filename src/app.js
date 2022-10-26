@@ -19,6 +19,7 @@ const cookieParser = require("cookie-parser");
 // const header = new Headers();
 const MongoDBSession = require('connect-mongodb-session');
 const session = require('express-session');
+// const cookieSession = require("coo")
 
 
   const app = express();
@@ -56,40 +57,8 @@ const session = require('express-session');
   // (All)10mins- if no activity
  
 
-    // enable cors
-    const corsOptions = {
-      origin: 'http://localhost:3000',
-      credentials: true
-  }
-    app.use(cors(corsOptions));
-    // app.options('*', cors());
-
-  // app.use(cors({
-  //   'allowedHeaders': ['sessionId', 'Content-Type'],
-  //   'exposedHeaders': ['sessionId'],
-  //   'origin': '*',
-  //   'methods': 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  //   'preflightContinue': false
-  // }));
-  // app.use((req, res, next) => {
-  //   //allow access from every, elminate CORS
-  //   res.setHeader('Access-Control-Allow-Origin','*');
-  //   res.removeHeader('x-powered-by');
-  //   //set the allowed HTTP methods to be requested
-  //   res.setHeader('Access-Control-Allow-Methods','POST');
-  //   //headers clients can use in their requests
-  //   res.setHeader('Access-Control-Allow-Headers','Content-Type');
-  //   //allow request to continue and be handled by routes
-  //   next();
-  // });
-  
-  app.use((req,res,next)=>{
-    req.headers['authorization'] = `Bearer ${req.cookies['x-access-token']}`;
-    // res.headers("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
-    // res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
-    
-    next();
-  });
+  // enable cors
+  app.use(cors(config.corsOption));
   app.use(
     session({
         secret: config.cookie,
