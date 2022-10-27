@@ -104,32 +104,33 @@ app.use((req,res,next)=>{
   next();
 });
 
-app.use(
-  session({
-      secret: config.cookie,
-      resave: false,
-      saveUninitialized: false,
-      store:store,
-      maxAge: 24 * 60 * 60 * 100,
-      httpOnly: true,
-      SameSite:'None',
-      SameSite: 'Strict',
-      secure: true,
-
- })
-);
-
 // app.use(
-//     cookieSession({
-//       name: "__session",
-//       keys: ["key1"],
-//         maxAge: 24 * 60 * 60 * 100,
-//         secure: true,
-//         httpOnly: true,
-//         sameSite: 'None',
-//         SameSite:'Lax'
-//     })
+//   session({
+//       secret: config.cookie,
+//       resave: false,
+//       saveUninitialized: false,
+//       store:store,
+//       maxAge: 24 * 60 * 60 * 100,
+//       httpOnly: true,
+//       SameSite:'None',
+//       SameSite: 'Lax',
+//       secure: true,
+
+//  })
 // );
+
+app.use(
+    cookieSession({
+      name: "__session",
+      keys: ["key1"],
+        maxAge: 24 * 60 * 60 * 100,
+        secure: true,
+        httpOnly: true,
+        sameSite: 'None',
+        SameSite:'Lax',
+        store:store,
+    })
+);
 
 
   // jwt authentication
