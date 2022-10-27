@@ -19,7 +19,7 @@ const cookieParser = require("cookie-parser");
 // const header = new Headers();
 const MongoDBSession = require('connect-mongodb-session');
 const session = require('express-session');
-// const cookieSession = require("coo")
+const cookieSession = require("cookie-session")
 
 
   const app = express();
@@ -84,18 +84,17 @@ const session = require('express-session');
 // });
 
 
-  app.use(
-    session({
-        secret: config.cookie,
-        resave: false,
-        saveUninitialized: false,
-        store:store,
-        cookie: {
-          SameSite: 'none',
-          maxAge: 1000 * 60 * 60 * 60
-      }
-   })
-  );
+app.set('trust proxy', 1)
+app.use(
+    cookieSession({
+      name: "__session",
+      keys: ["key1"],
+        maxAge: 24 * 60 * 60 * 100,
+        secure: true,
+        httpOnly: true,
+        sameSite: 'none'
+    })
+);
 
 
   // jwt authentication
