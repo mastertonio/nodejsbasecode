@@ -57,13 +57,18 @@ const { NO_CONTENT } = require('http-status');
 
   // (All)10mins- if no activity
  
-
+  var allowlist = ['http://localhost:3000', 'http://localhost:3001']
+  var corsOptionsDelegate = function (req, callback) {
+    var corsOptions;
+    if (allowlist.indexOf(req.header('Origin')) !== -1) {
+      corsOptions = { origin: true } // reflect (enable) the requested origin in the CORS response
+    } else {
+      corsOptions = { origin: false } // disable CORS for this request
+    }
+    callback(null, corsOptions) // callback expects two parameters: error and options
+  }
   // enable cors
-  app.use(cors({
-    origin:'http://localhost:3000',
-    credentials: true
-  })
-  // );
+  app.use(cors(corsOptionsDelegate));
   // Add headers
 // app.use(function (req, res, next) {
 
