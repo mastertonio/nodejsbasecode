@@ -89,7 +89,11 @@ const session = require('express-session');
         secret: config.cookie,
         resave: false,
         saveUninitialized: false,
-        store:store
+        store:store,
+        cookie: {
+          SameSite: 'none',
+          maxAge: 1000 * 60 * 60 * 60
+      }
    })
   );
 
