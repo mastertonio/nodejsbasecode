@@ -56,9 +56,9 @@ const session = require('express-session');
 
   // (All)10mins- if no activity
  
-
   // enable cors
-  app.use(cors(config.corsOption));
+  app.use(cors());
+  app.options('*', cors());
   app.use(
     session({
         secret: config.cookie,
