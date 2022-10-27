@@ -113,6 +113,7 @@ app.use(
       maxAge: 24 * 60 * 60 * 100,
       httpOnly: true,
       SameSite:'None',
+      SameSite: 'Strict',
       secure: true,
 
  })
