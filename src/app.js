@@ -124,7 +124,7 @@ app.use(
       name: "__session",
       keys: ["key1"],
         maxAge: 24 * 60 * 60 * 100,
-        secure: true,
+        secure: false,
         httpOnly: true,
         sameSite:'Lax',
         store:store,
