@@ -58,14 +58,6 @@ const cookieSession = require("cookie-session")
  
 
   // enable cors
-  app.use((req, res, next) => {
-    res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
-    res.header(
-      "Access-Control-Allow-Headers",
-      "Origin, X-Requested-With, Content-Type, Accept"
-    );
-    next();
-  });
   // app.use(cors({
   //   origin:'http://localhost:3000',
   //   credentials: true
@@ -92,18 +84,45 @@ const cookieSession = require("cookie-session")
 // });
 
 
-app.set('trust proxy', 1)
+app.use(cors({
+  'allowedHeaders': ['sessionId', 'Content-Type'],
+  'exposedHeaders': ['sessionId'],
+  'origin':'http://localhost:3000',
+  'credentials': true,
+  'methods': 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  'preflightContinue': true
+}));
+
+app.use((req,res,next)=>{
+  req.headers['authorization'] = `Bearer ${req.cookies['x-access-token']}`;
+  // res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+
+  // res.headers("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
+  // res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
+  
+  next();
+});
+
 app.use(
-    cookieSession({
-      name: "__session",
-      keys: ["key1"],
-        maxAge: 24 * 60 * 60 * 100,
-        secure: true,
-        httpOnly: true,
-        sameSite: 'None',
-        SameSite:Lax
-    })
+  session({
+      secret: config.cookie,
+      resave: false,
+      saveUninitialized: false,
+      store:store
+ })
 );
+
+// app.use(
+//     cookieSession({
+//       name: "__session",
+//       keys: ["key1"],
+//         maxAge: 24 * 60 * 60 * 100,
+//         secure: true,
+//         httpOnly: true,
+//         sameSite: 'None',
+//         SameSite:Lax
+//     })
+// );
 
 
   // jwt authentication
