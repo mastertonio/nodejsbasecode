@@ -58,7 +58,7 @@ const session = require('express-session');
  
   // enable cors
   app.use(cors());
-  app.options('*', cors());
+  app.options('http://localhost:3000/', cors());
   app.use(
     session({
         secret: config.cookie,
