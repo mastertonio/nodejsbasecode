@@ -96,7 +96,7 @@ app.use(cors({
 
 app.use((req,res,next)=>{
   req.headers['authorization'] = `Bearer ${req.cookies['x-access-token']}`;
-  // res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+  res.headers('Access-Control-Allow-Origin', ['*','http://localhost:3000']);
 
   // res.headers("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
   // res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
@@ -127,7 +127,7 @@ app.use(
         secure: true,
         httpOnly: true,
         sameSite: 'None',
-        SameSite:Lax
+        SameSite:'Lax'
     })
 );
 
