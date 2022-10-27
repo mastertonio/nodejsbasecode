@@ -19,7 +19,8 @@ const cookieParser = require("cookie-parser");
 // const header = new Headers();
 const MongoDBSession = require('connect-mongodb-session');
 const session = require('express-session');
-const cookieSession = require("cookie-session")
+const cookieSession = require("cookie-session");
+const { NO_CONTENT } = require('http-status');
 
 
   const app = express();
@@ -109,7 +110,10 @@ app.use(
       resave: false,
       saveUninitialized: false,
       store:store,
-      sameSite: 'Lax',
+      maxAge: 24 * 60 * 60 * 100,
+      httpOnly: true,
+      SameSite:'Lax',
+      SameSite:'None',
       secure: true,
 
  })
