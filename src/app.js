@@ -59,10 +59,10 @@ const { NO_CONTENT } = require('http-status');
  
 
   // enable cors
-  // app.use(cors({
-  //   origin:'http://localhost:3000',
-  //   credentials: true
-  // })
+  app.use(cors({
+    origin:'http://localhost:3000',
+    credentials: true
+  })
   // );
   // Add headers
 // app.use(function (req, res, next) {
@@ -85,14 +85,14 @@ const { NO_CONTENT } = require('http-status');
 // });
 
 
-app.use(cors({
-  'allowedHeaders': ['sessionId', 'Content-Type'],
-  'exposedHeaders': ['sessionId'],
-  'origin':'http://localhost:3000',
-  'credentials': true,
-  'methods': 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  'preflightContinue': false
-}));
+// app.use(cors({
+//   'allowedHeaders': ['sessionId', 'Content-Type'],
+//   'exposedHeaders': ['sessionId'],
+//   'origin':'http://localhost:3000',
+//   'credentials': true,
+//   'methods': 'GET,HEAD,PUT,PATCH,POST,DELETE',
+//   'preflightContinue': false
+// }));
 
 app.use((req,res,next)=>{
   req.headers['authorization'] = `Bearer ${req.cookies['x-access-token']}`;
