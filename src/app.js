@@ -108,7 +108,10 @@ app.use(
       secret: config.cookie,
       resave: false,
       saveUninitialized: false,
-      store:store
+      store:store,
+      sameSite: 'Lax',
+      secure: true,
+
  })
 );
 
