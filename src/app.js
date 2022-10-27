@@ -58,7 +58,11 @@ const session = require('express-session');
  
 
   // enable cors
-  // app.use(cors(config.corsOption));
+  app.use(cors({
+    origin:'http://localhost:3000',
+    credentials: true
+  })
+  );
   // Add headers
 app.use(function (req, res, next) {
 
