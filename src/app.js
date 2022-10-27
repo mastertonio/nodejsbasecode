@@ -124,10 +124,10 @@ app.use(
       name: "__session",
       keys: ["key1"],
         maxAge: 24 * 60 * 60 * 100,
-        secure: false,
+        secure: true,
         httpOnly: true,
         sameSite: 'None',
-        SameSite:'Lax',
+        sameSite:'Lax',
         store:store,
     })
 );
