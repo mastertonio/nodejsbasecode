@@ -15,7 +15,7 @@ const login = catchAsync(async (req, res) => {
   const tokens = await tokenService.generateAuthTokens(user, req );
   res.cookie('x-access-token', 
     tokens.access.token,
-    { maxAge: 1000 * 60 * 10, httpOnly: true, sameSite: 'none', secure: true }
+    { maxAge: 1000 * 60 * 10, httpOnly: true, sameSite: 'none', secure: false }
     ); 
   res.send({ user, tokens });
 });
