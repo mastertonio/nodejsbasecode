@@ -13,10 +13,8 @@ const login = catchAsync(async (req, res) => {
  
   const user = await authService.loginUserWithEmailAndPassword(email, password);
   const tokens = await tokenService.generateAuthTokens(user, req );
-  res.setHeader('Set-Cookie', tokens.access.token);
   res.cookie('x-access-token', 
-    tokens.access.token,
-    { maxAge: 1000 * 60 * 10, httpOnly: true, sameSite: 'none', secure: true }
+    tokens.access.token
     ); 
   res.send({ user, tokens });
 });

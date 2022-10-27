@@ -126,7 +126,6 @@ app.use(
         maxAge: 24 * 60 * 60 * 100,
         secure: true,
         httpOnly: true,
-        sameSite: 'None',
         sameSite:'Lax',
         store:store,
     })
