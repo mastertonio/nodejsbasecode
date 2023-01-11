@@ -8,8 +8,28 @@ const {builderController} = require('../../controllers');
 const router = express.Router();
 
 router
-  .route('/:template_id')
+  .route('/:templateVersion_id')
   .post(auth('createROI'), validate(builder.createROI), builderController.createROI);
+
+router
+  .route('/:templateVersion_id/:templateBuilder_id')
+  .get(auth('getBuildTemplate'), validate(builder.getBuildTempalate), builderController.getTemplateBuild)
+
+
+//logo
+
+
+
+//header
+
+
+//menu
+
+
+
+//section
+
+
 
 
 
