@@ -18420,3 +18420,854 @@ Content-Disposition: form-data; name" is not allowed
     at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:34:10
     at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
 [31merror[39m: GET /v1/dashboard/template/list 401 - 2.254 ms - message: Please authenticate
+[31merror[39m: MongoError: PlanExecutor error during aggregation :: caused by :: Total size of documents in templateversions matching pipeline's $lookup stage exceeds 16793600 bytes
+    at MessageStream.messageHandler (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/mongodb/lib/cmap/connection.js:299:20)
+    at MessageStream.emit (node:events:513:28)
+    at MessageStream.emit (node:domain:489:12)
+    at processIncomingData (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/mongodb/lib/cmap/message_stream.js:144:12)
+    at MessageStream._write (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/mongodb/lib/cmap/message_stream.js:42:5)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Writable.write (node:internal/streams/writable:337:10)
+    at TLSSocket.ondata (node:internal/streams/readable:766:22)
+    at TLSSocket.emit (node:events:513:28)
+    at TLSSocket.emit (node:domain:489:12)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TLSWrap.onStreamRead (node:internal/stream_base_commons:190:23)
+[31merror[39m: GET /v1/dashboard/template/list 500 - 581.054 ms - message: PlanExecutor error during aggregation :: caused by :: Total size of documents in templateversions matching pipeline's $lookup stage exceeds 16793600 bytes
+[31merror[39m: TypeError: Template.aggregate(...).useCursor is not a function
+    at getAllTemplate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/dashboard.service.js:45:42)
+    at Object.getRoiTemplates (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/dashboard.service.js:828:17)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/controllers/dashboard.controller.js:189:42
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[31merror[39m: GET /v1/dashboard/template/list 500 - 132.365 ms - message: Template.aggregate(...).useCursor is not a function
+[31merror[39m: Error: Please authenticate
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:13:19
+    at allFailed (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:110:18)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:183:28)
+    at strategy.fail (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:305:9)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:106:33
+    at module.exports [as verify] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/jsonwebtoken/verify.js:70:12)
+    at module.exports [as JwtVerifier] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/verify_jwt.js:4:16)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:40:13)
+    at JwtStrategy.authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:99:10)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:369:16)
+    at authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:370:7)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:35:107
+    at new Promise (<anonymous>)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:34:10
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+[31merror[39m: GET /v1/dashboard/template/list 401 - 9.520 ms - message: Please authenticate
+[31merror[39m: MongoError: PlanExecutor error during aggregation :: caused by :: Total size of documents in templateversions matching pipeline's $lookup stage exceeds 16793600 bytes
+    at MessageStream.messageHandler (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/mongodb/lib/cmap/connection.js:299:20)
+    at MessageStream.emit (node:events:513:28)
+    at MessageStream.emit (node:domain:489:12)
+    at processIncomingData (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/mongodb/lib/cmap/message_stream.js:144:12)
+    at MessageStream._write (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/mongodb/lib/cmap/message_stream.js:42:5)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Writable.write (node:internal/streams/writable:337:10)
+    at TLSSocket.ondata (node:internal/streams/readable:766:22)
+    at TLSSocket.emit (node:events:513:28)
+    at TLSSocket.emit (node:domain:489:12)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TLSWrap.onStreamRead (node:internal/stream_base_commons:190:23)
+[31merror[39m: GET /v1/dashboard/template/list 500 - 539.115 ms - message: PlanExecutor error during aggregation :: caused by :: Total size of documents in templateversions matching pipeline's $lookup stage exceeds 16793600 bytes
+[31merror[39m: MongoError: PlanExecutor error during aggregation :: caused by :: Total size of documents in templateversions matching pipeline's $lookup stage exceeds 16793600 bytes
+    at MessageStream.messageHandler (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/mongodb/lib/cmap/connection.js:299:20)
+    at MessageStream.emit (node:events:513:28)
+    at MessageStream.emit (node:domain:489:12)
+    at processIncomingData (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/mongodb/lib/cmap/message_stream.js:144:12)
+    at MessageStream._write (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/mongodb/lib/cmap/message_stream.js:42:5)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Writable.write (node:internal/streams/writable:337:10)
+    at TLSSocket.ondata (node:internal/streams/readable:766:22)
+    at TLSSocket.emit (node:events:513:28)
+    at TLSSocket.emit (node:domain:489:12)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TLSWrap.onStreamRead (node:internal/stream_base_commons:190:23)
+[31merror[39m: GET /v1/dashboard/template/list 500 - 518.359 ms - message: PlanExecutor error during aggregation :: caused by :: Total size of documents in templateversions matching pipeline's $lookup stage exceeds 16793600 bytes
+[31merror[39m: MongoError: PlanExecutor error during aggregation :: caused by :: Total size of documents in templateversions matching pipeline's $lookup stage exceeds 16793600 bytes
+    at MessageStream.messageHandler (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/mongodb/lib/cmap/connection.js:299:20)
+    at MessageStream.emit (node:events:513:28)
+    at MessageStream.emit (node:domain:489:12)
+    at processIncomingData (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/mongodb/lib/cmap/message_stream.js:144:12)
+    at MessageStream._write (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/mongodb/lib/cmap/message_stream.js:42:5)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Writable.write (node:internal/streams/writable:337:10)
+    at TLSSocket.ondata (node:internal/streams/readable:766:22)
+    at TLSSocket.emit (node:events:513:28)
+    at TLSSocket.emit (node:domain:489:12)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TLSWrap.onStreamRead (node:internal/stream_base_commons:190:23)
+[31merror[39m: GET /v1/dashboard/template/list 500 - 586.867 ms - message: PlanExecutor error during aggregation :: caused by :: Total size of documents in templateversions matching pipeline's $lookup stage exceeds 16793600 bytes
+[31merror[39m: MongoError: PlanExecutor error during aggregation :: caused by :: Total size of documents in templateversions matching pipeline's $lookup stage exceeds 16793600 bytes
+    at MessageStream.messageHandler (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/mongodb/lib/cmap/connection.js:299:20)
+    at MessageStream.emit (node:events:513:28)
+    at MessageStream.emit (node:domain:489:12)
+    at processIncomingData (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/mongodb/lib/cmap/message_stream.js:144:12)
+    at MessageStream._write (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/mongodb/lib/cmap/message_stream.js:42:5)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Writable.write (node:internal/streams/writable:337:10)
+    at TLSSocket.ondata (node:internal/streams/readable:766:22)
+    at TLSSocket.emit (node:events:513:28)
+    at TLSSocket.emit (node:domain:489:12)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TLSWrap.onStreamRead (node:internal/stream_base_commons:190:23)
+[31merror[39m: GET /v1/dashboard/template/list 500 - 596.457 ms - message: PlanExecutor error during aggregation :: caused by :: Total size of documents in templateversions matching pipeline's $lookup stage exceeds 16793600 bytes
+[31merror[39m: MongoError: PlanExecutor error during aggregation :: caused by :: Total size of documents in templateversions matching pipeline's $lookup stage exceeds 16793600 bytes
+    at MessageStream.messageHandler (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/mongodb/lib/cmap/connection.js:299:20)
+    at MessageStream.emit (node:events:513:28)
+    at MessageStream.emit (node:domain:489:12)
+    at processIncomingData (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/mongodb/lib/cmap/message_stream.js:144:12)
+    at MessageStream._write (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/mongodb/lib/cmap/message_stream.js:42:5)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Writable.write (node:internal/streams/writable:337:10)
+    at TLSSocket.ondata (node:internal/streams/readable:766:22)
+    at TLSSocket.emit (node:events:513:28)
+    at TLSSocket.emit (node:domain:489:12)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TLSWrap.onStreamRead (node:internal/stream_base_commons:190:23)
+[31merror[39m: GET /v1/dashboard/template/list 500 - 514.040 ms - message: PlanExecutor error during aggregation :: caused by :: Total size of documents in templateversions matching pipeline's $lookup stage exceeds 16793600 bytes
+[31merror[39m: Error: Please authenticate
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:13:19
+    at allFailed (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:110:18)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:183:28)
+    at strategy.fail (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:305:9)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:106:33
+    at module.exports [as verify] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/jsonwebtoken/verify.js:70:12)
+    at module.exports [as JwtVerifier] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/verify_jwt.js:4:16)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:40:13)
+    at JwtStrategy.authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:99:10)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:369:16)
+    at authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:370:7)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:35:107
+    at new Promise (<anonymous>)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:34:10
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+[31merror[39m: GET /v1/dashboard/template/list 401 - 8.979 ms - message: Please authenticate
+[31merror[39m: MongoError: PlanExecutor error during aggregation :: caused by :: Total size of documents in templateversions matching pipeline's $lookup stage exceeds 16793600 bytes
+    at MessageStream.messageHandler (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/mongodb/lib/cmap/connection.js:299:20)
+    at MessageStream.emit (node:events:513:28)
+    at MessageStream.emit (node:domain:489:12)
+    at processIncomingData (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/mongodb/lib/cmap/message_stream.js:144:12)
+    at MessageStream._write (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/mongodb/lib/cmap/message_stream.js:42:5)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Writable.write (node:internal/streams/writable:337:10)
+    at TLSSocket.ondata (node:internal/streams/readable:766:22)
+    at TLSSocket.emit (node:events:513:28)
+    at TLSSocket.emit (node:domain:489:12)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TLSWrap.onStreamRead (node:internal/stream_base_commons:190:23)
+[31merror[39m: GET /v1/dashboard/template/list 500 - 904.684 ms - message: PlanExecutor error during aggregation :: caused by :: Total size of documents in templateversions matching pipeline's $lookup stage exceeds 16793600 bytes
+[31merror[39m: MongooseError: Callback must be a function, got [object Object]
+    at Model.$handleCallbackError (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/mongoose/lib/model.js:5067:11)
+    at Function.aggregate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/mongoose/lib/model.js:4235:19)
+    at getAllTemplate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/dashboard.service.js:45:21)
+    at Object.getRoiTemplates (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/dashboard.service.js:828:17)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/controllers/dashboard.controller.js:189:42
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[31merror[39m: GET /v1/dashboard/template/list 400 - 377.257 ms - message: Callback must be a function, got [object Object]
+[31merror[39m: MongooseError: Callback must be a function, got [object Object]
+    at Model.$handleCallbackError (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/mongoose/lib/model.js:5067:11)
+    at Function.aggregate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/mongoose/lib/model.js:4235:19)
+    at getAllTemplate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/dashboard.service.js:45:21)
+    at Object.getRoiTemplates (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/dashboard.service.js:828:17)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/controllers/dashboard.controller.js:189:42
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[31merror[39m: GET /v1/dashboard/template/list 400 - 112.380 ms - message: Callback must be a function, got [object Object]
+[31merror[39m: MongoError: PlanExecutor error during aggregation :: caused by :: Total size of documents in templateversions matching pipeline's $lookup stage exceeds 16793600 bytes
+    at MessageStream.messageHandler (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/mongodb/lib/cmap/connection.js:299:20)
+    at MessageStream.emit (node:events:513:28)
+    at MessageStream.emit (node:domain:489:12)
+    at processIncomingData (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/mongodb/lib/cmap/message_stream.js:144:12)
+    at MessageStream._write (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/mongodb/lib/cmap/message_stream.js:42:5)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Writable.write (node:internal/streams/writable:337:10)
+    at TLSSocket.ondata (node:internal/streams/readable:766:22)
+    at TLSSocket.emit (node:events:513:28)
+    at TLSSocket.emit (node:domain:489:12)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TLSWrap.onStreamRead (node:internal/stream_base_commons:190:23)
+[31merror[39m: GET /v1/dashboard/template/list 500 - 1276.587 ms - message: PlanExecutor error during aggregation :: caused by :: Total size of documents in templateversions matching pipeline's $lookup stage exceeds 16793600 bytes
+[31merror[39m: MongooseError: Callback must be a function, got [object Object]
+    at Model.$handleCallbackError (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/mongoose/lib/model.js:5067:11)
+    at Function.aggregate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/mongoose/lib/model.js:4235:19)
+    at getAllTemplate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/dashboard.service.js:45:21)
+    at Object.getRoiTemplates (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/dashboard.service.js:828:17)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/controllers/dashboard.controller.js:189:42
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[31merror[39m: GET /v1/dashboard/template/list 400 - 391.824 ms - message: Callback must be a function, got [object Object]
+[31merror[39m: MongooseError: Callback must be a function, got [object Object]
+    at Model.$handleCallbackError (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/mongoose/lib/model.js:5067:11)
+    at Function.aggregate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/mongoose/lib/model.js:4235:19)
+    at getAllTemplate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/dashboard.service.js:45:31)
+    at Object.getRoiTemplates (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/dashboard.service.js:830:17)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/controllers/dashboard.controller.js:189:42
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[31merror[39m: GET /v1/dashboard/template/list 400 - 139.562 ms - message: Callback must be a function, got [object Object]
+[31merror[39m: MongoError: PlanExecutor error during aggregation :: caused by :: Total size of documents in templateversions matching pipeline's $lookup stage exceeds 16793600 bytes
+    at MessageStream.messageHandler (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/mongodb/lib/cmap/connection.js:299:20)
+    at MessageStream.emit (node:events:513:28)
+    at MessageStream.emit (node:domain:489:12)
+    at processIncomingData (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/mongodb/lib/cmap/message_stream.js:144:12)
+    at MessageStream._write (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/mongodb/lib/cmap/message_stream.js:42:5)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Writable.write (node:internal/streams/writable:337:10)
+    at TLSSocket.ondata (node:internal/streams/readable:766:22)
+    at TLSSocket.emit (node:events:513:28)
+    at TLSSocket.emit (node:domain:489:12)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TLSWrap.onStreamRead (node:internal/stream_base_commons:190:23)
+[31merror[39m: GET /v1/dashboard/template/list 500 - 1277.508 ms - message: PlanExecutor error during aggregation :: caused by :: Total size of documents in templateversions matching pipeline's $lookup stage exceeds 16793600 bytes
+[31merror[39m: Error: Please authenticate
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:13:19
+    at allFailed (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:110:18)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:183:28)
+    at strategy.fail (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:305:9)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:106:33
+    at module.exports [as verify] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/jsonwebtoken/verify.js:70:12)
+    at module.exports [as JwtVerifier] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/verify_jwt.js:4:16)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:40:13)
+    at JwtStrategy.authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:99:10)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:369:16)
+    at authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:370:7)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:35:107
+    at new Promise (<anonymous>)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:34:10
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+[31merror[39m: GET /v1/dashboard/template/list 401 - 11.163 ms - message: Please authenticate
+[31merror[39m: MongoError: PlanExecutor error during aggregation :: caused by :: Total size of documents in templateversions matching pipeline's $lookup stage exceeds 16793600 bytes
+    at MessageStream.messageHandler (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/mongodb/lib/cmap/connection.js:299:20)
+    at MessageStream.emit (node:events:513:28)
+    at MessageStream.emit (node:domain:489:12)
+    at processIncomingData (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/mongodb/lib/cmap/message_stream.js:144:12)
+    at MessageStream._write (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/mongodb/lib/cmap/message_stream.js:42:5)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Writable.write (node:internal/streams/writable:337:10)
+    at TLSSocket.ondata (node:internal/streams/readable:766:22)
+    at TLSSocket.emit (node:events:513:28)
+    at TLSSocket.emit (node:domain:489:12)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TLSWrap.onStreamRead (node:internal/stream_base_commons:190:23)
+[31merror[39m: GET /v1/dashboard/template/list 500 - 1260.378 ms - message: PlanExecutor error during aggregation :: caused by :: Total size of documents in templateversions matching pipeline's $lookup stage exceeds 16793600 bytes
+[31merror[39m: MongoError: PlanExecutor error during aggregation :: caused by :: Total size of documents in templateversions matching pipeline's $lookup stage exceeds 16793600 bytes
+    at MessageStream.messageHandler (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/mongodb/lib/cmap/connection.js:299:20)
+    at MessageStream.emit (node:events:513:28)
+    at MessageStream.emit (node:domain:489:12)
+    at processIncomingData (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/mongodb/lib/cmap/message_stream.js:144:12)
+    at MessageStream._write (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/mongodb/lib/cmap/message_stream.js:42:5)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Writable.write (node:internal/streams/writable:337:10)
+    at TLSSocket.ondata (node:internal/streams/readable:766:22)
+    at TLSSocket.emit (node:events:513:28)
+    at TLSSocket.emit (node:domain:489:12)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TLSWrap.onStreamRead (node:internal/stream_base_commons:190:23)
+[31merror[39m: GET /v1/dashboard/template/list 500 - 1258.458 ms - message: PlanExecutor error during aggregation :: caused by :: Total size of documents in templateversions matching pipeline's $lookup stage exceeds 16793600 bytes
+[31merror[39m: MongoError: PlanExecutor error during aggregation :: caused by :: Total size of documents in templateversions matching pipeline's $lookup stage exceeds 16793600 bytes
+    at MessageStream.messageHandler (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/mongodb/lib/cmap/connection.js:299:20)
+    at MessageStream.emit (node:events:513:28)
+    at MessageStream.emit (node:domain:489:12)
+    at processIncomingData (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/mongodb/lib/cmap/message_stream.js:144:12)
+    at MessageStream._write (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/mongodb/lib/cmap/message_stream.js:42:5)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Writable.write (node:internal/streams/writable:337:10)
+    at TLSSocket.ondata (node:internal/streams/readable:766:22)
+    at TLSSocket.emit (node:events:513:28)
+    at TLSSocket.emit (node:domain:489:12)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TLSWrap.onStreamRead (node:internal/stream_base_commons:190:23)
+[31merror[39m: GET /v1/dashboard/template/list 500 - 1281.375 ms - message: PlanExecutor error during aggregation :: caused by :: Total size of documents in templateversions matching pipeline's $lookup stage exceeds 16793600 bytes
+[31merror[39m: MongoError: PlanExecutor error during aggregation :: caused by :: Total size of documents in templateversions matching pipeline's $lookup stage exceeds 16793600 bytes
+    at MessageStream.messageHandler (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/mongodb/lib/cmap/connection.js:299:20)
+    at MessageStream.emit (node:events:513:28)
+    at MessageStream.emit (node:domain:489:12)
+    at processIncomingData (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/mongodb/lib/cmap/message_stream.js:144:12)
+    at MessageStream._write (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/mongodb/lib/cmap/message_stream.js:42:5)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Writable.write (node:internal/streams/writable:337:10)
+    at TLSSocket.ondata (node:internal/streams/readable:766:22)
+    at TLSSocket.emit (node:events:513:28)
+    at TLSSocket.emit (node:domain:489:12)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TLSWrap.onStreamRead (node:internal/stream_base_commons:190:23)
+[31merror[39m: GET /v1/dashboard/template/list 500 - 1253.875 ms - message: PlanExecutor error during aggregation :: caused by :: Total size of documents in templateversions matching pipeline's $lookup stage exceeds 16793600 bytes
+[31merror[39m: MongoError: PlanExecutor error during aggregation :: caused by :: Total size of documents in templateversions matching pipeline's $lookup stage exceeds 16793600 bytes
+    at MessageStream.messageHandler (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/mongodb/lib/cmap/connection.js:299:20)
+    at MessageStream.emit (node:events:513:28)
+    at MessageStream.emit (node:domain:489:12)
+    at processIncomingData (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/mongodb/lib/cmap/message_stream.js:144:12)
+    at MessageStream._write (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/mongodb/lib/cmap/message_stream.js:42:5)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Writable.write (node:internal/streams/writable:337:10)
+    at TLSSocket.ondata (node:internal/streams/readable:766:22)
+    at TLSSocket.emit (node:events:513:28)
+    at TLSSocket.emit (node:domain:489:12)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TLSWrap.onStreamRead (node:internal/stream_base_commons:190:23)
+[31merror[39m: GET /v1/dashboard/template/list 500 - 1274.134 ms - message: PlanExecutor error during aggregation :: caused by :: Total size of documents in templateversions matching pipeline's $lookup stage exceeds 16793600 bytes
+[31merror[39m: Error: Please authenticate
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:13:19
+    at allFailed (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:110:18)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:183:28)
+    at strategy.fail (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:305:9)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:106:33
+    at module.exports [as verify] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/jsonwebtoken/verify.js:70:12)
+    at module.exports [as JwtVerifier] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/verify_jwt.js:4:16)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:40:13)
+    at JwtStrategy.authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:99:10)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:369:16)
+    at authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:370:7)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:35:107
+    at new Promise (<anonymous>)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:34:10
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+[31merror[39m: GET /v1/templateBuilder/628779c3ec4e045f4806f775/637766339ecaa37f5165cae8 401 - 9.993 ms - message: Please authenticate
+[31merror[39m: Error: Incorrect email or password
+    at Object.loginUserWithEmailAndPassword (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/auth.service.js:17:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/controllers/auth.controller.js:14:16
+[31merror[39m: POST /v1/auth/login 401 - 645.151 ms - message: Incorrect email or password
+[31merror[39m: Error: Please authenticate
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:13:19
+    at allFailed (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:110:18)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:183:28)
+    at strategy.fail (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:305:9)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:106:33
+    at module.exports [as verify] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/jsonwebtoken/verify.js:70:12)
+    at module.exports [as JwtVerifier] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/verify_jwt.js:4:16)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:40:13)
+    at JwtStrategy.authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:99:10)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:369:16)
+    at authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:370:7)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:35:107
+    at new Promise (<anonymous>)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:34:10
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+[31merror[39m: PUT /v1/dashboard/6298548c95e432514d017b3b 401 - 155.274 ms - message: Please authenticate
+[31merror[39m: Error: Calculator Template not found
+    at Object.updateStatus (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/dashboard.service.js:269:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/controllers/dashboard.controller.js:45:18
+[31merror[39m: PUT /v1/dashboard/6298548c95e432514d017b3b 404 - 134.328 ms - message: Calculator Template not found
+[31merror[39m: Error: Please authenticate
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:13:19
+    at allFailed (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:110:18)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:183:28)
+    at strategy.fail (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:305:9)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:106:33
+    at module.exports [as verify] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/jsonwebtoken/verify.js:70:12)
+    at module.exports [as JwtVerifier] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/verify_jwt.js:4:16)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:40:13)
+    at JwtStrategy.authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:99:10)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:369:16)
+    at authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:370:7)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:35:107
+    at new Promise (<anonymous>)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:34:10
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+[31merror[39m: PUT /v1/dashboard/6298548c95e432514d017b3b 401 - 19.839 ms - message: Please authenticate
+[31merror[39m: Error: Calculator Template not found
+    at Object.updateStatus (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/dashboard.service.js:269:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/controllers/dashboard.controller.js:45:18
+[31merror[39m: PUT /v1/dashboard/6298548c95e432514d017b3b 404 - 160.572 ms - message: Calculator Template not found
+[31merror[39m: Error: Please authenticate
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:13:19
+    at allFailed (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:110:18)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:183:28)
+    at strategy.fail (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:305:9)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:106:33
+    at module.exports [as verify] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/jsonwebtoken/verify.js:70:12)
+    at module.exports [as JwtVerifier] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/verify_jwt.js:4:16)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:40:13)
+    at JwtStrategy.authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:99:10)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:369:16)
+    at authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:370:7)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:35:107
+    at new Promise (<anonymous>)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:34:10
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+[31merror[39m: PUT /v1/dashboard/6298548c95e432514d017b3b 401 - 18.202 ms - message: Please authenticate
+[31merror[39m: Error: Calculator Template not found
+    at Object.updateStatus (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/dashboard.service.js:269:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/controllers/dashboard.controller.js:45:18
+[31merror[39m: PUT /v1/dashboard/6298548c95e432514d017b3b 404 - 138.897 ms - message: Calculator Template not found
+[31merror[39m: Error: Calculator Template not found
+    at Object.updateStatus (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/dashboard.service.js:269:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/controllers/dashboard.controller.js:45:18
+[31merror[39m: PUT /v1/dashboard/6298548c95e432514d017b3b 404 - 134.260 ms - message: Calculator Template not found
+[31merror[39m: Error: Calculator Template not found
+    at Object.updateStatus (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/dashboard.service.js:269:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/controllers/dashboard.controller.js:45:18
+[31merror[39m: PUT /v1/dashboard/6298548c95e432514d017b3b 404 - 135.399 ms - message: Calculator Template not found
+[31merror[39m: Error: Not found
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/app.js:117:10
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:328:13)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:280:10)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:646:15
+    at next (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:265:14)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:646:15
+    at next (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:265:14)
+    at Function.handle (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:175:3)
+    at router (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:328:13)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:346:12)
+[31merror[39m: PUT /v1/dashboard/importance/628cf05ca04994535d8f284b/6298548c95e432514d017b3b 404 - 16.428 ms - message: Not found
+[31merror[39m: Error: Not found
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/app.js:117:10
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:328:13)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:280:10)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:646:15
+    at next (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:265:14)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:646:15
+    at next (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:265:14)
+    at Function.handle (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:175:3)
+    at router (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:328:13)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:346:12)
+[31merror[39m: PUT /v1/dashboard/importance/628cf05ca04994535d8f284b/6298548c95e432514d017b3b 404 - 6.204 ms - message: Not found
+[31merror[39m: TypeError: Cannot read properties of undefined (reading '_id')
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/company.service.js:185:68
+    at Array.map (<anonymous>)
+    at Object.companyUserAccount (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/company.service.js:158:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/controllers/company.controller.js:750:33
+[31merror[39m: GET /v1/company/62b2a6f9061ed2a095b55555/user 500 - 286.489 ms - message: Cannot read properties of undefined (reading '_id')
+[31merror[39m: TypeError: Cannot read properties of undefined (reading '_id')
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/company.service.js:185:68
+    at Array.map (<anonymous>)
+    at Object.companyUserAccount (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/company.service.js:158:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/controllers/company.controller.js:750:33
+[31merror[39m: GET /v1/company/62b2a6f9061ed2a095b55555/user 500 - 334.626 ms - message: Cannot read properties of undefined (reading '_id')
+[31merror[39m: TypeError: Cannot read properties of undefined (reading '_id')
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/company.service.js:185:68
+    at Array.map (<anonymous>)
+    at Object.companyUserAccount (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/company.service.js:158:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/controllers/company.controller.js:750:33
+[31merror[39m: GET /v1/company/62b2a6f9061ed2a095b55555/user 500 - 297.125 ms - message: Cannot read properties of undefined (reading '_id')
+[31merror[39m: TypeError: Cannot read properties of undefined (reading '_id')
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/company.service.js:185:68
+    at Array.map (<anonymous>)
+    at Object.companyUserAccount (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/company.service.js:158:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/controllers/company.controller.js:750:33
+[31merror[39m: GET /v1/company/62b2a6f9061ed2a095b55555/user 500 - 310.461 ms - message: Cannot read properties of undefined (reading '_id')
+[31merror[39m: TypeError: Cannot read properties of undefined (reading '_id')
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/company.service.js:186:68
+    at Array.map (<anonymous>)
+    at Object.companyUserAccount (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/company.service.js:159:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/controllers/company.controller.js:750:33
+[31merror[39m: GET /v1/company/62b2a6f9061ed2a095b55555/user 500 - 310.471 ms - message: Cannot read properties of undefined (reading '_id')
+[31merror[39m: TypeError: Cannot read properties of undefined (reading '_id')
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/company.service.js:186:68
+    at Array.map (<anonymous>)
+    at Object.companyUserAccount (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/company.service.js:159:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/controllers/company.controller.js:750:33
+[31merror[39m: GET /v1/company/62b2a6f9061ed2a095b55555/user 500 - 329.842 ms - message: Cannot read properties of undefined (reading '_id')
+[31merror[39m: TypeError: Cannot read properties of undefined (reading '_id')
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/company.service.js:186:68
+    at Array.map (<anonymous>)
+    at Object.companyUserAccount (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/company.service.js:159:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/controllers/company.controller.js:750:33
+[31merror[39m: GET /v1/company/62b2a6f9061ed2a095b55555/user 500 - 339.318 ms - message: Cannot read properties of undefined (reading '_id')
+[31merror[39m: TypeError: Cannot read properties of undefined (reading '_id')
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/company.service.js:187:68
+    at Array.map (<anonymous>)
+    at Object.companyUserAccount (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/company.service.js:159:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/controllers/company.controller.js:750:33
+[31merror[39m: GET /v1/company/62b2a6f9061ed2a095b55555/user 500 - 316.387 ms - message: Cannot read properties of undefined (reading '_id')
+[31merror[39m: TypeError: Cannot read properties of undefined (reading '_id')
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/company.service.js:187:68
+    at Array.map (<anonymous>)
+    at Object.companyUserAccount (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/company.service.js:159:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/controllers/company.controller.js:750:33
+[31merror[39m: GET /v1/company/62b2a6f9061ed2a095b55555/user 500 - 293.214 ms - message: Cannot read properties of undefined (reading '_id')
+[31merror[39m: Error: Please authenticate
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:13:19
+    at allFailed (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:110:18)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:183:28)
+    at strategy.fail (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:305:9)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:106:33
+    at module.exports [as verify] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/jsonwebtoken/verify.js:70:12)
+    at module.exports [as JwtVerifier] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/verify_jwt.js:4:16)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:40:13)
+    at JwtStrategy.authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:99:10)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:369:16)
+    at authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:370:7)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:35:107
+    at new Promise (<anonymous>)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:34:10
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+[31merror[39m: GET /v1/company/62b2a6f9061ed2a095b55555/user 401 - 10.033 ms - message: Please authenticate
+[31merror[39m: TypeError: Cannot read properties of undefined (reading '_id')
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/company.service.js:187:68
+    at Array.map (<anonymous>)
+    at Object.companyUserAccount (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/company.service.js:159:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/controllers/company.controller.js:750:33
+[31merror[39m: GET /v1/company/62b2a6f9061ed2a095b55555/user 500 - 270.974 ms - message: Cannot read properties of undefined (reading '_id')
+[31merror[39m: TypeError: Cannot read properties of undefined (reading '_id')
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/company.service.js:187:68
+    at Array.map (<anonymous>)
+    at Object.companyUserAccount (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/company.service.js:159:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/controllers/company.controller.js:750:33
+[31merror[39m: GET /v1/company/62b2a6f9061ed2a095b55555/user 500 - 301.867 ms - message: Cannot read properties of undefined (reading '_id')
+[31merror[39m: TypeError: Cannot read properties of undefined (reading '_id')
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/company.service.js:187:68
+    at Array.map (<anonymous>)
+    at Object.companyUserAccount (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/company.service.js:159:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/controllers/company.controller.js:750:33
+[31merror[39m: GET /v1/company/62b2a6f9061ed2a095b55555/user 500 - 328.382 ms - message: Cannot read properties of undefined (reading '_id')
+[31merror[39m: TypeError: Cannot read properties of undefined (reading '_id')
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/company.service.js:188:68
+    at Array.map (<anonymous>)
+    at Object.companyUserAccount (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/company.service.js:159:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/controllers/company.controller.js:750:33
+[31merror[39m: GET /v1/company/62b2a6f9061ed2a095b55555/user 500 - 323.577 ms - message: Cannot read properties of undefined (reading '_id')
+[31merror[39m: TypeError: Cannot read properties of undefined (reading '_id')
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/company.service.js:188:68
+    at Array.map (<anonymous>)
+    at Object.companyUserAccount (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/company.service.js:159:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/controllers/company.controller.js:750:33
+[31merror[39m: GET /v1/company/62b2a6f9061ed2a095b55555/user 500 - 293.556 ms - message: Cannot read properties of undefined (reading '_id')
+[31merror[39m: TypeError: Cannot read properties of undefined (reading '_id')
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/company.service.js:188:68
+    at Array.map (<anonymous>)
+    at Object.companyUserAccount (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/company.service.js:159:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/controllers/company.controller.js:750:33
+[31merror[39m: GET /v1/company/62b2a6f9061ed2a095b55555/user 500 - 336.958 ms - message: Cannot read properties of undefined (reading '_id')
+[31merror[39m: TypeError: Cannot read properties of undefined (reading '_id')
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/company.service.js:188:68
+    at Array.map (<anonymous>)
+    at Object.companyUserAccount (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/company.service.js:159:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/controllers/company.controller.js:750:33
+[31merror[39m: GET /v1/company/62b2a6f9061ed2a095b55555/user 500 - 288.862 ms - message: Cannot read properties of undefined (reading '_id')
+[31merror[39m: TypeError: Cannot read properties of undefined (reading '_id')
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/company.service.js:188:68
+    at Array.map (<anonymous>)
+    at Object.companyUserAccount (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/company.service.js:159:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/controllers/company.controller.js:750:33
+[31merror[39m: GET /v1/company/62b2a6f9061ed2a095b55555/user 500 - 309.166 ms - message: Cannot read properties of undefined (reading '_id')
+[31merror[39m: TypeError: Cannot read properties of undefined (reading '_id')
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/company.service.js:188:68
+    at Array.map (<anonymous>)
+    at Object.companyUserAccount (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/company.service.js:159:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/controllers/company.controller.js:750:33
+[31merror[39m: GET /v1/company/62b2a6f9061ed2a095b55555/user 500 - 548.328 ms - message: Cannot read properties of undefined (reading '_id')
+[31merror[39m: TypeError: Cannot read properties of undefined (reading '_id')
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/company.service.js:188:68
+    at Array.map (<anonymous>)
+    at Object.companyUserAccount (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/company.service.js:159:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/controllers/company.controller.js:750:33
+[31merror[39m: GET /v1/company/62b2a6f9061ed2a095b55555/user 500 - 306.034 ms - message: Cannot read properties of undefined (reading '_id')
+[31merror[39m: TypeError: Cannot read properties of undefined (reading '_id')
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/company.service.js:189:68
+    at Array.map (<anonymous>)
+    at Object.companyUserAccount (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/company.service.js:159:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/controllers/company.controller.js:750:33
+[31merror[39m: GET /v1/company/62b2a6f9061ed2a095b55555/user 500 - 321.179 ms - message: Cannot read properties of undefined (reading '_id')
+[31merror[39m: TypeError: Cannot read properties of undefined (reading '_id')
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/company.service.js:189:68
+    at Array.map (<anonymous>)
+    at Object.companyUserAccount (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/company.service.js:159:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/controllers/company.controller.js:750:33
+[31merror[39m: GET /v1/company/62b2a6f9061ed2a095b55555/user 500 - 307.416 ms - message: Cannot read properties of undefined (reading '_id')
+[31merror[39m: TypeError: Cannot read properties of undefined (reading '_id')
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/company.service.js:189:68
+    at Array.map (<anonymous>)
+    at Object.companyUserAccount (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/company.service.js:159:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/controllers/company.controller.js:750:33
+[31merror[39m: GET /v1/company/62b2a6f9061ed2a095b55555/user 500 - 301.505 ms - message: Cannot read properties of undefined (reading '_id')
+[31merror[39m: TypeError: Cannot read properties of undefined (reading '_id')
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/company.service.js:189:68
+    at Array.map (<anonymous>)
+    at Object.companyUserAccount (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/company.service.js:159:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/controllers/company.controller.js:750:33
+[31merror[39m: GET /v1/company/62b2a6f9061ed2a095b55555/user 500 - 330.846 ms - message: Cannot read properties of undefined (reading '_id')
+[31merror[39m: Error: Please authenticate
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:13:19
+    at allFailed (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:110:18)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:183:28)
+    at strategy.fail (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:305:9)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:106:33
+    at module.exports [as verify] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/jsonwebtoken/verify.js:70:12)
+    at module.exports [as JwtVerifier] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/verify_jwt.js:4:16)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:40:13)
+    at JwtStrategy.authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:99:10)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:369:16)
+    at authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:370:7)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:35:107
+    at new Promise (<anonymous>)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:34:10
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+[31merror[39m: GET /v1/company/62b2a6f9061ed2a095b55555/user 401 - 12.433 ms - message: Please authenticate
+[31merror[39m: TypeError: Cannot read properties of undefined (reading '_id')
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/company.service.js:189:68
+    at Array.map (<anonymous>)
+    at Object.companyUserAccount (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/company.service.js:159:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/controllers/company.controller.js:750:33
+[31merror[39m: GET /v1/company/62b2a6f9061ed2a095b55555/user 500 - 528.178 ms - message: Cannot read properties of undefined (reading '_id')
+[31merror[39m: TypeError: Cannot read properties of undefined (reading '_id')
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/company.service.js:186:68
+    at Array.map (<anonymous>)
+    at Object.companyUserAccount (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/company.service.js:159:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/controllers/company.controller.js:750:33
+[31merror[39m: GET /v1/company/62b2a6f9061ed2a095b55555/user 500 - 326.468 ms - message: Cannot read properties of undefined (reading '_id')
+[31merror[39m: TypeError: Cannot read properties of undefined (reading '_id')
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/company.service.js:186:68
+    at Array.map (<anonymous>)
+    at Object.companyUserAccount (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/company.service.js:159:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/controllers/company.controller.js:750:33
+[31merror[39m: GET /v1/company/62b2a6f9061ed2a095b55555/user 500 - 301.218 ms - message: Cannot read properties of undefined (reading '_id')
+[31merror[39m: Error: no record found  on Template version collection!
+    at Object.createCalculator (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/dashboard.service.js:478:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/controllers/dashboard.controller.js:96:29
+[31merror[39m: POST /v1/dashboard/628247b19e2a1d3a5ef8b9ad 404 - 257.655 ms - message: no record found  on Template version collection!
+[31merror[39m: Error: no record found  on Template version collection!
+    at Object.createCalculator (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/dashboard.service.js:478:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/controllers/dashboard.controller.js:96:29
+[31merror[39m: POST /v1/dashboard/628247b19e2a1d3a5ef8b9ad 404 - 234.353 ms - message: no record found  on Template version collection!
+[31merror[39m: Error: Please authenticate
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:13:19
+    at allFailed (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:110:18)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:183:28)
+    at strategy.fail (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:305:9)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:106:33
+    at module.exports [as verify] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/jsonwebtoken/verify.js:70:12)
+    at module.exports [as JwtVerifier] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/verify_jwt.js:4:16)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:40:13)
+    at JwtStrategy.authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:99:10)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:369:16)
+    at authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:370:7)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:35:107
+    at new Promise (<anonymous>)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:34:10
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+[31merror[39m: POST /v1/dashboard/628247b19e2a1d3a5ef8b9ad 401 - 12.596 ms - message: Please authenticate
+[31merror[39m: Error: no record found  on Template version collection!
+    at Object.createCalculator (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/dashboard.service.js:478:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/controllers/dashboard.controller.js:96:29
+[31merror[39m: POST /v1/dashboard/628247b19e2a1d3a5ef8b9ad 404 - 224.458 ms - message: no record found  on Template version collection!
+[31merror[39m: Error: no record found  on Template version collection!
+    at Object.createCalculator (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/dashboard.service.js:478:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/controllers/dashboard.controller.js:96:29
+[31merror[39m: POST /v1/dashboard/628247b19e2a1d3a5ef8b9ad 404 - 267.708 ms - message: no record found  on Template version collection!
+[31merror[39m: Error: no record found  on Template version collection!
+    at Object.createCalculator (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/dashboard.service.js:478:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/controllers/dashboard.controller.js:96:29
+[31merror[39m: POST /v1/dashboard/628247b19e2a1d3a5ef8b9ad 404 - 252.188 ms - message: no record found  on Template version collection!
+[31merror[39m: [Invalid TOken] Error: Template id not found
+[31merror[39m: Error: Template id not found
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/controllers/company.controller.js:450:19
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[31merror[39m: POST /v1/company/62b2a6f9061ed2a095b55555/template/62e7b3b4e5cd5e62445be6cc/version 404 - 189.568 ms - message: Template id not found
+[31merror[39m: Error: no record found!
+    at Object.updateroiTableService (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/dashboard.service.js:452:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/controllers/dashboard.controller.js:69:27
+[31merror[39m: PATCH /v1/dashboard/roi/628627c90fa60a1c4e02511d/628247b19e2a1d3a5ef8b9ad 404 - 160.091 ms - message: no record found!
+[31merror[39m: Error: Please authenticate
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:13:19
+    at allFailed (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:110:18)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:183:28)
+    at strategy.fail (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:305:9)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:106:33
+    at module.exports [as verify] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/jsonwebtoken/verify.js:70:12)
+    at module.exports [as JwtVerifier] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/verify_jwt.js:4:16)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:40:13)
+    at JwtStrategy.authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:99:10)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:369:16)
+    at authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:370:7)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:35:107
+    at new Promise (<anonymous>)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:34:10
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+[31merror[39m: PATCH /v1/dashboard/roi/63c7e5108b764058cc09f806/628247b19e2a1d3a5ef8b9ad 401 - 5.196 ms - message: Please authenticate
+[31merror[39m: Error: no record found!
+    at Object.updateroiTableService (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/dashboard.service.js:452:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/controllers/dashboard.controller.js:69:27
+[31merror[39m: PATCH /v1/dashboard/roi/63c7e5108b764058cc09f806/628247b19e2a1d3a5ef8b9ad 404 - 135.832 ms - message: no record found!
+[31merror[39m: Error: no record found!
+    at Object.updateroiTableService (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/dashboard.service.js:452:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/controllers/dashboard.controller.js:69:27
+[31merror[39m: PATCH /v1/dashboard/roi/63c7e5108b764058cc09f806/628247b19e2a1d3a5ef8b9ad 404 - 166.541 ms - message: no record found!
+[31merror[39m: Error: no record found!
+    at Object.updateroiTableService (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/dashboard.service.js:452:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/controllers/dashboard.controller.js:69:27
+[31merror[39m: PATCH /v1/dashboard/roi/63c7e5108b764058cc09f806/628247b19e2a1d3a5ef8b9ad 404 - 160.812 ms - message: no record found!
+[31merror[39m: Error: no record found!
+    at Object.updateroiTableService (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/dashboard.service.js:452:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/controllers/dashboard.controller.js:69:27
+[31merror[39m: PATCH /v1/dashboard/roi/63c7e5108b764058cc09f806/628247b19e2a1d3a5ef8b9ad 404 - 165.937 ms - message: no record found!
+[31merror[39m: Error: no record found!
+    at Object.updateroiTableService (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/dashboard.service.js:452:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/controllers/dashboard.controller.js:69:27
+[31merror[39m: PATCH /v1/dashboard/roi/63c7e5108b764058cc09f806/628247b19e2a1d3a5ef8b9ad 404 - 224.971 ms - message: no record found!
+[31merror[39m: Error: no record found!
+    at Object.updateroiTableService (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/dashboard.service.js:452:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/controllers/dashboard.controller.js:69:27
+[31merror[39m: PATCH /v1/dashboard/roi/628627c90fa60a1c4e02511d/628247b19e2a1d3a5ef8b9ad 404 - 160.928 ms - message: no record found!
+[31merror[39m: Error: no record found!
+    at Object.updateroiTableService (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/dashboard.service.js:452:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/controllers/dashboard.controller.js:69:27
+[31merror[39m: PATCH /v1/dashboard/roi/628627c90fa60a1c4e02511d/628247b19e2a1d3a5ef8b9ad 404 - 132.709 ms - message: no record found!
+[31merror[39m: Error: Calculator Template not found
+    at Object.cloneCalculator (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/dashboard.service.js:518:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/controllers/dashboard.controller.js:110:28
+[31merror[39m: POST /v1/dashboard/roi/6299e391919e59b9fb50ec58/628247b19e2a1d3a5ef8b9ad 404 - 162.517 ms - message: Calculator Template not found
+[31merror[39m: Error: Please authenticate
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:13:19
+    at allFailed (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:110:18)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:183:28)
+    at strategy.fail (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:305:9)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:106:33
+    at module.exports [as verify] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/jsonwebtoken/verify.js:70:12)
+    at module.exports [as JwtVerifier] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/verify_jwt.js:4:16)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:40:13)
+    at JwtStrategy.authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:99:10)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:369:16)
+    at authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:370:7)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:35:107
+    at new Promise (<anonymous>)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:34:10
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+[31merror[39m: GET /v1/auth/current 401 - 17.125 ms - message: Please authenticate
+[31merror[39m: Error: Please authenticate
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:13:19
+    at allFailed (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:110:18)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:183:28)
+    at strategy.fail (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:305:9)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:106:33
+    at module.exports [as verify] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/jsonwebtoken/verify.js:70:12)
+    at module.exports [as JwtVerifier] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/verify_jwt.js:4:16)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:40:13)
+    at JwtStrategy.authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:99:10)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:369:16)
+    at authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:370:7)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:35:107
+    at new Promise (<anonymous>)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:34:10
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+[31merror[39m: GET /v1/auth/current 401 - 40.365 ms - message: Please authenticate
+[31merror[39m: Error: Please authenticate
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:13:19
+    at allFailed (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:110:18)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:183:28)
+    at strategy.fail (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:305:9)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:106:33
+    at module.exports [as verify] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/jsonwebtoken/verify.js:70:12)
+    at module.exports [as JwtVerifier] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/verify_jwt.js:4:16)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:40:13)
+    at JwtStrategy.authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:99:10)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:369:16)
+    at authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:370:7)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:35:107
+    at new Promise (<anonymous>)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:34:10
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+[31merror[39m: POST /v1/company/62b2a6f9061ed2a095b55555/template 401 - 16.486 ms - message: Please authenticate

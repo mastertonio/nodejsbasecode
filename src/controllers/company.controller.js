@@ -231,6 +231,7 @@ const createCompanyTemplate = catchAsync(async (req, res)=>{
       name:create_template.name,
       notes:create_template.notes,
       company_id:create_template.company_id,
+      projection:create_template.projection,
       active:create_template.active,
       status:status
     });

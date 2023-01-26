@@ -37,12 +37,13 @@ const getAllTemplate = async (cond) => {
                 foreignField: 'template_id',
                 as: 'build'
             }
-        }]
+        },{ $skip: 1 }, { $limit: 1 }]
 
         
     }
 
-    return Template.aggregate(condition)
+    return  await Template.aggregate(condition);
+
     
 }
 const getCalculatorStatistic = async (data) =>{
@@ -472,7 +473,7 @@ const getDashboard = async (userId,filter, options) => {
     const template_id = new ObjectId(paramBody.template_id);
     // const templateVersion = await TemplateVersion.find({template_id: template_id,stage:1});   
     const templateVersion = await TemplateVersion.find({_id: template_id});   
-    
+    console.log(template_id)
     if(!templateVersion || _.isEmpty(templateVersion)){
         throw new ApiError(httpStatus.NOT_FOUND, `no record found  on Template version collection!`)
     }

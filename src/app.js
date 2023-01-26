@@ -85,7 +85,7 @@ app.use(
     cookieSession({
       name: "session",
       keys: ["x-access-token"],
-        maxAge: 24 * 60 * 60 * 100,
+        maxAge: 24 * 60 * 60 * 1000,
         secure: false,
         httpOnly: true,
         sameSite:'Lax',
@@ -104,7 +104,7 @@ app.use(
   if (config.env === 'production') {
     app.use('/v1/auth', authLimiter);
   }
-  //Try contacting the owner of the form if you think this is a mistake.
+  // Try contacting the owner of the form if you think this is a mistake.
 
 
 

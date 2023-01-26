@@ -58,6 +58,7 @@ const getManagerByCompanyId = async (cid) =>{
         return User.find({role:"company-manager"});
     }else{        
         const _cid = new ObjectId(cid); 
+        
         return User.find({
             $and:[
                 {role:"company-manager"},
@@ -165,17 +166,17 @@ const companyUserAccount = async (cid) =>{
             })
 
             let manger_info = manger.map(m=>{
-                if(JSON.stringify(v.manager) === JSON.stringify(m._id)){
-                    
+                // console.log('---m--',m._id)
+                // console.log('---v--',v.manager)
+                if(JSON.stringify(v.manager) === JSON.stringify(m._id)){                    
                     return {_id:m._id, first_name:m.first_name, last_name:m.last_name, email:m.email}
-                }   
-                
-               
+                }             
             })
             console.log(manger_info)
             const managerinfo = manger_info.filter(function (el) {
                 return el != null;
               })
+              console.log('--->',v.manager)
             container.push({
                 _id:v._id,
                 first_name:v.first_name,

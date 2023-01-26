@@ -54,7 +54,23 @@ const getTemplateBuild = catchAsync(async(req,res)=>{
          logger.error(`[Invalid TOken] ${error}`);
          throw error;
        }
-    console.log(req.query)  
+    
+       
+       const templateVersion_id = req.params.templateVersion_id;
+    const que = {
+      templateVersion_id:new ObjectId(req.params.templateVersion_id),
+      _id: new ObjectId(req.params.templateBuilder_id)
+    };
+    const isTemplateVersionValid = await templateService.isValidTemplateBuilder(que);
+    if(isTemplateVersionValid){
+      const templateBuilder = await templateService.getTemplateBuild(que);
+      res.send(templateBuilder)
+    }else{
+      let error = new ApiError(httpStatus.NOT_FOUND, 'Template id not found');
+      logger.error(`[Invalid TOken] ${error}`);
+      throw error;
+    }
+    
   } catch (error) {
     logger.error(`[Invalid TOken] ${error}`);
     throw error;
