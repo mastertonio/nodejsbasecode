@@ -61,74 +61,31 @@ const { NO_CONTENT } = require('http-status');
   var corsOptionsDelegate = function (req, callback) {
     var corsOptions;
     if (allowlist.indexOf(req.header('Origin')) !== -1) {
-      corsOptions = { origin: true} // reflect (enable) the requested origin in the CORS response
+      corsOptions = { origin: true , credentials: true} // reflect (enable) the requested origin in the CORS response
     } else {
-      corsOptions = { origin: false } // disable CORS for this request
+      corsOptions = { origin: false , credentials: true } // disable CORS for this request
     }
     callback(null, corsOptions) // callback expects two parameters: error and options
   }
   // enable cors
   app.use(cors(config.corsOption));
-  // Add headers
-// app.use(function (req, res, next) {
-
-//   // Website you wish to allow to connect
-//   res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
-
-//   // Request methods you wish to allow
-//   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-
-//   // Request headers you wish to allow
-//   res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
-
-//   // Set to true if you need the website to include cookies in the requests sent
-//   // to the API (e.g. in case you use sessions)
-//   res.setHeader('Access-Control-Allow-Credentials', true);
-
-//   // Pass to next layer of middleware
-//   next();
-// });
-
-
-// app.use(cors({
-//   'allowedHeaders': ['sessionId', 'Content-Type'],
-//   'exposedHeaders': ['sessionId'],
-//   'origin':'http://localhost:3000',
-//   'credentials': true,
-//   'methods': 'GET,HEAD,PUT,PATCH,POST,DELETE',
-//   'preflightContinue': false
-// }));
-
+ 
 app.use((req,res,next)=>{
+  console.log(` token -- - ${req.cookies['session']}`)
   req.headers['authorization'] = `Bearer ${req.cookies['x-access-token']}`;
   res.setHeader('Access-Control-Allow-Origin', ['http://localhost:3000']);
 
   // res.headers("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
-  // res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
   
   next();
 });
 
-// app.use(
-//   session({
-//       secret: config.cookie,
-//       resave: false,
-//       saveUninitialized: false,
-//       store:store,
-//       maxAge: 24 * 60 * 60 * 100,
-//       httpOnly: true,
-//       SameSite:'None',
-//       SameSite: 'Lax',
-//       secure: true,
-
-//  })
-// );
-
 app.use(
     cookieSession({
-      name: "__session",
-      keys: ["key1"],
-        maxAge: 24 * 60 * 60 * 100,
+      name: "session",
+      keys: ["x-access-token"],
+        maxAge: 24 * 60 * 60 * 1000,
         secure: false,
         httpOnly: true,
         sameSite:'Lax',
@@ -147,7 +104,9 @@ app.use(
   if (config.env === 'production') {
     app.use('/v1/auth', authLimiter);
   }
-  
+  // Try contacting the owner of the form if you think this is a mistake.
+
+
 
 
   // v1 api routes

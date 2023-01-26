@@ -6,9 +6,6 @@ const _ = require("underscore");
 const logger = require('../config/logger');
 
 const verifyCallback = (req, resolve, reject, requiredRights) => async (err, user, info) => {
- logger.info("verification errro->",err);
- logger.info("verification user->",user);
- logger.info("verification info->", info)
   if (err || info || !user) {
     return reject(new ApiError(httpStatus.UNAUTHORIZED, 'Please authenticate'));
   }

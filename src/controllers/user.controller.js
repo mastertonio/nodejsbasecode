@@ -20,6 +20,11 @@ const getUsers = catchAsync(async (req, res) => {
   res.send(result);
 });
 
+const viewUser = catchAsync(async(req,res)=>{
+  console.log(req)
+  res.send(req.user);
+})
+
 const getUser = catchAsync(async (req, res) => {
   const user = await userService.getUserById(req.params.userId);
   if (!user) {
@@ -105,5 +110,6 @@ module.exports = {
   getUser,
   updateUser,
   deleteUser,
-  uploadAvatar
+  uploadAvatar,
+  viewUser
 };

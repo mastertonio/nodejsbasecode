@@ -1,32 +1,40 @@
 version: '3'
 
 services:
-  node-app:
-    build: .
-    image: node-app
-    environment:
-      - MONGODB_URL=mongodb://mongodb:27017/node-boilerplate
-    ports:
-      - '3000:3000'
-    depends_on:
-      - mongodb
-    volumes:
-      - .:/usr/src/node-app
-    networks:
-      - node-network
+    redis: 
+      container_name: "redis"
+      image: redis
+      command: redis-server /usr/local/etc/redis/redis.conf --requirepass ${REDIS_PASSWORD}
+      ports:
+        - "6379:6379"
+      volumes:
+        - $PWD/redis.conf:/usr/local/etc/redis/redis.conf
+#   node-app:
+#     build: .
+#     image: node-app
+#     environment:
+#       - MONGODB_URL=mongodb://mongodb:27017/node-boilerplate
+#     ports:
+#       - '3000:3000'
+#     depends_on:
+#       - mongodb
+#     volumes:
+#       - .:/usr/src/node-app
+#     networks:
+#       - node-network
 
-  mongodb:
-    image: mongo:4.2.1-bionic
-    ports:
-      - '27017:27017'
-    volumes:
-      - dbdata:/data/db
-    networks:
-      - node-network
+#   mongodb:
+#     image: mongo:4.2.1-bionic
+#     ports:
+#       - '27017:27017'
+#     volumes:
+#       - dbdata:/data/db
+#     networks:
+#       - node-network
 
-volumes:
-  dbdata:
+# volumes:
+#   dbdata:
 
-networks:
-  node-network:
-    driver: bridge
+# networks:
+#   node-network:
+#     driver: bridge

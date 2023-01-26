@@ -12,6 +12,10 @@ const templateSchema = mongoose.Schema(
             type: mongoose.SchemaTypes.ObjectId,
             required: true
         },
+        projection: {
+            type: Number,
+            default: 1
+        },
         active: {
             type: Number,
             default: 1
