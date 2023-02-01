@@ -387,6 +387,7 @@ const getCompnayTemplateVersion = catchAsync(async (req,res)=>{
      throw error;
    }
    const templateVersion = await TemplateVersion.find({_id:version_id,template_id:template_id})
+
    const container = [];
    templateVersion.map(v=>{
     let templateVersion_status = "inactive"
@@ -401,6 +402,7 @@ const getCompnayTemplateVersion = catchAsync(async (req,res)=>{
       name:v.name,
       notes:v.notes,
       template_id: v.template_id,
+      projection: template.projection,
       status:templateVersion_status
     })
     

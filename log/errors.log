@@ -19271,3 +19271,363 @@ Content-Disposition: form-data; name" is not allowed
     at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:34:10
     at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
 [31merror[39m: POST /v1/company/62b2a6f9061ed2a095b55555/template 401 - 16.486 ms - message: Please authenticate
+[31merror[39m: Error: Please authenticate
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:10:19
+    at allFailed (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:110:18)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:183:28)
+    at strategy.fail (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:305:9)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:106:33
+    at module.exports [as verify] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/jsonwebtoken/verify.js:70:12)
+    at module.exports [as JwtVerifier] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/verify_jwt.js:4:16)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:40:13)
+    at JwtStrategy.authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:99:10)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:369:16)
+    at authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:370:7)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:32:107
+    at new Promise (<anonymous>)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:31:10
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+[31merror[39m: GET /v1/company/62b2a6f9061ed2a095b55555/template/62e7b3b4e5cd5e62445be6cc/version/62f882cdc1f0165e6cf1a267 401 - 9.879 ms - message: Please authenticate
+[31merror[39m: Error: Please authenticate
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:10:19
+    at allFailed (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:110:18)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:183:28)
+    at strategy.fail (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:305:9)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:106:33
+    at module.exports [as verify] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/jsonwebtoken/verify.js:70:12)
+    at module.exports [as JwtVerifier] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/verify_jwt.js:4:16)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:40:13)
+    at JwtStrategy.authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:99:10)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:369:16)
+    at authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:370:7)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:32:107
+    at new Promise (<anonymous>)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:31:10
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+[31merror[39m: POST /v1/company/62b2a6f9061ed2a095b55555/template 401 - 17.744 ms - message: Please authenticate
+[31merror[39m: Error: Please authenticate
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:10:19
+    at allFailed (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:110:18)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:183:28)
+    at strategy.fail (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:305:9)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:106:33
+    at module.exports [as verify] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/jsonwebtoken/verify.js:70:12)
+    at module.exports [as JwtVerifier] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/verify_jwt.js:4:16)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:40:13)
+    at JwtStrategy.authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:99:10)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:369:16)
+    at authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:370:7)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:32:107
+    at new Promise (<anonymous>)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:31:10
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+[31merror[39m: GET /v1/auth/current 401 - 10.111 ms - message: Please authenticate
+[31merror[39m: Error: Please authenticate
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:10:19
+    at allFailed (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:110:18)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:183:28)
+    at strategy.fail (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:305:9)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:106:33
+    at module.exports [as verify] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/jsonwebtoken/verify.js:70:12)
+    at module.exports [as JwtVerifier] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/verify_jwt.js:4:16)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:40:13)
+    at JwtStrategy.authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:99:10)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:369:16)
+    at authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:370:7)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:32:107
+    at new Promise (<anonymous>)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:31:10
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+[31merror[39m: GET /v1/auth/current 401 - 3.493 ms - message: Please authenticate
+[31merror[39m: Error: Not found
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/app.js:117:10
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:328:13)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:280:10)
+    at strategy.pass (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:346:9)
+    at SessionStrategy.authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/strategies/session.js:75:10)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:369:16)
+    at authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:370:7)
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:328:13)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:280:10)
+    at initialize (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/initialize.js:98:5)
+[31merror[39m: GET /api?timeout=32s 404 - 12.275 ms - message: Not found
+[31merror[39m: Error: Not found
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/app.js:117:10
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:328:13)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:280:10)
+    at strategy.pass (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:346:9)
+    at SessionStrategy.authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/strategies/session.js:75:10)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:369:16)
+    at authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:370:7)
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:328:13)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:280:10)
+    at initialize (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/initialize.js:98:5)
+[31merror[39m: GET /apis?timeout=32s 404 - 2.290 ms - message: Not found
+[31merror[39m: Error: Not found
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/app.js:117:10
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:328:13)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:280:10)
+    at strategy.pass (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:346:9)
+    at SessionStrategy.authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/strategies/session.js:75:10)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:369:16)
+    at authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:370:7)
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:328:13)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:280:10)
+    at initialize (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/initialize.js:98:5)
+[31merror[39m: GET /api?timeout=32s 404 - 1.973 ms - message: Not found
+[31merror[39m: Error: Not found
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/app.js:117:10
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:328:13)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:280:10)
+    at strategy.pass (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:346:9)
+    at SessionStrategy.authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/strategies/session.js:75:10)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:369:16)
+    at authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:370:7)
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:328:13)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:280:10)
+    at initialize (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/initialize.js:98:5)
+[31merror[39m: GET /apis?timeout=32s 404 - 1.455 ms - message: Not found
+[31merror[39m: Error: Not found
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/app.js:117:10
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:328:13)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:280:10)
+    at strategy.pass (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:346:9)
+    at SessionStrategy.authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/strategies/session.js:75:10)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:369:16)
+    at authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:370:7)
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:328:13)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:280:10)
+    at initialize (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/initialize.js:98:5)
+[31merror[39m: GET /api?timeout=32s 404 - 1.064 ms - message: Not found
+[31merror[39m: Error: Not found
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/app.js:117:10
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:328:13)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:280:10)
+    at strategy.pass (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:346:9)
+    at SessionStrategy.authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/strategies/session.js:75:10)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:369:16)
+    at authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:370:7)
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:328:13)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:280:10)
+    at initialize (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/initialize.js:98:5)
+[31merror[39m: GET /apis?timeout=32s 404 - 0.938 ms - message: Not found
+[31merror[39m: Error: Not found
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/app.js:117:10
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:328:13)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:280:10)
+    at strategy.pass (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:346:9)
+    at SessionStrategy.authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/strategies/session.js:75:10)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:369:16)
+    at authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:370:7)
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:328:13)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:280:10)
+    at initialize (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/initialize.js:98:5)
+[31merror[39m: GET /api?timeout=32s 404 - 1.980 ms - message: Not found
+[31merror[39m: Error: Not found
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/app.js:117:10
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:328:13)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:280:10)
+    at strategy.pass (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:346:9)
+    at SessionStrategy.authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/strategies/session.js:75:10)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:369:16)
+    at authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:370:7)
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:328:13)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:280:10)
+    at initialize (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/initialize.js:98:5)
+[31merror[39m: GET /apis?timeout=32s 404 - 1.364 ms - message: Not found
+[31merror[39m: Error: Not found
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/app.js:117:10
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:328:13)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:280:10)
+    at strategy.pass (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:346:9)
+    at SessionStrategy.authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/strategies/session.js:75:10)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:369:16)
+    at authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:370:7)
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:328:13)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:280:10)
+    at initialize (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/initialize.js:98:5)
+[31merror[39m: GET /api?timeout=32s 404 - 6.947 ms - message: Not found
+[31merror[39m: Error: Not found
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/app.js:117:10
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:328:13)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:280:10)
+    at strategy.pass (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:346:9)
+    at SessionStrategy.authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/strategies/session.js:75:10)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:369:16)
+    at authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:370:7)
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:328:13)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:280:10)
+    at initialize (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/initialize.js:98:5)
+[31merror[39m: GET /apis?timeout=32s 404 - 1.817 ms - message: Not found
+[31merror[39m: Error: Not found
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/app.js:117:10
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:328:13)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:280:10)
+    at strategy.pass (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:346:9)
+    at SessionStrategy.authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/strategies/session.js:75:10)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:369:16)
+    at authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:370:7)
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:328:13)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:280:10)
+    at initialize (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/initialize.js:98:5)
+[31merror[39m: GET /api?timeout=32s 404 - 1.737 ms - message: Not found
+[31merror[39m: Error: Not found
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/app.js:117:10
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:328:13)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:280:10)
+    at strategy.pass (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:346:9)
+    at SessionStrategy.authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/strategies/session.js:75:10)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:369:16)
+    at authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:370:7)
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:328:13)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:280:10)
+    at initialize (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/initialize.js:98:5)
+[31merror[39m: GET /apis?timeout=32s 404 - 1.460 ms - message: Not found
+[31merror[39m: Error: Not found
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/app.js:117:10
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:328:13)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:280:10)
+    at strategy.pass (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:346:9)
+    at SessionStrategy.authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/strategies/session.js:75:10)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:369:16)
+    at authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:370:7)
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:328:13)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:280:10)
+    at initialize (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/initialize.js:98:5)
+[31merror[39m: GET /api?timeout=32s 404 - 1.253 ms - message: Not found
+[31merror[39m: Error: Not found
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/app.js:117:10
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:328:13)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:280:10)
+    at strategy.pass (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:346:9)
+    at SessionStrategy.authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/strategies/session.js:75:10)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:369:16)
+    at authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:370:7)
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:328:13)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:280:10)
+    at initialize (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/initialize.js:98:5)
+[31merror[39m: GET /apis?timeout=32s 404 - 2.283 ms - message: Not found
+[31merror[39m: Error: Not found
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/app.js:117:10
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:328:13)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:280:10)
+    at strategy.pass (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:346:9)
+    at SessionStrategy.authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/strategies/session.js:75:10)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:369:16)
+    at authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:370:7)
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:328:13)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:280:10)
+    at initialize (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/initialize.js:98:5)
+[31merror[39m: GET /api?timeout=32s 404 - 1.081 ms - message: Not found
+[31merror[39m: Error: Not found
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/app.js:117:10
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:328:13)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:280:10)
+    at strategy.pass (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:346:9)
+    at SessionStrategy.authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/strategies/session.js:75:10)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:369:16)
+    at authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:370:7)
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:328:13)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:280:10)
+    at initialize (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/initialize.js:98:5)
+[31merror[39m: GET /apis?timeout=32s 404 - 2.158 ms - message: Not found
