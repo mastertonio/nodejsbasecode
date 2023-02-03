@@ -6,13 +6,7 @@ WORKDIR /usr/src/node-app
 
 COPY package.json yarn.lock ./
 
-RUN apk --no-cache --virtual build-dependencies add \
-        python \
-        make \
-        g++ \
-&& yarn install --production \
-&& apk del build-dependencies
-
+RUN apk add --no-cache python2 g++ make
 USER node
 
 RUN npm install
