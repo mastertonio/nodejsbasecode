@@ -73,7 +73,7 @@ const { NO_CONTENT } = require('http-status');
 app.use((req,res,next)=>{
   console.log(` token -- - ${req.cookies['session']}`)
   req.headers['authorization'] = `Bearer ${req.cookies['x-access-token']}`;
-  res.setHeader('Access-Control-Allow-Origin', *);
+  res.setHeader('Access-Control-Allow-Origin', [http://18.234.140.187:3000/]);
 
   // res.headers("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
