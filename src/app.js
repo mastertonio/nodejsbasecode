@@ -69,12 +69,12 @@ const { NO_CONTENT } = require('http-status');
     callback(null, corsOptions) // callback expects two parameters: error and options
   }
   // enable cors
-  app.use(cors(config.corsOption));
- 
+  //app.use(cors(config.corsOption));
+ app.use(cors('*'));
 app.use((req,res,next)=>{
   console.log(` token -- - ${req.cookies['session']}`)
   req.headers['authorization'] = `Bearer ${req.cookies['x-access-token']}`;
-  res.setHeader('Access-Control-Allow-Origin', ["http://localhost:3000","http://18.234.140.187:3000","http://18.234.140.187","http://18.234.140.187:3000"]);
+ // res.setHeader('Access-Control-Allow-Origin', ["http://localhost:3000","http://18.234.140.187:3000","http://18.234.140.187","http://18.234.140.187:3000"]);
 
   // res.headers("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
