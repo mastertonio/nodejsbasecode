@@ -70,7 +70,7 @@ const { NO_CONTENT } = require('http-status');
   }
   // enable cors
   //app.use(cors(config.corsOption));
- app.use(cors('*'));
+ app.use(cors());
 app.use((req,res,next)=>{
   console.log(` token -- - ${req.cookies['session']}`)
   req.headers['authorization'] = `Bearer ${req.cookies['x-access-token']}`;
