@@ -57,7 +57,7 @@ const { NO_CONTENT } = require('http-status');
 
   // (All)10mins- if no activity
  
-  var allowlist = ['http://localhost:3000', 'http://localhost:3001','http://18.234.140.187:3000']
+  var allowlist = ['http://localhost:3000', 'http://localhost:3001','http://18.234.140.187']
   var corsOptionsDelegate = function (req, callback) {
     var corsOptions;
     if (allowlist.indexOf(req.header('Origin')) !== -1) {
