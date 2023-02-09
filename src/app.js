@@ -69,10 +69,7 @@ const { NO_CONTENT } = require('http-status');
     callback(null, corsOptions) // callback expects two parameters: error and options
   }
   // enable cors
-  //app.use(cors(config.corsOption));
- app.use(cors({
- origin:"*"
- }));
+  app.use(cors(config.corsOption));
 app.use((req,res,next)=>{
   console.log(` token -- - ${req.cookies['session']}`)
   req.headers['authorization'] = `Bearer ${req.cookies['x-access-token']}`;
