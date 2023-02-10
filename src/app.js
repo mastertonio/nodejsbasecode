@@ -70,7 +70,7 @@ const { NO_CONTENT } = require('http-status');
   }
   // enable cors
   app.use(cors(config.corsOption));
-
+app.use(session({secret: "Shh, its a secret!"}));
 app.use(
     cookieSession({
       name: "session",
@@ -82,6 +82,7 @@ app.use(
         store:store,
     })
 );
+
 
 
   // jwt authentication
