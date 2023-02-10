@@ -80,17 +80,17 @@ app.use((req,res,next)=>{
   
   next();
 });
-app.use(
-    cookieSession({
-      name: "session",
-      keys: ["x-access-token"],
-        maxAge: 24 * 60 * 60 * 1000,
-        secure: false,
-        httpOnly: true,
-        sameSite:'Lax',
-        store:store,
-    })
-);
+// app.use(
+//     cookieSession({
+//       name: "session",
+//       keys: ["x-access-token"],
+//         maxAge: 24 * 60 * 60 * 1000,
+//         secure: false,
+//         httpOnly: true,
+//         sameSite:'Lax',
+//         store:store,
+//     })
+// );
 
 
 
