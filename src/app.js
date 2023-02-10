@@ -70,7 +70,16 @@ const { NO_CONTENT } = require('http-status');
   }
   // enable cors
   app.use(cors(config.corsOption));
-app.use(session({secret: "Shh, its a secret!"}));
+app.use((req,res,next)=>{
+  console.log(` token -- - ${req.cookies['session']}`)
+  req.headers['authorization'] = `Bearer ${req.cookies['x-access-token']}`;
+  res.setHeader('Access-Control-Allow-Origin', ['http://localhost:3000']);
+
+  // res.headers("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
+  
+  next();
+});
 app.use(
     cookieSession({
       name: "session",
