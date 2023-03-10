@@ -30,4 +30,4 @@ jobs:
     - run: npm i
     - run: npm audit fix
     - run: cp /home/ubuntu/.env /home/ubuntu/backend/_work/nodejsBackend/nodejsBackend
-    - run: pm2 restart backendApp
+   # - run: pm2 restart backendApp
