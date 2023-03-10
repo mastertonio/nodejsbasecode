@@ -297,7 +297,7 @@ const getMyRoiGraph =catchAsync(async (req, res) =>{
      logger.error(`[Invalid TOken] ${error}`);
      throw error;
    }
-   const allowed = ["company-manager","company-admin"]
+   const allowed = ["company-manager","company-admin","admin"]
    const user_role = is_user.role;
 
   const role = allowed.some(element => {
