@@ -403,11 +403,13 @@ const getCompnayTemplateVersion = catchAsync(async (req,res)=>{
       notes:v.notes,
       template_id: v.template_id,
       projection: template.projection,
+      company_logo:"https://theroishop.com/assets/roishop/wp-content/uploads/2019/08/ROI-Shop-Logo.png",
+      logo_description:"test logo because the s3 not yet ready",
       status:templateVersion_status
     })
     
    })
-   res.send(container)
+   res.send(container[0])
 })
 
 /**
