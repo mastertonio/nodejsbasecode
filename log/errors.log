@@ -19631,3 +19631,123 @@ Content-Disposition: form-data; name" is not allowed
     at next (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:280:10)
     at initialize (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/initialize.js:98:5)
 [31merror[39m: GET /apis?timeout=32s 404 - 2.158 ms - message: Not found
+[31merror[39m: Error: Calculator Template not found
+    at Object.cloneCalculator (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/dashboard.service.js:518:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/controllers/dashboard.controller.js:110:28
+[31merror[39m: POST /v1/dashboard/roi/6287791836bddb586c11082a/628247b19e2a1d3a5ef8b9ad 404 - 163.753 ms - message: Calculator Template not found
+[31merror[39m: Error: Calculator Template not found
+    at Object.cloneCalculator (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/dashboard.service.js:518:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/controllers/dashboard.controller.js:110:28
+[31merror[39m: POST /v1/dashboard/roi/628779c3ec4e045f4806f775/628247b19e2a1d3a5ef8b9ad 404 - 181.977 ms - message: Calculator Template not found
+[31merror[39m: Error: Please authenticate
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:10:19
+    at allFailed (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:110:18)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:183:28)
+    at strategy.fail (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:305:9)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:106:33
+    at module.exports [as verify] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/jsonwebtoken/verify.js:70:12)
+    at module.exports [as JwtVerifier] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/verify_jwt.js:4:16)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:40:13)
+    at JwtStrategy.authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:99:10)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:369:16)
+    at authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:370:7)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:32:107
+    at new Promise (<anonymous>)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:31:10
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+[31merror[39m: GET /v1/company/62b2a6f9061ed2a095b55555/template/63d23c3079f0ab2fe19e08d2/version/63d23c416ff9e42fe88f0096 401 - 11.150 ms - message: Please authenticate
+[31merror[39m: [Invalid TOken] Error: Unauthorized access
+[31merror[39m: Error: Unauthorized access
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/controllers/dashboard.controller.js:307:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[31merror[39m: GET /v1/dashboard/data/company/graph 401 - 159.129 ms - message: Unauthorized access
+[31merror[39m: [Invalid TOken] Error: Unauthorized access
+[31merror[39m: Error: Unauthorized access
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/controllers/dashboard.controller.js:307:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[31merror[39m: GET /v1/dashboard/data/company/graph 401 - 360.763 ms - message: Unauthorized access
+[31merror[39m: TypeError: res.headers is not a function
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/app.js:64:7
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:328:13)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:280:10)
+    at compression (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/compression/index.js:220:5)
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:328:13)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:280:10)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express-fileupload/lib/index.js:35:14
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:328:13)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:286:9
+[31merror[39m: POST /v1/auth/login 500 - 1675.255 ms - message: res.headers is not a function
+[31merror[39m: Error: Please authenticate
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:10:19
+    at allFailed (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:110:18)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:183:28)
+    at strategy.fail (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:305:9)
+    at JwtStrategy.authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:96:21)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:369:16)
+    at authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:370:7)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:32:107
+    at new Promise (<anonymous>)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:31:10
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+    at next (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:346:12)
+[31merror[39m: GET /v1/dashboard/data/super/admin/graph 401 - 7.332 ms - message: Please authenticate
+[31merror[39m: Error: Please authenticate
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:10:19
+    at allFailed (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:110:18)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:183:28)
+    at strategy.fail (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:305:9)
+    at JwtStrategy.authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport-jwt/lib/strategy.js:96:21)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:369:16)
+    at authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:370:7)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:32:107
+    at new Promise (<anonymous>)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/middlewares/auth.js:31:10
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+    at next (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:346:12)
+[31merror[39m: GET /v1/dashboard/data/company/graph 401 - 3.599 ms - message: Please authenticate
+[31merror[39m: TypeError: Cannot set properties of undefined (setting 'user')
+    at Object.generateAuthTokens (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/token.service.js:77:20)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/controllers/auth.controller.js:15:18
+[31merror[39m: POST /v1/auth/login 500 - 179.793 ms - message: Cannot set properties of undefined (setting 'user')
+[31merror[39m: Error: Login sessions require session support. Did you forget to use `express-session` middleware?
+    at SessionStrategy.authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/strategies/session.js:46:41)
+    at attempt (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:369:16)
+    at authenticate (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/authenticate.js:370:7)
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:328:13)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:280:10)
+    at initialize (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/passport/lib/middleware/initialize.js:98:5)
+    at Layer.handle [as handle_request] (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:328:13)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/express/lib/router/index.js:280:10)
+    at cors (/mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/cors/lib/index.js:188:7)
+    at /mnt/6C225862225832F6/roi-project/ROINode_Backend/node_modules/cors/lib/index.js:224:17
+[31merror[39m: POST /v1/auth/login 500 - 16.650 ms - message: Login sessions require session support. Did you forget to use `express-session` middleware?
+[31merror[39m: TypeError: Cannot set properties of undefined (setting 'user')
+    at Object.generateAuthTokens (/mnt/6C225862225832F6/roi-project/ROINode_Backend/src/services/token.service.js:77:20)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/controllers/auth.controller.js:15:18
+[31merror[39m: POST /v1/auth/login 500 - 147.974 ms - message: Cannot set properties of undefined (setting 'user')

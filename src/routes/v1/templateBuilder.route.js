@@ -8,7 +8,7 @@ const {builderController} = require('../../controllers');
 const router = express.Router();
 
 router
-  .route('/:templateVersion_id')
+  .route('/')
   .post(auth('createROI'), validate(builder.createROI), builderController.createROI);
 
 router

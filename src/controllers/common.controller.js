@@ -8,7 +8,6 @@ const getCID = (req) => {
 }
 
 const jwtExtract = (req) =>{
-  console.log(req.headers)
     let params = req.headers.authorization;
     let token = params.split(" ");
     const decode = jwtToken(token[1]);

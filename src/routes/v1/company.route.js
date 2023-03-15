@@ -87,6 +87,7 @@ router
 
 /**
  * Company Template version
+ * Get templateversion for the templatebuilder
  */
 router
   .route('/:company_id/template/:template_id/version')

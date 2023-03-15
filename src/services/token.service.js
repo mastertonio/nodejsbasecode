@@ -74,15 +74,6 @@ const generateAuthTokens = async (user, req) => {
   const refreshTokenExpires = moment().add(config.jwt.refreshExpirationDays, 'days');
   const refreshToken = generateToken(user.id, user.company_id, refreshTokenExpires, tokenTypes.REFRESH);
   await saveToken(refreshToken, user.id, refreshTokenExpires, tokenTypes.REFRESH);
-  req.session.user = {
-      uuid: user.id,
-      access:{
-        token: accessToken,
-        epoch:accessTokenExpires,
-        expires: accessTokenExpires.toDate(),
-        type:tokenTypes.ACCESS
-      }
-  }
   return {
     access: {
       token: accessToken,      
