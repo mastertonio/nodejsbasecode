@@ -46,6 +46,7 @@ if (cluster.isMaster) {
     exitHandler();
   };
 
+  
   process.on('uncaughtException', unexpectedErrorHandler);
   process.on('unhandledRejection', unexpectedErrorHandler);
 
