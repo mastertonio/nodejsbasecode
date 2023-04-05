@@ -28,5 +28,5 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm i
-    - run: cp /home/ubuntu/.env /home/ubuntu/backend/_work/nodejsBackend/nodejsBackend
+    - run: cp /home/ubuntu/.env /home/ubuntu/actions-runner/_work/nodejsBackend/nodejsBackend
     - run: pm2 restart app
