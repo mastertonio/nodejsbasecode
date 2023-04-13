@@ -40,6 +40,27 @@ const createCompanyUser = {
     })
   }
 
+  const getCompnayTemplateBuilder = {
+    params: Joi.object().keys({
+      company_id: Joi.required().custom(objectId),
+      template_id: Joi.required().custom(objectId),
+      version_id: Joi.required().custom(objectId),
+    }),
+    query: Joi.object().keys({
+      data: Joi.object(),
+    })
+  }
+  const createCompnayTemplateBuilder = {
+    params: Joi.object().keys({
+      company_id: Joi.required().custom(objectId),
+      template_id: Joi.required().custom(objectId),
+      version_id: Joi.required().custom(objectId),
+    }),
+    query: Joi.object().keys({
+      data: Joi.object(),
+    })
+  }
+
   const getCompnayTemplateVersionInfo = {
     params: Joi.object().keys({
       company_id: Joi.required().custom(objectId),
@@ -244,5 +265,7 @@ module.exports = {
     getCompnayTemplateVersion,
     getCompnayTemplateVersionInfo,
     deleteTemplateVersion,
-    deleteTemplate
+    getCompnayTemplateBuilder,
+    deleteTemplate,
+    createCompnayTemplateBuilder
   };

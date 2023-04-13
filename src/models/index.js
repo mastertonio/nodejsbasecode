@@ -11,4 +11,5 @@ module.exports.StoreValue = require('./storeValue.model');
 module.exports.Template = require('./templates.model');
 module.exports.TemplateVersion = require('./templateVersion.model');
 module.exports.UserPermission = require('./userPermission.model');
-module.exports.TemplateBuilder = require('./templateBuilder.model');
+module.exports.TemplateBuilder = require('./templateBuilder.model'); // do not use
+module.exports.SectionBuilder =  require('./sectionBuilder.model');

@@ -19751,3 +19751,1208 @@ Content-Disposition: form-data; name" is not allowed
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
     at async /mnt/6C225862225832F6/roi-project/ROINode_Backend/src/controllers/auth.controller.js:15:18
 [31merror[39m: POST /v1/auth/login 500 - 147.974 ms - message: Cannot set properties of undefined (setting 'user')
+[31merror[39m: Error: Please authenticate
+    at /home/phoenix1/nodejsBackend/src/middlewares/auth.js:10:19
+    at allFailed (/home/phoenix1/nodejsBackend/node_modules/passport/lib/middleware/authenticate.js:110:18)
+    at attempt (/home/phoenix1/nodejsBackend/node_modules/passport/lib/middleware/authenticate.js:183:28)
+    at JwtStrategy.strategy.fail (/home/phoenix1/nodejsBackend/node_modules/passport/lib/middleware/authenticate.js:305:9)
+    at /home/phoenix1/nodejsBackend/node_modules/passport-jwt/lib/strategy.js:106:33
+    at /home/phoenix1/nodejsBackend/node_modules/jsonwebtoken/verify.js:171:14
+    at getSecret (/home/phoenix1/nodejsBackend/node_modules/jsonwebtoken/verify.js:97:14)
+    at Object.module.exports [as verify] (/home/phoenix1/nodejsBackend/node_modules/jsonwebtoken/verify.js:101:10)
+    at Function.module.exports [as JwtVerifier] (/home/phoenix1/nodejsBackend/node_modules/passport-jwt/lib/verify_jwt.js:4:16)
+    at /home/phoenix1/nodejsBackend/node_modules/passport-jwt/lib/strategy.js:104:25
+    at JwtStrategy._secretOrKeyProvider (/home/phoenix1/nodejsBackend/node_modules/passport-jwt/lib/strategy.js:40:13)
+    at JwtStrategy.authenticate (/home/phoenix1/nodejsBackend/node_modules/passport-jwt/lib/strategy.js:99:10)
+    at attempt (/home/phoenix1/nodejsBackend/node_modules/passport/lib/middleware/authenticate.js:369:16)
+    at authenticate (/home/phoenix1/nodejsBackend/node_modules/passport/lib/middleware/authenticate.js:370:7)
+    at /home/phoenix1/nodejsBackend/src/middlewares/auth.js:32:107
+    at new Promise (<anonymous>)
+[31merror[39m: POST /v1/company/62b2a6f9061ed2a095b55555/template/63d23904ddf0bd15ff623b54/version 401 - 13.169 ms - message: Please authenticate
+[31merror[39m: [Invalid TOken] Error: Template id not found
+[31merror[39m: Error: Template id not found
+    at /home/phoenix1/nodejsBackend/src/controllers/company.controller.js:455:19
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company/62b2a6f9061ed2a095b55555/template/63d23904ddf0bd15ff623b54/version 404 - 192.303 ms - message: Template id not found
+[31merror[39m: TypeError: templateVersion.put is not a function
+    at /home/phoenix1/nodejsBackend/src/controllers/company.controller.js:485:21
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company/62b2a6f9061ed2a095b55555/template/6287791836bddb586c11082a/version 500 - 283.409 ms - message: templateVersion.put is not a function
+[31merror[39m: ReferenceError: JSONObject is not defined
+    at /home/phoenix1/nodejsBackend/src/controllers/company.controller.js:485:41
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company/62b2a6f9061ed2a095b55555/template/6287791836bddb586c11082a/version 500 - 2438.160 ms - message: JSONObject is not defined
+[31merror[39m: ReferenceError: JSONObject is not defined
+    at /home/phoenix1/nodejsBackend/src/controllers/company.controller.js:485:41
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company/62b2a6f9061ed2a095b55555/template/6287791836bddb586c11082a/version 500 - 273.153 ms - message: JSONObject is not defined
+[31merror[39m: ReferenceError: n_d is not defined
+    at /home/phoenix1/nodejsBackend/src/controllers/company.controller.js:486:5
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: POST /v1/company/62b2a6f9061ed2a095b55555/template/6287791836bddb586c11082a/version 500 - 284.769 ms - message: n_d is not defined
+[31merror[39m: Error: Please authenticate
+    at /home/phoenix1/nodejsBackend/src/middlewares/auth.js:10:19
+    at allFailed (/home/phoenix1/nodejsBackend/node_modules/passport/lib/middleware/authenticate.js:110:18)
+    at attempt (/home/phoenix1/nodejsBackend/node_modules/passport/lib/middleware/authenticate.js:183:28)
+    at JwtStrategy.strategy.fail (/home/phoenix1/nodejsBackend/node_modules/passport/lib/middleware/authenticate.js:305:9)
+    at JwtStrategy.authenticate (/home/phoenix1/nodejsBackend/node_modules/passport-jwt/lib/strategy.js:96:21)
+    at attempt (/home/phoenix1/nodejsBackend/node_modules/passport/lib/middleware/authenticate.js:369:16)
+    at authenticate (/home/phoenix1/nodejsBackend/node_modules/passport/lib/middleware/authenticate.js:370:7)
+    at /home/phoenix1/nodejsBackend/src/middlewares/auth.js:32:107
+    at new Promise (<anonymous>)
+    at /home/phoenix1/nodejsBackend/src/middlewares/auth.js:31:10
+    at Layer.handle [as handle_request] (/home/phoenix1/nodejsBackend/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/phoenix1/nodejsBackend/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/home/phoenix1/nodejsBackend/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/home/phoenix1/nodejsBackend/node_modules/express/lib/router/layer.js:95:5)
+    at /home/phoenix1/nodejsBackend/node_modules/express/lib/router/index.js:284:15
+    at param (/home/phoenix1/nodejsBackend/node_modules/express/lib/router/index.js:365:14)
+[31merror[39m: GET /v1/templateBuilder/628779c3ec4e045f4806f775/637766339ecaa37f5165cae8 401 - 3.391 ms - message: Please authenticate
+[31merror[39m: Error: Please authenticate
+    at /home/phoenix1/nodejsBackend/src/middlewares/auth.js:10:19
+    at allFailed (/home/phoenix1/nodejsBackend/node_modules/passport/lib/middleware/authenticate.js:110:18)
+    at attempt (/home/phoenix1/nodejsBackend/node_modules/passport/lib/middleware/authenticate.js:183:28)
+    at JwtStrategy.strategy.fail (/home/phoenix1/nodejsBackend/node_modules/passport/lib/middleware/authenticate.js:305:9)
+    at JwtStrategy.authenticate (/home/phoenix1/nodejsBackend/node_modules/passport-jwt/lib/strategy.js:96:21)
+    at attempt (/home/phoenix1/nodejsBackend/node_modules/passport/lib/middleware/authenticate.js:369:16)
+    at authenticate (/home/phoenix1/nodejsBackend/node_modules/passport/lib/middleware/authenticate.js:370:7)
+    at /home/phoenix1/nodejsBackend/src/middlewares/auth.js:32:107
+    at new Promise (<anonymous>)
+    at /home/phoenix1/nodejsBackend/src/middlewares/auth.js:31:10
+    at Layer.handle [as handle_request] (/home/phoenix1/nodejsBackend/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/phoenix1/nodejsBackend/node_modules/express/lib/router/route.js:144:13)
+    at next (/home/phoenix1/nodejsBackend/node_modules/express/lib/router/route.js:138:14)
+    at next (/home/phoenix1/nodejsBackend/node_modules/express/lib/router/route.js:138:14)
+    at next (/home/phoenix1/nodejsBackend/node_modules/express/lib/router/route.js:138:14)
+    at Route.dispatch (/home/phoenix1/nodejsBackend/node_modules/express/lib/router/route.js:114:3)
+[31merror[39m: PUT /v1/company/62b2a6f9061ed2a095b55555/template/6287791836bddb586c11082a/version/64366bb24e54fbb89101ae39/adminTool 401 - 3.829 ms - message: Please authenticate
+[31merror[39m: ReferenceError: data is not defined
+    at /home/phoenix1/nodejsBackend/src/controllers/company.controller.js:450:18
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: PUT /v1/company/62b2a6f9061ed2a095b55555/template/6287791836bddb586c11082a/version/64366bb24e54fbb89101ae39/adminTool 500 - 255.245 ms - message: data is not defined
+[31merror[39m: Error: Error connecting to db: getaddrinfo EAI_AGAIN cluster0-shard-00-02.ejokl.mongodb.net
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/index.js:88:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/utils.js:361:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/mongo_client.js:116:28
+    at connectCallback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:29:9)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:79:20
+    at exitWithError (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:186:53)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:190:59
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:242:80
+    at <anonymous>
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: Error: Error connecting to db: getaddrinfo EAI_AGAIN cluster0-shard-00-01.ejokl.mongodb.net
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/index.js:88:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/utils.js:361:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/mongo_client.js:116:28
+    at connectCallback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:29:9)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:79:20
+    at exitWithError (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:186:53)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:190:59
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:242:80
+    at <anonymous>
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/
+    at NativeConnection.Connection.openUri (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/connection.js:847:32)
+    at /home/phoenix1/nodejsBackend/node_modules/mongoose/lib/index.js:351:10
+    at /home/phoenix1/nodejsBackend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:32:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:10)
+    at Mongoose._promiseOrCallback (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/index.js:1149:10)
+    at Mongoose.connect (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/index.js:350:20)
+    at Object.<anonymous> (/home/phoenix1/nodejsBackend/src/index.js:26:12)
+    at Module._compile (node:internal/modules/cjs/loader:1196:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1250:10)
+    at Module.load (node:internal/modules/cjs/loader:1074:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:909:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
+    at node:internal/main/run_main_module:22:47
+[31merror[39m: Error: Error connecting to db: getaddrinfo EAI_AGAIN cluster0-shard-00-01.ejokl.mongodb.net
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/index.js:88:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/utils.js:361:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/mongo_client.js:116:28
+    at connectCallback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:29:9)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:79:20
+    at exitWithError (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:186:53)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:190:59
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:242:80
+    at <anonymous>
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at runNextTicks (node:internal/process/task_queues:65:3)
+    at listOnTimeout (node:internal/timers:528:9)
+    at processTimers (node:internal/timers:502:7)
+[31merror[39m: Error: Error connecting to db: getaddrinfo EAI_AGAIN cluster0-shard-00-01.ejokl.mongodb.net
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/index.js:88:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/utils.js:361:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/mongo_client.js:116:28
+    at connectCallback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:29:9)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:79:20
+    at exitWithError (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:186:53)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:190:59
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:242:80
+    at <anonymous>
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at runNextTicks (node:internal/process/task_queues:65:3)
+    at listOnTimeout (node:internal/timers:528:9)
+    at processTimers (node:internal/timers:502:7)
+[31merror[39m: Error: Error connecting to db: getaddrinfo EAI_AGAIN cluster0-shard-00-02.ejokl.mongodb.net
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/index.js:88:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/utils.js:361:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/mongo_client.js:116:28
+    at connectCallback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:29:9)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:79:20
+    at exitWithError (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:186:53)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:190:59
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:242:80
+    at <anonymous>
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: Error: Error connecting to db: getaddrinfo EAI_AGAIN cluster0-shard-00-02.ejokl.mongodb.net
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/index.js:88:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/utils.js:361:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/mongo_client.js:116:28
+    at connectCallback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:29:9)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:79:20
+    at exitWithError (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:186:53)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:190:59
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:242:80
+    at <anonymous>
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at runNextTicks (node:internal/process/task_queues:65:3)
+    at listOnTimeout (node:internal/timers:528:9)
+    at processTimers (node:internal/timers:502:7)
+[31merror[39m: Error: Error connecting to db: getaddrinfo EAI_AGAIN cluster0-shard-00-01.ejokl.mongodb.net
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/index.js:88:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/utils.js:361:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/mongo_client.js:116:28
+    at connectCallback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:29:9)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:79:20
+    at exitWithError (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:186:53)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:190:59
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:242:80
+    at <anonymous>
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: Error: Error connecting to db: getaddrinfo EAI_AGAIN cluster0-shard-00-01.ejokl.mongodb.net
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/index.js:88:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/utils.js:361:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/mongo_client.js:116:28
+    at connectCallback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:29:9)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:79:20
+    at exitWithError (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:186:53)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:190:59
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:242:80
+    at <anonymous>
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at runNextTicks (node:internal/process/task_queues:65:3)
+    at listOnTimeout (node:internal/timers:528:9)
+    at processTimers (node:internal/timers:502:7)
+[31merror[39m: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/
+    at NativeConnection.Connection.openUri (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/connection.js:847:32)
+    at /home/phoenix1/nodejsBackend/node_modules/mongoose/lib/index.js:351:10
+    at /home/phoenix1/nodejsBackend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:32:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:10)
+    at Mongoose._promiseOrCallback (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/index.js:1149:10)
+    at Mongoose.connect (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/index.js:350:20)
+    at Object.<anonymous> (/home/phoenix1/nodejsBackend/src/index.js:26:12)
+    at Module._compile (node:internal/modules/cjs/loader:1196:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1250:10)
+    at Module.load (node:internal/modules/cjs/loader:1074:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:909:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
+    at node:internal/main/run_main_module:22:47
+[31merror[39m: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/
+    at NativeConnection.Connection.openUri (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/connection.js:847:32)
+    at /home/phoenix1/nodejsBackend/node_modules/mongoose/lib/index.js:351:10
+    at /home/phoenix1/nodejsBackend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:32:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:10)
+    at Mongoose._promiseOrCallback (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/index.js:1149:10)
+    at Mongoose.connect (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/index.js:350:20)
+    at Object.<anonymous> (/home/phoenix1/nodejsBackend/src/index.js:26:12)
+    at Module._compile (node:internal/modules/cjs/loader:1196:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1250:10)
+    at Module.load (node:internal/modules/cjs/loader:1074:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:909:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
+    at node:internal/main/run_main_module:22:47
+[31merror[39m: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/
+    at NativeConnection.Connection.openUri (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/connection.js:847:32)
+    at /home/phoenix1/nodejsBackend/node_modules/mongoose/lib/index.js:351:10
+    at /home/phoenix1/nodejsBackend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:32:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:10)
+    at Mongoose._promiseOrCallback (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/index.js:1149:10)
+    at Mongoose.connect (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/index.js:350:20)
+    at Object.<anonymous> (/home/phoenix1/nodejsBackend/src/index.js:26:12)
+    at Module._compile (node:internal/modules/cjs/loader:1196:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1250:10)
+    at Module.load (node:internal/modules/cjs/loader:1074:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:909:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
+    at node:internal/main/run_main_module:22:47
+[31merror[39m: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/
+    at NativeConnection.Connection.openUri (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/connection.js:847:32)
+    at /home/phoenix1/nodejsBackend/node_modules/mongoose/lib/index.js:351:10
+    at /home/phoenix1/nodejsBackend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:32:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:10)
+    at Mongoose._promiseOrCallback (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/index.js:1149:10)
+    at Mongoose.connect (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/index.js:350:20)
+    at Object.<anonymous> (/home/phoenix1/nodejsBackend/src/index.js:26:12)
+    at Module._compile (node:internal/modules/cjs/loader:1196:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1250:10)
+    at Module.load (node:internal/modules/cjs/loader:1074:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:909:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
+    at node:internal/main/run_main_module:22:47
+[31merror[39m: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/
+    at NativeConnection.Connection.openUri (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/connection.js:847:32)
+    at /home/phoenix1/nodejsBackend/node_modules/mongoose/lib/index.js:351:10
+    at /home/phoenix1/nodejsBackend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:32:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:10)
+    at Mongoose._promiseOrCallback (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/index.js:1149:10)
+    at Mongoose.connect (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/index.js:350:20)
+    at Object.<anonymous> (/home/phoenix1/nodejsBackend/src/index.js:26:12)
+    at Module._compile (node:internal/modules/cjs/loader:1196:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1250:10)
+    at Module.load (node:internal/modules/cjs/loader:1074:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:909:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
+    at node:internal/main/run_main_module:22:47
+[31merror[39m: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/
+    at NativeConnection.Connection.openUri (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/connection.js:847:32)
+    at /home/phoenix1/nodejsBackend/node_modules/mongoose/lib/index.js:351:10
+    at /home/phoenix1/nodejsBackend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:32:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:10)
+    at Mongoose._promiseOrCallback (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/index.js:1149:10)
+    at Mongoose.connect (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/index.js:350:20)
+    at Object.<anonymous> (/home/phoenix1/nodejsBackend/src/index.js:26:12)
+    at Module._compile (node:internal/modules/cjs/loader:1196:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1250:10)
+    at Module.load (node:internal/modules/cjs/loader:1074:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:909:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
+    at node:internal/main/run_main_module:22:47
+[31merror[39m: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/
+    at NativeConnection.Connection.openUri (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/connection.js:847:32)
+    at /home/phoenix1/nodejsBackend/node_modules/mongoose/lib/index.js:351:10
+    at /home/phoenix1/nodejsBackend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:32:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:10)
+    at Mongoose._promiseOrCallback (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/index.js:1149:10)
+    at Mongoose.connect (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/index.js:350:20)
+    at Object.<anonymous> (/home/phoenix1/nodejsBackend/src/index.js:26:12)
+    at Module._compile (node:internal/modules/cjs/loader:1196:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1250:10)
+    at Module.load (node:internal/modules/cjs/loader:1074:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:909:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
+    at node:internal/main/run_main_module:22:47
+[31merror[39m: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/
+    at NativeConnection.Connection.openUri (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/connection.js:847:32)
+    at /home/phoenix1/nodejsBackend/node_modules/mongoose/lib/index.js:351:10
+    at /home/phoenix1/nodejsBackend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:32:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:10)
+    at Mongoose._promiseOrCallback (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/index.js:1149:10)
+    at Mongoose.connect (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/index.js:350:20)
+    at Object.<anonymous> (/home/phoenix1/nodejsBackend/src/index.js:26:12)
+    at Module._compile (node:internal/modules/cjs/loader:1196:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1250:10)
+    at Module.load (node:internal/modules/cjs/loader:1074:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:909:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
+    at node:internal/main/run_main_module:22:47
+[31merror[39m: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/
+    at NativeConnection.Connection.openUri (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/connection.js:847:32)
+    at /home/phoenix1/nodejsBackend/node_modules/mongoose/lib/index.js:351:10
+    at /home/phoenix1/nodejsBackend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:32:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:10)
+    at Mongoose._promiseOrCallback (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/index.js:1149:10)
+    at Mongoose.connect (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/index.js:350:20)
+    at Object.<anonymous> (/home/phoenix1/nodejsBackend/src/index.js:26:12)
+    at Module._compile (node:internal/modules/cjs/loader:1196:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1250:10)
+    at Module.load (node:internal/modules/cjs/loader:1074:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:909:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
+    at node:internal/main/run_main_module:22:47
+[31merror[39m: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/
+    at NativeConnection.Connection.openUri (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/connection.js:847:32)
+    at /home/phoenix1/nodejsBackend/node_modules/mongoose/lib/index.js:351:10
+    at /home/phoenix1/nodejsBackend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:32:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:10)
+    at Mongoose._promiseOrCallback (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/index.js:1149:10)
+    at Mongoose.connect (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/index.js:350:20)
+    at Object.<anonymous> (/home/phoenix1/nodejsBackend/src/index.js:26:12)
+    at Module._compile (node:internal/modules/cjs/loader:1196:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1250:10)
+    at Module.load (node:internal/modules/cjs/loader:1074:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:909:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
+    at node:internal/main/run_main_module:22:47
+[31merror[39m: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/
+    at NativeConnection.Connection.openUri (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/connection.js:847:32)
+    at /home/phoenix1/nodejsBackend/node_modules/mongoose/lib/index.js:351:10
+    at /home/phoenix1/nodejsBackend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:32:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:10)
+    at Mongoose._promiseOrCallback (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/index.js:1149:10)
+    at Mongoose.connect (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/index.js:350:20)
+    at Object.<anonymous> (/home/phoenix1/nodejsBackend/src/index.js:26:12)
+    at Module._compile (node:internal/modules/cjs/loader:1196:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1250:10)
+    at Module.load (node:internal/modules/cjs/loader:1074:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:909:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
+    at node:internal/main/run_main_module:22:47
+[31merror[39m: SyntaxError: Unexpected token ' in JSON at position 188
+    at JSON.parse (<anonymous>)
+    at parse (/home/phoenix1/nodejsBackend/node_modules/body-parser/lib/types/json.js:89:19)
+    at /home/phoenix1/nodejsBackend/node_modules/body-parser/lib/read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (/home/phoenix1/nodejsBackend/node_modules/raw-body/index.js:231:16)
+    at done (/home/phoenix1/nodejsBackend/node_modules/raw-body/index.js:220:7)
+    at IncomingMessage.onEnd (/home/phoenix1/nodejsBackend/node_modules/raw-body/index.js:280:7)
+    at IncomingMessage.emit (node:events:525:35)
+    at IncomingMessage.emit (node:domain:489:12)
+    at endReadableNT (node:internal/streams/readable:1358:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[31merror[39m: PUT /v1/company/62b2a6f9061ed2a095b55555/template/6287791836bddb586c11082a/version/64366bb24e54fbb89101ae39/adminTool 400 - 5.365 ms - message: Unexpected token ' in JSON at position 188
+[31merror[39m: ReferenceError: sectionEntry is not defined
+    at /home/phoenix1/nodejsBackend/src/controllers/company.controller.js:457:12
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: PUT /v1/company/62b2a6f9061ed2a095b55555/template/6287791836bddb586c11082a/version/64366bb24e54fbb89101ae39/adminTool 500 - 280.717 ms - message: sectionEntry is not defined
+[31merror[39m: RangeError [ERR_HTTP_INVALID_STATUS_CODE]: Invalid status code: 0
+    at new NodeError (node:internal/errors:387:5)
+    at ServerResponse.writeHead (node:_http_server:314:11)
+    at ServerResponse.writeHead (/home/phoenix1/nodejsBackend/node_modules/on-headers/index.js:44:26)
+    at ServerResponse.writeHead (/home/phoenix1/nodejsBackend/node_modules/on-headers/index.js:44:26)
+    at ServerResponse.writeHead (/home/phoenix1/nodejsBackend/node_modules/on-headers/index.js:44:26)
+    at ServerResponse._implicitHeader (node:_http_server:305:8)
+    at ServerResponse.end (/home/phoenix1/nodejsBackend/node_modules/compression/index.js:103:14)
+    at ServerResponse.send (/home/phoenix1/nodejsBackend/node_modules/express/lib/response.js:232:10)
+    at /home/phoenix1/nodejsBackend/src/controllers/company.controller.js:463:7
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: PUT /v1/company/62b2a6f9061ed2a095b55555/template/6287791836bddb586c11082a/version/64368eebd9ff1b8e24aa6323/adminTool 500 - 1384.766 ms - message: Invalid status code: 0
+[31merror[39m: RangeError [ERR_HTTP_INVALID_STATUS_CODE]: Invalid status code: 0
+    at new NodeError (node:internal/errors:387:5)
+    at ServerResponse.writeHead (node:_http_server:314:11)
+    at ServerResponse.writeHead (/home/phoenix1/nodejsBackend/node_modules/on-headers/index.js:44:26)
+    at ServerResponse.writeHead (/home/phoenix1/nodejsBackend/node_modules/on-headers/index.js:44:26)
+    at ServerResponse.writeHead (/home/phoenix1/nodejsBackend/node_modules/on-headers/index.js:44:26)
+    at ServerResponse._implicitHeader (node:_http_server:305:8)
+    at ServerResponse.end (/home/phoenix1/nodejsBackend/node_modules/compression/index.js:103:14)
+    at ServerResponse.send (/home/phoenix1/nodejsBackend/node_modules/express/lib/response.js:232:10)
+    at /home/phoenix1/nodejsBackend/src/controllers/company.controller.js:463:7
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: PUT /v1/company/62b2a6f9061ed2a095b55555/template/6287791836bddb586c11082a/version/64368eebd9ff1b8e24aa6323/adminTool 500 - 232.574 ms - message: Invalid status code: 0
+[31merror[39m: RangeError [ERR_HTTP_INVALID_STATUS_CODE]: Invalid status code: 0
+    at new NodeError (node:internal/errors:387:5)
+    at ServerResponse.writeHead (node:_http_server:314:11)
+    at ServerResponse.writeHead (/home/phoenix1/nodejsBackend/node_modules/on-headers/index.js:44:26)
+    at ServerResponse.writeHead (/home/phoenix1/nodejsBackend/node_modules/on-headers/index.js:44:26)
+    at ServerResponse.writeHead (/home/phoenix1/nodejsBackend/node_modules/on-headers/index.js:44:26)
+    at ServerResponse._implicitHeader (node:_http_server:305:8)
+    at ServerResponse.end (/home/phoenix1/nodejsBackend/node_modules/compression/index.js:103:14)
+    at ServerResponse.send (/home/phoenix1/nodejsBackend/node_modules/express/lib/response.js:232:10)
+    at /home/phoenix1/nodejsBackend/src/controllers/company.controller.js:463:7
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: PUT /v1/company/62b2a6f9061ed2a095b55555/template/6287791836bddb586c11082a/version/64368eebd9ff1b8e24aa6323/adminTool 500 - 228.126 ms - message: Invalid status code: 0
+[31merror[39m: RangeError [ERR_HTTP_INVALID_STATUS_CODE]: Invalid status code: 0
+    at new NodeError (node:internal/errors:387:5)
+    at ServerResponse.writeHead (node:_http_server:314:11)
+    at ServerResponse.writeHead (/home/phoenix1/nodejsBackend/node_modules/on-headers/index.js:44:26)
+    at ServerResponse.writeHead (/home/phoenix1/nodejsBackend/node_modules/on-headers/index.js:44:26)
+    at ServerResponse.writeHead (/home/phoenix1/nodejsBackend/node_modules/on-headers/index.js:44:26)
+    at ServerResponse._implicitHeader (node:_http_server:305:8)
+    at ServerResponse.end (/home/phoenix1/nodejsBackend/node_modules/compression/index.js:103:14)
+    at ServerResponse.send (/home/phoenix1/nodejsBackend/node_modules/express/lib/response.js:232:10)
+    at /home/phoenix1/nodejsBackend/src/controllers/company.controller.js:461:7
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: PUT /v1/company/62b2a6f9061ed2a095b55555/template/6287791836bddb586c11082a/version/64368eebd9ff1b8e24aa6323/adminTool 500 - 476.399 ms - message: Invalid status code: 0
+[31merror[39m: MongooseServerSelectionError: connection timed out
+    at NativeConnection.Connection.openUri (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/connection.js:847:32)
+    at /home/phoenix1/nodejsBackend/node_modules/mongoose/lib/index.js:351:10
+    at /home/phoenix1/nodejsBackend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:32:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:10)
+    at Mongoose._promiseOrCallback (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/index.js:1149:10)
+    at Mongoose.connect (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/index.js:350:20)
+    at Object.<anonymous> (/home/phoenix1/nodejsBackend/src/index.js:26:12)
+    at Module._compile (node:internal/modules/cjs/loader:1196:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1250:10)
+    at Module.load (node:internal/modules/cjs/loader:1074:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:909:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
+    at node:internal/main/run_main_module:22:47
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'sections')
+    at /home/phoenix1/nodejsBackend/src/controllers/company.controller.js:447:33
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: PUT /v1/company/62b2a6f9061ed2a095b55555/template/6287791836bddb586c11082a/version/64368eebd9ff1b8e24aa6323/adminTool 500 - 239.215 ms - message: Cannot read properties of undefined (reading 'sections')
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'sections')
+    at /home/phoenix1/nodejsBackend/src/controllers/company.controller.js:447:33
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: PUT /v1/company/62b2a6f9061ed2a095b55555/template/6287791836bddb586c11082a/version/64368eebd9ff1b8e24aa6323/adminTool 500 - 225.768 ms - message: Cannot read properties of undefined (reading 'sections')
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'sections')
+    at /home/phoenix1/nodejsBackend/src/controllers/company.controller.js:447:33
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: PUT /v1/company/62b2a6f9061ed2a095b55555/template/6287791836bddb586c11082a/version/64368eebd9ff1b8e24aa6323/adminTool 500 - 225.017 ms - message: Cannot read properties of undefined (reading 'sections')
+[31merror[39m: TypeError: Cannot read properties of undefined (reading 'sections')
+    at /home/phoenix1/nodejsBackend/src/controllers/company.controller.js:449:33
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: PUT /v1/company/62b2a6f9061ed2a095b55555/template/6287791836bddb586c11082a/version/64368eebd9ff1b8e24aa6323/adminTool 500 - 233.591 ms - message: Cannot read properties of undefined (reading 'sections')
+[31merror[39m: ReferenceError: die is not defined
+    at /home/phoenix1/nodejsBackend/src/controllers/company.controller.js:451:3
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: PUT /v1/company/62b2a6f9061ed2a095b55555/template/6287791836bddb586c11082a/version/64368eebd9ff1b8e24aa6323/adminTool 500 - 227.184 ms - message: die is not defined
+[31merror[39m: ReferenceError: die is not defined
+    at /home/phoenix1/nodejsBackend/src/controllers/company.controller.js:451:3
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: PUT /v1/company/62b2a6f9061ed2a095b55555/template/6287791836bddb586c11082a/version/64368eebd9ff1b8e24aa6323/adminTool 500 - 236.989 ms - message: die is not defined
+[31merror[39m: Error: Error connecting to db: getaddrinfo EAI_AGAIN cluster0-shard-00-01.ejokl.mongodb.net
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/index.js:88:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/utils.js:361:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/mongo_client.js:116:28
+    at connectCallback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:29:9)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:79:20
+    at exitWithError (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:186:53)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:197:32
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connection_pool.js:289:25
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/server.js:211:24
+    at Object.callback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connection_pool.js:286:13)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connection_pool.js:486:37
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connection_pool.js:349:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connect.js:34:20
+    at callback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connect.js:273:9)
+    at TLSSocket.<anonymous> (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connect.js:310:13)
+    at Object.onceWrapper (node:events:628:26)
+[31merror[39m: Error: getaddrinfo EAI_AGAIN cluster0-shard-00-01.ejokl.mongodb.net
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:109:26)
+[31merror[39m: Error: getaddrinfo EAI_AGAIN cluster0-shard-00-01.ejokl.mongodb.net
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:109:26)
+[31merror[39m: Error: Error connecting to db: getaddrinfo EAI_AGAIN cluster0-shard-00-01.ejokl.mongodb.net
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/index.js:88:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/utils.js:361:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/mongo_client.js:116:28
+    at connectCallback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:29:9)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:79:20
+    at exitWithError (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:186:53)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:197:32
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connection_pool.js:289:25
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/server.js:211:24
+    at Object.callback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connection_pool.js:286:13)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connection_pool.js:486:37
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connection_pool.js:349:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connect.js:34:20
+    at callback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connect.js:273:9)
+    at TLSSocket.<anonymous> (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connect.js:310:13)
+    at Object.onceWrapper (node:events:628:26)
+[31merror[39m: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/
+    at NativeConnection.Connection.openUri (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/connection.js:847:32)
+    at /home/phoenix1/nodejsBackend/node_modules/mongoose/lib/index.js:351:10
+    at /home/phoenix1/nodejsBackend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:32:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:10)
+    at Mongoose._promiseOrCallback (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/index.js:1149:10)
+    at Mongoose.connect (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/index.js:350:20)
+    at Object.<anonymous> (/home/phoenix1/nodejsBackend/src/index.js:26:12)
+    at Module._compile (node:internal/modules/cjs/loader:1196:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1250:10)
+    at Module.load (node:internal/modules/cjs/loader:1074:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:909:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
+    at node:internal/main/run_main_module:22:47
+[31merror[39m: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/
+    at NativeConnection.Connection.openUri (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/connection.js:847:32)
+    at /home/phoenix1/nodejsBackend/node_modules/mongoose/lib/index.js:351:10
+    at /home/phoenix1/nodejsBackend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:32:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:10)
+    at Mongoose._promiseOrCallback (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/index.js:1149:10)
+    at Mongoose.connect (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/index.js:350:20)
+    at Object.<anonymous> (/home/phoenix1/nodejsBackend/src/index.js:26:12)
+    at Module._compile (node:internal/modules/cjs/loader:1196:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1250:10)
+    at Module.load (node:internal/modules/cjs/loader:1074:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:909:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
+    at node:internal/main/run_main_module:22:47
+[31merror[39m: Error: Error connecting to db: getaddrinfo EAI_AGAIN cluster0-shard-00-01.ejokl.mongodb.net
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/index.js:88:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/utils.js:361:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/mongo_client.js:116:28
+    at connectCallback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:29:9)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:79:20
+    at exitWithError (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:186:53)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:190:59
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:242:80
+    at <anonymous>
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at runNextTicks (node:internal/process/task_queues:65:3)
+    at listOnTimeout (node:internal/timers:528:9)
+    at processTimers (node:internal/timers:502:7)
+[31merror[39m: Error: Error connecting to db: connection timed out
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/index.js:88:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/utils.js:361:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/mongo_client.js:116:28
+    at connectCallback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:29:9)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:79:20
+    at exitWithError (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:186:53)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:190:59
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:242:80
+    at <anonymous>
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: Error: Error connecting to db: getaddrinfo EAI_AGAIN cluster0-shard-00-01.ejokl.mongodb.net
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/index.js:88:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/utils.js:361:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/mongo_client.js:116:28
+    at connectCallback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:29:9)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:79:20
+    at exitWithError (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:186:53)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:190:59
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:242:80
+    at <anonymous>
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: Error: Error connecting to db: getaddrinfo EAI_AGAIN cluster0-shard-00-01.ejokl.mongodb.net
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/index.js:88:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/utils.js:361:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/mongo_client.js:116:28
+    at connectCallback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:29:9)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:79:20
+    at exitWithError (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:186:53)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:190:59
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:242:80
+    at <anonymous>
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: Error: Error connecting to db: connection timed out
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/index.js:88:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/utils.js:361:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/mongo_client.js:116:28
+    at connectCallback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:29:9)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:79:20
+    at exitWithError (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:186:53)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:197:32
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connection_pool.js:289:25
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/server.js:211:24
+    at Object.callback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connection_pool.js:286:13)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connection_pool.js:486:37
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connection_pool.js:349:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connect.js:34:20
+    at callback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connect.js:273:9)
+    at TLSSocket.<anonymous> (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connect.js:310:13)
+    at Object.onceWrapper (node:events:627:28)
+[31merror[39m: Error: Error connecting to db: connection timed out
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/index.js:88:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/utils.js:361:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/mongo_client.js:116:28
+    at connectCallback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:29:9)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:79:20
+    at exitWithError (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:186:53)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:197:32
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connection_pool.js:289:25
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/server.js:211:24
+    at Object.callback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connection_pool.js:286:13)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connection_pool.js:486:37
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connection_pool.js:349:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connect.js:34:20
+    at callback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connect.js:273:9)
+    at TLSSocket.<anonymous> (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connect.js:310:13)
+    at Object.onceWrapper (node:events:627:28)
+[31merror[39m: Error: Error connecting to db: getaddrinfo EAI_AGAIN cluster0-shard-00-02.ejokl.mongodb.net
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/index.js:88:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/utils.js:361:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/mongo_client.js:116:28
+    at connectCallback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:29:9)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:79:20
+    at exitWithError (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:186:53)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:190:59
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:242:80
+    at <anonymous>
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: MongoNetworkTimeoutError: connection timed out
+    at connectionFailureError (/home/phoenix1/nodejsBackend/node_modules/mongodb/lib/core/connection/connect.js:362:14)
+    at TLSSocket.<anonymous> (/home/phoenix1/nodejsBackend/node_modules/mongodb/lib/core/connection/connect.js:330:16)
+    at Object.onceWrapper (node:events:627:28)
+    at TLSSocket.emit (node:events:513:28)
+    at TLSSocket.emit (node:domain:489:12)
+    at TLSSocket.Socket._onTimeout (node:net:550:8)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+[31merror[39m: Error: Error connecting to db: connection timed out
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/index.js:88:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/utils.js:361:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/mongo_client.js:116:28
+    at connectCallback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:29:9)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:79:20
+    at exitWithError (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:186:53)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:197:32
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connection_pool.js:289:25
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/server.js:211:24
+    at Object.callback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connection_pool.js:286:13)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connection_pool.js:486:37
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connection_pool.js:349:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connect.js:34:20
+    at callback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connect.js:273:9)
+    at TLSSocket.<anonymous> (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connect.js:310:13)
+    at Object.onceWrapper (node:events:627:28)
+[31merror[39m: Error: Error connecting to db: connection timed out
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/index.js:88:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/utils.js:361:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/mongo_client.js:116:28
+    at connectCallback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:29:9)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:79:20
+    at exitWithError (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:186:53)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:197:32
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connection_pool.js:289:25
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/server.js:211:24
+    at Object.callback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connection_pool.js:286:13)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connection_pool.js:486:37
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connection_pool.js:349:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connect.js:34:20
+    at callback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connect.js:273:9)
+    at TLSSocket.<anonymous> (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connect.js:310:13)
+    at Object.onceWrapper (node:events:627:28)
+[31merror[39m: Error: Error connecting to db: connection timed out
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/index.js:88:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/utils.js:361:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/mongo_client.js:116:28
+    at connectCallback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:29:9)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:79:20
+    at exitWithError (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:186:53)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:197:32
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connection_pool.js:289:25
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/server.js:211:24
+    at Object.callback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connection_pool.js:286:13)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connection_pool.js:486:37
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connection_pool.js:349:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connect.js:34:20
+    at callback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connect.js:273:9)
+    at TLSSocket.<anonymous> (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connect.js:310:13)
+    at Object.onceWrapper (node:events:627:28)
+[31merror[39m: Error: Error connecting to db: connection timed out
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/index.js:88:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/utils.js:361:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/mongo_client.js:116:28
+    at connectCallback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:29:9)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:79:20
+    at exitWithError (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:186:53)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:197:32
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connection_pool.js:289:25
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/server.js:211:24
+    at Object.callback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connection_pool.js:286:13)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connection_pool.js:486:37
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connection_pool.js:349:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connect.js:34:20
+    at callback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connect.js:273:9)
+    at TLSSocket.<anonymous> (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connect.js:310:13)
+    at Object.onceWrapper (node:events:627:28)
+[31merror[39m: Error: Error connecting to db: connection timed out
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/index.js:88:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/utils.js:361:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/mongo_client.js:116:28
+    at connectCallback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:29:9)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:79:20
+    at exitWithError (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:186:53)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:197:32
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connection_pool.js:289:25
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/server.js:211:24
+    at Object.callback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connection_pool.js:286:13)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connection_pool.js:486:37
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connection_pool.js:349:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connect.js:34:20
+    at callback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connect.js:273:9)
+    at TLSSocket.<anonymous> (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connect.js:310:13)
+    at Object.onceWrapper (node:events:627:28)
+[31merror[39m: Error: Error connecting to db: connection timed out
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/index.js:88:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/utils.js:361:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/mongo_client.js:116:28
+    at connectCallback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:29:9)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:79:20
+    at exitWithError (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:186:53)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:197:32
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connection_pool.js:289:25
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/server.js:211:24
+    at Object.callback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connection_pool.js:286:13)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connection_pool.js:486:37
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connection_pool.js:349:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connect.js:34:20
+    at callback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connect.js:273:9)
+    at TLSSocket.<anonymous> (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/cmap/connect.js:310:13)
+    at Object.onceWrapper (node:events:627:28)
+[31merror[39m: SyntaxError: Unexpected token } in JSON at position 2658
+    at JSON.parse (<anonymous>)
+    at parse (/home/phoenix1/nodejsBackend/node_modules/body-parser/lib/types/json.js:89:19)
+    at /home/phoenix1/nodejsBackend/node_modules/body-parser/lib/read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (/home/phoenix1/nodejsBackend/node_modules/raw-body/index.js:231:16)
+    at done (/home/phoenix1/nodejsBackend/node_modules/raw-body/index.js:220:7)
+    at IncomingMessage.onEnd (/home/phoenix1/nodejsBackend/node_modules/raw-body/index.js:280:7)
+    at IncomingMessage.emit (node:events:525:35)
+    at IncomingMessage.emit (node:domain:489:12)
+    at endReadableNT (node:internal/streams/readable:1358:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[31merror[39m: PUT /v1/company/62b2a6f9061ed2a095b55555/template/6287791836bddb586c11082a/version/64368eebd9ff1b8e24aa6323/adminTool 400 - 5.469 ms - message: Unexpected token } in JSON at position 2658
+[31merror[39m: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/
+    at NativeConnection.Connection.openUri (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/connection.js:847:32)
+    at /home/phoenix1/nodejsBackend/node_modules/mongoose/lib/index.js:351:10
+    at /home/phoenix1/nodejsBackend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:32:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:10)
+    at Mongoose._promiseOrCallback (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/index.js:1149:10)
+    at Mongoose.connect (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/index.js:350:20)
+    at Object.<anonymous> (/home/phoenix1/nodejsBackend/src/index.js:26:12)
+    at Module._compile (node:internal/modules/cjs/loader:1196:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1250:10)
+    at Module.load (node:internal/modules/cjs/loader:1074:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:909:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
+    at node:internal/main/run_main_module:22:47
+[31merror[39m: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/
+    at NativeConnection.Connection.openUri (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/connection.js:847:32)
+    at /home/phoenix1/nodejsBackend/node_modules/mongoose/lib/index.js:351:10
+    at /home/phoenix1/nodejsBackend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:32:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:10)
+    at Mongoose._promiseOrCallback (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/index.js:1149:10)
+    at Mongoose.connect (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/index.js:350:20)
+    at Object.<anonymous> (/home/phoenix1/nodejsBackend/src/index.js:26:12)
+    at Module._compile (node:internal/modules/cjs/loader:1196:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1250:10)
+    at Module.load (node:internal/modules/cjs/loader:1074:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:909:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
+    at node:internal/main/run_main_module:22:47
+[31merror[39m: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/
+    at NativeConnection.Connection.openUri (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/connection.js:847:32)
+    at /home/phoenix1/nodejsBackend/node_modules/mongoose/lib/index.js:351:10
+    at /home/phoenix1/nodejsBackend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:32:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:10)
+    at Mongoose._promiseOrCallback (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/index.js:1149:10)
+    at Mongoose.connect (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/index.js:350:20)
+    at Object.<anonymous> (/home/phoenix1/nodejsBackend/src/index.js:26:12)
+    at Module._compile (node:internal/modules/cjs/loader:1196:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1250:10)
+    at Module.load (node:internal/modules/cjs/loader:1074:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:909:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
+    at node:internal/main/run_main_module:22:47
+[31merror[39m: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/
+    at NativeConnection.Connection.openUri (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/connection.js:847:32)
+    at /home/phoenix1/nodejsBackend/node_modules/mongoose/lib/index.js:351:10
+    at /home/phoenix1/nodejsBackend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:32:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:10)
+    at Mongoose._promiseOrCallback (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/index.js:1149:10)
+    at Mongoose.connect (/home/phoenix1/nodejsBackend/node_modules/mongoose/lib/index.js:350:20)
+    at Object.<anonymous> (/home/phoenix1/nodejsBackend/src/index.js:26:12)
+    at Module._compile (node:internal/modules/cjs/loader:1196:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1250:10)
+    at Module.load (node:internal/modules/cjs/loader:1074:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:909:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
+    at node:internal/main/run_main_module:22:47
+[31merror[39m: TypeError: adminTool[0].push is not a function
+    at /home/phoenix1/nodejsBackend/src/controllers/company.controller.js:417:16
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/company/62b2a6f9061ed2a095b55555/template/6287791836bddb586c11082a/version/64368eebd9ff1b8e24aa6323/adminTool 500 - 511.280 ms - message: adminTool[0].push is not a function
+[31merror[39m: Error: Error connecting to db: getaddrinfo EAI_AGAIN cluster0-shard-00-02.ejokl.mongodb.net
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/index.js:88:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/utils.js:361:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/mongo_client.js:116:28
+    at connectCallback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:29:9)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:79:20
+    at exitWithError (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:186:53)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:190:59
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:242:80
+    at <anonymous>
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: Error: Error connecting to db: getaddrinfo EAI_AGAIN cluster0-shard-00-02.ejokl.mongodb.net
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/index.js:88:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/utils.js:361:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/mongo_client.js:116:28
+    at connectCallback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:29:9)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:79:20
+    at exitWithError (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:186:53)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:190:59
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:242:80
+    at <anonymous>
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: Error: Error connecting to db: getaddrinfo EAI_AGAIN cluster0-shard-00-02.ejokl.mongodb.net
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/index.js:88:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/utils.js:361:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/mongo_client.js:116:28
+    at connectCallback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:29:9)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:79:20
+    at exitWithError (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:186:53)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:190:59
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:242:80
+    at <anonymous>
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: Error: Error connecting to db: getaddrinfo EAI_AGAIN cluster0-shard-00-02.ejokl.mongodb.net
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/index.js:88:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/utils.js:361:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/mongo_client.js:116:28
+    at connectCallback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:29:9)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:79:20
+    at exitWithError (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:186:53)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:190:59
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:242:80
+    at <anonymous>
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: Error: Error connecting to db: getaddrinfo EAI_AGAIN cluster0-shard-00-02.ejokl.mongodb.net
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/index.js:88:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/utils.js:361:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/mongo_client.js:116:28
+    at connectCallback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:29:9)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:79:20
+    at exitWithError (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:186:53)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:190:59
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:242:80
+    at <anonymous>
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: Error: Error connecting to db: getaddrinfo EAI_AGAIN cluster0-shard-00-02.ejokl.mongodb.net
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/index.js:88:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/utils.js:361:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/mongo_client.js:116:28
+    at connectCallback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:29:9)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:79:20
+    at exitWithError (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:186:53)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:190:59
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:242:80
+    at <anonymous>
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: Error: Error connecting to db: getaddrinfo EAI_AGAIN cluster0-shard-00-02.ejokl.mongodb.net
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/index.js:88:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/utils.js:361:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/mongo_client.js:116:28
+    at connectCallback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:29:9)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:79:20
+    at exitWithError (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:186:53)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:190:59
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:242:80
+    at <anonymous>
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at runNextTicks (node:internal/process/task_queues:65:3)
+    at listOnTimeout (node:internal/timers:528:9)
+    at processTimers (node:internal/timers:502:7)
+[31merror[39m: Error: Error connecting to db: getaddrinfo EAI_AGAIN cluster0-shard-00-02.ejokl.mongodb.net
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/index.js:88:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/utils.js:361:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/mongo_client.js:116:28
+    at connectCallback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:29:9)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:79:20
+    at exitWithError (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:186:53)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:190:59
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:242:80
+    at <anonymous>
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at runNextTicks (node:internal/process/task_queues:65:3)
+    at listOnTimeout (node:internal/timers:528:9)
+    at processTimers (node:internal/timers:502:7)
+[31merror[39m: Error: Error connecting to db: getaddrinfo EAI_AGAIN cluster0-shard-00-02.ejokl.mongodb.net
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/index.js:88:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/utils.js:361:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/mongo_client.js:116:28
+    at connectCallback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:29:9)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:79:20
+    at exitWithError (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:186:53)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:190:59
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:242:80
+    at <anonymous>
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: Error: Error connecting to db: getaddrinfo EAI_AGAIN cluster0-shard-00-02.ejokl.mongodb.net
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/index.js:88:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/utils.js:361:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/mongo_client.js:116:28
+    at connectCallback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:29:9)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:79:20
+    at exitWithError (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:186:53)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:190:59
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:242:80
+    at <anonymous>
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: Error: Error connecting to db: getaddrinfo EAI_AGAIN cluster0-shard-00-02.ejokl.mongodb.net
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/index.js:88:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/utils.js:361:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/mongo_client.js:116:28
+    at connectCallback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:29:9)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:79:20
+    at exitWithError (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:186:53)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:190:59
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:242:80
+    at <anonymous>
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: Error: Error connecting to db: getaddrinfo EAI_AGAIN cluster0-shard-00-02.ejokl.mongodb.net
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/index.js:88:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/utils.js:361:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/mongo_client.js:116:28
+    at connectCallback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:29:9)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:79:20
+    at exitWithError (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:186:53)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:190:59
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:242:80
+    at <anonymous>
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: Error: Error connecting to db: getaddrinfo EAI_AGAIN cluster0-shard-00-02.ejokl.mongodb.net
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/index.js:88:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/utils.js:361:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/mongo_client.js:116:28
+    at connectCallback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:29:9)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:79:20
+    at exitWithError (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:186:53)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:190:59
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:242:80
+    at <anonymous>
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at runNextTicks (node:internal/process/task_queues:65:3)
+    at listOnTimeout (node:internal/timers:528:9)
+    at processTimers (node:internal/timers:502:7)
+[31merror[39m: Error: Error connecting to db: getaddrinfo EAI_AGAIN cluster0-shard-00-02.ejokl.mongodb.net
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/index.js:88:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/utils.js:361:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/mongo_client.js:116:28
+    at connectCallback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:29:9)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:79:20
+    at exitWithError (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:186:53)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:190:59
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:242:80
+    at <anonymous>
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: Error: Error connecting to db: getaddrinfo EAI_AGAIN cluster0-shard-00-02.ejokl.mongodb.net
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/index.js:88:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/utils.js:361:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/mongo_client.js:116:28
+    at connectCallback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:29:9)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:79:20
+    at exitWithError (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:186:53)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:190:59
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:242:80
+    at <anonymous>
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at runNextTicks (node:internal/process/task_queues:65:3)
+    at listOnTimeout (node:internal/timers:528:9)
+    at processTimers (node:internal/timers:502:7)
+[31merror[39m: Error: Error connecting to db: getaddrinfo EAI_AGAIN cluster0-shard-00-02.ejokl.mongodb.net
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/index.js:88:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/utils.js:361:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/mongo_client.js:116:28
+    at connectCallback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:29:9)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:79:20
+    at exitWithError (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:186:53)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:190:59
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:242:80
+    at <anonymous>
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at runNextTicks (node:internal/process/task_queues:65:3)
+    at listOnTimeout (node:internal/timers:528:9)
+    at processTimers (node:internal/timers:502:7)
+[31merror[39m: Error: Error connecting to db: getaddrinfo EAI_AGAIN cluster0-shard-00-02.ejokl.mongodb.net
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/index.js:88:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/utils.js:361:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/mongo_client.js:116:28
+    at connectCallback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:29:9)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:79:20
+    at exitWithError (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:186:53)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:190:59
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:242:80
+    at <anonymous>
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: Error: Error connecting to db: getaddrinfo EAI_AGAIN cluster0-shard-00-02.ejokl.mongodb.net
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/index.js:88:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/utils.js:361:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/mongo_client.js:116:28
+    at connectCallback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:29:9)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:79:20
+    at exitWithError (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:186:53)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:190:59
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:242:80
+    at <anonymous>
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at runNextTicks (node:internal/process/task_queues:65:3)
+    at listOnTimeout (node:internal/timers:528:9)
+    at processTimers (node:internal/timers:502:7)
+[31merror[39m: Error: Error connecting to db: getaddrinfo EAI_AGAIN cluster0-shard-00-02.ejokl.mongodb.net
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/index.js:88:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/utils.js:361:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/mongo_client.js:116:28
+    at connectCallback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:29:9)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:79:20
+    at exitWithError (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:186:53)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:190:59
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:242:80
+    at <anonymous>
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at runNextTicks (node:internal/process/task_queues:65:3)
+    at listOnTimeout (node:internal/timers:528:9)
+    at processTimers (node:internal/timers:502:7)
+[31merror[39m: Error: Error connecting to db: getaddrinfo EAI_AGAIN cluster0-shard-00-02.ejokl.mongodb.net
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/index.js:88:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/utils.js:361:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/mongo_client.js:116:28
+    at connectCallback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:29:9)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:79:20
+    at exitWithError (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:186:53)
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:190:59
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/sdam/topology.js:242:80
+    at <anonymous>
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: SyntaxError: Unexpected token _ in JSON at position 4
+    at JSON.parse (<anonymous>)
+    at /home/phoenix1/nodejsBackend/src/controllers/company.controller.js:416:23
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/company/62b2a6f9061ed2a095b55555/template/6287791836bddb586c11082a/version/64368eebd9ff1b8e24aa6323/adminTool 500 - 268.751 ms - message: Unexpected token _ in JSON at position 4
+[31merror[39m: [Invalid TOken] ReferenceError: TemplateVersion is not defined
+[31merror[39m: ReferenceError: TemplateVersion is not defined
+    at /home/phoenix1/nodejsBackend/src/controllers/builder.controller.js:73:27
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/templateBuilder/64368eebd9ff1b8e24aa6323/64368eebd9ff1b8e24aa6325 500 - 588.669 ms - message: TemplateVersion is not defined
+[31merror[39m: [Invalid TOken] TypeError: Cannot read properties of undefined (reading '_id')
+[31merror[39m: TypeError: Cannot read properties of undefined (reading '_id')
+    at /home/phoenix1/nodejsBackend/src/services/company.service.js:186:68
+    at Array.map (<anonymous>)
+    at Object.companyUserAccount (/home/phoenix1/nodejsBackend/src/services/company.service.js:159:17)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async /home/phoenix1/nodejsBackend/src/controllers/builder.controller.js:71:24
+[31merror[39m: GET /v1/templateBuilder/64368eebd9ff1b8e24aa6323/64368eebd9ff1b8e24aa6325 500 - 2595.930 ms - message: Cannot read properties of undefined (reading '_id')
+[31merror[39m: [Invalid TOken] TypeError: Cannot read properties of undefined (reading '_id')
+[31merror[39m: TypeError: Cannot read properties of undefined (reading '_id')
+    at /home/phoenix1/nodejsBackend/src/services/company.service.js:186:68
+    at Array.map (<anonymous>)
+    at Object.companyUserAccount (/home/phoenix1/nodejsBackend/src/services/company.service.js:159:17)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async /home/phoenix1/nodejsBackend/src/controllers/builder.controller.js:71:24
+[31merror[39m: GET /v1/templateBuilder/64368eebd9ff1b8e24aa6323/64368eebd9ff1b8e24aa6325 500 - 3082.673 ms - message: Cannot read properties of undefined (reading '_id')
+[31merror[39m: [Invalid TOken] ReferenceError: consolel is not defined
+[31merror[39m: ReferenceError: consolel is not defined
+    at /home/phoenix1/nodejsBackend/src/controllers/builder.controller.js:73:7
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/templateBuilder/64368eebd9ff1b8e24aa6323/64368eebd9ff1b8e24aa6325 500 - 887.743 ms - message: consolel is not defined
+[31merror[39m: [Invalid TOken] ReferenceError: TemplateVersion is not defined
+[31merror[39m: ReferenceError: TemplateVersion is not defined
+    at /home/phoenix1/nodejsBackend/src/controllers/builder.controller.js:76:27
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/templateBuilder/64368eebd9ff1b8e24aa6323/64368eebd9ff1b8e24aa6325 500 - 177.407 ms - message: TemplateVersion is not defined
+[31merror[39m: [Invalid TOken] ReferenceError: TemplateVersion is not defined
+[31merror[39m: ReferenceError: TemplateVersion is not defined
+    at /home/phoenix1/nodejsBackend/src/controllers/builder.controller.js:76:27
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/templateBuilder/64368eebd9ff1b8e24aa6323/64368eebd9ff1b8e24aa6325 500 - 1425.959 ms - message: TemplateVersion is not defined
+[31merror[39m: [Invalid TOken] ReferenceError: TemplateVersion is not defined
+[31merror[39m: ReferenceError: TemplateVersion is not defined
+    at /home/phoenix1/nodejsBackend/src/controllers/builder.controller.js:76:27
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/templateBuilder/64368eebd9ff1b8e24aa6323/64368eebd9ff1b8e24aa6325 500 - 182.513 ms - message: TemplateVersion is not defined
+[31merror[39m: [Invalid TOken] ReferenceError: TemplateVersion is not defined
+[31merror[39m: ReferenceError: TemplateVersion is not defined
+    at /home/phoenix1/nodejsBackend/src/controllers/builder.controller.js:76:27
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/templateBuilder/64368eebd9ff1b8e24aa6323/64368eebd9ff1b8e24aa6325 500 - 178.112 ms - message: TemplateVersion is not defined
+[31merror[39m: [Invalid TOken] ReferenceError: template is not defined
+[31merror[39m: ReferenceError: template is not defined
+    at /home/phoenix1/nodejsBackend/src/controllers/builder.controller.js:92:18
+    at Array.map (<anonymous>)
+    at /home/phoenix1/nodejsBackend/src/controllers/builder.controller.js:79:19
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/templateBuilder/64368eebd9ff1b8e24aa6323/64368eebd9ff1b8e24aa6325 500 - 724.006 ms - message: template is not defined
+[31merror[39m: [Invalid TOken] ReferenceError: Template is not defined
+[31merror[39m: ReferenceError: Template is not defined
+    at /home/phoenix1/nodejsBackend/src/controllers/builder.controller.js:77:20
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/templateBuilder/64368eebd9ff1b8e24aa6323/64368eebd9ff1b8e24aa6325 500 - 1284.500 ms - message: Template is not defined
+[31merror[39m: [Invalid TOken] ReferenceError: Template is not defined
+[31merror[39m: ReferenceError: Template is not defined
+    at /home/phoenix1/nodejsBackend/src/controllers/builder.controller.js:77:20
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[31merror[39m: GET /v1/templateBuilder/64368eebd9ff1b8e24aa6323/64368eebd9ff1b8e24aa6325 500 - 227.800 ms - message: Template is not defined
+[31merror[39m: Error: querySrv EREFUSED _mongodb._tcp.cluster0.ejokl.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:dns:279:19)
+[31merror[39m: Error: querySrv EREFUSED _mongodb._tcp.cluster0.ejokl.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:dns:279:19)
+[31merror[39m: Error: querySrv EREFUSED _mongodb._tcp.cluster0.ejokl.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:dns:279:19)
+[31merror[39m: Error: querySrv EREFUSED _mongodb._tcp.cluster0.ejokl.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:dns:279:19)
+[31merror[39m: Error: querySrv EREFUSED _mongodb._tcp.cluster0.ejokl.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:dns:279:19)
+[31merror[39m: Error: querySrv EREFUSED _mongodb._tcp.cluster0.ejokl.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:dns:279:19)
+[31merror[39m: Error: querySrv EREFUSED _mongodb._tcp.cluster0.ejokl.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:dns:279:19)
+[31merror[39m: Error: querySrv EREFUSED _mongodb._tcp.cluster0.ejokl.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:dns:279:19)
+[31merror[39m: Error: Error connecting to db: querySrv EREFUSED _mongodb._tcp.cluster0.ejokl.mongodb.net
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/index.js:88:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/utils.js:361:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/mongo_client.js:116:28
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:34:24
+    at QueryReqWrap.callback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/connection_string.js:57:20)
+    at QueryReqWrap.onresolve [as oncomplete] (node:dns:279:10)
+[31merror[39m: Error: querySrv EREFUSED _mongodb._tcp.cluster0.ejokl.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:dns:279:19)
+[31merror[39m: Error: Error connecting to db: querySrv EREFUSED _mongodb._tcp.cluster0.ejokl.mongodb.net
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/index.js:88:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/utils.js:361:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/mongo_client.js:116:28
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:34:24
+    at QueryReqWrap.callback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/connection_string.js:57:20)
+    at QueryReqWrap.onresolve [as oncomplete] (node:dns:279:10)
+[31merror[39m: Error: querySrv EREFUSED _mongodb._tcp.cluster0.ejokl.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:dns:279:19)
+[31merror[39m: Error: Error connecting to db: querySrv EREFUSED _mongodb._tcp.cluster0.ejokl.mongodb.net
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/index.js:88:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/utils.js:361:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/mongo_client.js:116:28
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:34:24
+    at QueryReqWrap.callback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/connection_string.js:57:20)
+    at QueryReqWrap.onresolve [as oncomplete] (node:dns:279:10)
+[31merror[39m: Error: Error connecting to db: querySrv EREFUSED _mongodb._tcp.cluster0.ejokl.mongodb.net
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/index.js:88:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/utils.js:361:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/mongo_client.js:116:28
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:34:24
+    at QueryReqWrap.callback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/connection_string.js:57:20)
+    at QueryReqWrap.onresolve [as oncomplete] (node:dns:279:10)
+[31merror[39m: Error: querySrv EREFUSED _mongodb._tcp.cluster0.ejokl.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:dns:279:19)
+[31merror[39m: Error: Error connecting to db: querySrv EREFUSED _mongodb._tcp.cluster0.ejokl.mongodb.net
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/index.js:88:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/utils.js:361:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/mongo_client.js:116:28
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:34:24
+    at QueryReqWrap.callback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/connection_string.js:57:20)
+    at QueryReqWrap.onresolve [as oncomplete] (node:dns:279:10)
+[31merror[39m: Error: Error connecting to db: querySrv EREFUSED _mongodb._tcp.cluster0.ejokl.mongodb.net
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/index.js:88:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/utils.js:361:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/mongo_client.js:116:28
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:34:24
+    at QueryReqWrap.callback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/connection_string.js:57:20)
+    at QueryReqWrap.onresolve [as oncomplete] (node:dns:279:10)
+[31merror[39m: Error: Error connecting to db: querySrv EREFUSED _mongodb._tcp.cluster0.ejokl.mongodb.net
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/index.js:88:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/utils.js:361:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/mongo_client.js:116:28
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:34:24
+    at QueryReqWrap.callback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/connection_string.js:57:20)
+    at QueryReqWrap.onresolve [as oncomplete] (node:dns:279:10)
+[31merror[39m: Error: Error connecting to db: querySrv EREFUSED _mongodb._tcp.cluster0.ejokl.mongodb.net
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/index.js:88:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/utils.js:361:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/mongo_client.js:116:28
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:34:24
+    at QueryReqWrap.callback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/connection_string.js:57:20)
+    at QueryReqWrap.onresolve [as oncomplete] (node:dns:279:10)
+[31merror[39m: Error: Error connecting to db: querySrv EREFUSED _mongodb._tcp.cluster0.ejokl.mongodb.net
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/index.js:88:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/utils.js:361:17
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/mongo_client.js:116:28
+    at /home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/operations/connect.js:34:24
+    at QueryReqWrap.callback (/home/phoenix1/nodejsBackend/node_modules/connect-mongodb-session/node_modules/mongodb/lib/connection_string.js:57:20)
+    at QueryReqWrap.onresolve [as oncomplete] (node:dns:279:10)
