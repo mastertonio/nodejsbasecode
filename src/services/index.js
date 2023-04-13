@@ -5,3 +5,4 @@ module.exports.userService = require('./user.service');
 module.exports.dashboadService = require('./dashboard.service');
 module.exports.companyService = require('./company.service');
 module.exports.templateService = require('./template.service');
+module.exports.templateBuilderService =  require('./templateBuilder.service');

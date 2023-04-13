@@ -17,214 +17,260 @@ const sectionBuilderSchema = mongoose.Schema(
             type: mongoose.SchemaTypes.ObjectId,
             required: true   
         },
-        order:{
-            type: Number,
-            default: 0,
-            required:true
-        },
-        headers:{
-            dataType: {
-                type:String,
-                required: false,
-                default:''
-            },
-            mainTitle:{
-                dataType:{
-                    type:String,
+        
+        sections:[
+            {
+                address:{
+                    type: String,
                     required: false,
-                    default:''
+                    default: null
                 },
-                style:{
+                sectionTitle:{
                     type:String,
                     required: false,
-                    default:''
+                    default: null
                 },
-                text:{
-                    type:String,
-                    required: false,
-                    default: ''
-                }
-            },
-            subTitle:{
-                dataType:{
-                    type:String,
-                    required: false,
-                    default:''
+                order:{
+                    type: Number,
+                    required:false,
+                    default: null
                 },
-                text:{
-                    type:String,
-                    required: false,
-                    default: ''
-                }
-            },
-            description:{
-                type:String,
-                required: false,
-                default:''
-            },
-            quotes:{
-                dataType:{
-                    type:String,
-                    required: false,
-                    default:''
-                },
-                position:{
-                    type:String,
-                    required: false,
-                    default:''
-                },
-                elements:[
-                    {
-                        dataType:{
+                headers:{
+                    title:{
+                        dataType: {
                             type:String,
                             required: false,
-                            default:''
+                            default: null
                         },
-                        qoute:{
+                        mainTitle:{
+                            dataType:{
+                                type:String,
+                                required: false,
+                                default: null
+                            },
+                            style:{
+                                type:String,
+                                required: false,
+                                default: null
+                            },
                             text:{
                                 type:String,
                                 required: false,
-                                default: ''
-                            },
-                            author:{
+                                default: null
+                            }
+                        },
+                        subTitle:{
+                            dataType:{
                                 type:String,
                                 required: false,
-                                default: ''
+                                default: null
+                            },
+                            text:{
+                                type:String,
+                                required: false,
+                                default: null
                             }
+                        },
+                        description:{
+                            type:String,
+                            required: false,
+                            default: null
+                        },
+                        quotes:{
+                            dataType:{
+                                type:String,
+                                required: false,
+                                default: null
+                            },
+                            position:{
+                                type:String,
+                                required: false,
+                                default: null
+                            },
+                            elements:[
+                                {
+                                    dataType:{
+                                        type:String,
+                                        required: false,
+                                        default: null
+                                    },
+                                    qoute:{
+                                        text:{
+                                            type:String,
+                                            required: false,
+                                            default: null
+                                        },
+                                        author:{
+                                            type:String,
+                                            required: false,
+                                            default: null
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        content: {
+                            dataType:{
+                                type:String,
+                                required: false,
+                                default: null
+                            },
+                            elements:[
+                                {
+                                    dataType:{
+                                        type:String,
+                                        required: false,
+                                        default: null
+                                    },
+                                    span:{
+                                        type:String,
+                                        required: false,
+                                        default: null
+                                    },
+                                    class:{
+                                        type:String,
+                                        required: false,
+                                        default: null
+                                    },
+                                    mediaOrigin:{
+                                        type:String,
+                                        required: false,
+                                        default: null
+                                    },
+                                    text:{
+                                        type:String,
+                                        required: false,
+                                        default: null
+                                    },
+                                    link:{
+                                        type:String,
+                                        required: false,
+                                        default: null
+                                    }
+                                }
+                            ]
                         }
                     }
-                ]
-            },
-            content: {
-                dataType:{
-                    type:String,
-                    required: false,
-                    default:''
+                    
+        
                 },
-                elements:[
-                    {
-                        dataType:{
-                            type:String,
-                            required: false,
-                            default:''
-                        },
-                        span:{
-                            type:String,
-                            required: false,
-                            default:''
-                        },
-                        class:{
-                            type:String,
-                            required: false,
-                            default:''
-                        },
-                        mediaOrigin:{
-                            type:String,
-                            required: false,
-                            default:''
-                        },
-                        link:{
-                            type:String,
-                            required: false,
-                            default:''
+                grayContent:{
+                    dataType:{
+                        type:String,
+                        required: false,
+                        default: null
+                    },
+                    classes:{
+                        type:String,
+                        required: false,
+                        default: null
+                    },
+                    elements:[
+                        {
+                            address:{ // frontend -> UUID from frontend
+                                type: String,
+                                required: false,
+                                default: null
+                            },
+                            dataType:{ // frontend -> UUID from frontend
+                                type: String,
+                                required: false,
+                                default: null
+                            },
+                            text:{ // frontend -> UUID from frontend
+                                type: String,
+                                required: false,
+                                default: null
+                            },
+                            toggle:{ // frontend -> UUID from frontend
+                                type: Boolean,
+                                required: false,
+                                default: false
+                            },
+                            elements: [
+                                {
+                                    dataType:{
+                                        type:String,
+                                        required: false,
+                                        default: null
+                                    },
+                                    label:{
+                                        type:String,
+                                        required: false,
+                                        default: null
+                                    },
+                                    classes:{
+                                        type:String,
+                                        required: false,
+                                        default: null
+                                    },
+                                    title:{
+                                        type:String,
+                                        required: false,
+                                        default: null
+                                    },
+                                    sliderType:{
+                                        type:String,
+                                        required: false,
+                                        default: null
+                                    },
+                                    icon:{
+                                        type:String,
+                                        required: false,
+                                        default: null
+                                    },
+                                    rightSection:{
+                                        type:String,
+                                        required: false,
+                                        default: null
+                                    },
+                                    isDisabled:{
+                                        type: Boolean,
+                                        required: false,
+                                        default: null
+                                    },
+                                    isProcess:{
+                                        type: Boolean,
+                                        required: false,
+                                        default: null
+                                    },
+                            
+                                        address:{ // frontend -> UUID from frontend
+                                            type: String,
+                                            required: false,
+                                            default: null
+                                        },
+                                        forcedValue:{
+                                            type:Number,
+                                            required: false,
+                                            default: 0
+                                        },
+                                        format:{
+                                            type:String,
+                                            required: false,
+                                            default: null
+                                        },
+                                        formula:{
+                                            type:String,
+                                            required: false,
+                                            default: null
+                                        },
+                                        value:{
+                                            type:Number,
+                                            required: false,
+                                            default: 0
+                                        }
+                            
+                                    }
+                            ]
                         }
-                    }
-                ]
+                        
+                    ]
+                }
             }
-
-        },
-        // grayContent:{
-        //     dataType:{
-        //         type:String,
-        //         required: false,
-        //         default:''
-        //     },
-        //     classes:{
-        //         type:String,
-        //         required: false,
-        //         default:''
-        //     },
-        //     elements:[
-        //         {
-        //             dataType:{
-        //                 type:String,
-        //                 required: false,
-        //                 default:''
-        //             },
-        //             text:{
-        //                 type:String,
-        //                 required: false,
-        //                 default: ''
-        //             },
-        //             elements:[
-        //                 {
-        //                     dataType:{
-        //                         type:String,
-        //                         required: false,
-        //                         default:''
-        //                     },
-        //                     label:{
-        //                         type:String,
-        //                         required: false,
-        //                         default: ''
-        //                     },
-        //                     format:{
-        //                         type:String,
-        //                         required: false,
-        //                         default: ''
-        //                     },
-        //                     icon:{
-        //                         type:String,
-        //                         required: false,
-        //                         default: null
-        //                     },
-        //                     rightSection:{
-        //                         type:String,
-        //                         required: false,
-        //                         default: null
-        //                     },
-        //                     isDisabled:{
-        //                         type:boolean,
-        //                         required: false,
-        //                         default: null
-        //                     },
-        //                     isProcess:{
-        //                         type:boolean,
-        //                         required: false,
-        //                         default: null
-        //                     },
-                    
-        //                         address:{ // frontend -> UUID from frontend
-        //                             type: String,
-        //                             required: false,
-        //                             default: null
-        //                         },
-        //                         forcedValue:{
-        //                             type:Number,
-        //                             required: false,
-        //                             default: 0
-        //                         },
-        //                         format:{
-        //                             type:String,
-        //                             required: false,
-        //                             default: null
-        //                         },
-        //                         formula:{
-        //                             type:String,
-        //                             required: false,
-        //                             default: null
-        //                         },
-        //                         value:{
-        //                             type:Number,
-        //                             required: false,
-        //                             default: 0
-        //                         }
-                    
-        //                    }
-        //             ]
-        //         }
-        //     ]
-        // }
+        ],
+        
+        
     },
     {
         timestamps: true

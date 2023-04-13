@@ -1,7 +1,7 @@
 const httpStatus = require('http-status');
 
 const catchAsync = require('../utils/catchAsync');
-const {companyService, userService} = require('../services');
+const {companyService, userService,templateBuilderService} = require('../services');
 const { create } = require('../models/token.model');
 const { jwtExtract, getCID, getUserRole } = require('./common.controller');
 
@@ -20,6 +20,7 @@ const ApiError = require('../utils/ApiError');
 const _ = require("underscore");
 const {ACTIVE,INACTIVE, LOGGER_INVALID_TOKEN, STATUS_ACTIVE} = require("../common/staticValue.common");
 const { reset } = require('nodemon');
+const { createAdminTool } = require('../services/templateBuilder.service');
 
 
 const getFile = catchAsync(async (req, res)=>{
@@ -338,7 +339,171 @@ const getCompnayTemplateVersion = catchAsync(async (req,res)=>{
     
    })
    res.send(container)
-})
+});
+
+/**
+ * get specific tempalte builder
+ */
+const getCompanyadminTool = catchAsync(async (req,res)=>{
+  /**
+    * extracting JWT Token to get the User Id
+    */
+   const token = jwtExtract(req);
+   /**
+     * validating the user Account base on the response of the extraction
+     */
+   const is_user = await userService.getUserById(token);
+   if(!is_user){
+     let error = new ApiError(httpStatus.NOT_FOUND, 'User not found');
+     logger.error(`[Invalid TOken] ${error}`);
+     throw error;
+   }
+   const company_id = req.params.company_id;
+   const template_id = req.params.template_id;
+   const version_id = req.params.version_id;
+   /**
+    * validate if the company id is valid
+    */
+   const is_company = await companyService.getCompanyById(company_id);
+   
+   if(!is_company) {
+     let error = new ApiError(httpStatus.NOT_FOUND, 'Company id not found');
+     logger.error(`[Invalid TOken] ${error}`);
+     throw error;
+   }
+   
+   /**
+    * Add body parameters company_id and created by which can be extract in the JWT token
+    * cid = company id => company_id
+    * sub = user id => token
+    * getTemplateVersion(template_id)
+    * getCompanyTemplateByCompanyId (company_id)
+    */
+   const template = await Template.findById(template_id);  
+
+   if(!template){
+     let error = new ApiError(httpStatus.NOT_FOUND, 'Template id not found');
+     logger.error(`[Invalid TOken] ${error}`);
+     throw error;
+   }
+   const adminTool = await templateBuilderService.getAdminTool({company_id:company_id,template_id:template_id,version_id:version_id})
+
+
+
+
+  const templateVersion = await TemplateVersion.find({_id:version_id,template_id:template_id})
+
+  const container = [];
+  templateVersion.map(v=>{
+   let templateVersion_status = "inactive"
+   if(v.stage == 1){
+     templateVersion_status = "active"
+   }
+   container.push({
+     _id:v._id,
+     stage:v.stage,
+     level:v.level,
+     versions:v.version,
+     name:v.name,
+     notes:v.notes,
+     template_id: v.template_id,
+     projection: template.projection,
+     company_logo:"https://theroishop.com/assets/roishop/wp-content/uploads/2019/08/ROI-Shop-Logo.png",
+     status:templateVersion_status
+   })
+   
+  })
+  let response = {adminTool:adminTool[0],TemplateVersionInfo:container[0]};
+   res.send(response)
+});
+
+/**
+ * create admin  tool
+ */
+const createCompanyAdminTool = catchAsync(async (req,res)=>{
+  /**
+    * extracting JWT Token to get the User Id
+    */
+  const token = jwtExtract(req);
+  /**
+    * validating the user Account base on the response of the extraction
+    */
+  const is_user = await userService.getUserById(token);
+  if(!is_user){
+    let error = new ApiError(httpStatus.NOT_FOUND, 'User not found');
+    logger.error(`[Invalid TOken] ${error}`);
+    throw error;
+  }
+  const company_id = req.params.company_id;
+  const template_id = req.params.template_id;
+  const version_id = req.params.version_id;
+  /**
+   * validate if the company id is valid
+   */
+  const is_company = await companyService.getCompanyById(company_id);
+  
+  if(!is_company) {
+    let error = new ApiError(httpStatus.NOT_FOUND, 'Company id not found');
+    logger.error(`[Invalid TOken] ${error}`);
+    throw error;
+  }
+  
+  /**
+   * Add body parameters company_id and created by which can be extract in the JWT token
+   * cid = company id => company_id
+   * sub = user id => token
+   * getTemplateVersion(template_id)
+   * getCompanyTemplateByCompanyId (company_id)
+   */
+  const template = await Template.findById(template_id);  
+
+  if(!template){
+    let error = new ApiError(httpStatus.NOT_FOUND, 'Template id not found');
+    logger.error(`[Invalid TOken] ${error}`);
+    throw error;
+  }
+  let qkey = {company_id:company_id,template_id:template_id,version_id:version_id};
+  qkey.sections = { $elemMatch: { address: req.body.address} }
+  const adminTool = await templateBuilderService.getAdminTool(qkey)
+
+  if(!adminTool){
+    let error = new ApiError(httpStatus.NOT_FOUND, 'TemplateBuilder not found');
+    logger.error(`[Invalid TOken] ${error}`);
+    throw error;
+  }
+
+
+  let n_section;
+  if(_.isEmpty(adminTool)){
+    //  insert new data
+    delete qkey.sections;
+    console.log(qkey)
+    let sectionEntry = await templateBuilderService.updateAdminTool({key:qkey,updateDoc:{$push:{sections:req.body}}})
+    n_section = sectionEntry;
+    
+
+  }else{
+    // do update   
+    console.log(qkey)
+    let sectionEntry = await templateBuilderService.updateAdminTool({key:qkey,updateDoc:{$set:{'sections.$':req.body}}})
+    n_section = sectionEntry;
+  }
+
+
+
+
+
+  
+
+
+
+
+
+
+  // console.log(n_section);
+  res.send(adminTool)
+
+});
 
 /**
  * get all template version
@@ -465,8 +630,22 @@ const createCompnayTemplateVersion = catchAsync(async (req, res)=>{
     
     req.body.template_id = template._id;
     req.body.created_by = token;
+
+
+    //build template builder
+
+
     
     const templateVersion = await companyService.createTemplateVersion(req.body);
+
+    let  templateBuilderData =  {
+      company_id: company_id,
+      template_id:  template_id,
+      version_id: templateVersion.id
+
+
+    }
+    const  templateBuilder  =  await  templateBuilderService.createAdminTool(templateBuilderData);
     res.send(templateVersion);
 })
 
@@ -1057,6 +1236,8 @@ const transferTemplateAccount = catchAsync(async(req,res)=>{
     getCompnayTemplateVersionInfo,
     getCompanylicenseStatus,
     deleteCompanyTemplateVersionInfo,
-    deleteTemplate
+    deleteTemplate,
+    getCompanyadminTool,
+    createCompanyAdminTool
   }
   

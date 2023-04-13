@@ -55,11 +55,9 @@ const { NO_CONTENT } = require('http-status');
   // gzip compression
   app.use(compression());
 
-  // (All)10mins- if no activity
- 
-  var allowlist = ['http://localhost:3000', 'http://localhost:3001','http://18.234.140.187:3000']
   
   // enable cors
+  //specific IP allowed to access the server
   app.use(cors(config.corsOption));
  
 // app.use((req,res,next)=>{
@@ -91,18 +89,18 @@ const { NO_CONTENT } = require('http-status');
 //     })
 // );
 
-const expiryDate = new Date(Date.now() + 60 * 60 * 1000) // 1 hour
-app.use(session({
-  name: 'session',
-  keys: ['key1', 'key2'],
-  cookie: {
-    secure: true,
-    httpOnly: true,
-    domain: 'example.com',
-    path: 'foo/bar',
-    expires: expiryDate
-  }
-}))
+// const expiryDate = new Date(Date.now() + 60 * 60 * 1000) // 1 hour
+// app.use(session({
+//   name: 'session',
+//   keys: ['key1', 'key2'],
+//   cookie: {
+//     secure: true,
+//     httpOnly: true,
+//     domain: 'example.com',
+//     path: 'foo/bar',
+//     expires: expiryDate
+//   }
+// }))
 
 
   // jwt authentication

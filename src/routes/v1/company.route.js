@@ -94,6 +94,10 @@ router
   .post(auth('createCompnayTemplateVersion'), validate(companyValidation.createCompnayTemplateVersion), companyController.createCompnayTemplateVersion)
   .get(auth('getCompnayTemplateVersion'), validate(companyValidation.getCompnayTemplateVersion), companyController.getCompnayTemplateVersion)
 
+router
+  .route('/:company_id/template/:template_id/version/:version_id/adminTool')
+  .get(auth('getCompnayTemplateVersion'), validate(companyValidation.getCompnayTemplateBuilder), companyController.getCompanyadminTool)
+  .put(auth('getCompnayTemplateVersion'), validate(companyValidation.createCompnayTemplateBuilder), companyController.createCompanyAdminTool)
 
 router
   .route('/:company_id/template/:template_id/version/:version_id')
