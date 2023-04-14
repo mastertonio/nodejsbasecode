@@ -8,6 +8,7 @@ const sectionBuilder = require("../models/sectionBuilder.model");
 const { companyService } = require("../services");
 const { Company, TemplateVersion, Template } = require("../models");
 const ObjectId = require('mongodb').ObjectID;
+const _ = require("underscore");
 
 
 
@@ -66,7 +67,15 @@ const getTemplateBuild = catchAsync(async(req,res)=>{
     let getAdminTool = await sectionBuilder.find({_id:templateBuilderId,version_id:versionId});
     //     return getAdminTool
     // const templateBuilder = await templateService.getTemplateBuild(que);
+    if(!getAdminTool ||  _.isEmpty(getAdminTool)){
+      let error = new ApiError(httpStatus.NOT_FOUND, 'No data found');
+      logger.error(`[Invalid TOkenx] ${error}`);
+      throw error;
+    }
     let responseAdminTool= getAdminTool[0];
+   
+
+
     let tempId = responseAdminTool.template_id;
     let companyId = new ObjectId(is_user.company_id);
     let company_info = await Company.find({_id:companyId});
@@ -116,7 +125,7 @@ const getTemplateBuild = catchAsync(async(req,res)=>{
       }
     })
   } catch (error) {
-    logger.error(`[Invalid TOken] ${error}`);
+    logger.error(`[Invalid TOkenx] ${error}`);
     throw error;
   }
    
