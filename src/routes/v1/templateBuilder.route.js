@@ -12,7 +12,7 @@ router
   .post(auth('createROI'), validate(builder.createROI), builderController.createROI);
 
 router
-  .route('/:templateVersion_id/:templateBuilder_id')
+  .route('/:templateVersion_id') 
   .get(auth('getBuildTemplate'), validate(builder.getBuildTempalate), builderController.getTemplateBuild)
 
 
