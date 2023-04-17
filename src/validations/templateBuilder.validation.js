@@ -17,8 +17,7 @@ const createROI = {
 
   const getBuildTempalate = {
     params: Joi.object().keys({
-      templateVersion_id: Joi.required().custom(objectId),
-      templateBuilder_id: Joi.required().custom(objectId)
+      templateVersion_id: Joi.required().custom(objectId)
     }),
     query: Joi.object().keys({
       tag: Joi.string(),

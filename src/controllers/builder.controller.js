@@ -58,13 +58,13 @@ const getTemplateBuild = catchAsync(async(req,res)=>{
          logger.error(`[Invalid TOken] ${error}`);
          throw error;
        }
-    console.log(req.params.templateVersion_id)
+    
     let versionId = new ObjectId(req.params.templateVersion_id);
     let templateBuilderId = new ObjectId(req.params.templateBuilder_id);
 
     // new ObjectId(data.roi_source_uid); 
 
-    let getAdminTool = await sectionBuilder.find({_id:templateBuilderId,version_id:versionId});
+    let getAdminTool = await sectionBuilder.find({version_id:versionId});
     //     return getAdminTool
     // const templateBuilder = await templateService.getTemplateBuild(que);
     if(!getAdminTool ||  _.isEmpty(getAdminTool)){
@@ -82,7 +82,7 @@ const getTemplateBuild = catchAsync(async(req,res)=>{
       console.log('company_name----',company_info)
 
     
-  const templateVersion = await   TemplateVersion.find({_id:versionId,template_id:tempId})
+  const templateVersion = await   TemplateVersion.find({_id:versionId})
   const template = await  Template.findById(tempId);  
   const container = [];
   templateVersion.map(v=>{
