@@ -70,6 +70,7 @@ const getTemplateBuild = catchAsync(async(req,res)=>{
     if(!getAdminTool ||  _.isEmpty(getAdminTool)){
       let error = new ApiError(httpStatus.NOT_FOUND, 'No data found');
       logger.error(`[Invalid TOkenx] ${error}`);
+      
       throw error;
     }
     let responseAdminTool= getAdminTool[0];

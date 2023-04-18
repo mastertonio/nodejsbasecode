@@ -463,7 +463,14 @@ const createCompanyAdminTool = catchAsync(async (req,res)=>{
     throw error;
   }
   let qkey = {company_id:company_id,template_id:template_id,version_id:version_id};
-  qkey.sections = { $elemMatch: { address: req.body.address} }
+
+  if(_.has(req.body,"_id")){
+   let update_id = new ObjectId(req.body.section_id)
+    qkey.sections = { $elemMatch: { _id: update_id} }
+  }
+  
+  
+  
   const adminTool = await templateBuilderService.getAdminTool(qkey)
 
   if(!adminTool){
@@ -477,7 +484,7 @@ const createCompanyAdminTool = catchAsync(async (req,res)=>{
   if(_.isEmpty(adminTool)){
     //  insert new data
     delete qkey.sections;
-    console.log(qkey)
+    
     let sectionEntry = await templateBuilderService.updateAdminTool({key:qkey,updateDoc:{$push:{sections:req.body}}})
     n_section = sectionEntry;
     
