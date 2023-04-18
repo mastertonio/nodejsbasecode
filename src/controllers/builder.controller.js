@@ -74,12 +74,23 @@ const getTemplateBuild = catchAsync(async(req,res)=>{
     }
     let responseAdminTool= getAdminTool[0];
    
-
+    console.log('responseAdminTool----',responseAdminTool.sections)
+    
+    let responseAdminToolSection = responseAdminTool.sections;
+    let resAdminToolContainer = [];
+    responseAdminToolSection.map(r=>{
+      resAdminToolContainer.push({
+          "_id": r._id,
+          "link": r.address,
+          "title": r.sectionTitle,
+          "listSequence": r.order
+      })
+    })
 
     let tempId = responseAdminTool.template_id;
     let companyId = new ObjectId(is_user.company_id);
     let company_info = await Company.find({_id:companyId});
-      console.log('company_name----',company_info)
+     
 
     
   const templateVersion = await   TemplateVersion.find({_id:versionId})
@@ -119,7 +130,23 @@ const getTemplateBuild = catchAsync(async(req,res)=>{
           "logo": "https://www.theroishop.com/company_specific_files/547/logo/logo.png",
           "companyName": company_info[0].name
         },
-        navigationMenu:{}
+        navigationMenu:[{
+              "link": null,
+                "_id": "637766339ecaa37f5165cae9",
+                "title": "ROI Sections",
+                "icon": "calculator",
+                "menuSequence": 1,
+                "navigationlist": resAdminToolContainer
+            },{
+              "link": null,
+              "_id": "637766339ecaa37f5165caf2",
+              "title": "My ROIs",
+              "icon": "globe",
+              "menuSequence": 2,
+              "navigationlist": []
+          }
+            
+        ]
       },
       content:responseAdminTool
       }
