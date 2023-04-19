@@ -46,6 +46,7 @@ const getAdminTool  = async(req)=>{
 //     }
 // }
 const updateAdminTool  = async(req)  =>{
+
     try {
         console.log(req.updateDoc)
         const update = await  sectionBuilder.updateOne(req.key, req.updateDoc,{new:true});
