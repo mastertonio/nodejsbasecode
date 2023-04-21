@@ -98,6 +98,9 @@ router
   .route('/:company_id/template/:template_id/version/:version_id/adminTool')
   .get(auth('getCompnayTemplateVersion'), validate(companyValidation.getCompnayTemplateBuilder), companyController.getCompanyadminTool)
   .put(auth('getCompnayTemplateVersion'), validate(companyValidation.createCompnayTemplateBuilder), companyController.createCompanyAdminTool)
+router
+  .route('/admintool/:adminTool_id/section/:section_id')
+  .patch(auth('getCompnayTemplateVersion'), validate(companyValidation.patchSection), companyController.updateCompanyAdminTool)
 
 router
   .route('/:company_id/template/:template_id/version/:version_id')

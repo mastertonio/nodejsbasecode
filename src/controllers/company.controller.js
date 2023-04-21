@@ -418,6 +418,45 @@ const getCompanyadminTool = catchAsync(async (req,res)=>{
 });
 
 /**
+ * updateCompanyAdminTool
+ */
+const updateCompanyAdminTool = catchAsync(async (req,res)=>{
+  /**
+    * extracting JWT Token to get the User Id
+    */
+  const token = jwtExtract(req);
+  /**
+    * validating the user Account base on the response of the extraction
+    */
+  const is_user = await userService.getUserById(token);
+  if(!is_user){
+    let error = new ApiError(httpStatus.NOT_FOUND, 'User not found');
+    logger.error(`[Invalid TOken] ${error}`);
+    throw error;
+  }
+  let sectionArea = await templateBuilderService.patchAdminTool(req);
+
+  if(sectionArea){
+    let getSectionArea = await templateBuilderService.getAdminToolInfo(req);
+    if(getSectionArea){
+      res.send(getSectionArea)
+    }else{
+      let error = new ApiError(httpStatus.NOT_FOUND, 'Admin tool section not found');
+      logger.error(`[Invalid TOken] ${error}`);
+      throw error;
+    }
+  }else{
+    let error = new ApiError(httpStatus.NOT_FOUND, 'Admin tool section not found');
+    logger.error(`[Invalid TOken] ${error}`);
+    throw error;
+  }
+
+
+
+});
+
+
+/**
  * create admin  tool
  */
 const createCompanyAdminTool = catchAsync(async (req,res)=>{
@@ -464,14 +503,16 @@ const createCompanyAdminTool = catchAsync(async (req,res)=>{
   }
   let qkey = {company_id:company_id,template_id:template_id,version_id:version_id};
 
-  // if(_.has(req.body,"_id")){
+  if(_.has(req.body,"_id")){
    let update_id = new ObjectId(req.body.section_id)
     qkey.sections = { $elemMatch: { _id: update_id} }
-  // }
+  }
   
   
   
   const adminTool = await templateBuilderService.getAdminTool(qkey)
+
+  console.log(adminTool)
 
   if(!adminTool){
     let error = new ApiError(httpStatus.NOT_FOUND, 'TemplateBuilder not found');
@@ -480,10 +521,12 @@ const createCompanyAdminTool = catchAsync(async (req,res)=>{
   }
 
 
+  console.log(adminTool)
   let n_section;
   if(_.isEmpty(adminTool)){
     //  insert new data
     delete qkey.sections;
+    delete req.body._id;
 
     let sectionEntry = await templateBuilderService.updateAdminTool({key:qkey,updateDoc:{$push:{sections:req.body}}})
     n_section = sectionEntry;
@@ -497,7 +540,7 @@ const createCompanyAdminTool = catchAsync(async (req,res)=>{
   }
 
 
-
+  let updatedData = await templateBuilderService.getAdminTool(qkey);
 
 
   
@@ -508,7 +551,7 @@ const createCompanyAdminTool = catchAsync(async (req,res)=>{
 
 
   // console.log(n_section);
-  res.send(adminTool)
+  res.send(updatedData)
 
 });
 
@@ -1245,6 +1288,7 @@ const transferTemplateAccount = catchAsync(async(req,res)=>{
     deleteCompanyTemplateVersionInfo,
     deleteTemplate,
     getCompanyadminTool,
-    createCompanyAdminTool
+    createCompanyAdminTool,
+    updateCompanyAdminTool
   }
   
