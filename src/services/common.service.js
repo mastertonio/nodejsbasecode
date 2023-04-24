@@ -12,6 +12,9 @@ const dashboardData = async (data_col) => {
     return element.toLowerCase() === user_role.toLowerCase();
   });
   const chartData={};
+//   console.log(data_col.collection.statistic)
+
+
   if(role){
     let categories=[];
     let count = [];
@@ -26,7 +29,7 @@ const dashboardData = async (data_col) => {
     const d = new Date();
     let year = d.getFullYear();
     const ncollection = [];
-    console.log(data_col)
+    // console.log(data_col)
     data_col.collection.statistic.map(v=>{
         if(year == v._id.year){
             ncollection.push({
