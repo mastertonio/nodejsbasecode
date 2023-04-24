@@ -61,13 +61,13 @@ const getCalculatorStatistic = async (data) =>{
                   count: { $sum: 1 }
                 }
               }]);
+        case 'company-manager':
         case 'company-admin':
             const users = await User.find({company_id:data.cid});
             const _ids = [];
             users.map(v=>{
                 _ids.push(v._id)
-            })          
-
+            })    
             cond = [{
                         $match: {
                                 user_id:{$in:_ids}
@@ -101,6 +101,7 @@ const getCalculatorStatistic = async (data) =>{
     }
     let graph;
     if(data.access == "company-admin" || data.access=="company-manager"){
+        
         const templateData = await Calculator.aggregate(cond);
         const usersData = await User.find({company_id:data.cid});
         const graph_data = [];
@@ -121,8 +122,10 @@ const getCalculatorStatistic = async (data) =>{
         usersData.map(v=>{
             let n_count = templateData.map(k=>{
                 let count =0;
+                
                 if(JSON.stringify(v._id) === JSON.stringify(k._id)){
-                    count = k.count;
+                    
+                    count += k.count;
                 }
                 return count
             });
@@ -874,19 +877,27 @@ const getDashboard = async (userId,filter, options) => {
     graphData.oid = new ObjectId(uid._id);
     graphData.cid = new ObjectId(cid);
     graphData.access = uid.role;
+    //  console.log("superAdmin")
 
     const statistic = await getCalculatorStatistic(graphData);
-    console.log(statistic)
+    // console.log(statistic)
 
     return commonService.setChart({type:'bargraph',uid:uid._id, statistic,role:uid.role});
   }
+
+
+
+
+
+
+  
   const getSuperAdminRoiGraph = async(uid,cid) =>{
     const graphData={};
     graphData.oid = new ObjectId(uid._id);
     graphData.cid = new ObjectId(cid);
     graphData.access = uid.role;
 
-         
+        
     const statistic = await Calculator.aggregate([{
             $group: {
             _id: {
