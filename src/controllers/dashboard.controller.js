@@ -233,21 +233,57 @@ const getMyRoiGraph =catchAsync(async (req, res) =>{
      throw error;
    }
   
-   switch (is_user.role) {
-    case "admin":
-      const adminGraph= await dashboadService.getSuperAdminRoiGraph(is_user, comp_id);
-          res.send(adminGraph)
-      break;
-    case "company-admin":
-    case "company-manager":
-      const roiGraph = await dashboadService.getCompanyRoiGraph(is_user, comp_id);
-        res.send(roiGraph)
-      break;
-    default:
-      const myroiGraph= await dashboadService.getMyRoiGraph(is_user, comp_id);
-          res.send(myroiGraph)
-      break;
+  //  req.query
+   console.log();
+   if(req.query.data == 1){
+    const myroiGraph= await dashboadService.getMyRoiGraph(is_user, comp_id);
+            res.send(myroiGraph)
+   }else{
+    switch (is_user.role) {
+      case "admin":
+        const adminGraph= await dashboadService.getSuperAdminRoiGraph(is_user, comp_id);
+            res.send(adminGraph)
+        break;
+      case "company-admin":
+      case "company-manager":
+        const roiGraph = await dashboadService.getCompanyRoiGraph(is_user, comp_id);
+          res.send(roiGraph)
+        break;
+      default:
+        const myroiGraph= await dashboadService.getMyRoiGraph(is_user, comp_id);
+            res.send(myroiGraph)
+        break;
+     }
    }
+   
+  
+});
+
+
+const getRoiGraph =catchAsync(async (req, res) =>{
+  /**
+    * extracting JWT Token to get the User Id
+    */
+   const token = jwtExtract(req);
+  //  const comp_id = await getCID(req);
+
+
+   /**
+     * validating the user Account base on the response of the extraction
+     */
+
+   console.log('----------',token)
+   
+  //  const is_user = await userService.getUserById(token);
+  //  if(!is_user){
+  //    let error = new ApiError(httpStatus.NOT_FOUND, 'User not found');
+  //    logger.error(`[Invalid TOken] ${error}`);
+  //    throw error;
+  //  }
+  
+  //  console.log(comp_id)
+  // const myroiGraph= await dashboadService.getMyRoiGraph(is_user, comp_id);
+  // res.send(myroiGraph)
   
 });
 
@@ -352,6 +388,7 @@ module.exports = {
     getRoiGraphSuperAdmin,
     getRoiGraphCompany,
     getCompanyRoiTable,
-    getRoiTable
+    getRoiTable,
+    getRoiGraph
 
 }

@@ -49,6 +49,11 @@ router
   .route('/data/graph')
   .get(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.getMyRoiGraph)
 
+
+router
+  .route('/graph')
+  .get(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.getRoiGraph)
+
 router
   .route('/data/super/admin/graph')
   .get(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.getRoiGraphSuperAdmin)
