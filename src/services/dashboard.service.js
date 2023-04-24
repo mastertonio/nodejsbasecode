@@ -917,6 +917,13 @@ const getDashboard = async (userId,filter, options) => {
     const active_roi =  await getActiveROI(user._id);
     const all_roi = await getAllROI(user._id);
     const name = user.name;
+
+    let account_name;
+    if(_.isUndefined(name)){
+        account_name = `${user.first_name.toString().toUpperCase()} ${user.last_name.toString().toUpperCase()}`
+    }else{
+        account_name = `${name.toString().toUpperCase()}`
+    }
  
 
     /***
@@ -929,10 +936,10 @@ const getDashboard = async (userId,filter, options) => {
             count: 0
         }
     ];
-    console.log(data)
+    console.log(user)
     return {
         welcome:{
-            account_name: name.toString().toUpperCase(),
+            account_name: account_name,
             current_roi: all_roi.length,
             active_roi: active_roi.length
         },
