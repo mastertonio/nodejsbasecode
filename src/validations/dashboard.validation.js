@@ -4,7 +4,7 @@ const { password, objectId } = require('./custom.validation');
 
 const getDashboard = {
     query: Joi.object().keys({
-      data: Joi.object(),
+      data: Joi.number().integer(),
     }),
   };
 
