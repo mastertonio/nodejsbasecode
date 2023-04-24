@@ -14,6 +14,8 @@ const { map, get } = require('underscore');
 
 const getAllTemplate = async (cond) => {
     let condition = [];
+
+    console.log('get all tempalte cond ', cond)
     if(cond == null){
         condition =[{
             $lookup: {
@@ -37,7 +39,7 @@ const getAllTemplate = async (cond) => {
                 foreignField: 'template_id',
                 as: 'build'
             }
-        },{ $skip: 1 }, { $limit: 1 }]
+        }]
 
         
     }
