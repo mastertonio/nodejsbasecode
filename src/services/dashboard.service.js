@@ -226,6 +226,12 @@ const allUserByCompany = async () => {
                 "name": {
                     $first: "$name"
                 },
+                "first_name": {
+                    $first: "$first_name"
+                },
+                "last_name": {
+                    $first: "$last_name"
+                },
                 "totalROIS": {
                     "$sum": 1
                 }

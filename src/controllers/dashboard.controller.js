@@ -188,18 +188,16 @@ const getRoiTemplate = catchAsync(async (req, res)=>{
 
   const roiTable = await dashboadService.getRoiTemplates(comp_id,is_user);
   const data = [];
+  
   roiTable.map(v=>{
+    console.log(v)
     if(!_.isEmpty(v.build)){
       v.build.map(k=>{
-        if(k.stage == 1){
-          
+        if(k.stage == 1){          
           data.push({id:v._id,...v,})
         }
       })
     }
-    
-    // if(!_.isEmpty(v.TemplateVersionData) && v.TemplateVersionData)
-    // console.log(v.TemplateVersionData);
   });
   res.send(data);
 });
@@ -357,7 +355,18 @@ const getRoiGraph =catchAsync(async (req, res) =>{
  const getRanking =catchAsync(async (req, res) =>{
   const uid = jwtExtract(req);
   const userRanking = await dashboadService.getRanking(uid);
-  res.send(userRanking);
+  let container = [];
+
+  userRanking.map(v=>{
+    // if(v.name === null)
+    container.push({
+      _id:v._id,
+      name: (v.name== null)? `${v.first_name} ${v.last_name}` : `${v.name}`,
+      totalROIS: v.totalROIS
+    })
+  })
+
+  res.send(container);
 });
 
 /**
