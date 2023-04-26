@@ -523,7 +523,7 @@ const createCompanyAdminTool = catchAsync(async (req,res)=>{
 
   console.log(adminTool)
   let n_section;
-  if(_.isEmpty(adminTool)){
+  if(_.isEmpty(adminTool.sections)){
     //  insert new data
     delete qkey.sections;
     delete req.body._id;

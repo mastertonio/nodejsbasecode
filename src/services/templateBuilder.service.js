@@ -171,9 +171,9 @@ const patchAdminTool = async(req)  =>{
     }
 }
 const updateAdminTool  = async(req)  =>{
-
+    console.log(req.updateDoc)
     try {
-        console.log(req.key)
+       
         const update = await  sectionBuilder.updateOne(req.key, req.updateDoc,{new:true});
         
         if(!update){
