@@ -1150,8 +1150,8 @@ const transferTemplateAccount = catchAsync(async(req,res)=>{
        logger.error(`${LOGGER_INVALID_TOKEN} ${error}`);
        throw error;
      }
-
-     if(is_user.role == "company_admin"){
+     console.log(is_user.role)
+     if(is_user.role == 'company-admin'){
       const countRemainingLicense = await companyService.getCompanylicenseStatus(is_company);
       res.send(countRemainingLicense);
      }else{
