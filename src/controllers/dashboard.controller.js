@@ -7,6 +7,7 @@ const { data } = require('../config/logger');
 const _ = require('underscore');
 const ApiError = require('../utils/ApiError');
 const logger = require('../config/logger');
+const { array } = require('joi');
 
 const getDashboard = catchAsync(async (req, res) => {
     const filter = pick(req.query, ['title']);
@@ -355,7 +356,10 @@ const getRoiGraph =catchAsync(async (req, res) =>{
  const getRanking =catchAsync(async (req, res) =>{
   const uid = jwtExtract(req);
   const userRanking = await dashboadService.getRanking(uid);
+  const no_ranks = 4;
   let container = [];
+  let ranks = [];
+  
 
   userRanking.map(v=>{
     // if(v.name === null)
@@ -366,6 +370,28 @@ const getRoiGraph =catchAsync(async (req, res) =>{
     })
   })
 
+  // container.sort(function(a, b){
+  //     return b.totalROIS - a.totalROIS;
+  // });
+  // //container.lenght
+  // for (var i = 0; i < container.lenght; i++) {
+  //   // console.log(i)
+  //   // if(i<no_ranks){
+  //     container[i].rank = i + 1;
+  //     ranks.push(container[i]);
+  //   // }
+  //   // if(container[i]._id =='62e787f589661534d715e283'){
+  //   //   console.log("found!")
+  //   // }
+  // }
+
+  // console.log(uid);
+  // let checkMyRank = _.filter(container, function(item){
+  //   return _.contains(item._id, '62e787f589661534d715e283');
+  // })
+
+  // console.log(checkMyRank)
+  
   res.send(container);
 });
 
