@@ -370,27 +370,20 @@ const getRoiGraph =catchAsync(async (req, res) =>{
     })
   })
 
-  // container.sort(function(a, b){
-  //     return b.totalROIS - a.totalROIS;
-  // });
-  // //container.lenght
-  // for (var i = 0; i < container.lenght; i++) {
-  //   // console.log(i)
-  //   // if(i<no_ranks){
-  //     container[i].rank = i + 1;
-  //     ranks.push(container[i]);
-  //   // }
-  //   // if(container[i]._id =='62e787f589661534d715e283'){
-  //   //   console.log("found!")
-  //   // }
-  // }
+  container.sort(function(a, b){
+      return b.totalROIS - a.totalROIS;
+  });
+  //container.lenght
+  for (var i = 0; i < no_ranks; i++) {
+    
+      container[i].rank = i + 1;
+      ranks.push(container[i]);
+  }
 
-  // console.log(uid);
-  // let checkMyRank = _.filter(container, function(item){
-  //   return _.contains(item._id, '62e787f589661534d715e283');
-  // })
+  let checkMyRank = _.filter(container, function(item){
+    return _.contains(item._id, '62e787f589661534d715e283');
+  })
 
-  // console.log(checkMyRank)
   
   res.send(container);
 });
