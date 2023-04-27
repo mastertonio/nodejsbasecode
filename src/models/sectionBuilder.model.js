@@ -2,6 +2,7 @@ const { required, boolean } = require("joi");
 const mongoose = require("mongoose");
 const { objectId } = require("../validations/custom.validation");
 const { toJSON } = require("./plugins");
+const { unique } = require("underscore");
 
 const sectionBuilderSchema = mongoose.Schema(
     { 
@@ -23,7 +24,8 @@ const sectionBuilderSchema = mongoose.Schema(
                 address:{
                     type: String,
                     required: false,
-                    default: null
+                    default: null,
+                    unique:true
                 },
                 sectionTitle:{
                     type:String,
@@ -167,12 +169,57 @@ const sectionBuilderSchema = mongoose.Schema(
                     },
                     elements:[
                         {
+                            section:[
+                                {
+                                    label:{
+                                        type:String,
+                                        required: false,
+                                        default: null
+                                    },
+                                    value:{
+                                        type:String,
+                                        required: false,
+                                        default: null
+                                    }
+                                }
+                            ],
                             address:{ // frontend -> UUID from frontend
+                                type: String,
+                                required: false,
+                                default: null,
+                                unique: true
+                            },
+                            choices:{ 
                                 type: String,
                                 required: false,
                                 default: null
                             },
-                            dataType:{ // frontend -> UUID from frontend
+                            decimalPlace:{ 
+                                type: String,
+                                required: false,
+                                default: null
+                            },
+                            currency:{ 
+                                type: String,
+                                required: false,
+                                default: null
+                            },
+                            tooltip:{ 
+                                type: String,
+                                required: false,
+                                default: null
+                            },
+                            appendedText:{ 
+                                type: String,
+                                required: false,
+                                default: null
+                            },
+                            prefilled:{ 
+                                type: String,
+                                required: false,
+                                default: null
+                            },
+                            dataType:{ 
                                 type: String,
                                 required: false,
                                 default: null
@@ -187,82 +234,66 @@ const sectionBuilderSchema = mongoose.Schema(
                                 required: false,
                                 default: false
                             },
-                            elements: [
-                                {
-                                    dataType:{
-                                        type:String,
-                                        required: false,
-                                        default: null
-                                    },
-                                    label:{
-                                        type:String,
-                                        required: false,
-                                        default: null
-                                    },
-                                    classes:{
-                                        type:String,
-                                        required: false,
-                                        default: null
-                                    },
-                                    title:{
-                                        type:String,
-                                        required: false,
-                                        default: null
-                                    },
-                                    sliderType:{
-                                        type:String,
-                                        required: false,
-                                        default: null
-                                    },
-                                    icon:{
-                                        type:String,
-                                        required: false,
-                                        default: null
-                                    },
-                                    rightSection:{
-                                        type:String,
-                                        required: false,
-                                        default: null
-                                    },
-                                    isDisabled:{
-                                        type: Boolean,
-                                        required: false,
-                                        default: null
-                                    },
-                                    isProcess:{
-                                        type: Boolean,
-                                        required: false,
-                                        default: null
-                                    },
-                            
-                                        address:{ // frontend -> UUID from frontend
-                                            type: String,
-                                            required: false,
-                                            default: null
-                                        },
-                                        forcedValue:{
-                                            type:Number,
-                                            required: false,
-                                            default: 0
-                                        },
-                                        format:{
-                                            type:String,
-                                            required: false,
-                                            default: null
-                                        },
-                                        formula:{
-                                            type:String,
-                                            required: false,
-                                            default: null
-                                        },
-                                        value:{
-                                            type:Number,
-                                            required: false,
-                                            default: 0
-                                        }
-                            
-                                    }
-                            ]
+                            label:{
+                                type:String,
+                                required: false,
+                                default: null
+                            },
+                            classes:{
+                                type:String,
+                                required: false,
+                                default: null
+                            },
+                            title:{
+                                type:String,
+                                required: false,
+                                default: null
+                            },
+                            sliderType:{
+                                type:String,
+                                required: false,
+                                default: null
+                            },
+                            icon:{
+                                type:String,
+                                required: false,
+                                default: null
+                            },
+                            rightSection:{
+                                type:String,
+                                required: false,
+                                default: null
+                            },
+                            isDisabled:{
+                                type: Boolean,
+                                required: false,
+                                default: null
+                            },
+                            isProcess:{
+                                type: Boolean,
+                                required: false,
+                                default: null
+                            },                     
+                            forcedValue:{
+                                type:Number,
+                                required: false,
+                                default: 0
+                            },
+                            format:{
+                                type:String,
+                                required: false,
+                                default: null
+                            },
+                            formula:{
+                                type:String,
+                                required: false,
+                                default: null
+                            },
+                            value:{
+                                type:Number,
+                                required: false,
+                                default: 0
+                            }
                         }
                         
                     ]
