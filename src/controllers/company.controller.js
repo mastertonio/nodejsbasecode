@@ -964,24 +964,32 @@ const createCompnayTemplateVersion = catchAsync(async (req, res)=>{
        * validating the user Account base on the response of the extraction
        */
      const is_user = await userService.getUserById(token);
+
      if(!is_user){
        let error = new ApiError(httpStatus.NOT_FOUND, 'User not found');
        logger.error(`[Invalid TOken] ${error}`);
        throw error;
      }
-     const company_id = req.params.company_id;
-     /**
-      * validate if the company id is valid
-      */
-     const is_company = await companyService.getCompanyById(company_id);
-     
-     if(!is_company) {
-       let error = new ApiError(httpStatus.NOT_FOUND, 'Company id not found');
-      logger.error(`[Invalid TOken] ${error}`);
-      throw error;
+     let companyUserAccount;
+     if(is_user.role == "admin"){
+       companyUserAccount = await companyService.companyUserAccount(null);
+     }else{
+      const company_id = req.params.company_id;
+      /**
+        * validate if the company id is valid
+        */
+      const is_company = await companyService.getCompanyById(company_id);
+      
+      if(!is_company) {
+        let error = new ApiError(httpStatus.NOT_FOUND, 'Company id not found');
+        logger.error(`[Invalid TOken] ${error}`);
+        throw error;
+      }
+      
+       companyUserAccount = await companyService.companyUserAccount(company_id);
      }
+
      
-     const companyUserAccount = await companyService.companyUserAccount(company_id);
      
      res.send(companyUserAccount)
     });
