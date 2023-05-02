@@ -30,6 +30,10 @@ router
   .post(auth('createCompanyUser'), validate(companyValidation.createCompanyUser), companyController.createCompanyUser)
   .get(auth('getAllUser'), validate(companyValidation.getAllCompanyUser), companyController.getAllCompanyUser);
 
+// router
+//   .route('/:company_id/enduser')
+//   .get(auth('getAllUser'), validate(companyValidation.getAllCompanyUser), companyController.getAllCompanyUser);
+
 router
   .route('/:company_id/user/templates')
   .get(auth('getAllUserTemplate'), validate(companyValidation.getAllCompanyUser), companyController.getAllUserTemplate);

@@ -9,7 +9,7 @@ const createCompanyUser = {
         first_name: Joi.string().required(),
         last_name: Joi.string().required(),
         email: Joi.string().email().required(),
-        password: Joi.string().required().custom(password),
+        password: Joi.string().allow(null, ''),
         currency: Joi.string().min(2).max(5).required(),
         role: Joi.string(),
         manager: Joi.custom(objectId),
