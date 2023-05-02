@@ -14,13 +14,15 @@ const {currency} = require('../config/currency');
 const {getCalculatorStatistic} = require('../services/dashboard.service');
 const { email } = require('../config/config');
 const { values, template } = require('underscore');
-const { objectId } = require('../validations/custom.validation');
+const { objectId, password } = require('../validations/custom.validation');
 const ObjectId = require('mongodb').ObjectID;
 const ApiError = require('../utils/ApiError');
 const _ = require("underscore");
 const {ACTIVE,INACTIVE, LOGGER_INVALID_TOKEN, STATUS_ACTIVE} = require("../common/staticValue.common");
 const { reset } = require('nodemon');
 const { createAdminTool } = require('../services/templateBuilder.service');
+
+const {sendEmail} = require('../services/email.service');
 
 
 const getFile = catchAsync(async (req, res)=>{
@@ -183,6 +185,35 @@ const createCompanyUser = catchAsync(async (req, res) => {
    user_req.name = `${req.body.first_name} ${req.body.last_name}`
    user_req.status = 1;
    
+   if(_.isEmpty(user_req.password)){
+    const randPassword = ()=>{
+      let lettersLength = 10;
+      let numbersLength = 10;
+      let j, x, i;
+      let result = '';
+      let letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@#$%^&*()-_=+[{]}|;:<,>.?/';
+      let t1 = new Date().getTime();
+      let numbers =  String(t1);
+      
+      for (i = 0; i < lettersLength; i++ ) {
+          result += letters.charAt(Math.floor(Math.random() * letters.length));
+      }
+      for (i = 0; i < numbersLength; i++ ) {
+          result += numbers.charAt(Math.floor(Math.random() * numbers.length));
+      }
+      result = result.split("");
+      for (i = result.length - 1; i > 0; i--) {
+          j = Math.floor(Math.random() * (i + 1));
+          x = result[i];
+          result[i] = result[j];
+          result[j] = x;
+      }
+      result = result.join("");
+      return result
+    } 
+
+    user_req.password = randPassword();
+   }
    const createUser = await companyService.company_user(user_req);
   
 
@@ -971,10 +1002,14 @@ const createCompnayTemplateVersion = catchAsync(async (req, res)=>{
        throw error;
      }
      let companyUserAccount;
-     if(is_user.role == "admin"){
-       companyUserAccount = await companyService.companyUserAccount(null);
-     }else{
-      const company_id = req.params.company_id;
+
+     switch (is_user.role) {
+      case "admin":
+        companyUserAccount = await companyService.companyUserAccount(null);
+        break;
+     
+      default:
+          const company_id = req.params.company_id;
       /**
         * validate if the company id is valid
         */
@@ -985,14 +1020,47 @@ const createCompnayTemplateVersion = catchAsync(async (req, res)=>{
         logger.error(`[Invalid TOken] ${error}`);
         throw error;
       }
+      let userContainer = await companyService.companyUserAccount(company_id);
+      let userArray = [];
+      if(is_user.role=="company-manager"){
+        userContainer.map(v=>{
+          if(v.role=="company-agent"){
+            userArray.push(v);
+          }
+        })
+        companyUserAccount = userArray;
+      }else{
+        companyUserAccount = userContainer;
+      }
       
-       companyUserAccount = await companyService.companyUserAccount(company_id);
+      
+        break;
      }
+
+    //  if(is_user.role == "admin"){
+    //    companyUserAccount = await companyService.companyUserAccount(null);
+    //  }else{
+    //   const company_id = req.params.company_id;
+    //   /**
+    //     * validate if the company id is valid
+    //     */
+    //   const is_company = await companyService.getCompanyById(company_id);
+      
+    //   if(!is_company) {
+    //     let error = new ApiError(httpStatus.NOT_FOUND, 'Company id not found');
+    //     logger.error(`[Invalid TOken] ${error}`);
+    //     throw error;
+    //   }
+      
+    //    companyUserAccount = await companyService.companyUserAccount(company_id);
+    //  }
 
      
      
      res.send(companyUserAccount)
     });
+
+    
 
 /**
  * Transfer ROI account to new account

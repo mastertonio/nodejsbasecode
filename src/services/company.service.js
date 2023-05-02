@@ -11,6 +11,7 @@ const _ = require("underscore");
 const { map } = require('underscore');
 const { objectId } = require('../validations/custom.validation');
 const { LOGGER_INVALID_TOKEN, INSUFFICIENT_LICENSE, LICENSE_ERROR, ROLE, USER_ERROR, NO_RECORD_FOUND } = require('../common/staticValue.common');
+const { sendEmail, sendEmailHTMLBODY } = require('./email.service');
 
 const getCompanyTemplateByCompanyId = async (_id) =>{
     const conatainer =[];
@@ -390,7 +391,52 @@ const company_user = async(req) => {
             logger.error(`[USER Module ] ${e}`)
             throw e;
         }
+        //  sendEmail(to, subject, text)
 
+        await sendEmailHTMLBODY(req.email,'Welcome to the ROI Shop', `
+        <table>
+	        <tbody><tr>
+                <td></td>
+                <td bgcolor="#FFFFFF">
+			<div>
+			<table>
+				<tbody><tr>
+					<td>
+						<h3>Welcome to The ROI Shop, <a href="${req.email}" target="_blank">${req.email}</a></h3>
+						<p>An account with this email address has been successfully setup. Your account details are as follows:<br><br>
+							<span style="margin-left:20px">Username: <a href="${req.email}" target="_blank">${req.email}</a> </span><br>
+							<span style="margin-left:20px">Password: ${req.password} </span></p>
+						<br>						
+						<p>
+							Begin creating ROIs right away! <a href="https://enterprise.theroishop.com" target="_blank">Click here to begin! »</a>
+						</p>
+						<table width="100%">
+							<tbody><tr>
+								<td>	
+									<table align="left">
+										<tbody><tr>
+											<td>									
+												<h5>Contact Info:</h5>												
+												<p>Phone: <strong>770-739-4725</strong><br>
+                                                Email: <strong><a>support@theroishop.com</a></strong></p>
+                
+											</td>
+										</tr>
+									</tbody></table>									
+									<span></span>										
+								</td>
+							</tr>
+						</tbody></table>						
+					</td>
+				</tr>
+			</tbody></table>
+			</div>
+									
+		</td>
+		<td></td>
+	</tr>
+</tbody></table>
+        `)
         
         const updateLicense = await Company.updateOne(
             {
@@ -546,7 +592,7 @@ const transferAccount = async (data) =>{
         ]);
         const ret_val = {};
         ret_val.user_count = user[0].count;
-        ret_val.company_license = company.licenses;
+        ret_val.company_license = company.licenses+user[0].count;
         ret_val.company_name = company.name;
         ret_val.remarks = INSUFFICIENT_LICENSE;
 

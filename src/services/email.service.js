@@ -1,6 +1,7 @@
 const nodemailer = require('nodemailer');
 const config = require('../config/config');
 const logger = require('../config/logger');
+const { loggers } = require('winston');
 
 const transport = nodemailer.createTransport(config.email.smtp);
 /* istanbul ignore next */
@@ -21,6 +22,14 @@ if (config.env !== 'test') {
 const sendEmail = async (to, subject, text) => {
   const msg = { from: config.email.from, to, subject, text };
   await transport.sendMail(msg);
+};
+
+const sendEmailHTMLBODY = async (to, subject, text) => {
+  const msg = { from: config.email.from, to, subject, html:text };
+ 
+  const sendmailstatus = await transport.sendMail(msg);
+
+  logger.info(`Email Message: ${JSON.stringify(msg)}   || Email Satus: ${JSON.stringify(sendmailstatus)} 👻`);
 };
 
 /**
@@ -60,4 +69,5 @@ module.exports = {
   sendEmail,
   sendResetPasswordEmail,
   sendVerificationEmail,
+  sendEmailHTMLBODY,
 };
