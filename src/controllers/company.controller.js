@@ -1159,14 +1159,14 @@ const transferTemplateAccount = catchAsync(async(req,res)=>{
        throw error;
      }
      console.log(is_user.role)
-     if(is_user.role == 'company-admin'){
+    //  if(is_user.role == 'company-admin'){
       const countRemainingLicense = await companyService.getCompanylicenseStatus(is_company);
       res.send(countRemainingLicense);
-     }else{
-        let error = new ApiError(httpStatus.UNAUTHORIZED, 'Invalid access role');
-       logger.error(`${LOGGER_INVALID_TOKEN} ${error}`);
-       throw error;
-     }
+    //  }else{
+    //     let error = new ApiError(httpStatus.UNAUTHORIZED, 'Invalid access role');
+    //    logger.error(`${LOGGER_INVALID_TOKEN} ${error}`);
+    //    throw error;
+    //  }
      
   })
 
