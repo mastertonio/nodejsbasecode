@@ -169,20 +169,6 @@ const sectionBuilderSchema = mongoose.Schema(
                     },
                     elements:[
                         {
-                            section:[
-                                {
-                                    label:{
-                                        type:String,
-                                        required: false,
-                                        default: null
-                                    },
-                                    value:{
-                                        type:String,
-                                        required: false,
-                                        default: null
-                                    }
-                                }
-                            ],
                             address:{ // frontend -> UUID from frontend
                                 type: String,
                                 required: false,

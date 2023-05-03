@@ -72,6 +72,19 @@ const createCompanyUser = {
     })
   }
 
+  const patchSectionElement = {
+    params: Joi.object().keys({
+      // company_id: Joi.required().custom(objectId),
+      // template_id: Joi.required().custom(objectId),
+      adminTool_id: Joi.required().custom(objectId),
+      section_id: Joi.required().custom(objectId),
+      element_id: Joi.required().custom(objectId),
+    }),
+    query: Joi.object().keys({
+      data: Joi.object(),
+    })
+  }
+
   const getCompnayTemplateVersionInfo = {
     params: Joi.object().keys({
       company_id: Joi.required().custom(objectId),
@@ -279,5 +292,6 @@ module.exports = {
     getCompnayTemplateBuilder,
     deleteTemplate,
     createCompnayTemplateBuilder,
-    patchSection
+    patchSection,
+    patchSectionElement
   };
