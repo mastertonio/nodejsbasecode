@@ -12,7 +12,7 @@ const { map } = require('underscore');
 const { objectId } = require('../validations/custom.validation');
 const { LOGGER_INVALID_TOKEN, INSUFFICIENT_LICENSE, LICENSE_ERROR, ROLE, USER_ERROR, NO_RECORD_FOUND } = require('../common/staticValue.common');
 const sectionBuilder = require('../models/sectionBuilder.model');
-const { templateBuilderService } = require('.');
+// const { templateBuilderService } = require('.');
 
 const  createAdminTool = async(req)=>{
     try {
@@ -54,7 +54,7 @@ const getAdminToolInfo  = async(req)=>{
         return sectionContainer
     } catch (error) {
         let e = new ApiError(httpStatus.UNPROCESSABLE_ENTITY,error);
-        logger.error(`[Company Module Template Version] ${e}`)
+        logger.error(`[Company Module AdminTool] ${e}`)
         throw e;
     }
 }

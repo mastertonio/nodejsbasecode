@@ -20,9 +20,10 @@ const ApiError = require('../utils/ApiError');
 const _ = require("underscore");
 const {ACTIVE,INACTIVE, LOGGER_INVALID_TOKEN, STATUS_ACTIVE} = require("../common/staticValue.common");
 const { reset } = require('nodemon');
-const { createAdminTool } = require('../services/templateBuilder.service');
+const { createAdminTool, updateAdminTool } = require('../services/templateBuilder.service');
 
 const {sendEmail} = require('../services/email.service');
+const sectionBuilder = require('../models/sectionBuilder.model');
 
 
 const getFile = catchAsync(async (req, res)=>{
@@ -485,6 +486,154 @@ const updateCompanyAdminTool = catchAsync(async (req,res)=>{
 
 
 });
+
+
+/**
+ * updateSectionElement
+ */
+const updateSectionElement= catchAsync(async (req,res)=>{
+  /**
+    * extracting JWT Token to get the User Id
+    */
+  const token = jwtExtract(req);
+  /**
+    * validating the user Account base on the response of the extraction
+    */
+  const is_user = await userService.getUserById(token);
+  if(!is_user){
+    let error = new ApiError(httpStatus.NOT_FOUND, 'User not found');
+    logger.error(`[Invalid TOken] ${error}`);
+    throw error;
+  }
+
+  try {
+    const  section_id = new ObjectId(req.params.section_id);
+    const  adminTool_id = req.params.adminTool_id;
+    const  element_id = req.params.element_id;
+    const adminTool = await sectionBuilder.findById(adminTool_id);
+    let sectionData = adminTool.sections;
+    let grayContent =[];
+    let quotes =[];
+    let datacontent =[];
+    if(_.has(req.body,"grayContent")){
+      sectionData.map(v=>{
+        if( JSON.stringify(section_id) === JSON.stringify(v._id)){
+          v.grayContent.elements.map(e=>{
+            if( JSON.stringify(element_id) === JSON.stringify(e._id)){
+              e.address = (_.has(req.body.grayContent,"address"))?req.body.grayContent.address:e.address;
+              e.choices = (_.has(req.body.grayContent,"choices"))?req.body.grayContent.choices:e.choices;
+              e.decimalPlace = (_.has(req.body.grayContent,"decimalPlace"))?req.body.grayContent.decimalPlace:e.decimalPlace;
+              e.currency = (_.has(req.body.grayContent,"currency"))?req.body.grayContent.currency:e.currency;
+              e.tooltip = (_.has(req.body.grayContent,"tooltip"))?req.body.grayContent.tooltip:e.tooltip;
+              e.appendedText = (_.has(req.body.grayContent,"appendedText"))?req.body.grayContent.appendedText:e.appendedText;
+              e.prefilled = (_.has(req.body.grayContent,"prefilled"))?req.body.grayContent.prefilled:e.prefilled;
+              e.dataType = (_.has(req.body.grayContent,"dataType"))?req.body.grayContent.address:e.dataType;
+              e.text = (_.has(req.body.grayContent,"text"))?req.body.grayContent.dataType:e.text;
+              e.toggle = (_.has(req.body.grayContent,"toggle"))?req.body.grayContent.toggle:e.toggle;
+              e.classes = (_.has(req.body.grayContent,"classes"))?req.body.grayContent.classes:e.classes;
+              e.title = (_.has(req.body.grayContent,"title"))?req.body.grayContent.title:e.title;
+              e.sliderType = (_.has(req.body.grayContent,"sliderType"))?req.body.grayContent.sliderType:e.sliderType;
+              e.icon = (_.has(req.body.grayContent,"icon"))?req.body.grayContent.icon:e.icon;
+              e.rightSection = (_.has(req.body.grayContent,"rightSection"))?req.body.grayContent.rightSection:e.rightSection;
+              e.isDisabled = (_.has(req.body.grayContent,"isDisabled"))?req.body.grayContent.isDisabled:e.isDisabled;
+              e.isProcess = (_.has(req.body.grayContent,"isProcess"))?req.body.grayContent.isProcess:e.isProcess;
+              e.forcedValue = (_.has(req.body.grayContent,"forcedValue"))?req.body.grayContent.forcedValue:e.forcedValue;
+              e.format = (_.has(req.body.grayContent,"format"))?req.body.grayContent.format:e.format;
+              e.formula = (_.has(req.body.grayContent,"formula"))?req.body.grayContent.formula:e.formula;
+              e.value = (_.has(req.body.grayContent,"value"))?req.body.grayContent.value:e.value;           
+            grayContent.push(e);
+            }else{
+              grayContent.push(e);
+            }          
+
+          });
+          v.grayContent.elements = grayContent;
+        }
+      });
+    }
+    if(_.has(req.body,"quotes")){
+      sectionData.map(v=>{
+        if( JSON.stringify(section_id) === JSON.stringify(v._id)){
+          v.headers.title.quotes.elements.map(e=>{
+            if( JSON.stringify(element_id) === JSON.stringify(e._id)){              
+              e.qoute.text = (_.has(req.body.quotes,"text"))?req.body.quotes.text:e.qoute.text;    
+              e.qoute.author = (_.has(req.body.quotes,"author"))?req.body.quotes.author:e.qoute.author;   
+              quotes.push(e);
+            }else{
+              quotes.push(e);
+            }
+          })
+          v.headers.title.quotes.elements=quotes;
+        }
+      });
+    }
+   
+    if(_.has(req.body,"content")){
+      sectionData.map(v=>{
+        if( JSON.stringify(section_id) === JSON.stringify(v._id)){
+          v.headers.title.content.elements.map(e=>{
+            if( JSON.stringify(element_id) === JSON.stringify(e._id)){  
+              e.dataType = (_.has(req.body.content,"dataType")) ? req.body.content.dataType : e.dataType;
+              e.span = (_.has(req.body.content,"span")) ? req.body.content.span : e.span;
+              e.class = (_.has(req.body.content,"class")) ? req.body.content.class : e.class;
+              e.mediaOrigin = (_.has(req.body.content,"mediaOrigin")) ? req.body.content.mediaOrigin : e.mediaOrigin;
+              e.text = (_.has(req.body.content,"text")) ? req.body.content.text : e.text;
+              e.link = (_.has(req.body.content,"link")) ? req.body.content.link : e.link;
+              // console.log(e)
+              datacontent.push(e);
+            }else{
+              datacontent.push(e);
+            }
+          })
+          // console.log(v.headers.title.content)
+          v.headers.title.content.elements=datacontent;
+        }
+        // console.log(v.headers.title.content)
+      });
+    }
+
+    console.log("sectioncontent----",sectionData[0].headers.title.content);
+    let qkey = {_id:adminTool_id};
+    qkey.sections = { $elemMatch: { _id: section_id} }
+    let sectionEntry = await updateAdminTool({key:qkey,updateDoc:{$set:{'sections.$':sectionData[0]}}},{ returnDocument: 'after' })
+        
+    let getSectionArea = await templateBuilderService.getAdminToolInfo(req);
+    if(getSectionArea){
+      res.send(getSectionArea)
+    }else{
+      let error = new ApiError(httpStatus.NOT_FOUND, 'Admin tool section not found');
+      logger.error(`[Invalid TOken] ${error}`);
+      throw error;
+    }
+    
+  } catch (error) {
+    let e = new ApiError(httpStatus.UNPROCESSABLE_ENTITY,error);
+        logger.error(`[patch admin tool] ${e}`)
+        throw e;
+  }
+
+  
+  // let sectionArea = await templateBuilderService.patchAdminTool(req);
+
+  // if(sectionArea){
+  //   let getSectionArea = await templateBuilderService.getAdminToolInfo(req);
+  //   if(getSectionArea){
+  //     res.send(getSectionArea)
+  //   }else{
+  //     let error = new ApiError(httpStatus.NOT_FOUND, 'Admin tool section not found');
+  //     logger.error(`[Invalid TOken] ${error}`);
+  //     throw error;
+  //   }
+  // }else{
+  //   let error = new ApiError(httpStatus.NOT_FOUND, 'Admin tool section not found');
+  //   logger.error(`[Invalid TOken] ${error}`);
+  //   throw error;
+  // }
+
+
+
+});
+
 
 
 /**
@@ -1372,6 +1521,7 @@ const transferTemplateAccount = catchAsync(async(req,res)=>{
     deleteTemplate,
     getCompanyadminTool,
     createCompanyAdminTool,
-    updateCompanyAdminTool
+    updateCompanyAdminTool,
+    updateSectionElement
   }
   

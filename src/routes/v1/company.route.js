@@ -107,6 +107,10 @@ router
   .patch(auth('getCompnayTemplateVersion'), validate(companyValidation.patchSection), companyController.updateCompanyAdminTool)
 
 router
+  .route('/admintool/:adminTool_id/section/:section_id/element/:element_id')
+  .patch(auth('getCompnayTemplateVersion'), validate(companyValidation.patchSectionElement), companyController.updateSectionElement)
+
+router
   .route('/:company_id/template/:template_id/version/:version_id')
   .patch(auth('patchCompnayTemplateVersion'), validate(companyValidation.patchCompnayTemplateVersion), companyController.patchCompnayTemplateVersion)
   .get(auth('getCompnayTemplateVersion'), validate(companyValidation.getCompnayTemplateVersionInfo), companyController.getCompnayTemplateVersionInfo)
