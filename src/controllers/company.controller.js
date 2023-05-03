@@ -636,6 +636,132 @@ const updateSectionElement= catchAsync(async (req,res)=>{
 
 
 
+
+/**
+ * updateSectionElement
+ */
+const deleteSectionElement= catchAsync(async (req,res)=>{
+  /**
+    * extracting JWT Token to get the User Id
+    */
+  const token = jwtExtract(req);
+  /**
+    * validating the user Account base on the response of the extraction
+    */
+  const is_user = await userService.getUserById(token);
+  if(!is_user){
+    let error = new ApiError(httpStatus.NOT_FOUND, 'User not found');
+    logger.error(`[Invalid TOken] ${error}`);
+    throw error;
+  }
+
+  try {
+    const  section_id = new ObjectId(req.params.section_id);
+    const  adminTool_id = req.params.adminTool_id;
+    const  element_id = req.params.element_id;
+    const adminTool = await sectionBuilder.findById(adminTool_id);
+    let sectionData = adminTool.sections;
+    let grayContent =[];
+    let quotes =[];
+    let datacontent =[];
+    if(_.has(req.body,"grayContent")){
+    if(req.body.grayContent !==true){
+      let e = new ApiError(httpStatus.UNPROCESSABLE_ENTITY,'Gray content is delete disable');
+        logger.error(`[patch admin tool] ${e}`)
+        throw e;
+    }
+      sectionData.map(v=>{
+        if( JSON.stringify(section_id) === JSON.stringify(v._id)){
+          v.grayContent.elements.map(e=>{
+            if( JSON.stringify(element_id) !== JSON.stringify(e._id)){
+              grayContent.push(e);
+            }     
+
+          });
+          v.grayContent.elements = grayContent;
+        }
+      });
+    }
+    if(_.has(req.body,"quotes")){
+      if(req.body.quotes !==true){
+        let e = new ApiError(httpStatus.UNPROCESSABLE_ENTITY,'Quotes is delete disable');
+          logger.error(`[patch admin tool] ${e}`)
+          throw e;
+      }
+      sectionData.map(v=>{
+        if( JSON.stringify(section_id) === JSON.stringify(v._id)){
+          v.headers.title.quotes.elements.map(e=>{
+            if( JSON.stringify(element_id) !== JSON.stringify(e._id)){    
+              quotes.push(e);
+            }
+          })
+          v.headers.title.quotes.elements=quotes;
+        }
+      });
+    }
+   
+    if(_.has(req.body,"content")){
+      if(req.body.content !==true){
+        let e = new ApiError(httpStatus.UNPROCESSABLE_ENTITY,'Content is delete disable');
+          logger.error(`[patch admin tool] ${e}`)
+          throw e;
+      }
+      sectionData.map(v=>{
+        if( JSON.stringify(section_id) === JSON.stringify(v._id)){
+          v.headers.title.content.elements.map(e=>{
+            if( JSON.stringify(element_id) !== JSON.stringify(e._id)){  
+              datacontent.push(e);
+            }
+          })
+          // console.log(v.headers.title.content)
+          v.headers.title.content.elements=datacontent;
+        }
+        // console.log(v.headers.title.content)
+      });
+    }
+
+    console.log("sectioncontent----",sectionData[0].headers.title.content);
+    let qkey = {_id:adminTool_id};
+    qkey.sections = { $elemMatch: { _id: section_id} }
+    let sectionEntry = await updateAdminTool({key:qkey,updateDoc:{$set:{'sections.$':sectionData[0]}}},{ returnDocument: 'after' })
+        
+    let getSectionArea = await templateBuilderService.getAdminToolInfo(req);
+    if(getSectionArea){
+      res.send(getSectionArea)
+    }else{
+      let error = new ApiError(httpStatus.NOT_FOUND, 'Admin tool section not found');
+      logger.error(`[Invalid TOken] ${error}`);
+      throw error;
+    }
+    
+  } catch (error) {
+    let e = new ApiError(httpStatus.UNPROCESSABLE_ENTITY,error);
+        logger.error(`[patch admin tool] ${e}`)
+        throw e;
+  }
+
+  
+  // let sectionArea = await templateBuilderService.patchAdminTool(req);
+
+  // if(sectionArea){
+  //   let getSectionArea = await templateBuilderService.getAdminToolInfo(req);
+  //   if(getSectionArea){
+  //     res.send(getSectionArea)
+  //   }else{
+  //     let error = new ApiError(httpStatus.NOT_FOUND, 'Admin tool section not found');
+  //     logger.error(`[Invalid TOken] ${error}`);
+  //     throw error;
+  //   }
+  // }else{
+  //   let error = new ApiError(httpStatus.NOT_FOUND, 'Admin tool section not found');
+  //   logger.error(`[Invalid TOken] ${error}`);
+  //   throw error;
+  // }
+
+
+
+});
+
 /**
  * create admin  tool
  */
@@ -1522,6 +1648,8 @@ const transferTemplateAccount = catchAsync(async(req,res)=>{
     getCompanyadminTool,
     createCompanyAdminTool,
     updateCompanyAdminTool,
-    updateSectionElement
+    updateSectionElement,
+    deleteSectionElement,
+    
   }
   
