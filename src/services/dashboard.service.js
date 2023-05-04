@@ -695,6 +695,7 @@ const getDashboard = async (userId,filter, options) => {
     const data = [];
     
     let c_id = new ObjectId(cid);
+    
     const templateVersion_collection = [];
     const templateData = await Template.aggregate([
                 {
@@ -720,18 +721,20 @@ const getDashboard = async (userId,filter, options) => {
         }
     })
     let o_id = new ObjectId(uid);
+    console.log(templateVersion_collection)
     const roi_table = await  Calculator.aggregate([ {
             $match: {
                 template_version_id:{$in:templateVersion_collection}
             }
-        },{
-            $lookup: {
-                from: 'templateversions',
-                localField: '_id',
-                foreignField: 'template_version_id',
-                as: 'TemplateVersionData'
-            }
         }
+        // ,{
+        //     $lookup: {
+        //         from: 'templateversions',
+        //         localField: '_id',
+        //         foreignField: 'template_version_id',
+        //         as: 'TemplateVersionData'
+        //     }
+        // }
     ]).sort({createdAt:-1})
 
 
@@ -760,19 +763,39 @@ const getDashboard = async (userId,filter, options) => {
         let getYear = d.getFullYear();
         let n_d = d.toLocaleString();
             n_d= n_d.split(', ');
-        
-            data.push({
-                id: v._id,
-                link: v.linked_title,
-                importance: Number(v.importance),
-                name: v.title,
-                source_id: v.template_version_id,
-                source_name: _.isEmpty(v.TemplateVersionData)?"":v.TemplateVersionData[0].name,
-                dateCreated:`${monthName} ${getDate},${getYear} ${n_d[1]}`,
-                views: Number(v.visits),
-                uniqueViews: Number(v.unique_ip),
-                status: v.status
+            // console.log(v)
+            // let source_name;
+            // if(_.isEmpty(v.TemplateVersionData)){
+            //     let o_id = new ObjectId(id);       
+            //     source_name = await TemplateVersion.findById({_id: o_id});
+
+            // }else{
+            //     source_name = v.TemplateVersionData[0].name
+            // }
+           
+            templateData.map(tpl=>{
+                if(!_.isEmpty(tpl.TemplateVersionData)){
+                    tpl.TemplateVersionData.map(tpl_v=>{
+                       if( JSON.stringify(tpl_v._id) === JSON.stringify(v.template_version_id)){
+                        data.push({
+                            id: v._id,
+                            link: v.linked_title,
+                            importance: Number(v.importance),
+                            name: v.title,
+                            source_id: v.template_version_id,
+                            source_name: tpl_v.name,
+                            dateCreated:`${monthName} ${getDate},${getYear} ${n_d[1]}`,
+                            views: Number(v.visits),
+                            uniqueViews: Number(v.unique_ip),
+                            status: v.status
+                        })
+                       }
+                    });
+                }
             })
+
+
+            
     });
     return data;
 
