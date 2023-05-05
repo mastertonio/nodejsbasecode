@@ -71,6 +71,17 @@ const createCompanyUser = {
       data: Joi.object(),
     })
   }
+  const deleteSection = {
+    params: Joi.object().keys({
+      // company_id: Joi.required().custom(objectId),
+      // template_id: Joi.required().custom(objectId),
+      adminTool_id: Joi.required().custom(objectId),
+      section_id: Joi.required().custom(objectId),
+    }),
+    query: Joi.object().keys({
+      data: Joi.object(),
+    })
+  }
 
   const patchSectionElement = {
     params: Joi.object().keys({
@@ -79,6 +90,19 @@ const createCompanyUser = {
       adminTool_id: Joi.required().custom(objectId),
       section_id: Joi.required().custom(objectId),
       element_id: Joi.required().custom(objectId),
+    }),
+    query: Joi.object().keys({
+      data: Joi.object(),
+    })
+  }
+  const deleteSectionElement = {
+    params: Joi.object().keys({
+      // company_id: Joi.required().custom(objectId),
+      // template_id: Joi.required().custom(objectId),
+      adminTool_id: Joi.required().custom(objectId),
+      section_id: Joi.required().custom(objectId),
+      element_id: Joi.required().custom(objectId),
+      target_name: Joi.string().required(),
     }),
     query: Joi.object().keys({
       data: Joi.object(),
@@ -293,5 +317,7 @@ module.exports = {
     deleteTemplate,
     createCompnayTemplateBuilder,
     patchSection,
-    patchSectionElement
+    patchSectionElement,
+    deleteSectionElement,
+    deleteSection,
   };

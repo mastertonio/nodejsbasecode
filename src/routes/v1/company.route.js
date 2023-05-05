@@ -105,11 +105,14 @@ router
 router
   .route('/admintool/:adminTool_id/section/:section_id')
   .patch(auth('getCompnayTemplateVersion'), validate(companyValidation.patchSection), companyController.updateCompanyAdminTool)
+  .delete(auth('getCompnayTemplateVersion'), validate(companyValidation.deleteSection), companyController.deleteSection)
 
 router
   .route('/admintool/:adminTool_id/section/:section_id/element/:element_id')
   .patch(auth('getCompnayTemplateVersion'), validate(companyValidation.patchSectionElement), companyController.updateSectionElement)
-  .delete(auth('getCompnayTemplateVersion'), validate(companyValidation.patchSectionElement), companyController.deleteSectionElement)
+  router
+  .route('/admintool/:adminTool_id/section/:section_id/element/:element_id/target/:target_name')
+  .delete(auth('getCompnayTemplateVersion'), validate(companyValidation.deleteSectionElement), companyController.deleteSectionElement)
 
 router
   .route('/:company_id/template/:template_id/version/:version_id')
