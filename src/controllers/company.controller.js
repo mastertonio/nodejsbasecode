@@ -448,6 +448,48 @@ const getCompanyadminTool = catchAsync(async (req,res)=>{
   let response = {adminTool:adminTool[0],TemplateVersionInfo:container[0]};
    res.send(response)
 });
+const deleteSection = catchAsync(async (req,res)=>{
+  /**
+    * extracting JWT Token to get the User Id
+    */
+  const token = jwtExtract(req);
+  /**
+    * validating the user Account base on the response of the extraction
+    */
+  const is_user = await userService.getUserById(token);
+  if(!is_user){
+    let error = new ApiError(httpStatus.NOT_FOUND, 'User not found');
+    logger.error(`[Invalid TOken] ${error}`);
+    throw error;
+  }
+  const adminTool_id = req.params.adminTool_id;
+  const section_id = req.params.section_id;
+  const section = await sectionBuilder.findById(adminTool_id);
+  const sectionContainer = [];
+  section.sections.map(v=>{
+    if(JSON.stringify(v._id) !== JSON.stringify(section_id)){
+      sectionContainer.push(v);
+    }
+  })
+  // section.sections=sectionContainer;
+
+  const update = await  sectionBuilder.updateOne({_id:adminTool_id}, req.updateDoc,{new:true});
+
+
+  let qkey = {_id:adminTool_id};
+  let sectionEntry = await updateAdminTool({key:qkey,updateDoc:{$set:{'sections':sectionContainer}}},{ returnDocument: 'after' })
+
+  let getSectionArea = await templateBuilderService.getAdminToolInfo(req);
+    if(getSectionArea){
+      res.send(getSectionArea)
+    }else{
+      let error = new ApiError(httpStatus.NOT_FOUND, 'Admin tool section not found');
+      logger.error(`[Invalid TOken] ${error}`);
+      throw error;
+    }
+  // res.send({})
+
+})
 
 /**
  * updateCompanyAdminTool
@@ -657,6 +699,7 @@ const deleteSectionElement= catchAsync(async (req,res)=>{
 
   try {
     const  section_id = new ObjectId(req.params.section_id);
+    const  target = req.params.adminTool_id;
     const  adminTool_id = req.params.adminTool_id;
     const  element_id = req.params.element_id;
     const adminTool = await sectionBuilder.findById(adminTool_id);
@@ -664,12 +707,14 @@ const deleteSectionElement= catchAsync(async (req,res)=>{
     let grayContent =[];
     let quotes =[];
     let datacontent =[];
-    if(_.has(req.body,"grayContent")){
-    if(req.body.grayContent !==true){
-      let e = new ApiError(httpStatus.UNPROCESSABLE_ENTITY,'Gray content is delete disable');
-        logger.error(`[patch admin tool] ${e}`)
-        throw e;
-    }
+
+
+    if( target === "grayContent" ){
+    // if(req.body.grayContent !==true){
+    //   let e = new ApiError(httpStatus.UNPROCESSABLE_ENTITY,'Gray content is delete disable');
+    //     logger.error(`[patch admin tool] ${e}`)
+    //     throw e;
+    // }
       sectionData.map(v=>{
         if( JSON.stringify(section_id) === JSON.stringify(v._id)){
           v.grayContent.elements.map(e=>{
@@ -682,12 +727,15 @@ const deleteSectionElement= catchAsync(async (req,res)=>{
         }
       });
     }
-    if(_.has(req.body,"quotes")){
-      if(req.body.quotes !==true){
-        let e = new ApiError(httpStatus.UNPROCESSABLE_ENTITY,'Quotes is delete disable');
-          logger.error(`[patch admin tool] ${e}`)
-          throw e;
-      }
+
+
+
+    if(target==="quotes"){
+      // if(req.body.quotes !==true){
+      //   let e = new ApiError(httpStatus.UNPROCESSABLE_ENTITY,'Quotes is delete disable');
+      //     logger.error(`[patch admin tool] ${e}`)
+      //     throw e;
+      // }
       sectionData.map(v=>{
         if( JSON.stringify(section_id) === JSON.stringify(v._id)){
           v.headers.title.quotes.elements.map(e=>{
@@ -700,12 +748,12 @@ const deleteSectionElement= catchAsync(async (req,res)=>{
       });
     }
    
-    if(_.has(req.body,"content")){
-      if(req.body.content !==true){
-        let e = new ApiError(httpStatus.UNPROCESSABLE_ENTITY,'Content is delete disable');
-          logger.error(`[patch admin tool] ${e}`)
-          throw e;
-      }
+    if (target==="content"){
+      // if(req.body.content !==true){
+      //   let e = new ApiError(httpStatus.UNPROCESSABLE_ENTITY,'Content is delete disable');
+      //     logger.error(`[patch admin tool] ${e}`)
+      //     throw e;
+      // }
       sectionData.map(v=>{
         if( JSON.stringify(section_id) === JSON.stringify(v._id)){
           v.headers.title.content.elements.map(e=>{
@@ -1650,6 +1698,7 @@ const transferTemplateAccount = catchAsync(async(req,res)=>{
     updateCompanyAdminTool,
     updateSectionElement,
     deleteSectionElement,
+    deleteSection,
     
   }
   
