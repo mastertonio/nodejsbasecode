@@ -71,7 +71,7 @@ const getAdminToolInfo  = async(req)=>{
 // }
 
 const patchAdminTool = async(req)  =>{
-    try {
+    // try {
         // const company_id = req.params.company_id;
         // const template_id = req.params.template_id;
         // const version_id = req.params.version_id;
@@ -87,21 +87,24 @@ const patchAdminTool = async(req)  =>{
                 v.address= (_.has(req.body,"address")) ? req.body.address : v.address;
                 v.sectionTitle= (_.has(req.body,"sectionTitle")) ? req.body.sectionTitle : v.sectionTitle;
                 v.order= (_.has(req.body,"order")) ? req.body.order : v.order;
-
+                
                 if(_.has(req.body,"grayContent")){
                     v.grayContent.dataType = (_.has(req.body.grayContent,"dataType")) ?req.body.grayContent.dataType :v.grayContent.dataType;
                     v.grayContent.classes = (_.has(req.body.grayContent,"classes")) ?req.body.grayContent.classes :v.grayContent.classes;
+                    
                     if(_.has(req.body.grayContent,"elements")){
+                        console.log(req.body.grayContent.elements)
                         if(_.isEmpty(v.grayContent.elements)){
                             v.grayContent.elements = req.body.grayContent.elements;
                         }else{
-                            v.grayContent.elements.map(g=>{
-                                if(JSON.stringify(g._id) === JSON.stringify(req.body.grayContent.elements[0]._id)){
-                                    v.grayContent.elements = req.body.grayContent.elements[0];
-                                }else{
-                                    v.grayContent.elements.push(req.body.grayContent.elements[0]);
-                                }
-                            })
+                            v.grayContent.elements.push(req.body.grayContent.elements[0]);
+                            // v.grayContent.elements.map(g=>{
+                            //     if(JSON.stringify(g._id) === JSON.stringify(req.body.grayContent.elements[0]._id)){
+                            //         v.grayContent.elements = req.body.grayContent.elements[0];
+                            //     }else{
+                            //         v.grayContent.elements.push(req.body.grayContent.elements[0]);
+                            //     }
+                            // })
                         }
                         
                     }
@@ -148,7 +151,7 @@ const patchAdminTool = async(req)  =>{
             }
         });
 
-        // console.log(sectionContainer.headers.title);
+        // console.log(sectionContainer.grayContent.elements);
 
 
         let qkey = {_id:adminTool_id};
@@ -158,17 +161,17 @@ const patchAdminTool = async(req)  =>{
   
         let sectionEntry = await updateAdminTool({key:qkey,updateDoc:{$set:{'sections.$':sectionContainer[0]}}},{ returnDocument: 'after' })
         return sectionEntry;
-
+        // return {};
 
         // Object.assign(adminTool,UpdateBody);
         // await company.save();
         // return company;
 
-    } catch (error) {
-        let e = new ApiError(httpStatus.UNPROCESSABLE_ENTITY,error);
-        logger.error(`[patch admin tool] ${e}`)
-        throw e;
-    }
+    // } catch (error) {
+    //     let e = new ApiError(httpStatus.UNPROCESSABLE_ENTITY,error);
+    //     logger.error(`[patch admin tool] ${e}`)
+    //     throw e;
+    // }
 }
 const updateAdminTool  = async(req)  =>{
     console.log(req.updateDoc)
