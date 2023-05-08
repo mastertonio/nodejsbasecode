@@ -22,7 +22,7 @@ const templateSchema = mongoose.Schema(
         },
         notes: {
             type: String,
-            required: true
+            required: false
         },
         created_by: {
             type: mongoose.SchemaTypes.ObjectId,
