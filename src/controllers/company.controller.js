@@ -259,6 +259,31 @@ const createCompanyTemplate = catchAsync(async (req, res)=>{
     req.body.created_by = token;
     const create_template = await companyService.createNewTempalete(req.body);
     let status = (create_template.active == 1)? ACTIVE:INACTIVE;
+
+
+
+
+
+
+    const templateVersionData = {
+      name: `${create_template.name}`,
+      version: 1,
+      stage: 1,
+      notes: `this is version created for template ${create_template._id}`,
+      template_id: create_template._id,
+      created_by: token
+    }   
+    
+    const templateVersion = await companyService.createTemplateVersion(templateVersionData);
+
+    let  templateBuilderData =  {
+      company_id: company_id,
+      template_id:  create_template._id,
+      version_id: templateVersion.id
+    }
+    
+    await  templateBuilderService.createAdminTool(templateBuilderData);
+
     res.send({
       _id:create_template._id,
       name:create_template.name,
@@ -266,7 +291,8 @@ const createCompanyTemplate = catchAsync(async (req, res)=>{
       company_id:create_template.company_id,
       projection:create_template.projection,
       active:create_template.active,
-      status:status
+      status:status,
+      templateVersion:templateVersion
     });
 
 });
@@ -1038,7 +1064,8 @@ const createCompnayTemplateVersion = catchAsync(async (req, res)=>{
 
     //build template builder
 
-
+    
+    console.log("tempalateVersion->", req.body)
     
     const templateVersion = await companyService.createTemplateVersion(req.body);
 
@@ -1046,9 +1073,9 @@ const createCompnayTemplateVersion = catchAsync(async (req, res)=>{
       company_id: company_id,
       template_id:  template_id,
       version_id: templateVersion.id
-
-
     }
+
+    console.log('TemplateBuilder->',templateBuilderData);
     const  templateBuilder  =  await  templateBuilderService.createAdminTool(templateBuilderData);
     res.send(templateVersion);
 })
