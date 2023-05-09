@@ -142,7 +142,7 @@ const createCompanyUser = {
       name: Joi.string().required(),
       projection: Joi.number().integer().required(),
       status: Joi.number().integer().required(),
-      notes: Joi.string()
+      notes: Joi.string().allow('').optional()
 
     })
   }
