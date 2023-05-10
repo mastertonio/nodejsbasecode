@@ -589,7 +589,28 @@ const updateSectionElement= catchAsync(async (req,res)=>{
           v.grayContent.elements.map(e=>{
             if( JSON.stringify(element_id) === JSON.stringify(e._id)){
               e.address = (_.has(req.body.grayContent,"address"))?req.body.grayContent.address:e.address;
-              e.choices = (_.has(req.body.grayContent,"choices"))?req.body.grayContent.choices:e.choices;
+              // e.choices = (_.has(req.body.grayContent,"choices"))?req.body.grayContent.choices:e.choices;
+              if(_.has(req.body.grayContent,"choices")){
+                let c = req.body.grayContent.choices;
+                let choices = [];
+                  c.map(q=>{
+                      if(q.label === ""){
+                          let error = new ApiError(httpStatus.UNPROCESSABLE_ENTITY, 'label should not be null');
+                          logger.error(`[Invalid TOken] ${error}`);
+                          throw error;
+                      }
+                      if(q.value === ""){
+                        let error = new ApiError(httpStatus.UNPROCESSABLE_ENTITY, 'value should not be null');
+                        logger.error(`[Invalid TOken] ${error}`);
+                        throw error;
+                      }
+                      choices.push(q);
+                  });
+                  e.choices = q;
+              }else{
+                  e.choices = e.choices;
+              }
+
               e.decimalPlace = (_.has(req.body.grayContent,"decimalPlace"))?req.body.grayContent.decimalPlace:e.decimalPlace;
               e.currency = (_.has(req.body.grayContent,"currency"))?req.body.grayContent.currency:e.currency;
               e.tooltip = (_.has(req.body.grayContent,"tooltip"))?req.body.grayContent.tooltip:e.tooltip;
@@ -660,19 +681,20 @@ const updateSectionElement= catchAsync(async (req,res)=>{
       });
     }
 
-    console.log("sectioncontent----",sectionData[0].headers.title.content);
-    let qkey = {_id:adminTool_id};
-    qkey.sections = { $elemMatch: { _id: section_id} }
-    let sectionEntry = await updateAdminTool({key:qkey,updateDoc:{$set:{'sections.$':sectionData[0]}}},{ returnDocument: 'after' })
+    console.log("sectioncontent----",sectionData[0].grayContent.elements);
+
+    // let qkey = {_id:adminTool_id};
+    // qkey.sections = { $elemMatch: { _id: section_id} }
+    // let sectionEntry = await updateAdminTool({key:qkey,updateDoc:{$set:{'sections.$':sectionData[0]}}},{ returnDocument: 'after' })
         
-    let getSectionArea = await templateBuilderService.getAdminToolInfo(req);
-    if(getSectionArea){
-      res.send(getSectionArea)
-    }else{
-      let error = new ApiError(httpStatus.NOT_FOUND, 'Admin tool section not found');
-      logger.error(`[Invalid TOken] ${error}`);
-      throw error;
-    }
+    // let getSectionArea = await templateBuilderService.getAdminToolInfo(req);
+    // if(getSectionArea){
+    //   res.send(getSectionArea)
+    // }else{
+    //   let error = new ApiError(httpStatus.NOT_FOUND, 'Admin tool section not found');
+    //   logger.error(`[Invalid TOken] ${error}`);
+    //   throw error;
+    // }
     
   } catch (error) {
     let e = new ApiError(httpStatus.UNPROCESSABLE_ENTITY,error);
