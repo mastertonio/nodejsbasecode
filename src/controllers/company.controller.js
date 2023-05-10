@@ -606,7 +606,7 @@ const updateSectionElement= catchAsync(async (req,res)=>{
                       }
                       choices.push(q);
                   });
-                  e.choices = q;
+                  e.choices = choices;
               }else{
                   e.choices = e.choices;
               }
@@ -681,20 +681,20 @@ const updateSectionElement= catchAsync(async (req,res)=>{
       });
     }
 
-    console.log("sectioncontent----",sectionData[0].grayContent.elements);
-
-    // let qkey = {_id:adminTool_id};
-    // qkey.sections = { $elemMatch: { _id: section_id} }
-    // let sectionEntry = await updateAdminTool({key:qkey,updateDoc:{$set:{'sections.$':sectionData[0]}}},{ returnDocument: 'after' })
+    // console.log("sectioncontent----",sectionData[0].grayContent.elements);
+    logger.info(`[element] ${sectionData[0].grayContent.elements}`);
+    let qkey = {_id:adminTool_id};
+    qkey.sections = { $elemMatch: { _id: section_id} }
+    let sectionEntry = await updateAdminTool({key:qkey,updateDoc:{$set:{'sections.$':sectionData[0]}}},{ returnDocument: 'after' })
         
-    // let getSectionArea = await templateBuilderService.getAdminToolInfo(req);
-    // if(getSectionArea){
-    //   res.send(getSectionArea)
-    // }else{
-    //   let error = new ApiError(httpStatus.NOT_FOUND, 'Admin tool section not found');
-    //   logger.error(`[Invalid TOken] ${error}`);
-    //   throw error;
-    // }
+    let getSectionArea = await templateBuilderService.getAdminToolInfo(req);
+    if(getSectionArea){
+      res.send(getSectionArea)
+    }else{
+      let error = new ApiError(httpStatus.NOT_FOUND, 'Admin tool section not found');
+      logger.error(`[Invalid TOken] ${error}`);
+      throw error;
+    }
     
   } catch (error) {
     let e = new ApiError(httpStatus.UNPROCESSABLE_ENTITY,error);
