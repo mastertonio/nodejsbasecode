@@ -175,11 +175,21 @@ const sectionBuilderSchema = mongoose.Schema(
                                 default: null,
                                 unique: true
                             },
-                            choices:{ 
-                                type: String,
-                                required: false,
-                                default: null
-                            },
+                            choices:[
+                                        {
+                                            value:{
+                                                type:String,
+                                                required:false,
+                                                default:""
+                                            },
+                                            label:{
+                                                type:String,
+                                                required:false,
+                                                default:""
+                                            }
+                                        }
+                                    ],
+                
                             decimalPlace:{ 
                                 type: String,
                                 required: false,
