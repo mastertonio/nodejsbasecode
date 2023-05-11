@@ -1212,7 +1212,6 @@ const createCompnayTemplateVersion = catchAsync(async (req, res)=>{
     
 
      const templates = await companyService.getCompanyTemplateByCompanyId(company_id);
-      
      res.send(templates)
       
   });
