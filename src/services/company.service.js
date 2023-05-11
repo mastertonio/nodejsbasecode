@@ -12,33 +12,61 @@ const { map } = require('underscore');
 const { objectId } = require('../validations/custom.validation');
 const { LOGGER_INVALID_TOKEN, INSUFFICIENT_LICENSE, LICENSE_ERROR, ROLE, USER_ERROR, NO_RECORD_FOUND } = require('../common/staticValue.common');
 const { sendEmail, sendEmailHTMLBODY } = require('./email.service');
+const sectionBuilder = require('../models/sectionBuilder.model');
 
 const getCompanyTemplateByCompanyId = async (_id) =>{
     const conatainer =[];
     if(_.isNull(_id)){
-        const allTemplates =  Template.find();
-        allTemplates.map(v=>{
-            conatainer.push({
-                _id:v._id,
-                name: v.name,
-                notes: v.notes,
-                company_id: v.company_id,
-                active: v.active,
-                status: (v.active==1)?"active":"inactive"
+        /**
+         * Remove change of  specs
+         *  const allTemplates =  Template.find();
+         */
+       
+        const company_template = await Template.find();
+        const adminTool = await sectionBuilder.find();
+
+
+        company_template.map(v=>{
+            adminTool.map(a=>{
+                if(JSON.stringify(v._id) === JSON.stringify(a.template_id)){
+                    conatainer.push({
+                                _id:v._id,
+                                name: v.name,
+                                notes: v.notes,
+                                company_id: v.company_id,
+                                version_id:  a.version_id,
+                                admintool_id:  a._id,
+                                active: v.active,
+                                status: (v.active==1)?"active":"inactive"
+                            })
+                }
             })
+           
         })
     }else{
         const o_id = new ObjectId(_id); 
-        const company_template =await Template.find({company_id:o_id});
+        // const company_template =await Template.find({company_id:o_id});
+
+        const company_template = await Template.find({company_id:o_id});
+        const adminTool = await sectionBuilder.find({company_id:o_id});
+
+
         company_template.map(v=>{
-            conatainer.push({
-                _id:v._id,
-                name: v.name,
-                notes: v.notes,
-                company_id: v.company_id,
-                active: v.active,
-                status: (v.active==1)?"active":"inactive"
+            adminTool.map(a=>{
+                if(JSON.stringify(v._id) === JSON.stringify(a.template_id)){
+                    conatainer.push({
+                                _id:v._id,
+                                name: v.name,
+                                notes: v.notes,
+                                company_id: v.company_id,
+                                version_id:  a.version_id,
+                                admintool_id:  a._id,
+                                active: v.active,
+                                status: (v.active==1)?"active":"inactive"
+                            })
+                }
             })
+           
         })
     }
     return conatainer;
