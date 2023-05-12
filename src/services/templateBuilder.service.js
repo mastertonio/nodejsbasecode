@@ -112,7 +112,7 @@ const patchAdminTool = async(req)  =>{
 
 
                 if(_.has(req.body,"headers")){
-                    console.log('----x------->',req.body.headers.title);
+                   
                     v.headers.title.dataType = (_.has(req.body.headers.title,"dataType")) ? req.body.headers.title.dataType : v.headers.title.dataType;
                     v.headers.title.description = (_.has(req.body.headers.title,"description")) ? req.body.headers.title.description : v.headers.title.description;
                     v.headers.title.mainTitle = (_.has(req.body.headers.title,"mainTitle")) ?req.body.headers.title.mainTitle : v.headers.title.mainTitle;
@@ -122,18 +122,18 @@ const patchAdminTool = async(req)  =>{
                     /**
                      * Qoutes
                      */
-                    if(_.has(req.body.headers,"quotes")){
-                        v.headers.title.quotes.dataType = (_.has(req.body.headers.quotes ,"dataType")) ? req.body.headers.quotes.dataType : v.headers.title.quotes.dataType;
-                        v.headers.title.quotes.position = (_.has(req.body.headers.quotes ,"position")) ? req.body.headers.quotes.position : v.headers.title.quotes.position;
+                    if(_.has(req.body.headers.title,"quotes")){
+                        v.headers.title.quotes.dataType = (_.has(req.body.headers.title.quotes ,"dataType")) ? req.body.headers.title.quotes.dataType : v.headers.title.quotes.dataType;
+                        v.headers.title.quotes.position = (_.has(req.body.headers.title.quotes ,"position")) ? req.body.headers.title.quotes.position : v.headers.title.quotes.position;
                         if((_.has(req.body.headers.quotes ,"elements"))){
                             let dataElement = [];
                             if(_.isEmpty(v.headers.title.quotes.elements)){
-                                v.headers.title.quotes.elements = req.body.headers.quotes.elements;
+                                v.headers.title.quotes.elements = req.body.headers.title.quotes.elements;
                             }else{
-                                req.body.headers.quotes.elements.map(e=>{                                
+                                req.body.headers.title.quotes.elements.map(e=>{                                
                                     dataElement.push({
-                                        dataType: (_.has(req.body.headers.quotes.elements),"dataType")?req.body.headers.quotes.elements.dataType:v.headers.title.quotes.elements.dataType,
-                                        qoute:  (_.has(req.body.headers.quotes.elements),"qoute")?req.body.headers.quotes.elements.qoute:v.headers.title.quotes.elements.qoute,
+                                        dataType: (_.has(req.body.headers.title.quotes.elements),"dataType")?req.body.headers.title.quotes.elements.dataType:v.headers.title.quotes.elements.dataType,
+                                        qoute:  (_.has(req.body.headers.title.quotes.elements),"qoute")?req.body.headers.title.quotes.elements.qoute:v.headers.title.quotes.elements.qoute,
                                     })
                                 })
                             }
@@ -143,6 +143,36 @@ const patchAdminTool = async(req)  =>{
                     /**
                      * content
                      */
+
+                    if(_.has(req.body.headers.title,"content")){
+                        console.log('----x------->',req.body.headers.title);
+                        v.headers.title.content.dataType = (_.has(req.body.headers.title.content ,"dataType")) ? req.body.headers.title.content.dataType : v.headers.title.content.dataType;
+                        if((_.has(req.body.headers.title.content ,"elements"))){
+                            let dataElement = [];
+                            if(_.isEmpty(v.headers.title.content.elements)){
+                                v.headers.title.content.elements = req.body.headers.title.content.elements;
+                            }else{
+                                req.body.headers.title.content.elements.map(e=>{                                
+                                    dataElement.push({
+                                        dataType: (_.has(req.body.headers.title.content.elements),"dataType")?req.body.headers.title.content.elements.dataType:v.headers.title.content.elements.dataType,
+                                        qoute:  (_.has(req.body.headers.title.content.elements),"qoute")?req.body.headers.title.content.elements.qoute:v.headers.title.content.elements.qoute,
+                                        span:  (_.has(req.body.headers.title.content.elements),"span")?req.body.headers.title.content.elements.span:v.headers.title.content.elements.span,
+                                        class:  (_.has(req.body.headers.title.content.elements),"class")?req.body.headers.content.elements.class:v.headers.title.content.elements.class,
+                                        mediaOrigin:  (_.has(req.body.headers.title.content.elements),"mediaOrigin")?req.body.headers.title.content.elements.mediaOrigin:v.headers.title.content.elements.mediaOrigin,
+                                        text:  (_.has(req.body.headers.title.content.elements),"text")?req.body.headers.title.content.elements.text:v.headers.title.content.elements.text,
+                                        link:  (_.has(req.body.headers.title.content.elements),"link")?req.body.headers.title.content.elements.link:v.headers.title.content.elements.link,
+
+                                    })
+                                })
+                            }
+                            
+                        }
+                    }
+                    
+
+
+
+                    
                            
 
                 }
