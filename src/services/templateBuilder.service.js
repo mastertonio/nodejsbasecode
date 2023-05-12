@@ -112,10 +112,11 @@ const patchAdminTool = async(req)  =>{
 
 
                 if(_.has(req.body,"headers")){
-                    v.headers.title.dataType = (_.has(req.body.headers,"dataType")) ? req.body.headers.dataType : v.headers.title.dataType;
-                    v.headers.title.description = (_.has(req.body.headers,"description")) ? req.body.headers.description : v.headers.title.description;
-                    v.headers.title.mainTitle = (_.has(req.body.headers,"mainTitle")) ?req.body.headers.mainTitle : v.headers.title.mainTitle;
-                    v.headers.title.subTitle = (_.has(req.body.headers,"subTitle")) ?req.body.headers.subTitle : v.headers.title.subTitle;
+                    console.log('----x------->',req.body.headers.title);
+                    v.headers.title.dataType = (_.has(req.body.headers.title,"dataType")) ? req.body.headers.title.dataType : v.headers.title.dataType;
+                    v.headers.title.description = (_.has(req.body.headers.title,"description")) ? req.body.headers.title.description : v.headers.title.description;
+                    v.headers.title.mainTitle = (_.has(req.body.headers.title,"mainTitle")) ?req.body.headers.title.mainTitle : v.headers.title.mainTitle;
+                    v.headers.title.subTitle = (_.has(req.body.headers.title,"subTitle")) ?req.body.headers.title.subTitle : v.headers.title.subTitle;
 
                     // v.headers.title.quotes = (_.has(req.body.headers,"subTitle")) ?req.body.headers.subTitle : v.headers.title.subTitle;
                     /**
