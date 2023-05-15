@@ -749,13 +749,13 @@ const deleteSectionElement= catchAsync(async (req,res)=>{
     const  section_id = new ObjectId(req.params.section_id);
     const  target = req.params.target_name;
     const  adminTool_id = req.params.adminTool_id;
-    const  element_id = req.params.element_id;
+    const  element_id = new ObjectId(req.params.element_id);
     const adminTool = await sectionBuilder.findById(adminTool_id);
     let sectionData = adminTool.sections;
     let grayContent =[];
     let quotes =[];
     let datacontent =[];
-    console.log('-------target---------',target)
+
     if( target === "grayContent" ){
     // if(req.body.grayContent !==true){
     //   let e = new ApiError(httpStatus.UNPROCESSABLE_ENTITY,'Gray content is delete disable');
@@ -764,16 +764,25 @@ const deleteSectionElement= catchAsync(async (req,res)=>{
     // }
     
       sectionData.map(v=>{
+        
         if( JSON.stringify(section_id) === JSON.stringify(v._id)){
+
+
+          
           v.grayContent.elements.map(e=>{
             if( JSON.stringify(element_id) !== JSON.stringify(e._id)){
+              console.log('element list --- ',v.grayContent.elements)
               grayContent.push(e);
             }     
 
           });
+          
           v.grayContent.elements = grayContent;
         }
+
       });
+
+      
     }
 
 
@@ -816,7 +825,9 @@ const deleteSectionElement= catchAsync(async (req,res)=>{
       });
     }
 
-    console.log("sectioncontent----",sectionData[0].headers.title.content);
+
+
+    // console.log("sectioncontent----",sectionData[0].headers.title.content);
     let qkey = {_id:adminTool_id};
     qkey.sections = { $elemMatch: { _id: section_id} }
     let sectionEntry = await updateAdminTool({key:qkey,updateDoc:{$set:{'sections.$':sectionData[0]}}},{ returnDocument: 'after' })

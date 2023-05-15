@@ -110,7 +110,7 @@ router
 router
   .route('/admintool/:adminTool_id/section/:section_id/element/:element_id')
   .patch(auth('getCompnayTemplateVersion'), validate(companyValidation.patchSectionElement), companyController.updateSectionElement)
-  router
+router
   .route('/admintool/:adminTool_id/section/:section_id/element/:element_id/target/:target_name')
   .delete(auth('getCompnayTemplateVersion'), validate(companyValidation.deleteSectionElement), companyController.deleteSectionElement)
 
