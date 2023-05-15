@@ -157,7 +157,7 @@ const patchAdminTool = async(req)  =>{
                                         dataType: (_.has(req.body.headers.title.content.elements),"dataType")?req.body.headers.title.content.elements.dataType:v.headers.title.content.elements.dataType,
                                         qoute:  (_.has(req.body.headers.title.content.elements),"qoute")?req.body.headers.title.content.elements.qoute:v.headers.title.content.elements.qoute,
                                         span:  (_.has(req.body.headers.title.content.elements),"span")?req.body.headers.title.content.elements.span:v.headers.title.content.elements.span,
-                                        class:  (_.has(req.body.headers.title.content.elements),"class")?req.body.headers.content.elements.class:v.headers.title.content.elements.class,
+                                        class:  (_.has(req.body.headers.title.content.elements),"class")?req.body.headers.title.content.elements.class:v.headers.title.content.elements.class,
                                         mediaOrigin:  (_.has(req.body.headers.title.content.elements),"mediaOrigin")?req.body.headers.title.content.elements.mediaOrigin:v.headers.title.content.elements.mediaOrigin,
                                         text:  (_.has(req.body.headers.title.content.elements),"text")?req.body.headers.title.content.elements.text:v.headers.title.content.elements.text,
                                         link:  (_.has(req.body.headers.title.content.elements),"link")?req.body.headers.title.content.elements.link:v.headers.title.content.elements.link,
