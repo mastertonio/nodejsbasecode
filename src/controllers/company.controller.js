@@ -755,6 +755,7 @@ const deleteSectionElement= catchAsync(async (req,res)=>{
     let grayContent =[];
     let quotes =[];
     let datacontent =[];
+    let updateQuery;
 
     if( target === "grayContent" ){
     // if(req.body.grayContent !==true){
@@ -774,6 +775,7 @@ const deleteSectionElement= catchAsync(async (req,res)=>{
             }     
           });        
           v.grayContent.elements=grayContent;
+          updateQuery ={'sections.$':v};
          
         }
       
@@ -828,10 +830,11 @@ const deleteSectionElement= catchAsync(async (req,res)=>{
 
 
     // console.log("sectioncontent----",sectionData[0].headers.title.content);
+    console.log(JSON.stringify(sectionData))
 
     let qkey = {_id:adminTool_id};
     qkey.sections = { $elemMatch: { _id: section_id} }
-    let sectionEntry = await updateAdminTool({key:qkey,updateDoc:{$set:{'sections.$':sectionData[0]}}},{ returnDocument: 'after' })
+    let sectionEntry = await updateAdminTool({key:qkey,updateDoc:{$set:updateQuery}},{ returnDocument: 'after' })
         
     let getSectionArea = await templateBuilderService.getAdminToolInfo(req);
     if(getSectionArea){
