@@ -766,24 +766,24 @@ const deleteSectionElement= catchAsync(async (req,res)=>{
       sectionData.map(v=>{
         
         if( JSON.stringify(section_id) === JSON.stringify(v._id)){
-
-
           
           v.grayContent.elements.map(e=>{
             if( JSON.stringify(element_id) !== JSON.stringify(e._id)){
-              console.log('element list --- ',v.grayContent.elements)
               grayContent.push(e);
             }     
-
-          });
-          
-          v.grayContent.elements = grayContent;
+          });        
+          v.grayContent.elements=grayContent;
+        console.log('graycontent----',v.grayContent.elements);  
+         
         }
-
+      
+       
+        
       });
 
       
     }
+    
 
 
 
@@ -828,6 +828,7 @@ const deleteSectionElement= catchAsync(async (req,res)=>{
 
 
     // console.log("sectioncontent----",sectionData[0].headers.title.content);
+
     let qkey = {_id:adminTool_id};
     qkey.sections = { $elemMatch: { _id: section_id} }
     let sectionEntry = await updateAdminTool({key:qkey,updateDoc:{$set:{'sections.$':sectionData[0]}}},{ returnDocument: 'after' })
