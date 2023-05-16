@@ -803,6 +803,7 @@ const deleteSectionElement= catchAsync(async (req,res)=>{
             }
           })
           v.headers.title.quotes.elements=quotes;
+          updateQuery ={'sections.$':v};
         }
       });
     }
@@ -822,6 +823,7 @@ const deleteSectionElement= catchAsync(async (req,res)=>{
           })
           // console.log(v.headers.title.content)
           v.headers.title.content.elements=datacontent;
+          updateQuery ={'sections.$':v};
         }
         // console.log(v.headers.title.content)
       });
