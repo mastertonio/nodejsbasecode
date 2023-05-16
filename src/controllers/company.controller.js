@@ -762,7 +762,7 @@ const deleteSectionElement= catchAsync(async (req,res)=>{
     //     logger.error(`[patch admin tool] ${e}`)
     //     throw e;
     // }
-    
+
     
       sectionData.map(v=>{
         
@@ -774,7 +774,6 @@ const deleteSectionElement= catchAsync(async (req,res)=>{
             }     
           });        
           v.grayContent.elements=grayContent;
-        console.log('graycontent----',v.grayContent.elements);  
          
         }
       
