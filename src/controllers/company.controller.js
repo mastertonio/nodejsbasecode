@@ -830,7 +830,7 @@ const deleteSectionElement= catchAsync(async (req,res)=>{
     // console.log("sectioncontent----",sectionData[0].headers.title.content);
 
     let qkey = {_id:adminTool_id};
-    // qkey.sections = { $elemMatch: { _id: section_id} }
+    qkey.sections = { $elemMatch: { _id: section_id} }
     let sectionEntry = await updateAdminTool({key:qkey,updateDoc:{$set:{'sections.$':sectionData[0]}}},{ returnDocument: 'after' })
         
     let getSectionArea = await templateBuilderService.getAdminToolInfo(req);
