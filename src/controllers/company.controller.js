@@ -763,6 +763,7 @@ const deleteSectionElement= catchAsync(async (req,res)=>{
     //     throw e;
     // }
     
+    
       sectionData.map(v=>{
         
         if( JSON.stringify(section_id) === JSON.stringify(v._id)){
