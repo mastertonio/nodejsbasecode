@@ -147,6 +147,21 @@ const createCompanyUser = {
     })
   }
 
+  const cloneCompnayTemplate = {
+    params: Joi.object().keys({
+      company_id: Joi.required().custom(objectId),
+      version_id: Joi.required().custom(objectId),
+      template_id: Joi.required().custom(objectId)
+    }),
+    body: Joi.object().keys({
+      name: Joi.string().required(),
+      projection: Joi.number().integer().required(),
+      status: Joi.number().integer().required(),
+      notes: Joi.string().allow('').optional()
+
+    })
+  }
+
   const patchCompnayTemplate = {
     params: Joi.object().keys({
       company_id: Joi.required().custom(objectId),
@@ -320,4 +335,5 @@ module.exports = {
     patchSectionElement,
     deleteSectionElement,
     deleteSection,
+    cloneCompnayTemplate,
   };
