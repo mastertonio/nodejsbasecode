@@ -90,6 +90,13 @@ router
   .delete(auth('deleteTemplate'), validate(companyValidation.deleteTemplate), companyController.deleteTemplate)
 
 /**
+ * Clone Template
+ */
+router
+.route('/:company_id/template/:template_id/version/:version_id/clone')
+.post(auth('createCompnayTemplate'), validate(companyValidation.cloneCompnayTemplate), companyController.cloneCompanyTemplate)
+
+/**
  * Company Template version
  * Get templateversion for the templatebuilder
  */
@@ -97,6 +104,7 @@ router
   .route('/:company_id/template/:template_id/version')
   .post(auth('createCompnayTemplateVersion'), validate(companyValidation.createCompnayTemplateVersion), companyController.createCompnayTemplateVersion)
   .get(auth('getCompnayTemplateVersion'), validate(companyValidation.getCompnayTemplateVersion), companyController.getCompnayTemplateVersion)
+
 
 router
   .route('/:company_id/template/:template_id/version/:version_id/adminTool')

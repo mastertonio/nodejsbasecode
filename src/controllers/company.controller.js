@@ -24,6 +24,7 @@ const { createAdminTool, updateAdminTool } = require('../services/templateBuilde
 
 const {sendEmail} = require('../services/email.service');
 const sectionBuilder = require('../models/sectionBuilder.model');
+const { SectionBuilder } = require('../models');
 
 
 const getFile = catchAsync(async (req, res)=>{
@@ -224,6 +225,133 @@ const createCompanyUser = catchAsync(async (req, res) => {
 /**
  * create company template
  */
+const cloneCompanyTemplate = catchAsync(async (req, res)=>{
+   /**
+    * extracting JWT Token to get the User Id
+    */
+   const token = jwtExtract(req);
+   /**
+     * validating the user Account base on the response of the extraction
+     */
+   const is_user = await userService.getUserById(token);
+   if(!is_user){
+     let error = new ApiError(httpStatus.NOT_FOUND, 'User not found');
+     logger.error(`[Invalid TOken] ${error}`);
+     throw error;
+   }
+   const company_id = new ObjectId(req.params.company_id);
+   const template_id = new ObjectId(req.params.template_id);
+   const version_id = new ObjectId(req.params.version_id);
+
+   let queryTemplateBuilder = {
+    company_id: company_id,
+    template_id:  template_id,
+    version_id: version_id
+   }
+   
+   /**
+    * validate if the company id is valid
+    */
+   const is_company = await companyService.getCompanyById(company_id);
+   
+   if(!is_company) {
+     let error = new ApiError(httpStatus.NOT_FOUND, 'Company id not found');
+     logger.error(`[Invalid TOken] ${error}`);
+     throw error;
+   }
+   
+   /**
+    * Add body parameters company_id and created by which can be extract in the JWT token
+    * cid = company id => company_id
+    * sub = user id => token
+    * getTemplateVersion(template_id)
+    * getCompanyTemplateByCompanyId (company_id)
+    */
+   const template = await Template.findById(template_id);  
+
+   if(!template){
+     let error = new ApiError(httpStatus.NOT_FOUND, 'Template id not found');
+     logger.error(`[Invalid TOken] ${error}`);
+     throw error;
+   }
+  
+  const d = Date.now();
+  req.body.company_id = company_id;
+  req.body.created_by = token;
+  req.body.name = `[CLONE][${d}] ${req.body.name}`;
+  const create_template = await companyService.createNewTempalete(req.body);
+   
+  const templateVersionData = {
+    name: `${create_template.name}`,
+    version: 1,
+    stage: 1,
+    notes: `this is version created for template ${create_template._id}`,
+    template_id: create_template._id,
+    created_by: token
+  }   
+  
+  const templateVersion = await companyService.createTemplateVersion(templateVersionData);
+  const tpl_version = new ObjectId(templateVersion.id);
+  
+  const queryBuilder = await SectionBuilder.find(queryTemplateBuilder);
+  console.log('sections',queryBuilder[0].sections);
+
+
+  /**
+   * Cloning
+   */
+
+  let  templateBuilderData =  {
+    company_id: company_id,
+    template_id:  create_template._id,
+    version_id: tpl_version,
+    sections:queryBuilder[0].sections
+  }
+  
+  await  templateBuilderService.createAdminTool(templateBuilderData);
+  let status = (create_template.active == 1)? ACTIVE:INACTIVE;
+
+    let response_data = {
+        "position": 0,
+        "verification_code": 0,
+        "email_protected": 0,
+        "visits": 0,
+        "unique_ip": 0,
+        "currency": null,
+        "is_sf_opportunity": 0,
+        "salesforce_id": 0,
+        "sfdc_link": 0,
+        "instance": 0,
+        "folder":  0,
+        "linked_title": 0,
+        "version": 1,
+        "status": 0,
+        "importance": 0,
+        "cloned_from_parent":  0,
+        "user_id": token,
+        "title": create_template.name,
+        "template_version_id": tpl_version,
+    }
+    
+    await Calculator.create(response_data);
+
+
+
+
+  res.send({
+    _id:create_template._id,
+    name:create_template.name,
+    notes:create_template.notes,
+    company_id:create_template.company_id,
+    projection:create_template.projection,
+    active:create_template.active,
+    status:status,
+    templateVersion:templateVersion
+  });
+});
+/**
+ * create company template
+ */
 const createCompanyTemplate = catchAsync(async (req, res)=>{
   /**
     * extracting JWT Token to get the User Id
@@ -275,14 +403,38 @@ const createCompanyTemplate = catchAsync(async (req, res)=>{
     }   
     
     const templateVersion = await companyService.createTemplateVersion(templateVersionData);
-
+    const tpl_version = new ObjectId(templateVersion.id);
     let  templateBuilderData =  {
       company_id: company_id,
       template_id:  create_template._id,
-      version_id: templateVersion.id
+      version_id: tpl_version
     }
     
     await  templateBuilderService.createAdminTool(templateBuilderData);
+
+    let response_data = {
+      "position": 0,
+      "verification_code": 0,
+      "email_protected": 0,
+      "visits": 0,
+      "unique_ip": 0,
+      "currency": null,
+      "is_sf_opportunity": 0,
+      "salesforce_id": 0,
+      "sfdc_link": 0,
+      "instance": 0,
+      "folder":  0,
+      "linked_title": 0,
+      "version": 1,
+      "status": 0,
+      "importance": 0,
+      "cloned_from_parent":  0,
+      "user_id": token,
+      "title": create_template.name,
+      "template_version_id": tpl_version,
+  }
+  
+    await Calculator.create(response_data);
 
     res.send({
       _id:create_template._id,
@@ -1764,6 +1916,6 @@ const transferTemplateAccount = catchAsync(async(req,res)=>{
     updateSectionElement,
     deleteSectionElement,
     deleteSection,
-    
+    cloneCompanyTemplate
   }
   
