@@ -278,7 +278,7 @@ const cloneCompanyTemplate = catchAsync(async (req, res)=>{
   const d = Date.now();
   req.body.company_id = company_id;
   req.body.created_by = token;
-  req.body.name = `[CLONE][${d}] ${req.body.name}`;
+  req.body.name = `${req.body.name} [COPY]`;
   const create_template = await companyService.createNewTempalete(req.body);
    
   const templateVersionData = {
