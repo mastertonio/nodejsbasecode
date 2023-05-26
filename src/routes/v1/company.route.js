@@ -114,6 +114,7 @@ router
   .route('/admintool/:adminTool_id/section/:section_id')
   .patch(auth('getCompnayTemplateVersion'), validate(companyValidation.patchSection), companyController.updateCompanyAdminTool)
   .delete(auth('getCompnayTemplateVersion'), validate(companyValidation.deleteSection), companyController.deleteSection)
+  .put(auth('getCompnayTemplateVersion'), validate(companyValidation.patchSection), companyController.updateSectionGrayContent)
 
 router
   .route('/admintool/:adminTool_id/section/:section_id/element/:element_id')

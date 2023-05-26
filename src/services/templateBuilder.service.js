@@ -64,11 +64,40 @@ const getAdminToolInfo  = async(req)=>{
 //         return fetchSection;       
 
 //     } catch (error) {
-//         let e = new ApiError(httpStatus.UNPROCESSABLE_ENTITY,error);
+//         let e = new ApiError(httpStatus.UNPROCESSABLE_ENTITY,error);s
 //         logger.error(`[Company Module Template Version] ${e}`)
 //         throw e;
 //     }
 // }
+const updateSectionElement = async(req) =>{
+    const  section_id = new ObjectId(req.params.section_id);
+    const  adminTool_id =  new ObjectId(req.params.adminTool_id);
+    let qkey = {_id:adminTool_id};
+    let sectionContainer = [];
+    qkey.sections = { $elemMatch: { _id: section_id} }
+
+    const queAdminTool = await sectionBuilder.findById(qkey);
+    // const grayContentElements = queAdminTool.sections[0].grayContent.elements;
+
+    let sectionData = queAdminTool.sections;
+    sectionData.map(v=>{
+        if( JSON.stringify(section_id) === JSON.stringify(v._id)){
+            v.grayContent.elements = req.body.grayContentElement;
+        }
+
+        sectionContainer.push(v)
+    });
+
+
+
+
+    // let update_id = new ObjectId(req.body.section_id)
+    
+    let grayContentElements = await updateAdminTool({key:qkey,updateDoc:{$set:{'sections.$':sectionContainer[0]}}},{ returnDocument: 'after' })
+    // return sectionEntry;
+    return grayContentElements;
+
+}
 
 const patchAdminTool = async(req)  =>{
     // try {
@@ -229,5 +258,6 @@ module.exports = {
     getAdminTool,
     updateAdminTool,
     patchAdminTool,
-    getAdminToolInfo
+    getAdminToolInfo,
+    updateSectionElement
 }

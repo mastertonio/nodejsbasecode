@@ -703,9 +703,40 @@ const updateCompanyAdminTool = catchAsync(async (req,res)=>{
     throw error;
   }
 
-
-
 });
+
+const updateSectionGrayContent = catchAsync(async (req,res)=>{
+   /**
+    * extracting JWT Token to get the User Id
+    */
+   const token = jwtExtract(req);
+   /**
+     * validating the user Account base on the response of the extraction
+     */
+   const is_user = await userService.getUserById(token);
+   if(!is_user){
+     let error = new ApiError(httpStatus.NOT_FOUND, 'User not found');
+     logger.error(`[Invalid TOken] ${error}`);
+     throw error;
+   }
+
+   const sectionData = await templateBuilderService.updateSectionElement(req);
+   if(sectionData){
+    let getSectionArea = await templateBuilderService.getAdminToolInfo(req);
+    if(getSectionArea){
+      res.send(getSectionArea)
+    }else{
+      let error = new ApiError(httpStatus.NOT_FOUND, 'Admin tool section not found');
+      logger.error(`[Invalid TOken] ${error}`);
+      throw error;
+    }
+  }else{
+    let error = new ApiError(httpStatus.NOT_FOUND, 'Admin tool section not found');
+    logger.error(`[Invalid TOken] ${error}`);
+    throw error;
+  }
+
+})
 
 
 /**
@@ -1916,6 +1947,7 @@ const transferTemplateAccount = catchAsync(async(req,res)=>{
     updateSectionElement,
     deleteSectionElement,
     deleteSection,
-    cloneCompanyTemplate
+    cloneCompanyTemplate,
+    updateSectionGrayContent
   }
   
