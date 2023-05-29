@@ -425,7 +425,7 @@ const company_user = async(req) => {
         }
         //  sendEmail(to, subject, text)
 
-        await sendEmailHTMLBODY(req.email,'Welcome to the ROI Shop', `
+        await sendEmailHTMLBODY(req.email,'Welcome to The ROI Shop', `
         <table>
 	        <tbody><tr>
                 <td></td>
