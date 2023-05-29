@@ -84,7 +84,8 @@ const getActiveTemplateVersionByTemplateId = async (temp_id) =>{
 const getManagerByCompanyId = async (cid) =>{ 
    
     // if(_.isNull(cid)){
-        return User.find({role:"company-manager",company_id: cid});
+        console.log("object_id for CID",cid)
+        return User.find({role:"company-manager",company_id:ObjectId(cid)});
     // }
     
     // else{        
