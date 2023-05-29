@@ -1545,9 +1545,6 @@ const createCompnayTemplateVersion = catchAsync(async (req, res)=>{
 
      switch (is_user.role) {
       case "admin":
-        companyUserAccount = await companyService.companyUserAccount(null);
-        break;
-     
       default:
           const company_id = req.params.company_id;
       /**
