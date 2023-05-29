@@ -83,18 +83,21 @@ const getActiveTemplateVersionByTemplateId = async (temp_id) =>{
 }
 const getManagerByCompanyId = async (cid) =>{ 
    
-    if(_.isNull(cid)){
-        return User.find({role:"company-manager"});
-    }else{        
-        const _cid = new ObjectId(cid); 
+    // if(_.isNull(cid)){
+        return User.find({role:"company-manager",company_id: cid});
+    // }
+    
+    // else{        
+        // console.log('[cid]-->',cid)
+        // const _cid = new ObjectId(cid); 
         
-        return User.find({
-            $and:[
-                {role:"company-manager"},
-                {company_id: _cid}
-            ]
-        });
-    }
+        // return User.find({
+        //     $and:[
+        //         {role:"company-manager"},
+        //         {company_id: _cid}
+        //     ]
+        // });
+    // }
     
 }
 
