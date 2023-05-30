@@ -3,6 +3,7 @@ const validator = require('validator');
 const bcrypt = require('bcryptjs');
 const { toJSON, paginate } = require('./plugins');
 const { roles } = require('../config/roles');
+const { array } = require('joi');
 
 const userSchema = mongoose.Schema(
   {
@@ -87,6 +88,10 @@ const userSchema = mongoose.Schema(
     status: {
       type: Number,
       default: 1
+    },
+    template:{
+      type: Array,
+      default: []
     },
     created_by: {
       type: mongoose.SchemaTypes.ObjectId,

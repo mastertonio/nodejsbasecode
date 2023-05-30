@@ -1463,6 +1463,7 @@ const createCompnayTemplateVersion = catchAsync(async (req, res)=>{
        throw error;
      }
      const company_id = req.params.company_id;
+     console.log('-->',company_id );
      /**
       * validate if the company id is valid
       */
@@ -1475,7 +1476,7 @@ const createCompnayTemplateVersion = catchAsync(async (req, res)=>{
      }
      let comp_id = company_id;
      
-     const companyMangerAccount = await companyService.getManagerByCompanyId(comp_id);
+     const companyMangerAccount = await companyService.getManagerByCompanyId(company_id);
      res.send(companyMangerAccount);
   })
 
@@ -1535,6 +1536,7 @@ const createCompnayTemplateVersion = catchAsync(async (req, res)=>{
           let getYear = d.getFullYear();
           let n_d = d.toLocaleString();
               n_d= n_d.split(', ');
+              console.log("v--x-->",v.comp_id)
               container.push({
                             user_id: v._id,
                             template_id: v.created_calculator._id,
