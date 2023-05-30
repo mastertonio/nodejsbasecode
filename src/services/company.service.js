@@ -332,27 +332,33 @@ const getCompany = async(uid,comp)=>{
         case "company-admin":            
             return getCompanyById(user.company_id);
         case "admin":
-            const companyTemplate = await getAllTemplate();
             const fetchCompany = await fetchAllCompany();
-            console.log(companyTemplate);
+
+
+            const company_template = await Template.find({'active':1});
+            const adminTool = await sectionBuilder.find();
+
             const companyTemplateContainer = [];
-            companyTemplate.map(v=>{
-                companyTemplateContainer.push(
-                    v.company_id
-                )
+
+            company_template.map(v=>{
+                adminTool.map(a=>{
+                    if(JSON.stringify(v._id) === JSON.stringify(a.template_id)){
+                        companyTemplateContainer.push(v.company_id)
+                    }
+                })
+               
             })
-            
+
             const elementCounts = {};
 
             companyTemplateContainer.forEach(element => {
                 elementCounts[element] = (elementCounts[element] || 0) + 1;
             });
 
-            console.log('---company id--',elementCounts['62b2a6f9061ed2a095b55555']);
             const  n_fetchCompany = [];
             fetchCompany.map(fc=>{
                 let fc_container = {...fc};
-                fc_container.templates = elementCounts[fc._id];
+                fc_container.templates = (elementCounts[fc._id])?elementCounts[fc._id]:0;
                 n_fetchCompany.push(fc_container)
             })
             console.log(n_fetchCompany)
