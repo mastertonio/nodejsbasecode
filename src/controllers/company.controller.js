@@ -181,9 +181,11 @@ const createCompanyUser = catchAsync(async (req, res) => {
   req.body = getUserRole(req.body);
 
    //create new user under specific company
+   
    const user_req = {...req.body};
    user_req.company_id = company_id;
    user_req.created_by = token;
+   user_req.manager = (req.body.manager =="")?null:req.body.manager;
    user_req.name = `${req.body.first_name} ${req.body.last_name}`
    user_req.status = 1;
    
