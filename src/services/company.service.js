@@ -81,6 +81,12 @@ const getActiveTemplateVersionByTemplateId = async (temp_id) =>{
     });
     return flag;
 }
+
+
+const getAllTemplate = async()=>{
+    const company_template = await Template.find({'active':1});
+    return company_template;
+}
 const getManagerByCompanyId = async (cid) =>{ 
    
     // if(_.isNull(cid)){
@@ -244,12 +250,14 @@ const updateTemplate = async (id,parameters) =>{
 }
 
 const getCompanyById = async (_id) =>{
+    console.log("fetch by company id")
     console.log(_id)
     const o_id = new ObjectId(_id);
     return Company.findById({_id:o_id});
 }
 
 const fetchAllCompany = async() =>{
+    console.log("fetch all company")
     return Company.aggregate([
         {
             $project:
@@ -324,7 +332,33 @@ const getCompany = async(uid,comp)=>{
         case "company-admin":            
             return getCompanyById(user.company_id);
         case "admin":
-            return  fetchAllCompany();
+            const companyTemplate = await getAllTemplate();
+            const fetchCompany = await fetchAllCompany();
+            console.log(companyTemplate);
+            const companyTemplateContainer = [];
+            companyTemplate.map(v=>{
+                companyTemplateContainer.push(
+                    v.company_id
+                )
+            })
+            
+            const elementCounts = {};
+
+            companyTemplateContainer.forEach(element => {
+                elementCounts[element] = (elementCounts[element] || 0) + 1;
+            });
+
+            console.log('---company id--',elementCounts['62b2a6f9061ed2a095b55555']);
+            const  n_fetchCompany = [];
+            fetchCompany.map(fc=>{
+                let fc_container = {...fc};
+                fc_container.templates = elementCounts[fc._id];
+                n_fetchCompany.push(fc_container)
+            })
+            console.log(n_fetchCompany)
+
+
+            return  n_fetchCompany;
     
         default:
             const error = new ApiError(httpStatus.NOT_FOUND, 'User not found');
@@ -659,5 +693,6 @@ module.exports = {
     updateTemplate,
     templateInfo,
     updateTemplateVersion,
-    getActiveTemplateVersionByTemplateId
+    getActiveTemplateVersionByTemplateId,
+    getAllTemplate
 }

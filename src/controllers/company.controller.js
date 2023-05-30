@@ -128,6 +128,8 @@ const getAllCompany = catchAsync(async (req, res) =>{
 
 
     const getAll_company = await companyService.getAllCompany(token);     
+
+    
     
     res.send(getAll_company);
 })
@@ -188,7 +190,7 @@ const createCompanyUser = catchAsync(async (req, res) => {
    user_req.manager = (req.body.manager =="")?null:req.body.manager;
    user_req.name = `${req.body.first_name} ${req.body.last_name}`
    user_req.status = 1;
-   
+
    if(_.isEmpty(user_req.password)){
     const randPassword = ()=>{
       let lettersLength = 10;
