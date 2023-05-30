@@ -184,7 +184,7 @@ const createCompanyUser = {
         contact_fname: Joi.string().required(),
         contact_lname: Joi.string().required(),
         contact_email: Joi.string().required(),
-        contact_phone: Joi.string(),
+        contact_phone: Joi.string().min(10).max(15),
         contract_start_date: Joi.date().iso(),
         contract_end_date: Joi.date().iso(),
         notes: Joi.string().required()
@@ -257,7 +257,8 @@ const createCompanyUser = {
         contact_fname: Joi.string(),
         contact_lname: Joi.string(),
         contact_email: Joi.string(),
-        contact_phone: Joi.string().length(10).pattern(/[6-9]{1}[0-9]{9}/),
+        contact_phone: Joi.string().min(10).max(15),
+        // contact_phone: Joi.string().length(10).pattern(/[6-9]{1}[0-9]{9}/),
         contract_start_date: Joi.date().iso(),
         contract_end_date: Joi.date().iso(),
         notes: Joi.string()
