@@ -12,7 +12,7 @@ const createCompanyUser = {
         password: Joi.string().allow(null, ''),
         currency: Joi.string().min(2).max(5).required(),
         role: Joi.string(),
-        manager: Joi.custom(objectId).allow(null, ''),
+        manager: Joi.string().allow(null,''),
         template: Joi.array()    
     }),
   };
