@@ -162,7 +162,7 @@ const createCompanyUser = catchAsync(async (req, res) => {
      logger.error(`[Invalid TOken] ${error}`);
      throw error;
    }
-   const company_id = getCID(req);
+   const company_id = req.params.company_id;
    /**
     * validate if the company id is valid
     */
