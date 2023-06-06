@@ -133,7 +133,7 @@ const getCalculatorStatistic = async (data) =>{
                 }
                 return count
             });
-            if(JSON.stringify(v.manager) == JSON.stringify(data.oid) && ){
+            if(JSON.stringify(v.manager) == JSON.stringify(data.oid)  ){
 
                 graph_data.push({
                     _id:v._id,
