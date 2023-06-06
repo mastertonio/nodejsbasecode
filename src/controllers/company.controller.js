@@ -1596,9 +1596,11 @@ const createCompnayTemplateVersion = catchAsync(async (req, res)=>{
       }
       let userContainer = await companyService.companyUserAccount(company_id);
       let userArray = [];
+      console.log(is_user._id)
       if(is_user.role=="company-manager"){
         userContainer.map(v=>{
-          if(v.role=="company-agent"){
+          
+          if(v.role=="company-agent" && JSON.stringify(v.manager_id) === JSON.stringify(is_user._id)){
             userArray.push(v);
           }
         })
