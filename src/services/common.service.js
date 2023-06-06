@@ -19,6 +19,7 @@ const dashboardData = async (data_col) => {
     let categories=[];
     let count = [];
     data_col.collection.statistic.map(v=>{
+        console.log('---statistic--', v)
         categories.push(v.email);
         count.push(v.count)
     })
@@ -31,6 +32,7 @@ const dashboardData = async (data_col) => {
     const ncollection = [];
     // console.log(data_col)
     data_col.collection.statistic.map(v=>{
+       
         if(year == v._id.year){
             ncollection.push({
                 month: v._id.month,
