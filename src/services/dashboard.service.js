@@ -709,8 +709,7 @@ const getDashboard = async (userId,filter, options) => {
     const templateData = await Template.aggregate([
                 {
                     $match: {
-                        company_id:c_id,
-                        created_by: u_id
+                        company_id:c_id
                     }
                 },{
                     $lookup: {
