@@ -1540,7 +1540,8 @@ const createCompnayTemplateVersion = catchAsync(async (req, res)=>{
           let getYear = d.getFullYear();
           let n_d = d.toLocaleString();
               n_d= n_d.split(', ');
-              console.log("v--x-->",v.comp_id)
+              console.log("v--x-->",v)
+              if(v.role=="company-agent" && JSON.stringify(v.manager) === JSON.stringify(is_user._id)){
               container.push({
                             user_id: v._id,
                             template_id: v.created_calculator._id,
@@ -1552,6 +1553,7 @@ const createCompnayTemplateVersion = catchAsync(async (req, res)=>{
                             visits: v.created_calculator.visits,
                             unique_ip: parseInt(v.created_calculator.unique_ip)
                           })
+                        }
       // if(!_.isEmpty(v.templates)){
       
 
