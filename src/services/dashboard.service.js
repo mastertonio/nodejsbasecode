@@ -49,6 +49,10 @@ const getAllTemplate = async (cond) => {
     
 }
 const getCalculatorStatistic = async (data) =>{
+
+    // graphData.oid = new ObjectId(uid._id);
+    // graphData.cid = new ObjectId(cid);
+    // graphData.access = uid.role;
     let cond={};
     switch (data.access) {
         case 'admin':
@@ -103,7 +107,7 @@ const getCalculatorStatistic = async (data) =>{
     if(data.access == "company-admin" || data.access=="company-manager"){
         
         const templateData = await Calculator.aggregate(cond);
-        const usersData = await User.find({company_id:data.cid});
+        const usersData = await User.find({company_id:data.cid,manager:data.oid});
         const graph_data = [];
         const myData = await Calculator.aggregate([{
             $match: {
@@ -129,13 +133,17 @@ const getCalculatorStatistic = async (data) =>{
                 }
                 return count
             });
+            if(JSON.stringify(v.manager) == JSON.stringify(data.oid)){
 
-            graph_data.push({
-                _id:v._id,
-                email:v.email,
-                count:n_count.reduce((partialSum, a) => partialSum + a, 0)
-                
-            })
+                graph_data.push({
+                    _id:v._id,
+                    manager:v.manager,
+                    email:v.email,
+                    count:n_count.reduce((partialSum, a) => partialSum + a, 0)
+                    
+                })
+            }
+
 
         });
         return graph_data;
