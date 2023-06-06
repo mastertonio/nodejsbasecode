@@ -133,7 +133,7 @@ const getCalculatorStatistic = async (data) =>{
                 }
                 return count
             });
-            if(JSON.stringify(v.manager) == JSON.stringify(data.oid)){
+            if(JSON.stringify(v.manager) == JSON.stringify(data.oid) && ){
 
                 graph_data.push({
                     _id:v._id,
@@ -703,12 +703,14 @@ const getDashboard = async (userId,filter, options) => {
     const data = [];
     
     let c_id = new ObjectId(cid);
+    let u_id = new ObjectId(uid);
     
     const templateVersion_collection = [];
     const templateData = await Template.aggregate([
                 {
                     $match: {
-                        company_id:c_id
+                        company_id:c_id,
+                        created_by: u_id
                     }
                 },{
                     $lookup: {
