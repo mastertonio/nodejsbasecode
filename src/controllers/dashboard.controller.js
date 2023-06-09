@@ -95,6 +95,75 @@ const createCalculator = catchAsync(async (req,res)=>{
 
 
   const create_calculator = await dashboadService.createCalculator(token, req.body);
+
+  // const company_id = new ObjectId(req.params.company_id);
+  // const template_id = new ObjectId(req.params.template_id);
+  // const version_id = new ObjectId(req.params.version_id);
+
+
+  // const d = Date.now();
+  // req.body.company_id = company_id;
+  // req.body.created_by = token;
+  // req.body.name = `[CLONE][${d}] ${req.body.name}`;
+  // const create_template = await companyService.createNewTempalete(req.body);
+   
+  // const templateVersionData = {
+  //   name: `${create_template.name}`,
+  //   version: 1,
+  //   stage: 1,
+  //   notes: `this is version created for template ${create_template._id}`,
+  //   template_id: create_template._id,
+  //   created_by: token
+  // }   
+  
+  // const templateVersion = await companyService.createTemplateVersion(templateVersionData);
+  // const tpl_version = new ObjectId(templateVersion.id);
+  
+  // const queryBuilder = await SectionBuilder.find(queryTemplateBuilder);
+  // console.log('sections',queryBuilder[0].sections);
+
+
+  // /**
+  //  * Cloning
+  //  */
+
+  // let  templateBuilderData =  {
+  //   company_id: company_id,
+  //   template_id:  create_template._id,
+  //   version_id: tpl_version,
+  //   sections:queryBuilder[0].sections
+  // }
+  
+  // await  templateBuilderService.createAdminTool(templateBuilderData);
+  // let status = (create_template.active == 1)? ACTIVE:INACTIVE;
+
+  //   let response_data = {
+  //       "position": 0,
+  //       "verification_code": 0,
+  //       "email_protected": 0,
+  //       "visits": 0,
+  //       "unique_ip": 0,
+  //       "currency": null,
+  //       "is_sf_opportunity": 0,
+  //       "salesforce_id": 0,
+  //       "sfdc_link": 0,
+  //       "instance": 0,
+  //       "folder":  0,
+  //       "linked_title": 0,
+  //       "version": 1,
+  //       "status": 0,
+  //       "importance": 0,
+  //       "cloned_from_parent":  0,
+  //       "user_id": token,
+  //       "title": create_template.name,
+  //       "template_version_id": tpl_version,
+  //   }
+    
+  //  const create_calculator= await Calculator.create(response_data);
+
+
+
+
   res.send(create_calculator);
 });
 
@@ -356,33 +425,48 @@ const getRoiGraph =catchAsync(async (req, res) =>{
  const getRanking =catchAsync(async (req, res) =>{
   const uid = jwtExtract(req);
   const userRanking = await dashboadService.getRanking(uid);
+
+  const is_user = await userService.getUserById(uid);
+   if(!is_user){
+     let error = new ApiError(httpStatus.NOT_FOUND, 'User not found');
+     logger.error(`[Invalid TOken] ${error}`);
+     throw error;
+   }
+
+
   const no_ranks = 4;
   let container = [];
   let ranks = [];
   
 
+
   userRanking.map(v=>{
+    console.log(v)
+    // console.log(JSON.stringify(v.company_id) === JSON.stringify(is_user.company_id))
     // if(v.name === null)
-    container.push({
-      _id:v._id,
-      name: (v.name== null)? `${v.first_name} ${v.last_name}` : `${v.name}`,
-      totalROIS: v.totalROIS
-    })
-  })
-
-  container.sort(function(a, b){
-      return b.totalROIS - a.totalROIS;
-  });
-  //container.lenght
-  for (var i = 0; i < no_ranks; i++) {
+    // if(JSON.stringify(v.company_id) === JSON.stringify(is_user.company_id) ){
+      container.push({
+        _id:v._id,
+        name: (v.name== null)? `${v.first_name} ${v.last_name}` : `${v.name}`,
+        totalROIS: v.totalROIS
+      })
+    // }
     
-      container[i].rank = i + 1;
-      ranks.push(container[i]);
-  }
-
-  let checkMyRank = _.filter(container, function(item){
-    return _.contains(item._id, '62e787f589661534d715e283');
   })
+
+  // container.sort(function(a, b){
+  //     return b.totalROIS - a.totalROIS;
+  // });
+  // //container.lenght
+  // for (var i = 0; i < no_ranks; i++) {
+    
+  //     container[i].rank = i + 1;
+  //     ranks.push(container[i]);
+  // }
+
+  // let checkMyRank = _.filter(container, function(item){
+  //   return _.contains(item._id, '62e787f589661534d715e283');
+  // })
 
   
   res.send(container);
