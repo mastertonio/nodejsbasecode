@@ -28,7 +28,7 @@ const getCompanyTemplateByCompanyId = async (_id) =>{
 
         company_template.map(v=>{
             adminTool.map(a=>{
-                if(JSON.stringify(v._id) === JSON.stringify(a.template_id)){
+                if(JSON.stringify(v.company_id) === JSON.stringify(a.company_id)){
                     conatainer.push({
                                 _id:v._id,
                                 name: v.name,
@@ -336,13 +336,14 @@ const getCompany = async(uid,comp)=>{
 
 
             const company_template = await Template.find({'active':1});
+            console.log('----xx---->',user.company_id);
             const adminTool = await sectionBuilder.find();
 
             const companyTemplateContainer = [];
 
             company_template.map(v=>{
                 adminTool.map(a=>{
-                    if(JSON.stringify(v._id) === JSON.stringify(a.template_id)){
+                    if(JSON.stringify(v.company_id) === JSON.stringify(a.company_id)){
                         companyTemplateContainer.push(v.company_id)
                     }
                 })
@@ -361,7 +362,7 @@ const getCompany = async(uid,comp)=>{
                 fc_container.templates = (elementCounts[fc._id])?elementCounts[fc._id]:0;
                 n_fetchCompany.push(fc_container)
             })
-            console.log(n_fetchCompany)
+            // console.log(n_fetchCompany)
 
 
             return  n_fetchCompany;
