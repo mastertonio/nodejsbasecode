@@ -214,9 +214,15 @@ const calculatorsByUser = async (userId,filter, options) => {
      */
 }
 
-const allUserByCompany = async () => {
+const allUserByCompany = async (uid) => {
     
+    // console.log(uid)
     return User.aggregate([
+        {
+            $match: {
+                company_id:uid.company_id
+            }
+        },
         {
             $lookup: {
                 from: "calculators",
@@ -234,6 +240,7 @@ const allUserByCompany = async () => {
                 "name": {
                     $first: "$name"
                 },
+               
                 "first_name": {
                     $first: "$first_name"
                 },
@@ -329,7 +336,7 @@ const getDashboard = async (userId,filter, options) => {
         status: v.status
         });
     })
-    const ranking_UserByCompany = await allUserByCompany();
+    const ranking_UserByCompany = await allUserByCompany(user);
 
     const adminList = await getAllAdmin();
     const active_roi =  await getActiveROI(user._id);
@@ -704,12 +711,14 @@ const getDashboard = async (userId,filter, options) => {
     
     let c_id = new ObjectId(cid);
     let u_id = new ObjectId(uid);
+    console.log('----u_id---',u_id)
     
     const templateVersion_collection = [];
     const templateData = await Template.aggregate([
                 {
                     $match: {
-                        company_id:c_id
+                        company_id:c_id,
+                        created_by:u_id
                     }
                 },{
                     $lookup: {
@@ -955,7 +964,11 @@ const getDashboard = async (userId,filter, options) => {
     if (!user) {
         throw new ApiError(httpStatus.NOT_FOUND, 'User not found');
     }
-    return allUserByCompany();
+
+
+
+
+    return allUserByCompany(user);
   }
 
 
