@@ -343,7 +343,7 @@ const getCompany = async(uid,comp)=>{
 
             company_template.map(v=>{
                 adminTool.map(a=>{
-                    if(JSON.stringify(v.company_id) === JSON.stringify(a.company_id)){
+                    if(JSON.stringify(v._id) === JSON.stringify(a._id)){
                         companyTemplateContainer.push(v.company_id)
                     }
                 })
