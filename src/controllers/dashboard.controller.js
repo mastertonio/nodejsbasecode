@@ -8,6 +8,8 @@ const _ = require('underscore');
 const ApiError = require('../utils/ApiError');
 const logger = require('../config/logger');
 const { array } = require('joi');
+const { SectionBuilder } = require('../models');
+const sectionBuilder = require('../models/sectionBuilder.model');
 
 const getDashboard = catchAsync(async (req, res) => {
     const filter = pick(req.query, ['title']);
@@ -257,10 +259,13 @@ const getRoiTemplate = catchAsync(async (req, res)=>{
   const comp_id = await getCID(req);
 
   const roiTable = await dashboadService.getRoiTemplates(comp_id,is_user);
+
+  
+
+
   const data = [];
   
   roiTable.map(v=>{
-    console.log(v)
     if(!_.isEmpty(v.build)){
       v.build.map(k=>{
         if(k.stage == 1){          
