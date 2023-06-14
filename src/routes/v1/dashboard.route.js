@@ -34,6 +34,9 @@ router
   .get(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.getRoiTemplate)
 
 
+  // router
+  // .route('/graph')
+  // .get(auth('getDashboard'), validate(dashboardValidation.getDashboard), dashboardController.getRoiGraph)
 
 router
   .route('/company/roi/list')

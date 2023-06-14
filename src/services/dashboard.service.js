@@ -18,6 +18,10 @@ const getAllTemplate = async (cond) => {
     console.log('get all tempalte cond ', cond)
     if(cond == null){
         condition =[{
+            $match: {
+                active:1
+            }
+        },{
             $lookup: {
                 from: 'templateversions',
                 localField: '_id',
@@ -30,7 +34,8 @@ const getAllTemplate = async (cond) => {
         let o_id = new ObjectId(cond);  
         condition =[{
             $match: {
-                company_id:o_id
+                company_id:o_id,
+                active:1
             }
         },{
             $lookup: {
