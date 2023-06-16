@@ -22,7 +22,7 @@ const getCompanyTemplateByCompanyId = async (_id) =>{
          *  const allTemplates =  Template.find();
          */
        
-        const company_template = await Template.find({'active':1});
+        const company_template = await Template.find();
         const adminTool = await sectionBuilder.find();
 
 
