@@ -47,7 +47,7 @@ const getCompanyTemplateByCompanyId = async (_id) =>{
         const o_id = new ObjectId(_id); 
         // const company_template =await Template.find({company_id:o_id});
 
-        const company_template = await Template.find({company_id:o_id,'active':1});
+        const company_template = await Template.find({company_id:o_id});
         const adminTool = await sectionBuilder.find({company_id:o_id});
 
 
