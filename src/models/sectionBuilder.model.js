@@ -187,6 +187,11 @@ const sectionBuilderSchema = mongoose.Schema(
                                                 required:false,
                                                 default:""
                                             },
+                                            selectedOptions:{
+                                                type:Array,
+                                                required:false,
+                                                default:[]
+                                            },
                                             childElement:[
                                                 {
                                                     address:{
